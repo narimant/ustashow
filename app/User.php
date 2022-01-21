@@ -1,0 +1,97 @@
+<?php
+
+namespace App;
+
+use Carbon\Carbon;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+
+class User extends Authenticatable implements MustVerifyEmail
+{
+    use Notifiable;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name', 'email', 'password','viptime'
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+
+    public function course()
+    {
+        return $this->hasMany(Course::class);
+    }
+    public function article()
+    {
+       return $this->hasMany(Article::class);
+    }
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
+    }
+
+    public function hasRole($roles)
+    {
+        if(is_string($roles)){
+            return $this->roles->contains('name',$roles);
+        }
+
+//        foreach ($roles as $r)
+//        {
+//           if($this->hasRole($r->name))
+//           {
+//               return true;
+//           }
+//        }
+        return !! $roles->intersect($this->roles)->count() ;
+    }
+
+    public function isVip()
+    {
+
+      return $this->viptime >Carbon::now() ? true : false ;
+    }
+    public function isAdmin()
+    {
+        return $this->level =='admin' ? true : false ;
+    }
+
+    public function comments()
+    {
+       return $this->hasMany(Comment::class);
+    }
+
+
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
+
+    public function checkLearn($course)
+    {
+
+        return !! Learn::where('user_id' , $this->id)->where('course_id' , $course->id)->first();
+    }
+}
