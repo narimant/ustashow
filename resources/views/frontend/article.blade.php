@@ -1,7 +1,7 @@
 @extends('frontend.frontendlayout.frontendmaster')
 
 @section('content')
-
+    @dd($article->tags)
     <div class="py-4 py-lg-8 pb-14 ">
         <div class="container articlepage">
             <div class="row justify-content-center">

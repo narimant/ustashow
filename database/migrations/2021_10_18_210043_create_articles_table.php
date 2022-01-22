@@ -24,7 +24,6 @@ class CreateArticlesTable extends Migration
             $table->text('description');
             $table->text('body');
             $table->text('images');
-            $table->string('tags');
             $table->integer('ViewCount')->default(0);
             $table->integer('CommentCount')->default(0);
             $table->string('lang',10)->default('en');

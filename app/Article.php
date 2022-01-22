@@ -17,9 +17,9 @@ class Article extends Model
 
     ];
 
-    protected $attributes = [
+   /* protected $attributes = [
         'CreateTimeDiff' => '0',
-    ];
+    ];*/
     /**
      * Return the sluggable configuration array for this model.
      *
@@ -61,12 +61,6 @@ class Article extends Model
     }
 
 
-    public function categories()
-    {
-        return $this->belongsToMany(Category::class);
-    }
-
-
 
 
     public function getCreateTimeDiffAttribute()
@@ -87,4 +81,11 @@ class Article extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+
+    public function tags()
+    {
+        return $this->morphToMany(Tag::class, 'taggable');
+    }
+
 }

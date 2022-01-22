@@ -16,9 +16,9 @@ class Course extends Model
 
     ];
 
-    protected $attributes = [
+   /* protected $attributes = [
         'CreateTimeDiff' => '0',
-    ];
+    ];*/
     /**
      * Return the sluggable configuration array for this model.
      *
@@ -69,5 +69,10 @@ class Course extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function tags()
+    {
+        return $this->morphToMany(tag::class, 'taggable');
     }
 }
