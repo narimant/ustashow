@@ -1,7 +1,7 @@
 @extends('frontend.frontendlayout.frontendmaster')
 
 @section('content')
-    @dd($article->tags)
+
     <div class="py-4 py-lg-8 pb-14 ">
         <div class="container articlepage">
             <div class="row justify-content-center">
@@ -41,6 +41,12 @@
                     <!-- Descriptions -->
 
                 {!!  $article->body !!}
+
+                    <div>
+                        @foreach($article->tags as $tag)
+                            <a href="{{$tag->path()}}"> #{{$tag->name}}</a>
+                        @endforeach
+                    </div>
                     <!-- Media -->
                     <hr class="mt-8 mb-5">
                     <div class="d-flex justify-content-between align-items-center mb-5">

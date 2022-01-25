@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->timestamp('viptime')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->text('image')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

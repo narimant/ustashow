@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategorizableTable extends Migration
+class CreateCategoryableTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateCategorizableTable extends Migration
      */
     public function up()
     {
-        Schema::create('categorizable', function (Blueprint $table) {
+        Schema::create('categoryable', function (Blueprint $table) {
             $table->bigInteger('category_id');
-            $table->bigInteger('categorizable_id');
-            $table->string('categorizable_type');
+            $table->bigInteger('categoryable_id');
+            $table->string('categoryable_type');
             $table->timestamps();
         });
     }

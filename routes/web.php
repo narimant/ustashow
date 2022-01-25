@@ -26,6 +26,8 @@ Route::namespace('Front')->group(function (){
     Route::get('/','Homecontroller@index')->name('index');
     Route::get('/articles/{articleSlug}','ArticleController@single');
     Route::get('/courses/{courseSlug}','CourseController@single');
+    Route::get('/category/{categorySlug}','CategoryController@show');
+    Route::get('/tag/{tagSlug}','TagController@show');
 
     Route::get('/courses/{courseSlug}/episode/{episode}','EpisodeController@show' );
     Route::post('comment','HomeController@comment')->name('comment.send');
@@ -68,7 +70,8 @@ Route::namespace('Admin')->prefix('/admin')->middleware(['auth:web','chekAdmin',
     Route::resource('episodes','EpisodeController');
     Route::resource('roles','RoleController');
     Route::resource('permissions','PermissionController');
-
+    Route::resource('categories','CategoryController') ;
+    Route::resource('tags','TagController') ;
     //comment routes
     Route::get('/comments/unsucsess','CommentController@unsucsessfull')->name('comments.unsucsess');
     Route::resource('comments','CommentController');
@@ -79,6 +82,8 @@ Route::namespace('Admin')->prefix('/admin')->middleware(['auth:web','chekAdmin',
 
     Route::group(['/users'],function (){
         Route::get('/index','UserController@index')->name('users.index');
+        Route::get('/myprofile','UserController@myProfile')->name('users.profile');
+        Route::post('/uploadimage','UserController@userImage')->name('users.uploadImage');
         Route::resource('lvl','lvlManageController')->parameters(['lvl'=>'user']);
         Route::delete('/{user}/destroy','UserController@destrpy')->name('users.destroy');
     });

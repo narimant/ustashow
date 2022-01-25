@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Permission;
 use App\Role;
+use App\Tag;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
@@ -36,6 +37,21 @@ class AdminController extends Controller
         return $url;
 
     }
+
+    protected function checktags($tags)
+    {
+        $tagArr=[];
+        foreach ($tags as $tag) {
+            if (is_numeric($tag)) {
+                $tagArr[] = $tag;
+            } else {
+                $newTag = Tag::create(['name' => $tag]);
+                $tagArr[] = $newTag->id;
+            }
+        }
+        return Tag::find($tagArr);
+    }
+
 
 
     /*

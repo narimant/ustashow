@@ -1,11 +1,13 @@
 @extends('frontend.frontendlayout.frontendmaster')
 
 @section('content')
-<div class="container bootstrap snippets bootdey">
+    <div class="ibox-content">
+<div class="container-fluid bootstrap snippets bootdey">
+
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-10 mx-auto">
             <div class="ibox float-e-margins">
-                <div class="ibox-content">
+
                     <h2>
                         {{count($articles)}} results found for: <span class="text-navy">{{request('search')}}</span>
                     </h2>

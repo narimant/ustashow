@@ -36,6 +36,7 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'image'=>'array',
     ];
 
     public function course()
@@ -93,5 +94,37 @@ class User extends Authenticatable implements MustVerifyEmail
     {
 
         return !! Learn::where('user_id' , $this->id)->where('course_id' , $course->id)->first();
+    }
+
+    public function userimage($size='thumbnail')
+    {
+        if($this->image==null)
+        {
+            return asset('upload/users/default/default.png');
+        }
+        else
+        {
+            switch ($size)
+            {
+                case 'thumbnail':
+                    return $this->image['tumbnail'];
+                    break;
+                case '300':
+                    return $this->image['images']['300'];
+                    break;
+                case '600':
+                    return $this->image['images']['600'];
+                    break;
+                case '900':
+                    return $this->image['images']['900'];
+                    break;
+                case 'orginal':
+                    return $this->image['orginal'];
+                    break;
+            }
+
+
+        }
+
     }
 }

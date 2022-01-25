@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Article;
+use App\Category;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ArticleRequest;
+
+use App\Tag;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -29,7 +32,8 @@ class ArticleController extends AdminController
      */
     public function create()
     {
-        return view('Admin.articles.create');
+        $alltags=Tag::all();
+        return view('Admin.articles.create',compact('alltags'));
     }
 
     /**
@@ -40,20 +44,50 @@ class ArticleController extends AdminController
      */
     public function store(ArticleRequest $request)
     {
-//        return User::create([
-//            'lvl'=>'admin',
-//            'name'=>'nariman',
-//            'email'=>'nariman.tatari@gmail.com',
-//            'password'=>Hash::make('123456789'),
-//        ]);
 
 
-        auth()->loginUsingId(1);
+
+
+
+
+        /*
+         * upload image
+         */
         $files=$request->file('images');
         $imagesUrl=$this->uploadimage($files);
 
 
-        auth()->user()->article()->create(array_merge($request->all() , [ 'images' => $imagesUrl ]));
+
+        /*
+         * start work on tags
+         */
+
+         $allTagfind=$this->checktags($request->tags);
+        unset($request['tags']);
+        /*
+         * end work on tags
+         */
+
+
+
+
+        /*
+         * start work on category
+         */
+        $category=Category::find($request->category);
+        unset($request['category']);
+        /*
+         * end work on category
+         */
+
+
+        /*
+         * save data
+         */
+        $newarticle=auth()->user()->article()->create(array_merge($request->all() , [ 'images' => $imagesUrl ]));
+        $newarticle->categories()->sync($category);
+        $newarticle->tags()->sync($allTagfind);
+
 
         return redirect(route('articles.index'));
     }
@@ -77,7 +111,14 @@ class ArticleController extends AdminController
      */
     public function edit(Article $article)
     {
-        return view('Admin.articles.edit',compact('article'));
+        $alltags=Tag::all();
+        $tags=$article->tags;
+        foreach($tags as $tag)
+        {
+            $articletagsids[]=$tag->id;
+        }
+
+        return view('Admin.articles.edit',compact('article','alltags','articletagsids'));
     }
 
     /**
@@ -106,7 +147,29 @@ class ArticleController extends AdminController
         }
 
         unset($inputs['imagesThumb']);
+
+        /****
+         * unset category ids of request for add or update article
+         * and set request category in category argument for sync with category tables
+         */
+        $category=Category::find($request->category);
+       unset($inputs['category']);
+
+
+        /****
+        * start work on tags
+        */
+
+        $allTagfind=$this->checktags($request->tags);
+        unset($inputs['tags']);
+        /*
+         * end work on tags
+         */
+
+
         $article->update($inputs);
+        $article->categories()->sync($category);
+        $article->tags()->sync($allTagfind);
         return redirect(route('articles.index'));
 
     }

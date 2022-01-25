@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Category;
+use App\Tag;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
 use App\Article;
@@ -38,6 +40,13 @@ class RouteServiceProvider extends ServiceProvider
 
         Route::bind('courseSlug' , function ($value) {
             return Course::whereSlug($value)->firstOrFail();
+        });
+
+        Route::bind('categorySlug' , function ($value) {
+            return Category::whereSlug($value)->firstOrFail();
+        });
+        Route::bind('tagSlug' , function ($value) {
+            return Tag::whereSlug($value)->firstOrFail();
         });
 
         parent::boot();

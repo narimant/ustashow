@@ -18,12 +18,18 @@ class UserPanelController extends Controller
         return view('frontend.panel.index', compact('payments'));
     }
 
+
+
+
     public function history()
     {
         $payments=auth()->user()->payments()->latest()->paginate(20);
 
         return view('frontend.panel.history' , compact('payments'));
     }
+
+
+
 
 
     public function vip()

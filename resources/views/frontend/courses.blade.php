@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- Page content-->
-@dd($course->tags)
+
     <div class="pt-lg-8 pb-lg-16 pt-8 pb-12 bg-primary">
         <div class="container">
             <div class="row align-items-center">

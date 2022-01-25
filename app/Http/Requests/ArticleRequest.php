@@ -30,7 +30,7 @@ class ArticleRequest extends FormRequest
             'description'=>'required',
             'body'=>'required',
             'images'=>'required|mimes:jpg,png,bmp',
-            'Tags'=>'required',
+
 
         ];
         }
@@ -40,7 +40,7 @@ class ArticleRequest extends FormRequest
             'description'=>'required',
             'body'=>'required',
             'images'=>'',
-            'Tags'=>'required',
+
 
         ];
     }

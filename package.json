@@ -22,7 +22,8 @@
         "react-dom": "^16.2.0",
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.20.1",
-        "sass-loader": "^8.0.0"
+        "sass-loader": "^8.0.0",
+
     },
     "dependencies": {
         "jquery": "^3.6.0",

@@ -1,12 +1,28 @@
 @extends('Admin.master')
 
+@section('style')
+    <link rel="stylesheet" href="{{ asset('css/select2.min.css') }}">
+@endsection
+
+
 @section('script')
-<script src="/ckeditor/ckeditor.js"></script>
+<script src="{{asset('ckeditor/ckeditor.js')}}"></script>
+<script src="{{asset('js/select2.min.js')}}"></script>
+<script src=""></script>
     <script>
         CKEDITOR.replace('body',{
             filebrowserUploadUrl:'/admin/panel/upload-image',
             filebrowserImageUploadUrl:'/admin/panel/upload-image'
         })
+
+
+
+
+        $('#tags').select2({
+            tags: true,
+            multiple: true,
+            tokenSeparators: [',']
+        });
     </script>
 @endsection
 
@@ -25,9 +41,6 @@
                     </h3>
                 </div>
                 <div class="card-body">
-
-
-
 
 
 
@@ -65,14 +78,38 @@
                             <label  for="description">Image</label>
                             <input type="file" name="images" value="{{old('images')}}"  class="form-control" id="images" placeholder="insert  Image" >
                         </div>
-
                         <div class="col-sm-6 ">
-                            <label  for="description">Tags</label>
-                            <input type="text" name="Tags" value="{{old('Tags')}}" class="form-control" id="Tags" placeholder="insert  Tags" >
+                            <label  for="description">Category</label>
+                            <div>
+                                <ul class="list-group ">
+                                @foreach(\App\Category::where('parent_id',null)->with('sub_category')->get() as $value)
+                                        <li class="list-group-item"><input type="checkbox" name="category[]"value="{{ $value->id }}">{{ $value->name }}</input></li>
+
+                                    @if($value->sub_category->count())
+
+                                        @php $i=1; @endphp
+                                        @include('Admin.articles.categorylist',['child' => $value->sub_category ,'i' => $i])
+                                    @endif
+                                @endforeach
+                                </ul>
+                            </div>
                         </div>
+
+                        <div class="col-lg-6">
+                            <select class="form-control" id="tags" name="tags[]" multiple="multiple">
+                                @foreach($alltags as $tag)
+                                <option value="{{$tag->id}}">{{$tag->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
                     </div>
 
                 </div>
+
+
+
+
 
                 <div class="form-group">
                     <button class="btn btn-primary">Save</button>

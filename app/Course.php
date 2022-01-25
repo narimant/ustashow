@@ -75,4 +75,10 @@ class Course extends Model
     {
         return $this->morphToMany(tag::class, 'taggable');
     }
+
+
+    public function categories()
+    {
+        return $this->morphToMany(Category::class, 'categorizable');
+    }
 }

@@ -14,7 +14,7 @@
                     <div class="d-flex align-items-end justify-content-between bg-white px-4  pt-2 pb-4 rounded-bottom-md shadow-sm ">
                         <div class="d-flex align-items-center">
                             <div class="me-2 position-relative d-flex justify-content-end align-items-end mt-n5">
-                                <img src="frontend/images/avatar-3.jpg" class="avatar-xl rounded-circle border border-4 border-white" alt="">
+                                <img src="{{auth()->user()->userimage()}}" class="avatar-xl rounded-circle border border-4 border-white" alt="">
                             </div>
                             <div class="lh-1">
                                 <h2 class="mb-0">Stella Flores
