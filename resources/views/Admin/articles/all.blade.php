@@ -13,6 +13,17 @@
                     <a href="{{ route('articles.create') }}" class="btn btn-warning ml-auto p-2">Create Article</a>
                 </div>
                 <!-- /.card-header -->
+                <ul class="nav nav-tabs mt-3" id="custom-content-above-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link {{request()->get('show')=='' ? "active" : ''}}"  href="{{route('articles.index')}}"  > Articles Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{request()->get('show')=='trash' ? "active" : ''}}"  href="{{route('articles.index',['show'=>'trash'])}}"  >Articles in Trash @if($trashcount>0)<span class="badge badge-danger right">{{$trashcount}}@endif</span></a>
+                    </li>
+
+                </ul>
+
+
                 <div class="card-body">
                     <table class="table table-bordered">
                         <thead>
@@ -37,12 +48,22 @@
                                 <td>{{$article->CommentCount}}</td>
 
                                 <td>
-                                    <form action="{{ route('articles.destroy' , ['article'=>$article->id]) }}" method="post">
+                                    <form action="
+                                    @if(request()->get('show')=="trash")
+                                        {{ route('article.forceDelete' , ['id'=>$article->id]) }}
+                                    @else
+                                        {{ route('articles.destroy' , ['article'=>$article->id]) }}
+                                    @endif
+
+                                                    " method="post">
 
                                         @method('DELETE')
                                         @csrf
                                         <div class="btn btn-group">
                                             <a   href="{{ route('articles.edit', [ 'article'=>$article->id]) }}" class="btn btn-primary">{{ _('Edit') }}</a>
+                                           @if(request()->get('show')=='trash')
+                                                <a   href="{{ route('article.restore', [ 'id'=>$article->id]) }}" class="btn btn-success">{{ _('Restore') }}</a>
+                                            @endif
                                             <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?')" >{{ _('Delete') }}</button>
                                         </div>
                                     </form>

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
 use App\Course;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CourseRequest;
+use App\Tag;
 use Illuminate\Http\Request;
 
 class CourseController extends AdminController
@@ -27,7 +29,8 @@ class CourseController extends AdminController
      */
     public function create()
     {
-        return view('Admin.course.create');
+        $alltags=Tag::all();
+        return view('Admin.course.create',compact('alltags'));
     }
 
     /**
@@ -42,9 +45,30 @@ class CourseController extends AdminController
         $files=$request->file('images');
         $imagesUrl=$this->uploadimage($files);
 
+        /*
+        * start work on tags
+        */
 
-        auth()->user()->course()->create(array_merge($request->all() , [ 'images' => $imagesUrl]));
+        $allTagfind=$this->checktags($request->tags);
+        unset($request['tags']);
+        /*
+         * end work on tags
+         */
 
+
+        /*
+        * start work on category
+        */
+        $category=Category::find($request->category);
+        unset($request['category']);
+        /*
+         * end work on category
+         */
+
+
+        $newcourse=auth()->user()->course()->create(array_merge($request->all() , [ 'images' => $imagesUrl]));
+        $newcourse->categories()->sync($category);
+        $newcourse->tags()->sync($allTagfind);
         return redirect(route('courses.index'));
     }
 
@@ -67,9 +91,15 @@ class CourseController extends AdminController
      */
     public function edit(Course $course)
     {
+        $alltags=Tag::all();
+        $tags=$course->tags;
+        $articletagsids=[];
+        foreach($tags as $tag)
+        {
+            $articletagsids[]=$tag->id;
+        }
 
-
-        return view('Admin.course.edit',['course'=>$course]);
+        return view('Admin.course.edit',compact('course','alltags','articletagsids'));
     }
 
     /**
@@ -97,7 +127,30 @@ class CourseController extends AdminController
         }
 
         unset($inputs['imagesThumb']);
+
+        /****
+         * unset category ids of request for add or update article
+         * and set request category in category argument for sync with category tables
+         */
+        $category=Category::find($request->category);
+        unset($inputs['category']);
+
+
+        /****
+         * start work on tags
+         */
+
+        $allTagfind=$this->checktags($request->tags);
+        unset($inputs['tags']);
+        /*
+         * end work on tags
+         */
+
+
         $course->update($inputs);
+        $course->categories()->sync($category);
+        $course->tags()->sync($allTagfind);
+
         return redirect(route('courses.index'));
     }
 

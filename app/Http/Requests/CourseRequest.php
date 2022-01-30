@@ -30,7 +30,6 @@ class CourseRequest extends FormRequest
                 //'description'=>'required',
                 'body'=>'required',
                 'images'=>'required|mimes:jpg,png,bmp',
-                'Tags'=>'required',
                 'price'=>'required|numeric',
                 'type'=>'required',
 
@@ -42,7 +41,6 @@ class CourseRequest extends FormRequest
             //'description'=>'required',
             'body'=>'required',
             'images'=>'',
-            'Tags'=>'required',
             'price'=>'required|numeric',
             'type'=>'required',
 

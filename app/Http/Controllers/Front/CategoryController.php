@@ -20,7 +20,14 @@ class CategoryController extends Controller
     {
         $articles=$category->articles()->latest()->get();
         $courses=$category->courses()->latest()->get();
-        return view('frontend.categorypage',compact('articles','courses'));
+        if($articles->count()>0)
+        {
+            return view('frontend.categorypagearticle',compact('articles'));
+        }else
+        {
+            return view('frontend.categorypagecourse',compact('courses'));
+        }
+
     }
 
 

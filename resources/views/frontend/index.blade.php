@@ -115,7 +115,7 @@
                     <div class="card-footer">
                         <div class="row align-items-center g-0">
                             <div class="col-auto">
-                                <img src="frontend/images/avatar-2.jpg" class="rounded-circle avatar-xs" alt="">
+                                <img src="{{$article->user->userimage()}}" class="rounded-circle avatar-xs" alt="">
                             </div>
                             <div class="col ms-2">
                                 <span>{{ $article->user->name }}</span>
@@ -139,7 +139,7 @@
 
 
 
-
+  @if($courses->count()>0)
     <div class="pt-lg-8 pb-lg-3 pt-8 pb-6">
         <div class="container">
             <div class="row mb-4">
@@ -178,7 +178,7 @@
                         <div class="card-footer">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="frontend/images/avatar-2.jpg" class="rounded-circle avatar-xs" alt="">
+                                    <img src="{{$course->user->userimage()}}" class="rounded-circle avatar-xs" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <span>{{ $course->user->name }}</span>
@@ -196,6 +196,7 @@
             </div>
         </div>
     </div>
+    @endif
 
 
 

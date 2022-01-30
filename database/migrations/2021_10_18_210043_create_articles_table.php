@@ -28,6 +28,7 @@ class CreateArticlesTable extends Migration
             $table->integer('CommentCount')->default(0);
             $table->string('lang',10)->default('en');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

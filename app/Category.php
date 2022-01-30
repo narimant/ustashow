@@ -4,10 +4,12 @@ namespace App;
 
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 
 class Category extends Model
 {
+
     use Sluggable;
     protected $fillable=[
         'name',
@@ -57,4 +59,6 @@ class Category extends Model
     {
         return $this->hasMany(self::class,'parent_id','id');
     }
+
+
 }

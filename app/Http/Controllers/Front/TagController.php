@@ -16,12 +16,15 @@ class TagController extends Controller
      * @param  \App\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function show(Tag $tag)
+    public function show(Tag $tag,$type="article")
     {
 
-        $articles=$tag->articles()->latest()->get();
-        $courses=$tag->courses()->latest()->get();
-        return view('frontend.tagpage',compact('articles','courses'));
+
+        $articles=$tag->articles()->latest()->paginate(12);
+
+        $courses=$tag->courses()->latest()->paginate(12);
+
+        return view('frontend.tagpage',compact('articles','courses','tag','type'));
     }
 
 

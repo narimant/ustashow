@@ -278,7 +278,7 @@
                                         </button>
                                     </form>
 
-                                    search            </li>
+                                           </li>
                             </ul>
                         </div>
                     </li>

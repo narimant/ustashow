@@ -5,10 +5,12 @@ namespace App;
 use Carbon\Carbon;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Route;
 
 class Article extends Model
 {
+    use SoftDeletes;
     use Sluggable;
 
     protected $guarded=[];
@@ -45,10 +47,10 @@ class Article extends Model
 
         if(array_key_exists($local,config('app.locales')))
         {
-            return "/$local/articles/$this->slug";
+            return "/$local/article/$this->slug";
         }else
         {
-            return "/articles/$this->slug";
+            return "/article/$this->slug";
         }
 
 

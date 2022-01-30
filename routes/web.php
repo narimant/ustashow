@@ -24,10 +24,10 @@ Route::get('/logintest',function ()
 });
 Route::namespace('Front')->group(function (){
     Route::get('/','Homecontroller@index')->name('index');
-    Route::get('/articles/{articleSlug}','ArticleController@single');
-    Route::get('/courses/{courseSlug}','CourseController@single');
+    Route::get('/article/{articleSlug}','ArticleController@single');
+    Route::get('/course/{courseSlug}','CourseController@single');
     Route::get('/category/{categorySlug}','CategoryController@show');
-    Route::get('/tag/{tagSlug}','TagController@show');
+    Route::get('/tag/{tagSlug}/{type?}','TagController@show')->name('tag.show');
 
     Route::get('/courses/{courseSlug}/episode/{episode}','EpisodeController@show' );
     Route::post('comment','HomeController@comment')->name('comment.send');
@@ -66,6 +66,8 @@ Route::namespace('Admin')->prefix('/admin')->middleware(['auth:web','chekAdmin',
     Route::get('/panel','AdminController@index');
     Route::post('/panel/upload-image','PanelController@CkUploadImage');
     Route::resource('articles','ArticleController');
+    Route::get('article/{id}','ArticleController@restore')->name('article.restore');
+    Route::delete('article/{id}','ArticleController@forceDelete')->name('article.forceDelete');
     Route::resource('courses','CourseController');
     Route::resource('episodes','EpisodeController');
     Route::resource('roles','RoleController');

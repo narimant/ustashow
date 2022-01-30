@@ -5,9 +5,11 @@ namespace App;
 use Carbon\Carbon;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Course extends Model
 {
+
     use Sluggable;
 
     protected $guarded=[];
@@ -40,7 +42,7 @@ class Course extends Model
 
     public function path()
     {
-        return "/courses/$this->slug";
+        return "/course/$this->slug";
     }
 
     public function episodes()
@@ -79,6 +81,6 @@ class Course extends Model
 
     public function categories()
     {
-        return $this->morphToMany(Category::class, 'categorizable');
+        return $this->morphToMany(Category::class, 'categoryable');
     }
 }

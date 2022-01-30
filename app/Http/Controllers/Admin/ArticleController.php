@@ -4,13 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Article;
 use App\Category;
-use App\Http\Controllers\Controller;
 use App\Http\Requests\ArticleRequest;
-
 use App\Tag;
-use App\User;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
+
 
 class ArticleController extends AdminController
 {
@@ -21,8 +17,16 @@ class ArticleController extends AdminController
      */
     public function index()
     {
-       $articles=Article::latest()->paginate(20);
-      return view('Admin.articles.all',['articles'=>$articles]);
+        $show=\request()->get('show');
+        if(isset($show) && $show=='trash')
+        {
+            $articles= Article::onlyTrashed()->latest()->paginate(20);
+        }else
+        {
+            $articles=Article::latest()->paginate(20);
+        }
+        $trashcount=Article::onlyTrashed()->count();
+      return view('Admin.articles.all',['articles'=>$articles,'trashcount'=>$trashcount]);
     }
 
     /**
@@ -44,10 +48,6 @@ class ArticleController extends AdminController
      */
     public function store(ArticleRequest $request)
     {
-
-
-
-
 
 
         /*
@@ -184,5 +184,31 @@ class ArticleController extends AdminController
     {
         $article->delete();
         return redirect(route('articles.index'));
+    }
+
+
+
+
+    public function restore(int $id)
+
+    {
+
+        /**
+         * Find content only among those deleted.
+         */
+
+        $article = Article::onlyTrashed()->findOrFail($id);
+
+        $article->restore();
+
+        return redirect()->back();
+
+    }
+
+    public function forceDelete( $id)
+    {
+            $article=Article::onlyTrashed()->findOrFail($id);
+       $article->forceDelete();
+        return redirect()->back();
     }
 }
