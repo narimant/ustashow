@@ -228,11 +228,54 @@
                 <input type="search" name="search" class="form-control ps-6" placeholder="Search Courses">
             </form>
 
+            {{--language menu--}}
+
+
+
+
+
+
+
+
+
+
+
+
+                <ul class="navbar-nav navbar-right-wrap ms-auto d-none d-lg-block">
+
+                    <li class="dropdown d-inline-block stopevent">
+                        <a class="btn btn-light btn-icon rounded-circle text-muted indicator indicator-primary" href="#" role="button" id="dropdownNotificationSecond" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="f fa-globe-europ"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg" aria-labelledby="dropdownNotificationSecond">
+                            <div>
+                                <div class="border-bottom px-3 pb-3 d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">Languages</span>
+
+                                </div>
+                                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 300px;"><ul class="list-group list-group-flush notification-list-scroll " style="overflow: hidden; width: auto; height: 300px;">
+                                        <li class="list-group-item bg-light">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <a class="text-body" href="#">
+
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        </li>
+
+                                    </ul><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 154.905px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+
+                            </div>
+                        </div>
+                    </li>
+
 
 
             <!-- user menu-->
             @auth
-                <ul class="navbar-nav navbar-right-wrap ms-auto d-none d-lg-block">
+
 
 
                     <li class="dropdown ms-2 d-inline-block">
@@ -282,15 +325,17 @@
                             </ul>
                         </div>
                     </li>
-                </ul>
+
             @endauth
             @guest
 
-                <div class="ms-auto mt-3 mt-lg-0">
+
                     <a href="{{route('login')}}" class="btn btn-white shadow-sm me-1">Sign In</a>
                     <a href="{{route('register')}}" class="btn btn-primary">Sign Up</a>
-                </div>
+
             @endguest
+
+                </ul>
 
 
 

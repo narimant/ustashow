@@ -26,7 +26,7 @@ $dir=(app()->getLocale()=='fa') ? "rtl" :"ltr";
         <link rel="stylesheet" href="{{  asset('frontend/css/theme.min.css') }}" >
     @endif
 
-    <link rel="stylesheet" href="{{  asset('frontend/css/fonts/customstyle.css') }}" >
+    <link rel="stylesheet" href="{{  asset('frontend/css/customstyle.css') }}" >
 
 
 

@@ -18,6 +18,9 @@
                         <a class="nav-link {{request()->get('show')=='' ? "active" : ''}}"  href="{{route('articles.index')}}"  > Articles Active</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link {{request()->get('show')=='draft' ? "active" : ''}}"  href="{{route('articles.index',['show'=>'draft'])}}"  > Articles Draft @if($draftcount>0)<span class="badge badge-primary right">{{$draftcount}}@endif</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link {{request()->get('show')=='trash' ? "active" : ''}}"  href="{{route('articles.index',['show'=>'trash'])}}"  >Articles in Trash @if($trashcount>0)<span class="badge badge-danger right">{{$trashcount}}@endif</span></a>
                     </li>
 
@@ -44,8 +47,8 @@
                             <tr>
                                 <td>{{ $i++ }}</td>
                                 <td><A href="{{$article->path()}}"> {{$article->title}}</A></td>
-                                <td>{{$article->ViewCount}}</td>
                                 <td>{{$article->CommentCount}}</td>
+                                <td>{{$article->ViewCount}}</td>
 
                                 <td>
                                     <form action="
@@ -63,6 +66,9 @@
                                             <a   href="{{ route('articles.edit', [ 'article'=>$article->id]) }}" class="btn btn-primary">{{ _('Edit') }}</a>
                                            @if(request()->get('show')=='trash')
                                                 <a   href="{{ route('article.restore', [ 'id'=>$article->id]) }}" class="btn btn-success">{{ _('Restore') }}</a>
+                                            @endif
+                                            @if(request()->get('show')=='draft')
+                                                <a   href="{{ route('article.publish', [ 'id'=>$article->id]) }}" class="btn btn-success">{{ _('Publish') }}</a>
                                             @endif
                                             <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?')" >{{ _('Delete') }}</button>
                                         </div>

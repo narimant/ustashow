@@ -52,7 +52,30 @@
                 <label  for="description">description</label>
                 <input type="text" name="description" value="{{ $course->description }}" class="form-control" id="description" placeholder="insert  description" >
             </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label  for="language">language</label>
+                        <select name="lang" id="language" class="form-control">
+                            <option value="en" {{$course->lang=='en' ? 'selected' : ''}}>english</option>
+                            <option value="fa" {{$course->lang=='fa' ? 'selected' : ''}}>persian</option>
+                            <option value="tr" {{$course->lang=='tr' ? 'selected' : ''}}>turkish</option>
 
+                        </select>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label  for="status">Display Status</label>
+                        <select name="status" id="status" class="form-control">
+                            <option value="0" {{$course->status=='0' ? 'selected' : ''}}>Draft</option>
+                            <option value="1" {{$course->status=='1' ? 'selected' : ''}}>publish</option>
+
+
+                        </select>
+                    </div>
+                </div>
+            </div>
             <div class="form-group">
                 <label  for="body">body</label>
                 <textarea rows="5" name="body"  class="form-control" id="body" placeholder="insert  body" >{{ $course->body }}</textarea>
@@ -130,6 +153,26 @@
                 </div>
 
             </div>
+
+
+            {{--      SEO          --}}
+            <hr>
+            <div class="row mb-3">
+                <div class="col-sm-12 form-group">
+                    <label class="form-label" for="seoTitle">Seo Title</label>
+                    <input type="text" class="form-control" name="seoTitle" value="{{$course->seoTitle}}">
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label class="form-label" for="seoDescription">Seo Description</label>
+                    <input type="text" class="form-control" name="seoDescription" value="{{$course->seoDescription}}">
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label class="form-label" for="seoKeyword">Seo Keyword</label>
+                    <input type="text" class="form-control" name="seoKeyword" value="{{$course->seoKeyword}}">
+                </div>
+            </div>
+
+
 
             <div class="form-group">
                 <button class="btn btn-primary">Update</button>

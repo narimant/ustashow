@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Course extends Model
 {
-
+    use SoftDeletes;
     use Sluggable;
 
     protected $guarded=[];
@@ -82,5 +82,11 @@ class Course extends Model
     public function categories()
     {
         return $this->morphToMany(Category::class, 'categoryable');
+    }
+
+
+    public function scopeStatus($query,$status =true)
+    {
+        return $query->where('status', $status);
     }
 }

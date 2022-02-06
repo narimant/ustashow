@@ -17,7 +17,12 @@ class CreateTagsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('slug');
+            $table->string('seoTitle')->nullable();
+            $table->string('seoDescription')->nullable();
+            $table->string('seoKeyword')->nullable();
+            $table->string('lang',10)->default('en');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

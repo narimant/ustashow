@@ -21,12 +21,16 @@ class ArticleController extends AdminController
         if(isset($show) && $show=='trash')
         {
             $articles= Article::onlyTrashed()->latest()->paginate(20);
+        }elseif(isset($show) && $show=='draft')
+        {
+            $articles=Article::Status(false)->latest()->paginate(20);
         }else
         {
-            $articles=Article::latest()->paginate(20);
+            $articles=Article::Status()->latest()->paginate(20);
         }
         $trashcount=Article::onlyTrashed()->count();
-      return view('Admin.articles.all',['articles'=>$articles,'trashcount'=>$trashcount]);
+        $draftcount=Article::Status(false)->count();
+      return view('Admin.articles.all',['articles'=>$articles,'trashcount'=>$trashcount,'draftcount'=>$draftcount]);
     }
 
     /**
@@ -183,7 +187,7 @@ class ArticleController extends AdminController
     public function destroy(Article $article)
     {
         $article->delete();
-        return redirect(route('articles.index'));
+        return redirect()->back();
     }
 
 
@@ -209,6 +213,14 @@ class ArticleController extends AdminController
     {
             $article=Article::onlyTrashed()->findOrFail($id);
        $article->forceDelete();
+        return redirect()->back();
+    }
+
+    public function publish($id)
+    {
+        $article=Article::findOrfail($id);
+        $article->status=1;
+        $article->update();
         return redirect()->back();
     }
 }

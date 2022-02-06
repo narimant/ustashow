@@ -53,6 +53,30 @@
                     <label  for="description">description</label>
                     <input type="text" name="description" value="{{old('description')}}" class="form-control" id="description" placeholder="insert  description" >
                 </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label  for="language">language</label>
+                            <select name="lang" id="language" class="form-control">
+                                <option value="en" selected>english</option>
+                                <option value="fa">persian</option>
+                                <option value="tr">turkish</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label  for="status">Display Status</label>
+                            <select name="status" id="status" class="form-control">
+                                <option value="0" selected>Draft</option>
+                                <option value="1">publish</option>
+
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="form-group">
                     <label  for="body">body</label>
@@ -84,6 +108,7 @@
                         </div>
 
                         <div class="col-lg-6">
+                            <label  for="tags">Tags</label>
                             <select class="form-control" id="tags" name="tags[]" multiple="multiple">
                                 @foreach($alltags as $tag)
                                     <option value="{{$tag->id}}">{{$tag->name}}</option>
@@ -93,6 +118,7 @@
                     </div>
 
                 </div>
+
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-6">
@@ -110,6 +136,27 @@
                     </div>
 
                 </div>
+
+
+
+                {{--      SEO          --}}
+                <hr>
+                <div class="row mb-3">
+                    <div class="col-sm-12 form-group">
+                        <label class="form-label" for="seoTitle">Seo Title</label>
+                        <input type="text" class="form-control" name="seoTitle" value="{{old('seoTitle')}}">
+                    </div>
+                    <div class="col-sm-12 form-group">
+                        <label class="form-label" for="seoDescription">Seo Description</label>
+                        <input type="text" class="form-control" name="seoDescription" value="{{old('seoDescription')}}">
+                    </div>
+                    <div class="col-sm-12 form-group">
+                        <label class="form-label" for="seoKeyword">Seo Keyword</label>
+                        <input type="text" class="form-control" name="seoKeyword" value="{{old('seoKeyword')}}">
+                    </div>
+                </div>
+
+
 
                 <div class="form-group">
                     <button class="btn btn-primary">Save</button>

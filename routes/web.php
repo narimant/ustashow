@@ -67,7 +67,14 @@ Route::namespace('Admin')->prefix('/admin')->middleware(['auth:web','chekAdmin',
     Route::post('/panel/upload-image','PanelController@CkUploadImage');
     Route::resource('articles','ArticleController');
     Route::get('article/{id}','ArticleController@restore')->name('article.restore');
+    Route::get('article/publish/{id}','ArticleController@publish')->name('article.publish');
     Route::delete('article/{id}','ArticleController@forceDelete')->name('article.forceDelete');
+    Route::get('course/{id}','CourseController@restore')->name('course.restore');
+    Route::get('course/publish/{id}','CourseController@publish')->name('course.publish');
+    Route::delete('course/{id}','CourseController@forceDelete')->name('course.forceDelete');
+    Route::get('episode/{id}','EpisodeController@restore')->name('episode.restore');
+    Route::get('episode/publish/{id}','EpisodeController@publish')->name('episode.publish');
+    Route::delete('episode/{id}','EpisodeController@forceDelete')->name('episode.forceDelete');
     Route::resource('courses','CourseController');
     Route::resource('episodes','EpisodeController');
     Route::resource('roles','RoleController');

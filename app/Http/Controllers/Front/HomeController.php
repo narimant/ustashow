@@ -23,11 +23,11 @@ class HomeController extends Controller
         $local=app()->getLocale();
         SEOMeta::setTitle('Ustashow WebSite Home Page');
         SEOMeta::setDescription('Welcome To UstaShow Web Site ');
-
+        SEOMeta::addKeyword(['key1', 'key2', 'key3']);
         if(cache()->has('articles')){
             $articles=cache('articles');
         }else{
-            $articles=Article::latest()->take(4)->get();
+            $articles=Article::status()->latest()->take(4)->get();
             cache(['articles'=>$articles,Carbon::now()->addMinute(10)]);
         }
 
@@ -39,7 +39,7 @@ class HomeController extends Controller
             cache(['courses'=>$courses,Carbon::now()->addMinute(10)]);
         }
 
-        $articles=Article::whereLang($local)->latest()->take(4)->get();
+        $articles=Article::status()->whereLang($local)->latest()->take(4)->get();
         $courses=Course::latest()->take(4)->get();
         return view('frontend.index',compact('articles','courses'));
     }
@@ -63,6 +63,7 @@ class HomeController extends Controller
 
     public function search()
     {
+
        $keyword=\request('search');
        $articles=Article::search($keyword)->latest()->paginate(10);
        return view('frontend.search',compact('articles'));

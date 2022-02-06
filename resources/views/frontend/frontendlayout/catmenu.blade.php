@@ -4,7 +4,7 @@
 
     @foreach(\App\Category::where('parent_id',null)->with('sub_category')->get() as $value)
         <li class="nav-item {{ $value->sub_category->count() ? "dropdown" :"" }}">
-        <a class="nav-link dropdown-toggle" href=" {{ $value->path() }}" id="navbarPages" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link  {{ $value->sub_category->count() ? "dropdown-toggle" :"" }}" href=" {{ $value->path() }}" id="navbarPages" {{ $value->sub_category->count() ? "data-bs-toggle='dropdown''" :"" }} aria-haspopup="true" aria-expanded="false">
             {{ $value->name }}
         </a>
         @if($value->sub_category->count())

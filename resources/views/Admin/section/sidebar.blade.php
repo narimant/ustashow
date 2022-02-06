@@ -48,8 +48,8 @@
 
 
                 <!-- Articles -->
-                <li class="nav-item {{ Route::is(['articles.index','articles.create']) ? 'menu-open': '' }}">
-                    <a href="#" class="nav-link {{ Route::is(['articles.index','articles.create'])? 'active': '' }}">
+                <li class="nav-item {{ Route::is(['articles.index','articles.create','articles.edit']) ? 'menu-open': '' }}">
+                    <a href="#" class="nav-link {{ Route::is(['articles.index','articles.create' ,'articles.edit'])? 'active': '' }}">
                         <i class="fas fa-newspaper"></i>
                         <p>
                             Article

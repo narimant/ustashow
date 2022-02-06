@@ -38,9 +38,14 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+
         $request->validate(['name'=>'required']);
         Category::create([
             'name'=>$request->name,
+            'lang'=>$request->lang,
+            'seoTitle'=>$request->seoTitle,
+            'seoDescription'=>$request->seoDescription,
+            'seoKeyword'=>$request->seoKeyword,
             'parent_id'=>$request->parent_id
         ]);
         return  redirect(route('categories.index'));

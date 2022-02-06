@@ -17,8 +17,13 @@ class CreateCategoriesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('slug');
+            $table->string('lang',10)->default('en');
+            $table->string('seoTitle')->nullable();
+            $table->string('seoDescription')->nullable();
+            $table->string('seoKeyword')->nullable();
             $table->bigInteger('parent_id')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

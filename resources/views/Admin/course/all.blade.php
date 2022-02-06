@@ -18,7 +18,24 @@
 
 
 
+
+
+
                 <!-- /.card-header -->
+                <ul class="nav nav-tabs mt-3" id="custom-content-above-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link {{request()->get('show')=='' ? "active" : ''}}"  href="{{route('courses.index')}}"  > Articles Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{request()->get('show')=='draft' ? "active" : ''}}"  href="{{route('courses.index',['show'=>'draft'])}}"  > Articles Draft @if($draftcount>0)<span class="badge badge-primary right">{{$draftcount}}@endif</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{request()->get('show')=='trash' ? "active" : ''}}"  href="{{route('courses.index',['show'=>'trash'])}}"  >Articles in Trash @if($trashcount>0)<span class="badge badge-danger right">{{$trashcount}}@endif</span></a>
+                    </li>
+
+                </ul>
+
+
                 <div class="card-body">
             <table class="table table-bordered">
                 <thead>
@@ -52,13 +69,27 @@
                             @endif
                         </td>
                         <td>
-                            <form action="{{ route('courses.destroy' , ['course'=>$course->id]) }}" method="post">
 
+                                <form action="
+                                    @if(request()->get('show')=="trash")
+                                {{ route('course.forceDelete' , ['id'=>$course->id]) }}
+                                @else
+                                {{ route('courses.destroy' , ['course'=>$course->id]) }}
+                                @endif
+
+                                    " method="post">
                                 @method('DELETE')
                                 @csrf
+
                                 <div class="btn btn-group">
-                                    <a href="{{ route('courses.edit', [ 'course'=>$course->id]) }}" class="btn btn-primary">{{ _('Edit') }}</a>
-                                    <button class="btn btn-danger" onclick="return confirm('Are you sure?')" type="submit">{{ _('Delete') }}</button>
+                                    <a   href="{{ route('courses.edit', [ 'course'=>$course->id]) }}" class="btn btn-primary">{{ _('Edit') }}</a>
+                                    @if(request()->get('show')=='trash')
+                                        <a   href="{{ route('course.restore', [ 'id'=>$course->id]) }}" class="btn btn-success">{{ _('Restore') }}</a>
+                                    @endif
+                                    @if(request()->get('show')=='draft')
+                                        <a   href="{{ route('course.publish', [ 'id'=>$course->id]) }}" class="btn btn-success">{{ _('Publish') }}</a>
+                                    @endif
+                                    <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?')" >{{ _('Delete') }}</button>
                                 </div>
                             </form>
                         </td>

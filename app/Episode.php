@@ -50,4 +50,16 @@ class Episode extends Model
 
         return $status ? "/download/$this->id?mac=$hash&t=$timestamp" : "#";
     }
+
+
+
+    public function scopeStatus($query,$status =true)
+    {
+        return $query->where('status', $status);
+    }
+
+    public function tags()
+    {
+        return $this->morphToMany(tag::class, 'taggable');
+    }
 }

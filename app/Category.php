@@ -13,7 +13,12 @@ class Category extends Model
     use Sluggable;
     protected $fillable=[
         'name',
-        'parent_id'
+        'parent_id',
+        'lang',
+        'seoTitle',
+        'seoDescription',
+        'seoKeyword',
+        'status',
     ];
 
     public function sluggable()

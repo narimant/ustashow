@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Article;
 use App\Category;
 use App\Course;
 use App\Http\Controllers\Controller;
@@ -18,8 +19,23 @@ class CourseController extends AdminController
      */
     public function index()
     {
-        $courses=Course::latest()->paginate(20);
-        return view('Admin.course.all',compact('courses'));
+        $show=\request()->get('show');
+        if(isset($show) && $show=='trash')
+        {
+            $courses= Course::onlyTrashed()->latest()->paginate(20);
+        }elseif(isset($show) && $show=='draft')
+        {
+            $courses=Course::Status(false)->latest()->paginate(20);
+        }else
+        {
+            $courses=Course::Status()->latest()->paginate(20);
+        }
+        $trashcount=Course::onlyTrashed()->count();
+        $draftcount=Course::Status(false)->count();
+
+
+
+        return view('Admin.course.all',compact('courses','trashcount','draftcount'));
     }
 
     /**
@@ -91,6 +107,9 @@ class CourseController extends AdminController
      */
     public function edit(Course $course)
     {
+
+
+
         $alltags=Tag::all();
         $tags=$course->tags;
         $articletagsids=[];
@@ -160,9 +179,47 @@ class CourseController extends AdminController
      * @param  \App\Course  $course
      * @return \Illuminate\Http\Response
      */
+
+
+
+
     public function destroy(Course $course)
     {
         $course->delete();
-        return redirect(route('courses.index'));
+        return redirect()->back();
+    }
+
+
+
+
+    public function restore(int $id)
+
+    {
+
+        /**
+         * Find content only among those deleted.
+         */
+
+        $course = Course::onlyTrashed()->findOrFail($id);
+
+        $course->restore();
+
+        return redirect()->back();
+
+    }
+
+    public function forceDelete( $id)
+    {
+        $course=Course::onlyTrashed()->findOrFail($id);
+        $course->forceDelete();
+        return redirect()->back();
+    }
+
+    public function publish($id)
+    {
+        $course=Course::findOrfail($id);
+        $course->status=1;
+        $course->update();
+        return redirect()->back();
     }
 }

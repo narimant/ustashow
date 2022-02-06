@@ -3,6 +3,7 @@
 
 @section('style')
     <link rel="stylesheet" href="{{ asset('css/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/select2-bootstrap4.min.css') }}">
 @endsection
 
 
@@ -18,7 +19,8 @@
         $('#tags').select2({
             tags: true,
             multiple: true,
-            tokenSeparators: [',']
+            tokenSeparators: [','],
+            theme: 'bootstrap4'
         });
     </script>
 @endsection
@@ -52,7 +54,30 @@
                 <label  for="description">description</label>
                 <input type="text" name="description" value="{{ $article->description }}" class="form-control" id="description" placeholder="insert  description" >
             </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label  for="language">language</label>
+                        <select name="lang" id="language" class="form-control">
+                            <option value="en" {{$article->lang=='en' ? 'selected' : ''}}>english</option>
+                            <option value="fa" {{$article->lang=='fa' ? 'selected' : ''}}>persian</option>
+                            <option value="tr" {{$article->lang=='tr' ? 'selected' : ''}}>turkish</option>
 
+                        </select>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label  for="status">Display Status</label>
+                        <select name="status" id="status" class="form-control">
+                            <option value="0" {{$article->status=='0' ? 'selected' : ''}}>Draft</option>
+                            <option value="1" {{$article->status=='1' ? 'selected' : ''}}>publish</option>
+
+
+                        </select>
+                    </div>
+                </div>
+            </div>
             <div class="form-group">
                 <label  for="body">body</label>
                 <textarea rows="5" name="body"  class="form-control" id="body" placeholder="insert  body" >{{ $article->body }}</textarea>
@@ -111,6 +136,24 @@
                 </div>
 
             </div>
+
+            {{--      SEO          --}}
+            <hr>
+            <div class="row mb-3">
+                <div class="col-sm-12 form-group">
+                    <label class="form-label" for="seoTitle">Seo Title</label>
+                    <input type="text" class="form-control" name="seoTitle" value="{{$article->seoTitle}}">
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label class="form-label" for="seoDescription">Seo Description</label>
+                    <input type="text" class="form-control" name="seoDescription" value="{{$article->seoDescription}}">
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label class="form-label" for="seoKeyword">Seo Keyword</label>
+                    <input type="text" class="form-control" name="seoKeyword" value="{{$article->seoKeyword}}">
+                </div>
+            </div>
+
 
             <div class="form-group">
                 <button class="btn btn-primary">Update</button>

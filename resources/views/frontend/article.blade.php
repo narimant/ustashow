@@ -69,7 +69,8 @@
                 </div>
             </div>
         </div>
-        <!-- Container -->
+        <!-- Container related posts -->
+      @if($related->count()>0)
         <div class="container">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-12">
@@ -84,12 +85,15 @@
                         <a href="blog-single.html" class="card-img-top"> <img src="{{$rel->images['tumbnail']}}" class="card-img-top rounded-top-md" alt=""></a>
                         <!-- Card body -->
                         <div class="card-body">
-                            <a href="#" class="fs-5 fw-semi-bold d-block mb-3 text-primary">
+
                                 @foreach($rel->categories as $category)
+                                <a href="{{$category->path()}}" class="fs-5 fw-semi-bold d-block mb-3 text-primary">
                                     {{$category->name}} &nbsp;
+
+                                </a>
                                 @endforeach
-                            </a>
-                            <a href="blog-single.html" title="{{$rel->title}}">
+
+                            <a href="{{$rel->path()}}" title="{{$rel->title}}">
                                 <h3>{{ \Str::limit($rel->title, 25, ' ...')}}</h3>
                             </a>
                             <p>{{ \Str::limit($rel->description, 40, ' ...')}}   </p>
@@ -112,6 +116,8 @@
                     @endforeach
             </div>
         </div>
+          @endif
+
     </div>
 <div class="container">
     <div class="row justify-content-center">

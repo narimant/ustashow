@@ -27,6 +27,18 @@
                             <input type="text" name="name" value="{{old('name')}}" class="form-control" id="name" placeholder="insert name " >
                         </div>
 
+                            <div class="form-group">
+                                <label  for="language">language</label>
+                                <select name="lang" id="language" class="form-control">
+                                    <option value="en" selected>english</option>
+                                    <option value="fa">persian</option>
+                                    <option value="tr">turkish</option>
+
+                                </select>
+                            </div>
+
+
+
 
                         <div class="form-group">
                             <label for="parent_id" class="form-label"> Category Parent</label>
@@ -46,6 +58,22 @@
                             </div>
 
 
+                        {{--      SEO          --}}
+                        <hr>
+                        <div class="row mb-3">
+                            <div class="col-sm-12 form-group">
+                                <label class="form-label" for="seoTitle">Seo Title</label>
+                                <input type="text" class="form-control" name="seoTitle" value="{{old('seoTitle')}}">
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label class="form-label" for="seoDescription">Seo Description</label>
+                                <input type="text" class="form-control" name="seoDescription" value="{{old('seoDescription')}}">
+                            </div>
+                            <div class="col-sm-12 form-group">
+                                <label class="form-label" for="seoKeyword">Seo Keyword</label>
+                                <input type="text" class="form-control" name="seoKeyword" value="{{old('seoKeyword')}}">
+                            </div>
+                        </div>
 
 
                         <div class="form-group">
