@@ -3,12 +3,15 @@
 namespace App\Http\Controllers\Front;
 
 use App\Article;
-use App\Comment;
+
 use App\Course;
 use App\Http\Controllers\Controller;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Carbon\Carbon;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
+use Stevebauman\Location\Facades\Location;
 use UxWeb\SweetAlert\SweetAlert;
 
 
@@ -67,6 +70,27 @@ class HomeController extends Controller
        $keyword=\request('search');
        $articles=Article::search($keyword)->latest()->paginate(10);
        return view('frontend.search',compact('articles'));
+
+    }
+
+    public function switchLanguage($lang)
+    {
+
+        if ( array_key_exists($lang,config('app.locales')))
+        {
+            Cookie::queue(\Cookie::forget('lang'));
+            Cookie::queue('lang',$lang,60*24);
+                if($lang==config('app.fallback_locale'))
+                {
+                    return redirect('/');
+                }
+            return redirect('/'.$lang);
+        }else
+        {
+
+            return redirect('/');
+        }
+
 
     }
 }

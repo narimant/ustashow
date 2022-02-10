@@ -17,6 +17,7 @@ $dir=(app()->getLocale()=='fa') ? "rtl" :"ltr";
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{  asset('frontend/css/all.min.css') }}" >
+
     <link rel="stylesheet" href="{{  asset('frontend/css/feather.css') }}" >
     <link rel="stylesheet" href="{{  asset('frontend/css/materialdesignicons.min.css') }}" >
 
@@ -27,8 +28,8 @@ $dir=(app()->getLocale()=='fa') ? "rtl" :"ltr";
     @endif
 
     <link rel="stylesheet" href="{{  asset('frontend/css/customstyle.css') }}" >
-
-
+    <link rel="stylesheet" href="{{  asset('frontend/css/bootstrap-select.min.css') }}" >
+    <link rel="stylesheet" href="{{  asset('frontend/css/flag-icon.min.css') }}" >
 
 
 

@@ -3,7 +3,6 @@
 @section('content')
 
 
-
     <!-- Header-->
     <div class="bg-primary">
         <div class="container">

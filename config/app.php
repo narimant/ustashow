@@ -164,7 +164,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-
+        Stevebauman\Location\LocationServiceProvider::class,
 
 
         /*

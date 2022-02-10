@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-default">
     <div class="container-fluid px-0">
-        <a class="navbar-brand" href="{{ url('/') }}"> {{ config('app.name', 'Laravel') }}</a>
+        <a class="navbar-brand" href="{{ route('index') }}"> {{ config('app.name', 'Laravel') }}</a>
         <!-- Mobile view nav wrap -->
         <ul class="navbar-nav navbar-right-wrap ms-auto d-lg-none d-flex nav-top-wrap">
             <li class="dropdown stopevent">
@@ -243,34 +243,31 @@
 
                 <ul class="navbar-nav navbar-right-wrap ms-auto d-none d-lg-block">
 
-                    <li class="dropdown d-inline-block stopevent">
-                        <a class="btn btn-light btn-icon rounded-circle text-muted indicator indicator-primary" href="#" role="button" id="dropdownNotificationSecond" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="f fa-globe-europ"></i>
+
+
+
+                    <li class="nav-item dropdown d-inline-block">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        @php
+                        $segment=request()->segments();
+                        if(isset($segment[0]) && $segment[0]=='fa' || app()->getLocale()=='fa')
+                            {
+                               echo '<span class="flag-icon flag-icon-ir"> </span> farsi';
+                            }elseif (isset($segment[0]) && $segment[0]=='tr' || app()->getLocale()=='tr')
+                        {
+                            echo '<span class="flag-icon flag-icon-tr"> </span> Turky';
+                        }else
+                        {
+                            echo '<span class="flag-icon flag-icon-us"> </span> Engliah';
+                        }
+                        @endphp
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg" aria-labelledby="dropdownNotificationSecond">
-                            <div>
-                                <div class="border-bottom px-3 pb-3 d-flex justify-content-between align-items-center">
-                                    <span class="h5 mb-0">Languages</span>
-
-                                </div>
-                                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 300px;"><ul class="list-group list-group-flush notification-list-scroll " style="overflow: hidden; width: auto; height: 300px;">
-                                        <li class="list-group-item bg-light">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <a class="text-body" href="#">
-
-                                                    </a>
-                                                </div>
-
-                                            </div>
-                                        </li>
-
-                                    </ul><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 154.905px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
-
-                            </div>
+                        <div class="dropdown-menu" aria-labelledby="dropdown09">
+                            <a class="dropdown-item" href="{{url('language',['lang'=>'tr'])}}"><span class="flag-icon flag-icon-tr"> </span>  turkish</a>
+                            <a class="dropdown-item" href="{{url('language',['lang'=>'fa'])}}"><span class="flag-icon flag-icon-ir"> </span>  farsi</a>
+                            <a class="dropdown-item" href="{{url('language',['lang'=>'en'])}}"><span class="flag-icon flag-icon-us"> </span>  english</a>
                         </div>
                     </li>
-
 
 
             <!-- user menu-->

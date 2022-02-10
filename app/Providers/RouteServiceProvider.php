@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Category;
 use App\Tag;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Route;
 use App\Article;
 use App\Course;
@@ -75,9 +76,16 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
-        $local=request()->segment(1);
+
+
+
+            $local=request()->segment(1);
+
+
+
         if(array_key_exists($local,config('app.locales')))
         {
+
 
             app()->setLocale($local);
 
@@ -88,6 +96,7 @@ class RouteServiceProvider extends ServiceProvider
         }else
         {
             $local=app()->setLocale('app.fallback_locale');
+
             Route::middleware('web')
                 ->namespace($this->namespace)
 

@@ -23,6 +23,7 @@ Route::get('/logintest',function ()
     return view('auth.test');
 });
 Route::namespace('Front')->group(function (){
+    Route::get('language/{lang}','HomeController@switchLanguage');
     Route::get('/','Homecontroller@index')->name('index');
     Route::get('/article/{articleSlug}','ArticleController@single');
     Route::get('/course/{courseSlug}','CourseController@single');
