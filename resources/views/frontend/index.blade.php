@@ -10,14 +10,13 @@
             <div class="row align-items-center g-0">
                 <div class="col-xl-5 col-lg-6 col-md-12">
                     <div class="py-5 py-lg-0">
-                        <h1 class="text-white display-4 fw-bold">Welcome to Geeks UI Learning Application
+                        <h1 class="text-white display-4 fw-bold">@lang('messages.Welcome to Ustashow Platform Learning Application')
                         </h1>
                         <p class="text-white-50 mb-4 lead">
-                            Hand-picked Instructor and expertly crafted courses, designed for the modern students and
-                            entrepreneur.
+                           @lang('messages.Learning and engineering are not difficult. With the right training, you can get results faster.')
                         </p>
-                        <a href="pages/course-filter-list.html" class="btn btn-success">Browse Courses</a>
-                        <a href="pages/sign-in.html" class="btn btn-white">Are You Instructor?</a>
+                        <a href="pages/course-filter-list.html" class="btn btn-success">@lang('messages.Browse Courses')</a>
+
                     </div>
                 </div>
                 <div class=" col-xl-7 col-lg-6 col-md-12 text-lg-end text-center">
@@ -40,8 +39,8 @@
                             class="icon-sahpe icon-lg bg-light-warning rounded-circle text-center text-dark-warning fs-4 "> <i
                                 class="fe fe-video"> </i></span>
                         <div class="ms-3">
-                            <h4 class="mb-0 fw-semi-bold">30,000 online courses</h4>
-                            <p class="mb-0">Enjoy a variety of fresh topics</p>
+                            <h4 class="mb-0 fw-semi-bold">30,000 @lang('messages.online courses')</h4>
+                            <p class="mb-0">@lang('messages.Enjoy a variety of fresh topics')</p>
                         </div>
                     </div>
                 </div>
@@ -52,8 +51,8 @@
                             class="icon-sahpe icon-lg bg-light-warning rounded-circle text-center text-dark-warning fs-4 "> <i
                                 class="fe fe-users"> </i></span>
                         <div class="ms-3">
-                            <h4 class="mb-0 fw-semi-bold">Expert instruction</h4>
-                            <p class="mb-0">Find the right instructor for you</p>
+                            <h4 class="mb-0 fw-semi-bold">@lang('messages.Expert instruction')</h4>
+                            <p class="mb-0">@lang('messages.Find the right instructor for you')</p>
                         </div>
                     </div>
                 </div>
@@ -64,8 +63,8 @@
                             class="icon-sahpe icon-lg bg-light-warning rounded-circle text-center text-dark-warning fs-4 "> <i
                                 class="fe fe-clock"> </i></span>
                         <div class="ms-3">
-                            <h4 class="mb-0 fw-semi-bold">Lifetime access</h4>
-                            <p class="mb-0">Learn on your schedule</p>
+                            <h4 class="mb-0 fw-semi-bold">@lang('messages.Lifetime access')</h4>
+                            <p class="mb-0">@lang('messages.Learn on your schedule')</p>
                         </div>
                     </div>
                 </div>
@@ -75,12 +74,13 @@
 
 
 
+@if($articles->isNotEmpty())
 
     <div class="pt-lg-12 pb-lg-3 pt-8 pb-6">
         <div class="container">
             <div class="row mb-4">
                 <div class="col">
-                    <h2 class="mb-0">Last Article</h2>
+                    <h2 class="mb-0">@lang('messages.Last Article')</h2>
                 </div>
             </div>
             <div class="row">
@@ -133,17 +133,17 @@
         </div>
     </div>
 
+@endif
 
 
 
 
-
-  @if($courses->count()>0)
+    @if($articles->isNotEmpty())
     <div class="pt-lg-8 pb-lg-3 pt-8 pb-6">
         <div class="container">
             <div class="row mb-4">
                 <div class="col">
-                    <h2 class="mb-0">Last Article</h2>
+                    <h2 class="mb-0">@lang('messages.Last Courses')</h2>
                 </div>
             </div>
             <div class="row">

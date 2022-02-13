@@ -18,8 +18,8 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        $articles=$category->articles()->latest()->get();
-        $courses=$category->courses()->latest()->get();
+        $articles=$category->articles()->latest()->paginate(15);
+        $courses=$category->courses()->latest()->paginate(15);
         if($articles->count()>0)
         {
             return view('frontend.categorypagearticle',compact('articles'));

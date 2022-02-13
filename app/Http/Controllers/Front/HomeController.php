@@ -6,6 +6,8 @@ use App\Article;
 
 use App\Course;
 use App\Http\Controllers\Controller;
+use App\Siteseo;
+use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Carbon\Carbon;
 
@@ -24,9 +26,18 @@ class HomeController extends Controller
 
 
         $local=app()->getLocale();
-        SEOMeta::setTitle('Ustashow WebSite Home Page');
-        SEOMeta::setDescription('Welcome To UstaShow Web Site ');
-        SEOMeta::addKeyword(['key1', 'key2', 'key3']);
+
+        $seosite=Siteseo::where('lang',$local)->First();
+        SEOMeta::setTitle($seosite->site_title);
+        SEOMeta::setDescription($seosite->site_description);
+        SEOMeta::addKeyword($seosite->site_keyword);
+
+        OpenGraph::setTitle($seosite->site_title);
+        OpenGraph::setDescription($seosite->site_description);
+        OpenGraph::setUrl($_SERVER['HTTP_HOST']);
+
+        OpenGraph::setSiteName(\env('APP_NAME'));
+        OpenGraph::addProperty('locale', $local);
         if(cache()->has('articles')){
             $articles=cache('articles');
         }else{

@@ -32,8 +32,16 @@ Route::namespace('Front')->group(function (){
 
     Route::get('/courses/{courseSlug}/episode/{episode}','EpisodeController@show' );
     Route::post('comment','HomeController@comment')->name('comment.send');
+
+    //sitemap
     Route::get('/sitemap','SitemapController@index');
-    Route::get('/sitemap-articles','SitemapController@article');
+    Route::get('/sitemap-articles','SitemapController@articles');
+    Route::get('/sitemap-courses','SitemapController@courses');
+    Route::get('/sitemap-tags','SitemapController@tags');
+    Route::get('/sitemap-categories','SitemapController@categories');
+    Route::get('/sitemap-episodes','SitemapController@episodes');
+
+
     // Download Route
     Route::get('/download/{episode}' , 'CourseController@download');
     Route::get('/search','HomeController@search')->name('home.search');
@@ -57,7 +65,7 @@ Route::namespace('Front')->middleware('auth:web')->group(function (){
 
 
 
-Auth::routes(['verify' => true]);
+
 
 Route::get('login/google', 'Auth\LoginController@redirectToProvider');
 Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback');
@@ -86,6 +94,11 @@ Route::namespace('Admin')->prefix('/admin')->middleware(['auth:web','chekAdmin',
     Route::get('/comments/unsucsess','CommentController@unsucsessfull')->name('comments.unsucsess');
     Route::resource('comments','CommentController');
 
+
+    //site seo
+
+    Route::resource('siteseo','SiteseoController');
+
     //peyments route
     Route::get('/payments/unsucsess','PaymentContoller@unsuccessful')->name('payments.unsucsess');
     Route::resource('payments','PaymentContoller');
@@ -104,7 +117,7 @@ Route::get('/home',function (){
     return view('home');
 });
 
-
+Auth::routes(['verify' => true]);
 //Route::get('/',function (){
 //    alert()->success('Success Message', 'Optional Title');
 //    return view('welcome');

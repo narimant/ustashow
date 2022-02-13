@@ -225,21 +225,10 @@
 				<span class="position-absolute ps-3 search-icon">
 					<i class="fe fe-search"></i>
 				</span>
-                <input type="search" name="search" class="form-control ps-6" placeholder="Search Courses">
+                <input type="search" name="search" class="form-control ps-6" placeholder="@lang('messages.Search Courses')">
             </form>
 
             {{--language menu--}}
-
-
-
-
-
-
-
-
-
-
-
 
                 <ul class="navbar-nav navbar-right-wrap ms-auto d-none d-lg-block">
 
@@ -254,15 +243,15 @@
                             {
                                echo '<span class="flag-icon flag-icon-ir"> </span> farsi';
                             }elseif (isset($segment[0]) && $segment[0]=='tr' || app()->getLocale()=='tr')
-                        {
-                            echo '<span class="flag-icon flag-icon-tr"> </span> Turky';
-                        }else
-                        {
-                            echo '<span class="flag-icon flag-icon-us"> </span> Engliah';
-                        }
+                            {
+                                echo '<span class="flag-icon flag-icon-tr"> </span> Turky';
+                            }else
+                            {
+                                echo '<span class="flag-icon flag-icon-us"> </span> Engliah';
+                            }
                         @endphp
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown09">
+                        <div class="dropdown-menu  dropdown-menu-end" >
                             <a class="dropdown-item" href="{{url('language',['lang'=>'tr'])}}"><span class="flag-icon flag-icon-tr"> </span>  turkish</a>
                             <a class="dropdown-item" href="{{url('language',['lang'=>'fa'])}}"><span class="flag-icon flag-icon-ir"> </span>  farsi</a>
                             <a class="dropdown-item" href="{{url('language',['lang'=>'en'])}}"><span class="flag-icon flag-icon-us"> </span>  english</a>

@@ -1,5 +1,5 @@
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-dark-primary elevation-4 pb-5">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
         <img src="{{asset('upload/logo/logo.jpg')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
@@ -268,7 +268,7 @@
 
                 <!-- Users -->
 
-                <!-- Payment -->
+
                 <li class="nav-item {{ Route::is(['users.index','users.create','lvl.index','roles.index','permissions.index','permissions.create','users.profile']) ? 'menu-open': '' }}">
                     <a href="#"
                        class="nav-link {{ Route::is(['users.index','users.create','lvl.index','roles.index','permissions.index','permissions.create','users.profile'])? 'active': '' }}">
@@ -323,6 +323,29 @@
                 </li>
 
 
+                <!-- Site Settings -->
+                <li class="nav-item {{ Route::is(['siteSettings.index','payments.unsucsess']) ? 'menu-open': '' }}">
+                    <a href="#" class="nav-link {{ Route::is(['payments.index','payments.unsucsess'])? 'active': '' }}">
+                        <i class="fa-thin fa-books"></i>
+                        <p>
+                            Site Settings
+                            <i class="fas fa-angle-left right"></i>
+
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('siteseo.index')}}"
+                               class="nav-link {{ Route::is('siteseo.index')? 'active': '' }}">
+
+                                <p>Site Main Seo</p>
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
