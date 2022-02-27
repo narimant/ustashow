@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-default">
     <div class="container-fluid px-0">
-        <a class="navbar-brand" href="{{ route('index') }}"> {{ config('app.name', 'Laravel') }}</a>
+        <a class="navbar-brand" href="{{ route('index') }}"> <img src="{{asset('frontend/logo/menulogo.jpg')}}"></a>
         <!-- Mobile view nav wrap -->
         <ul class="navbar-nav navbar-right-wrap ms-auto d-lg-none d-flex nav-top-wrap">
             <li class="dropdown stopevent">
@@ -277,8 +277,8 @@
                                         <img alt="avatar" src="{{auth()->user()->userimage()}}" class="rounded-circle">
                                     </div>
                                     <div class="ms-3 lh-1">
-                                        <h5 class="mb-1">Annette Black</h5>
-                                        <p class="mb-0 text-muted">annette@geeksui.com</p>
+                                        <h5 class="mb-1">{{ auth()->user()->name }}</h5>
+                                        <p class="mb-0 text-muted">{{ auth()->user()->email }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -287,13 +287,13 @@
 
                                 <li>
                                     <a class="dropdown-item" href="{{ route('panel.index') }}">
-                                        <i class="fe fe-user me-2"></i>Profile
+                                        <i class="fe fe-user me-2"></i>@lang('messages.Profile')
                                     </a>
                                 </li>
 
                                 <li>
                                     <a class="dropdown-item" href="#">
-                                        <i class="fe fe-settings me-2"></i>Settings
+                                        <i class="fe fe-settings me-2"></i>{{ __('messages.Settings') }}
                                     </a>
                                 </li>
                             </ul>
@@ -303,7 +303,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" >
                                         @csrf
                                         <button class="btn  btn-outline-light-warning text-black w-100" >
-                                            <i class="fe fe-power me-2"></i>Sign Out
+                                            <i class="fe fe-power me-2"></i>@lang('messages.Sign Out')
                                         </button>
                                     </form>
 
@@ -316,8 +316,8 @@
             @guest
 
 
-                    <a href="{{route('login')}}" class="btn btn-white shadow-sm me-1">Sign In</a>
-                    <a href="{{route('register')}}" class="btn btn-primary">Sign Up</a>
+                    <a href="{{route('login')}}" class="btn btn-white shadow-sm me-1">@lang('messages.Sign In')</a>
+                    <a href="{{route('register')}}" class="btn btn-primary">@lang('messages.Sign Up')</a>
 
             @endguest
 

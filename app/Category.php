@@ -64,6 +64,37 @@ class Category extends Model
     {
         return $this->hasMany(self::class,'parent_id','id');
     }
+    public function seoData($value='seoTitle')
+    {
+        if($value=='seoTitle')
+        {
+            if($this->seoTitle != null)
+            {
+                return $this->seoTitle;
+            }else
+            {
+                return  $this->name;
+            }
 
+        }elseif($value=='seoDescription')
+        {
+            if($this->seoDescription != null)
+            {
+                return $this->seoDescription;
+            }else
+            {
+                return  $this->name;
+            }
+        }elseif ($value=='seoKeyword')
+        {
+            if($this->seoKeyword != null)
+            {
+                return $this->seoKeyword;
+            }else
+            {
+                return null;
+            }
+        }
+    }
 
 }

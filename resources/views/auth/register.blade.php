@@ -23,7 +23,7 @@
 
                         <div class="mb-4">
 
-                            <h1 class="mb-1 fw-bold">{{ __('Register') }}</h1>
+                            <h1 class="mb-1 fw-bold">{{ __('messages.Register') }}</h1>
 
                         </div>
                         <!-- Form -->
@@ -32,7 +32,7 @@
                         @csrf
                         <!-- name -->
                             <div class="mb-3">
-                                <label for="email" class="form-label">{{ __('Name') }}</label>
+                                <label for="email" class="form-label">{{ __('messages.Name') }}</label>
                                 <input type="text" id="name" class="form-control  @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
@@ -44,7 +44,7 @@
 
                         <!-- email -->
                             <div class="mb-3">
-                                <label for="email" class="form-label">{{ __('E-Mail Address') }}</label>
+                                <label for="email" class="form-label">{{ __('messages.E-Mail Address') }}</label>
                                 <input type="email" id="email" class="form-control  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -57,7 +57,7 @@
 
                             <!-- Password -->
                             <div class="mb-3">
-                                <label for="password" class="form-label">{{ __('Password') }}</label>
+                                <label for="password" class="form-label">{{ __('messages.Password') }}</label>
                                 <input type="password" id="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
@@ -70,7 +70,7 @@
 
                             <!-- Confirm Password -->
                             <div class="mb-3">
-                                <label for="password-confirm" class="form-label">{{ __('Confirm Password') }}</label>
+                                <label for="password-confirm" class="form-label">{{ __('messages.Confirm Password') }}</label>
 
 
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -85,7 +85,7 @@
 
                                 <!-- Button -->
                                 <div class="d-grid">
-                                    <button type="submit" class="btn btn-primary "> {{ __('Register') }}</button>
+                                    <button type="submit" class="btn btn-primary "> {{ __('messages.Register') }}</button>
                                 </div>
                             </div>
                             <hr class="my-4">

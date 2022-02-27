@@ -18,13 +18,10 @@
 //front end routes//
 
 use Illuminate\Support\Facades\Route;
-Route::get('/logintest',function ()
-{
-    return view('auth.test');
-});
+
 Route::namespace('Front')->group(function (){
     Route::get('language/{lang}','HomeController@switchLanguage');
-    Route::get('/','Homecontroller@index')->name('index');
+    Route::get('/','HomeController@index')->name('index');
     Route::get('/article/{articleSlug}','ArticleController@single');
     Route::get('/course/{courseSlug}','CourseController@single');
     Route::get('/category/{categorySlug}','CategoryController@show');
@@ -47,7 +44,7 @@ Route::namespace('Front')->group(function (){
     Route::get('/search','HomeController@search')->name('home.search');
 });
 
-Route::namespace('Front')->middleware('auth:web')->group(function (){
+Route::namespace('Front')->middleware(['auth:web','verified'])->group(function (){
     Route::post('/course/Payment','PaymentController@peyment');
     Route::get('course/Payment/check','PaymentController@check');
 
@@ -113,9 +110,7 @@ Route::namespace('Admin')->prefix('/admin')->middleware(['auth:web','chekAdmin',
 });
 
 
-Route::get('/home',function (){
-    return view('home');
-});
+
 
 Auth::routes(['verify' => true]);
 //Route::get('/',function (){

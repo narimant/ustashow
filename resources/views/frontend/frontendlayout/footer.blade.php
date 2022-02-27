@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer fixed-bottom mt-5">
     <div class="container">
         <div class="row align-items-center g-0 border-top py-2">
             <!-- Desc -->

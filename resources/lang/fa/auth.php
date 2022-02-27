@@ -15,5 +15,6 @@ return [
 
     'failed' => 'اطلاعات ورود شما با هم مطابقت ندارد.',
     'throttle' => 'تلاش های زیادی برای ورود به سیستم انجام شده. لطفا :seconds ثانیه دیگر دوباره اقدام به ورود کنید.',
-
+    'Login' => 'Welcome to Login Page!',
+    'Logout' => 'You are logged out!',
 ];

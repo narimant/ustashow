@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use Artesaos\SEOTools\Facades\SEOMeta;
 use Carbon\Carbon;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
@@ -73,4 +74,14 @@ class RegisterController extends Controller
             'viptime'=>Carbon::now(),
         ]);
     }
+
+
+    public function showRegistrationForm()
+    {
+        SEOMeta::setTitle(__('messages.Register'));
+        SEOMeta::setDescription(__('messages.Register'));
+        SEOMeta::addKeyword(__('messages.Register'));
+        return view('auth.register');
+    }
+
 }

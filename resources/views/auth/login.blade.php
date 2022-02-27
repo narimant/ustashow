@@ -23,7 +23,7 @@
                     @include('Admin.section.errors')
                     <div class="mb-4">
 
-                        <h1 class="mb-1 fw-bold">{{ __('Login') }}</h1>
+                        <h1 class="mb-1 fw-bold">{{ __('messages.Login') }}</h1>
 
                     </div>
                     <!-- Form -->
@@ -31,7 +31,7 @@
                     @csrf
                         <!-- Username -->
                         <div class="mb-3">
-                            <label for="email" class="form-label">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="form-label">{{ __('messages.E-Mail Address') }}</label>
                             <input type="email" id="email" class="form-control  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                             @error('email')
                             <span class="invalid-feedback" role="alert">
@@ -41,7 +41,7 @@
                         </div>
                         <!-- Password -->
                         <div class="mb-3">
-                            <label for="password" class="form-label">{{ __('Password') }}</label>
+                            <label for="password" class="form-label">{{ __('messages.Password') }}</label>
                             <input type="password" id="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                             @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -53,10 +53,10 @@
                         <div class="d-lg-flex justify-content-between align-items-center mb-4">
                             <div class="form-check">
                                 <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }} class="form-check-input" id="remember">
-                                <label class="form-check-label " for="remember">    {{ __('Remember Me') }}</label>
+                                <label class="form-check-label " for="remember">    {{ __('messages.Remember Me') }}</label>
                             </div>
                             <div>
-                                <a href="{{ route('password.request') }}"> {{ __('Forgot Your Password?') }}</a>
+                                <a href="{{ route('password.request') }}"> {{ __('messages.Forgot Your Password?') }}</a>
                             </div>
                         </div>
 
@@ -68,7 +68,7 @@
 
                             <!-- Button -->
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-primary ">Sign in</button>
+                                <button type="submit" class="btn btn-primary ">{{ __('messages.Sign In') }}</button>
                             </div>
                         </div>
                         <hr class="my-4">

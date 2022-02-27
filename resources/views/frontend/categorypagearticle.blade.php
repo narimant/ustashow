@@ -15,7 +15,7 @@
                 <!-- Flush Nav -->
                 <div class="flush-nav">
                     <nav class="nav">
-                        <a class="nav-link active ps-0" href="{{Route::currentRouteName()}}">All</a>
+                        <a class="nav-link active ps-0" href="{{Route::currentRouteName()}}">{{__('messages.All')}}</a>
 
                     </nav>
                 </div>

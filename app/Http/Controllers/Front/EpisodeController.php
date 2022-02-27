@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Front;
 
 use App\Episode;
 use App\Http\Controllers\Controller;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\SEOTools;
 use Illuminate\Http\Request;
 
 class EpisodeController extends Controller
@@ -47,8 +50,27 @@ class EpisodeController extends Controller
      */
     public function show($course,Episode $episode)
     {
+        $local=app()->getLocale();
 
-        return view('frontend.episode', compact('course','episode'));
+        /*
+   * seo strat
+   */
+        SEOMeta::setTitle($episode->seoData('seoTitle'));
+        SEOMeta::setDescription($episode->seoData('seoDescription'));
+        SEOMeta::addKeyword($episode->seoData('seoKeyword'));
+
+        OpenGraph::setTitle($episode->seoData('seoTitle'));
+        OpenGraph::setDescription($episode->seoData('seoDescription'));
+        OpenGraph::setUrl($_SERVER['HTTP_HOST'].$episode->path());
+        OpenGraph::addProperty('type', 'articles');
+        OpenGraph::setSiteName(\env('APP_NAME'));
+        OpenGraph::addProperty('locale', $local);
+
+        SEOTools::setCanonical($_SERVER['HTTP_HOST'].$course->path());
+
+
+        $comment=$episode->comments()->where(['status'=>1,'parent_id'=>0])->latest()->with('comments')->get();
+        return view('frontend.episode', compact('course','episode','comment'));
     }
 
     /**

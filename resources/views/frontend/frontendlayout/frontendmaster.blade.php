@@ -9,7 +9,7 @@ $dir=(app()->getLocale()=='fa') ? "rtl" :"ltr";
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     {!! SEO::generate() !!}
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{asset('frontend/logo/icon.jpg')}}" />
 
     <script src="{{ asset('js/sweetalert.min.js') }}"></script>
 

@@ -74,7 +74,7 @@ class Article extends Model
         $created = new Carbon($this->created_at);
         $now = Carbon::now();
         $difference = ($created->diff($now)->days < 1)
-            ? 'today'
+            ? __('messages.today')
             : $created->diffForHumans($now);
 
 

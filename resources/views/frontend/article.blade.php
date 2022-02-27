@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <div>
-                            <span class="ms-2 text-muted">Share</span>
+                            <span class="ms-2 text-muted">{{__('messages.Share')}}</span>
                             <a href="#" class="ms-2 text-muted"><i class="fab fa-facebook"></i></a>
                             <a href="#" class="ms-2 text-muted"><i class="fab fa-twitter"></i></a>
                             <a href="#" class="ms-2 text-muted "><i class="fab fa-linkedin"></i></a>
@@ -58,7 +58,7 @@
                             </div>
                         </div>
                         <div>
-                            <span class="ms-2 text-muted">Share</span>
+                            <span class="ms-2 text-muted">{{__('messages.Share')}}</span>
                             <a href="#" class="ms-2 text-muted"><i class="fab fa-facebook"></i></a>
                             <a href="#" class="ms-2 text-muted"><i class="fab fa-twitter"></i></a>
                             <a href="#" class="ms-2 text-muted "><i class="fab fa-linkedin"></i></a>

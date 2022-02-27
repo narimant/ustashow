@@ -1,8 +1,8 @@
 
-@include('admin.section.header')
+@include('Admin.section.header')
 
 
-    @include('admin.section.sidebar')
+    @include('Admin.section.sidebar')
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">

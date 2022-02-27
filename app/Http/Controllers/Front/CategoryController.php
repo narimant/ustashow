@@ -1,10 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\front;
+namespace App\Http\Controllers\Front;
+
 
 use App\Category;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\SEOTools;
+
 
 class CategoryController extends Controller
 {
@@ -18,8 +22,25 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
+        $local=app()->getLocale();
         $articles=$category->articles()->latest()->paginate(15);
         $courses=$category->courses()->latest()->paginate(15);
+
+        /*
+        * seo strat
+        */
+        SEOMeta::setTitle($category->seoData('seoTitle'));
+        SEOMeta::setDescription($category->seoData('seoDescription'));
+        SEOMeta::addKeyword($category->seoData('seoKeyword'));
+
+        OpenGraph::setTitle($category->seoData('seoTitle'));
+        OpenGraph::setDescription($category->seoData('seoDescription'));
+        OpenGraph::setUrl($_SERVER['HTTP_HOST'].$category->path());
+        OpenGraph::addProperty('type', 'articles');
+        OpenGraph::setSiteName(\env('APP_NAME'));
+        OpenGraph::addProperty('locale', $local);
+
+        SEOTools::setCanonical($_SERVER['HTTP_HOST'].$category->path());
         if($articles->count()>0)
         {
             return view('frontend.categorypagearticle',compact('articles'));

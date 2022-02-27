@@ -17,13 +17,13 @@ class PaymentContoller extends Controller
     public function index()
     {
         $payments = Payment::with('user')->wherePayment(1)->latest()->paginate(20);
-        return view('Admin.payment.all' , compact('payments'));
+        return view('Admin.Payment.all' , compact('payments'));
     }
 
     public function unsuccessful()
     {
         $payments = Payment::with('user')->wherePayment(0)->latest()->paginate(20);
-        return view('Admin.payment.unsuccessful' , compact('payments'));
+        return view('Admin.Payment.unsuccessful' , compact('payments'));
     }
 
     /**

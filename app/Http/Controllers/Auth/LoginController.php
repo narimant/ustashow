@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -83,6 +84,15 @@ class LoginController extends Controller
             'password' => 'required|string',
             'g-recaptcha-response'=>'recaptcha'
         ]);
+    }
+
+
+    public function showLoginForm()
+    {
+        SEOMeta::setTitle(__('messages.Login'));
+        SEOMeta::setDescription(__('messages.Login'));
+        SEOMeta::addKeyword(__('messages.Login'));
+        return view('auth.login');
     }
 
 }

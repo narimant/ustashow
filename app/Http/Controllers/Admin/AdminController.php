@@ -18,7 +18,7 @@ class AdminController extends Controller
 
          //dd(auth()->users()->hasRole(Permission::whereName('show-article')->first()->roles));
 
-        return view('admin.panel');
+        return view('Admin.panel');
     }
 
     protected  function uploadimage($file)

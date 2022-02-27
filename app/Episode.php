@@ -62,4 +62,56 @@ class Episode extends Model
     {
         return $this->morphToMany(tag::class, 'taggable');
     }
+
+
+
+    public function seoData($value='seoTitle')
+    {
+        if($value=='seoTitle')
+        {
+            if($this->seoTitle != null)
+            {
+                return $this->seoTitle;
+            }else
+            {
+                return  $this->title;
+            }
+
+        }elseif($value=='seoDescription')
+        {
+            if($this->seoDescription != null)
+            {
+                return $this->seoDescription;
+            }else
+            {
+                return  $this->description;
+            }
+        }elseif ($value=='seoKeyword')
+        {
+            if($this->seoKeyword != null)
+            {
+                return $this->seoKeyword;
+            }else
+            {
+
+                $keyword='';
+                $i=0;
+                foreach($this->tags()->get() as $tag)
+                {
+
+                    if($i==0)
+                    {
+                        $keyword=$tag->name;
+                    }else
+                    {
+                        $keyword=$keyword.' , '.$tag->name;
+                    }
+                    $i++;
+
+                }
+
+                return $keyword ;
+            }
+        }
+    }
 }

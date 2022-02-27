@@ -9,9 +9,9 @@
             <div class="ibox float-e-margins">
 
                     <h2>
-                        {{count($articles)}} results found for: <span class="text-navy">{{request('search')}}</span>
+                        {{count($articles)}}  {{ __('messages.results found for') }}: <span class="text-navy">{{request('search')}}</span>
                     </h2>
-                    <small>Request time  (0.23 seconds)</small>
+                    <small>{{ __('messages.Request time') }}  (0.23 seconds)</small>
 
                     <div class="search-form">
                         <form action="{{ route('home.search') }}" method="get">
@@ -19,7 +19,7 @@
                                 <input type="text" placeholder=" " name="search" value="{{request('search')}}" class="form-control input-lg">
                                 <div class="input-group-btn">
                                     <button class="btn btn-lg btn-primary" type="submit">
-                                        Search
+                                        {{ __('messages.Search') }}
                                     </button>
                                 </div>
                             </div>

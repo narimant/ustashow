@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Article;
 use App\Course;
 use App\Http\Controllers\Controller;
-use App\episode;
+use App\Episode;
 use App\Http\Requests\EpisodeRequest;
 use App\Tag;
 use Illuminate\Http\Request;

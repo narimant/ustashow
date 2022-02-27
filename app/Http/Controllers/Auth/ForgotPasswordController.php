@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 class ForgotPasswordController extends Controller
@@ -19,4 +20,13 @@ class ForgotPasswordController extends Controller
     */
 
     use SendsPasswordResetEmails;
+
+
+    public function showLinkRequestForm()
+    {
+        SEOMeta::setTitle(__('messages.Forgot Password'));
+        SEOMeta::setDescription(__('messages.Forgot Password'));
+        SEOMeta::addKeyword(__('messages.Forgot Password'));
+        return view('auth.passwords.email');
+    }
 }

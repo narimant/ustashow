@@ -18,7 +18,9 @@ class Language
     public function handle($request, Closure $next)
     {
         $local=$request->segment(1);
-
+        /*
+         * for use this section you can pass for get request()->ip()
+         */
         $position = Location::get();
         $countryCode=$position->countryCode;
 

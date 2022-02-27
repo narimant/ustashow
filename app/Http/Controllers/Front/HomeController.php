@@ -38,23 +38,23 @@ class HomeController extends Controller
 
         OpenGraph::setSiteName(\env('APP_NAME'));
         OpenGraph::addProperty('locale', $local);
-        if(cache()->has('articles')){
+
+        if(cache()->has('articles.'.$local)){
             $articles=cache('articles');
         }else{
-            $articles=Article::status()->latest()->take(4)->get();
-            cache(['articles'=>$articles,Carbon::now()->addMinute(10)]);
+            $articles=Article::status()->whereLang($local)->latest()->take(4)->get();
+            cache(['articles'=>$articles,Carbon::now()->addMinute(100)]);
         }
 
 
-        if(cache()->has('courses')){
+        if(cache()->has('courses.'.$local)){
             $courses=cache('courses');
         }else{
-            $courses=Course::latest()->take(4)->get();
-            cache(['courses'=>$courses,Carbon::now()->addMinute(10)]);
+            $courses=Course::status()->whereLang($local)->latest()->take(4)->get();
+            cache(['courses'=>$courses,Carbon::now()->addMinute(100)]);
         }
 
-        $articles=Article::status()->whereLang($local)->latest()->take(4)->get();
-        $courses=Course::latest()->take(4)->get();
+
         return view('frontend.index',compact('articles','courses'));
     }
 

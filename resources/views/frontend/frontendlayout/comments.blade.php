@@ -2,18 +2,18 @@
     <div class="card">
         <div class="card-body">
             <!-- Comment form-->
-            @include('admin.section.errors')
+            @include('Admin.section.errors')
             @auth
 
                 <form class="mb-4" method="post" action="{{route('comment.send')}}">
-                    <textarea class="form-control" name="comment" rows="3" placeholder="Join the discussion and leave a comment!"></textarea>
+                    <textarea class="form-control" name="comment" rows="3" placeholder="{{__('messages.Join the discussion and leave a comment!')}}"></textarea>
                     @csrf
                     <input type="hidden" name="parent_id" value="0">
 
                     <input type="hidden"  name="commentable_id" value="{{$subject->id}}">
                     <input type="hidden"  name="commentable_type" value="{{ get_class($subject) }}">
                     <button class="btn btn-primary mt-3">
-                        Send Comment
+                        {{__('messages.Send Comment')}}
                     </button>
                 </form>
             @else
@@ -77,7 +77,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                <h5 class="modal-title" id="exampleModalLabel">{{__('messages.New message')}}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -89,14 +89,14 @@
 
 
                     <div class="mb-3">
-                        <label for="message-text" class="col-form-label">Message:</label>
+                        <label for="message-text" class="col-form-label">{{__('messages.Message')}}:</label>
                         <textarea class="form-control" id="message-text" name="comment"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send message</button>
+                    <button type="submit" class="btn btn-primary">{{__('messages.Send message')}}</button>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('messages.Close')}}</button>
 
             </div>
         </div>
