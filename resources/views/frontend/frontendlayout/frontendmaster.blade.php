@@ -65,7 +65,7 @@ $dir=(app()->getLocale()=='fa') ? "rtl" :"ltr";
 
 
 
-<!-- footer-->
+<!-- pages-->
 @include('frontend.frontendlayout.footer')
 </body>
 </html>

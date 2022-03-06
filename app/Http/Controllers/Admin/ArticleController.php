@@ -6,6 +6,7 @@ use App\Article;
 use App\Category;
 use App\Http\Requests\ArticleRequest;
 use App\Tag;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 
 class ArticleController extends AdminController
@@ -57,8 +58,11 @@ class ArticleController extends AdminController
         /*
          * upload image
          */
-        $files=$request->file('images');
-        $imagesUrl=$this->uploadimage($files);
+        if($request->hasFile('images') != null)
+        {
+            $files=$request->file('images');
+            $imagesUrl=$this->uploadimage($files);
+        }
 
 
 
@@ -171,6 +175,11 @@ class ArticleController extends AdminController
          */
 
 
+        if($inputs['slug'] != '' &&$article->slug!= $inputs['slug'] )
+        {
+            $inputs['slug']=SlugService::createSlug(Article::class, 'slug', $inputs['slug']);
+
+        }
         $article->update($inputs);
         $article->categories()->sync($category);
         $article->tags()->sync($allTagfind);

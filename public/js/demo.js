@@ -381,13 +381,13 @@
   var $text_sm_footer_checkbox = $('<input />', {
     type: 'checkbox',
     value: 1,
-    checked: $('.main-footer').hasClass('text-sm'),
+    checked: $('.main-pages').hasClass('text-sm'),
     class: 'mr-1'
   }).on('click', function () {
     if ($(this).is(':checked')) {
-      $('.main-footer').addClass('text-sm')
+      $('.main-pages').addClass('text-sm')
     } else {
-      $('.main-footer').removeClass('text-sm')
+      $('.main-pages').removeClass('text-sm')
     }
   })
   var $text_sm_footer_container = $('<div />', { class: 'mb-4' }).append($text_sm_footer_checkbox).append('<span>Footer</span>')

@@ -138,6 +138,37 @@
                     </ul>
                 </li>
 
+
+                <!-- Pages -->
+                <li class="nav-item {{ Route::is(['pages.index','pages.create']) ? 'menu-open': '' }}">
+                    <a href="#" class="nav-link {{ Route::is(['pages.index','pages.create'])? 'active': '' }}">
+                        <i class="fas fa-newspaper"></i>
+                        <p>
+                            Pages
+                            <i class="fas fa-angle-left right"></i>
+
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('pages.index')}}"
+                               class="nav-link {{ Route::is('pages.index')? 'active': '' }}">
+
+                                <p>All Page</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('pages.create')}}"
+                               class="nav-link {{ Route::is('pages.create')? 'active': '' }}">
+
+                                <p>Create Page</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
                 <!-- Courses -->
                 <li class="nav-item {{ Route::is(['courses.index','courses.create']) ? 'menu-open': '' }}">
                     <a href="#" class="nav-link {{ Route::is(['courses.index','courses.create'])? 'active': '' }}">
@@ -324,8 +355,8 @@
 
 
                 <!-- Site Settings -->
-                <li class="nav-item {{ Route::is(['siteSettings.index','payments.unsucsess']) ? 'menu-open': '' }}">
-                    <a href="#" class="nav-link {{ Route::is(['payments.index','payments.unsucsess'])? 'active': '' }}">
+                <li class="nav-item {{ Route::is(['siteSettings.index','footer.index']) ? 'menu-open': '' }}">
+                    <a href="#" class="nav-link {{ Route::is(['siteSettings.index','footer.index'])? 'active': '' }}">
                         <i class="fa-thin fa-books"></i>
                         <p>
                             Site Settings
@@ -339,6 +370,14 @@
                                class="nav-link {{ Route::is('siteseo.index')? 'active': '' }}">
 
                                 <p>Site Main Seo</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{route('footer.index')}}"
+                               class="nav-link {{ Route::is('footer.index')? 'active': '' }}">
+
+                                <p>Site Footer Settings</p>
                             </a>
                         </li>
 

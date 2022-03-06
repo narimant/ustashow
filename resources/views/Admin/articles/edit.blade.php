@@ -49,6 +49,10 @@
                 <label  for="title">Titile</label>
                 <input type="text" name="title" value="{{ $article->title }}" class="form-control" id="title" placeholder="insert title " >
             </div>
+            <div class="form-group">
+                <label  for="title">Slug</label>
+                <input type="text" name="slug" value="{{ $article->slug }}" class="form-control" id="title" placeholder="insert title " >
+            </div>
 
             <div class="form-group">
                 <label  for="description">description</label>

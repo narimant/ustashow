@@ -70,7 +70,7 @@ return [
     'Before proceeding, please check your email for a verification link.'=>'Before proceeding, please check your email for a verification link.',
     'If you did not receive the email'=>'If you did not receive the email',
     'click here to request another'=>'click here to request another',
-    ''=>'',
+    'contact'=>'Contact',
     ''=>'',
     ''=>'',
     ''=>'',

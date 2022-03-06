@@ -1,4 +1,4 @@
-<div class="footer fixed-bottom mt-5">
+<div class="footer mt-5">
     <div class="container">
         <div class="row align-items-center g-0 border-top py-2">
             <!-- Desc -->
@@ -7,11 +7,12 @@
             </div>
             <!-- Links -->
             <div class="col-12 col-md-6">
+
                 <nav class="nav nav-footer justify-content-center justify-content-md-end">
-                    <a class="nav-link active ps-0" href="#">@lang('messages.Privacy')</a>
-                    <a class="nav-link" href="#">@lang('messages.Terms') </a>
-                    <a class="nav-link" href="#">@lang('messages.Feedback')</a>
-                    <a class="nav-link" href="#">@lang('messages.Support')</a>
+                    <a class="nav-link active ps-0" href="{{route('contact.index')}}">{{__('messages.contact')}}</a>
+                    @foreach($footerPages->get() as $footer)
+                    <a class="nav-link active ps-0" href="{{$footer->path()}}">{{ $footer->title }}</a>
+                    @endforeach
                 </nav>
             </div>
         </div>

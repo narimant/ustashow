@@ -23,7 +23,7 @@ class ArticleRequest extends FormRequest
      */
     public function rules()
     {
-        if($this->method =='POST')
+        if($this->method() =='POST')
         {
               return [
             'title'=>'required|max:250',

@@ -3,9 +3,9 @@
 namespace App\Providers;
 
 use App\Category;
+use App\Page;
 use App\Tag;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Route;
 use App\Article;
 use App\Course;
@@ -26,7 +26,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME = '/';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -49,7 +49,9 @@ class RouteServiceProvider extends ServiceProvider
         Route::bind('tagSlug' , function ($value) {
             return Tag::whereSlug($value)->firstOrFail();
         });
-
+        Route::bind('pages' , function ($value) {
+            return Page::whereSlug($value)->firstOrFail();
+        });
         parent::boot();
     }
 

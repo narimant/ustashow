@@ -84,7 +84,7 @@ return [
     'Before proceeding, please check your email for a verification link.'=>'Devam etmeden önce, lütfen bir doğrulama bağlantısı için e-postanızı kontrol edin.',
     'If you did not receive the email'=>'E-postayı almadıysanız',
     'click here to request another'=>'başka bir istek için buraya tıklayın',
-    ''=>'',
+    'contact'=>'İletişim',
     ''=>'',
     ''=>'',
     ''=>'',

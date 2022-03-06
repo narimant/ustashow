@@ -21,6 +21,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::namespace('Front')->group(function (){
     Route::get('language/{lang}','HomeController@switchLanguage');
+    Route::get('page/{pages}','HomeController@pages');
+
     Route::get('/','HomeController@index')->name('index');
     Route::get('/article/{articleSlug}','ArticleController@single');
     Route::get('/course/{courseSlug}','CourseController@single');
@@ -38,6 +40,9 @@ Route::namespace('Front')->group(function (){
     Route::get('/sitemap-categories','SitemapController@categories');
     Route::get('/sitemap-episodes','SitemapController@episodes');
 
+    //contact pages
+    Route::get('/contact','HomeController@contact')->name('contact.index');
+    Route::post('/contact','HomeController@contactSend')->name('contact.send');
 
     // Download Route
     Route::get('/download/{episode}' , 'CourseController@download');
@@ -87,6 +92,19 @@ Route::namespace('Admin')->prefix('/admin')->middleware(['auth:web','chekAdmin',
     Route::resource('permissions','PermissionController');
     Route::resource('categories','CategoryController') ;
     Route::resource('tags','TagController') ;
+
+
+    //pages section
+    Route::resource('pages','PageController');
+    Route::get('pageItem/{id}','PageController@restore')->name('pageItem.restore');
+    Route::get('pageItem/publish/{id}','PageController@publish')->name('pageItem.publish');
+    Route::delete('pageItem/{id}','PageController@forceDelete')->name('pageItem.forceDelete');
+
+
+    //Site Theme Settings
+    Route::get('/footer','ThemeController@footer')->name('footer.index');
+    Route::post('/footer','ThemeController@footerStore')->name('footer.store');
+
     //comment routes
     Route::get('/comments/unsucsess','CommentController@unsucsessfull')->name('comments.unsucsess');
     Route::resource('comments','CommentController');

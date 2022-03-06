@@ -5,14 +5,20 @@ namespace App\Http\Controllers\Front;
 use App\Article;
 
 use App\Course;
+use App\Footer;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ContactRequest;
+use App\Mail\ContactMail;
+use App\Page;
 use App\Siteseo;
+use App\SiteSetting;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Carbon\Carbon;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Mail;
 use Stevebauman\Location\Facades\Location;
 use UxWeb\SweetAlert\SweetAlert;
 
@@ -103,5 +109,29 @@ class HomeController extends Controller
         }
 
 
+    }
+
+    public function pages(Page $pages)
+    {
+        return $pages;
+    }
+
+
+    public function contact()
+    {
+        return view('frontend.contact');
+    }
+
+    public function contactSend(ContactRequest $request)
+    {
+        $data=[
+            'first_name'=>$request->first_name,
+            'last_name'=>$request->last_name,
+            'email'=>$request->email,
+            'messages'=>$request->messages,
+        ];
+        $amdin_email=SiteSetting::where('key','admin_email')->first();
+        Mail::to('info@ustashow.com')->send(new ContactMail($data));
+        return 'thanks for send mail';
     }
 }

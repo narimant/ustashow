@@ -76,7 +76,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 				// Get a reference to the "Link Info" tab.
 				var infoTab = dialogDefinition.getContents( 'tab1' );
 
-				// Add a new text field to the "tab1" tab page.
+				// Add a new text field to the "tab1" tab pages.
 				infoTab.add( {
 					type: 'text',
 					label: 'My Custom Field',
@@ -95,7 +95,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 				var input1 = infoTab.get( 'input1' );
 				input1[ 'default' ] = 'www.example.com';
 
-				// Remove the "tab2" tab page.
+				// Remove the "tab2" tab pages.
 				dialogDefinition.removeContents( 'tab2' );
 
 				// Add a new tab to the "Link" dialog.

@@ -6,6 +6,7 @@ namespace App\Providers;
 
 
 use App\Comment;
+use App\Page;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Validator;
@@ -54,6 +55,11 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('Admin.master' , function($view) {
              $newcomment = Comment::where('status' , 0);
             $view->with([ 'newcomment' => $newcomment]);
+        });
+        view()->composer('frontend.frontendlayout.frontendmaster',function ($view){
+            $local=app()->getLocale();
+            $footerPages = Page::where('status' ,1)->where('lang',$local)->where('attachTo','footer');
+            $view->with([ 'footerPages' => $footerPages]);
         });
 
     }

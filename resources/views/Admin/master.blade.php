@@ -4,7 +4,7 @@
 
     @include('Admin.section.sidebar')
 
-<!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains pages content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">

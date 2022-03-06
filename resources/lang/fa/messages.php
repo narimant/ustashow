@@ -85,7 +85,7 @@ return [
     'Before proceeding, please check your email for a verification link.'=>'قبل از ادامه، لطفاً ایمیل خود را برای پیوند تأیید بررسی کنید.',
     'If you did not receive the email'=>'اگر ایمیل را دریافت نکردید',
     'click here to request another'=>'برای درخواست دیگری اینجا را کلیک کنید',
-    ''=>'',
+    'contact'=>'تماس با ما',
     ''=>'',
     ''=>'',
     ''=>'',
