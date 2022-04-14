@@ -252,9 +252,9 @@
                         @endphp
                         </a>
                         <div class="dropdown-menu  dropdown-menu-end" >
-                            <a class="dropdown-item" href="{{url('language',['lang'=>'tr'])}}"><span class="flag-icon flag-icon-tr"> </span>  turkish</a>
-                            <a class="dropdown-item" href="{{url('language',['lang'=>'fa'])}}"><span class="flag-icon flag-icon-ir"> </span>  farsi</a>
-                            <a class="dropdown-item" href="{{url('language',['lang'=>'en'])}}"><span class="flag-icon flag-icon-us"> </span>  english</a>
+                            <a class="dropdown-item" href="{{url('tr')}}"><span class="flag-icon flag-icon-tr"> </span>  turkish</a>
+                            <a class="dropdown-item" href="{{url('fa')}}"><span class="flag-icon flag-icon-ir"> </span>  farsi</a>
+                            <a class="dropdown-item" href="{{url('en')}}"><span class="flag-icon flag-icon-us"> </span>  english</a>
                         </div>
                     </li>
 

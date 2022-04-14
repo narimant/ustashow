@@ -21,48 +21,56 @@ class Language
         /*
          * for use this section you can pass for get request()->ip()
          */
-        $position = Location::get();
+        $position = Location::get(request()->ip());
         $countryCode=$position->countryCode;
 
-        if(Cookie::get('userCountry') == null)
+        if(! array_key_exists($local,config('app.locales')))
         {
-            Cookie::queue('userCountry',$countryCode,60*24);
+            $segments=$request->segments();
+            if(Cookie::get('userCountry') == null)
+            {
+                Cookie::queue('userCountry',$countryCode,60*24);
 
-            if($countryCode=='IR')
-            {
-                $local='fa';
-                Cookie::queue('lang',$local,60*24);
+                if($countryCode=='IR')
+                {
+                    $local='fa';
+                    Cookie::queue('lang',$local,60*24);
 
-            }elseif($countryCode=='TR')
-            {
-                $local='tr';
-                Cookie::queue('lang',$local,60*24);
-            }else
-            {
-                $local='en';
-                Cookie::queue('lang',$local,60*24);
+                }elseif($countryCode=='TR')
+                {
+                    $local='tr';
+                    Cookie::queue('lang',$local,60*24);
+                }else
+                {
+                    $local='en';
+                    Cookie::queue('lang',$local,60*24);
+                }
+                $segments[0]=$local;
+                return redirect(implode('/',$segments));
+
             }
 
+            if(Cookie::get('lang') != null  )
+            {
+                $local=Cookie::get('lang');
+                $segments[0]=$local;
+            }
+            else
+            {
+                $segments[0]=config('app.fallback_locale');
+            }
+
+
+            return redirect(implode('/',$segments));
+        }
+        else
+        {
+            Cookie::queue(\Cookie::forget('lang'));
+            Cookie::queue('lang',$local,60*24);
         }
 
 
-
-        if(Cookie::get('lang') != null  )
-        {
-            $local=Cookie::get('lang');
-
-        }
-        if(array_key_exists($local,config('app.locales')))
-        {
-
-            app()->setLocale($local);
-
-        }else
-        {
-            app()->setLocale(config('app.fallback_locale'));
-        }
-
-
+        app()->setLocale($local);
 
 
         return $next($request);

@@ -90,35 +90,55 @@ class HomeController extends Controller
 
     }
 
-    public function switchLanguage($lang)
-    {
 
-        if ( array_key_exists($lang,config('app.locales')))
-        {
-            Cookie::queue(\Cookie::forget('lang'));
-            Cookie::queue('lang',$lang,60*24);
-                if($lang==config('app.fallback_locale'))
-                {
-                    return redirect('/');
-                }
-            return redirect('/'.$lang);
-        }else
-        {
-
-            return redirect('/');
-        }
-
-
-    }
 
     public function pages(Page $pages)
     {
-        return $pages;
+        $local=app()->getLocale();
+
+
+        /*
+       * seo strat
+       */
+        SEOMeta::setTitle($pages->seoData('seoTitle'));
+        SEOMeta::setDescription($pages->seoData('seoDescription'));
+        SEOMeta::addKeyword($pages->seoData('seoKeyword'));
+
+        OpenGraph::setTitle($pages->seoData('seoTitle'));
+        OpenGraph::setDescription($pages->seoData('seoDescription'));
+        OpenGraph::setUrl($_SERVER['HTTP_HOST'].$pages->path());
+        OpenGraph::addProperty('type', 'articles');
+        OpenGraph::setSiteName(\env('APP_NAME'));
+        OpenGraph::addProperty('locale', $local);
+
+
+        $comment=$pages->comments()->where(['status'=>1,'parent_id'=>0])->latest()->with('comments')->get();
+        return view('frontend.page',compact('pages','comment'));
     }
 
 
     public function contact()
     {
+
+
+        $local=app()->getLocale();
+            $site_title=__('messages.contact title');
+            $site_description=__('messages.contact description');
+           $site_keyword=__('messages.contact keyword');
+
+
+
+        SEOMeta::setTitle($site_title);
+        SEOMeta::setDescription($site_description);
+        SEOMeta::addKeyword($site_keyword);
+
+        OpenGraph::setTitle($site_title);
+        OpenGraph::setDescription($site_description);
+        OpenGraph::setUrl($_SERVER['HTTP_HOST']);
+
+        OpenGraph::setSiteName(\env('APP_NAME'));
+        OpenGraph::addProperty('locale', $local);
+
         return view('frontend.contact');
     }
 

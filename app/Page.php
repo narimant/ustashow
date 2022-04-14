@@ -89,30 +89,9 @@ class Page extends Model
             }
         }elseif ($value=='seoKeyword')
         {
-            if($this->seoKeyword != null)
-            {
+
                 return $this->seoKeyword;
-            }else
-            {
 
-                $keyword='';
-                $i=0;
-                foreach($this->tags()->get() as $tag)
-                {
-
-                    if($i==0)
-                    {
-                        $keyword=$tag->name;
-                    }else
-                    {
-                        $keyword=$keyword.' , '.$tag->name;
-                    }
-                    $i++;
-
-                }
-
-                return $keyword ;
-            }
         }
     }
 }

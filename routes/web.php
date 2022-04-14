@@ -20,7 +20,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::namespace('Front')->group(function (){
-    Route::get('language/{lang}','HomeController@switchLanguage');
+    Route::get('{lang}','HomeController@switchLanguage');
     Route::get('page/{pages}','HomeController@pages');
 
     Route::get('/','HomeController@index')->name('index');

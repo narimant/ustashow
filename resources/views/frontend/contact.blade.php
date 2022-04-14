@@ -11,28 +11,22 @@
             <div class="px-xl-20 px-md-8 px-4 py-8 py-lg-0">
                 <!-- content -->
                 <div class="d-flex justify-content-between mb-7 align-items-center">
-                    <a href="../index.html"><img src="../assets/images/brand/logo/logo.svg" alt="">
+                    <a href="{{url('/')}}"><img src="{{asset('frontend/logo/menulogo.jpg')}}" alt="">
                     </a>
                 </div>
                 <div class="text-dark">
-                    <h1 class="display-4 fw-bold">Get In Touch.</h1>
+                    <h1 class="display-4 fw-bold">{{__('messages.Get In Touch')}}.</h1>
                     <p class="lead text-dark">
-                        Fill in the form to the right to get in touch with someone on
-                        our
-                        team, and we will reach out shortly.
+                        {{__('messages.Fill in the form to the right to get in touch with someone on our team, and we will reach out shortly.')}}
                     </p>
                     <div class="mt-8">
-                        <p class="fs-4 mb-4">
-                            If you are seeking support please visit our <a href="#">support
-                                portal</a> before
-                            reaching out directly.
-                        </p>
+
                         <!-- address -->
 
                         <p class="fs-4"><i class="bi bi-telephone text-primary
-                    me-2"></i> + 0123-456-7890</p>
+                    me-2"></i>+905550811366</p>
                         <p class="fs-4"><i class="bi bi-envelope-open
-                    text-primary me-2"></i> hello@geekui.com</p>
+                    text-primary me-2"></i> suport@ustashow.com</p>
                         <p class="fs-4 d-flex"><i class="bi bi-geo-alt
                     text-primary me-2"></i> 2652 Kooter Lane Charlotte, NC 28263</p>
                     </div>
@@ -67,30 +61,30 @@
                         @method('post')
                         <!-- form group -->
                         <div class="mb-3 col-12 col-md-12">
-                            <label class="form-label" for="fname">First Name:<span class="text-danger">*</span></label>
-                            <input class="form-control" type="text" name="first_name" id="fname" placeholder="First Name" >
+                            <label class="form-label" for="fname">{{__('messages.First Name')}}:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" name="first_name" id="fname" placeholder="{{__('messages.First Name')}}" >
                         </div>
                         <!-- form group -->
                         <div class="mb-3 col-12 col-md-12">
-                            <label class="form-label" for="lname">Last Name:<span class="text-danger">*</span></label>
-                            <input class="form-control" type="text" name="last_name" id="lname" placeholder="Last Name" >
+                            <label class="form-label" for="lname">{{__('messages.Last Name')}}:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" name="last_name" id="lname" placeholder="{{__('messages.Last Name')}}" >
                         </div>
                         <!-- form group -->
                         <div class="mb-3 col-12 col-md-12">
-                            <label class="form-label" for="email">Email:<span class="text-danger">*</span></label>
-                            <input class="form-control" type="email" name="email" id="email" placeholder="Email" >
+                            <label class="form-label" for="email">{{__('messages.Email')}}:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="email" name="email" id="email" placeholder="{{__('messages.Email')}}" >
                         </div>
 
 
                         <!-- form group -->
                         <div class="mb-3 col-12">
-                            <label class="text-dark form-label" for="messages">Message:</label>
-                            <textarea class="form-control" id="messages" rows="3" placeholder="Messages" name="messages"></textarea>
+                            <label class="text-dark form-label" for="messages">{{__('messages.Message')}}:</label>
+                            <textarea class="form-control" id="messages" rows="3" placeholder="{{__('messages.Message')}}" name="messages"></textarea>
                         </div>
                         <!-- button -->
                         <div class=" col-12">
                             <button type="submit" class="btn btn-primary btn-block">
-                                Submit
+                                {{__('messages.Submit')}}
                             </button>
                         </div>
                     </form>

@@ -31,6 +31,7 @@ class CreatePagesTable extends Migration
             $table->string('seoTitle')->nullable();
             $table->string('seoDescription')->nullable();
             $table->string('seoKeyword')->nullable();
+            $table->boolean('commentStatus')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
