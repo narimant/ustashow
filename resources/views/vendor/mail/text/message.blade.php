@@ -19,8 +19,8 @@
     @endisset
 
     {{-- Footer --}}
-    @slot('pages')
-        @component('mail::pages')
+    @slot('footer')
+        @component('mail::footer')
             © {{ date('Y') }} {{ config('app.name') }}. @lang('All rights reserved.')
         @endcomponent
     @endslot

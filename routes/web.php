@@ -20,7 +20,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::namespace('Front')->group(function (){
-    Route::get('{lang}','HomeController@switchLanguage');
+
     Route::get('page/{pages}','HomeController@pages');
 
     Route::get('/','HomeController@index')->name('index');
@@ -33,12 +33,14 @@ Route::namespace('Front')->group(function (){
     Route::post('comment','HomeController@comment')->name('comment.send');
 
     //sitemap
+
     Route::get('/sitemap','SitemapController@index');
     Route::get('/sitemap-articles','SitemapController@articles');
     Route::get('/sitemap-courses','SitemapController@courses');
     Route::get('/sitemap-tags','SitemapController@tags');
     Route::get('/sitemap-categories','SitemapController@categories');
     Route::get('/sitemap-episodes','SitemapController@episodes');
+    Route::get('/sitemap-pages','SitemapController@pages');
 
     //contact pages
     Route::get('/contact','HomeController@contact')->name('contact.index');
@@ -69,8 +71,8 @@ Route::namespace('Front')->middleware(['auth:web','verified'])->group(function (
 
 
 
-Route::get('login/google', 'Auth\LoginController@redirectToProvider');
-Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('login/google', 'Auth\LoginController@redirectToProvider')->name('google.login');
+Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback')->name('google.callback');
 
 
 Route::namespace('Admin')->prefix('/admin')->middleware(['auth:web','chekAdmin','verified'])->group(function (){

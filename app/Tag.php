@@ -6,6 +6,8 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+
+
 class Tag extends Model
 {
 
@@ -51,4 +53,45 @@ class Tag extends Model
     {
         return $this->morphedByMany(Episode::class, 'taggable');
     }
+  
+  
+     public function seoData($value='seoTitle')
+    {
+        if($value=='seoTitle')
+        {
+            if($this->seoTitle != null)
+            {
+                return $this->seoTitle;
+            }else
+            {
+                return  $this->name;
+            }
+
+        }elseif($value=='seoDescription')
+        {
+            if($this->seoDescription != null)
+            {
+                return $this->seoDescription;
+            }else
+            {
+                return  $this->name;
+            }
+        }elseif ($value=='seoKeyword')
+        {
+            if($this->seoKeyword != null)
+            {
+                return $this->seoKeyword;
+            }else
+            {
+                return null;
+            }
+        }
+    }
+  
+  
+  
+  
+  
+  
+  
 }

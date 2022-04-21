@@ -37,7 +37,7 @@
                                             {{$category->name}}
                                         </a>
                                         @endforeach
-                                        <h1 class="mb-2 mb-lg-4"> <a href="blog-single.html" class="text-inherit">
+                                        <h1 class="mb-2 mb-lg-4"> <a href="{{$article->path()}}" class="text-inherit">
                                                {{$article->title}}
                                             </a>
                                         </h1>

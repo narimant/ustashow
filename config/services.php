@@ -33,7 +33,7 @@ return [
     'google' => [
         'client_id' => '744489929323-a9m62o5ncblu1jc5grste8386tmgafvk.apps.googleusercontent.com',
         'client_secret' => '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',
-        'redirect' => 'https://ustashow.com/login/google/callback',
+        //'redirect' => 'https://ustashow.com/tr/login/google/callback',
     ],
     'recaptcha'=>[
         'secretkey'=>env('RECAPTCHA_SECRET')

@@ -6,8 +6,10 @@
 
     <div class="container-fluid">
     <div class="row align-items-center min-vh-100">
+        
         <!-- col -->
         <div class="col-lg-6 col-md-12 col-12">
+         
             <div class="px-xl-20 px-md-8 px-4 py-8 py-lg-0">
                 <!-- content -->
                 <div class="d-flex justify-content-between mb-7 align-items-center">

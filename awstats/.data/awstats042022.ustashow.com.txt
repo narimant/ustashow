@@ -1,0 +1,1806 @@
+AWSTATS DATA FILE 7.8 (build 20200416)
+# If you remove this file, all statistics for date 202204 will be lost/reset.
+# Last config file used to build this data file was /home/ustashow/domains/ustashow.com/awstats/.data/awstats.ustashow.com.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 30
+POS_GENERAL 2102                
+POS_TIME 2776                
+POS_VISITOR 58076               
+POS_DAY 66553               
+POS_DOMAIN 3682                
+POS_LOGIN 3915                
+POS_ROBOT 4070                
+POS_WORMS 5009                
+POS_EMAILSENDER 5140                
+POS_EMAILRECEIVER 5283                
+POS_SESSION 67167               
+POS_SIDER 67377               
+POS_FILETYPES 5418                
+POS_DOWNLOADS 5737                
+POS_OS 5874                
+POS_BROWSER 6252                
+POS_SCREENSIZE 8398                
+POS_UNKNOWNREFERER 8472                
+POS_UNKNOWNREFERERBROWSER 8863                
+POS_ORIGIN 9032                
+POS_SEREFERRALS 9174                
+POS_PAGEREFS 9395                
+POS_SEARCHWORDS 9700                
+POS_KEYWORDS 9852                
+POS_MISC 2439                
+POS_ERRORS 9911                
+POS_CLUSTER 3771                
+POS_SIDER_403 10106               
+POS_SIDER_400 10555               
+POS_SIDER_404 10681               
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20220422001843 1377 348545 11798929852569
+FirstTime 0
+LastTime 20220421224153
+LastUpdate 20220422002851 1377 0 1377 0 0
+TotalVisits 309                 
+TotalUnique 203                 
+MonthHostsKnown 0                   
+MonthHostsUnknown 223                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 62 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 41 128 3606809 400 556 1301784
+1 139 309 6507412 277 806 3092249
+2 152 369 9853387 305 774 2920911
+3 49 117 3404901 575 735 618035
+4 9 20 1263602 101 160 215966
+5 19 21 140525 259 311 340458
+6 20 26 253945 144 251 414436
+7 76 367 11263895 583 765 1033523
+8 18 20 166082 251 327 338206
+9 10 10 67507 280 354 503962
+10 70 81 797753 461 570 590461
+11 78 118 1314536 305 401 240661
+12 188 298 3388379 504 797 1795841
+13 156 290 7449637 504 784 440006
+14 56 79 717728 220 387 949906
+15 134 218 3474875 571 796 2621256
+16 84 200 3895096 201 541 1439510
+17 111 193 3114485 229 444 437110
+18 62 102 2501401 403 608 667342
+19 54 84 2180624 521 642 976490
+20 69 236 6117017 503 684 431884
+21 77 161 3708068 317 529 925438
+22 57 129 3160149 244 305 193094
+23 12 36 1788743 192 244 293523
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 1741 3612 80136556
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 21
+Googlebot/ 269 2099024 20220421193655 26
+DotBot/ 266 97327 20220421080255 261
+bot[\s_+:,\.\;\/\\-] 172 559926 20220421172354 28
+AhrefsBot/ 146 417932 20220422000041 36
+bingbot/ 74 852417 20220421191905 28
+MJ12bot/ 74 27275 20220422001415 69
+SemrushBot/ 68 90599 20220421230456 45
+YandexBot/ 64 464359 20220421104222 17
+Barkrowler 51 168625 20220411022844 4
+unknown 25 1592 20220421111240 25
+Googlebot\-Image/ 2 17808 20220421193656 0
+no_user_agent 3 48681 20220415033832 0
+bingpreview 13 937791 20220420062915 0
+dataprovider\.com 17 460059 20220402013534 0
+python 9 35519 20220418231837 1
+java 1 0 20220403073850 0
+Go\-http\-client/ 6 53424 20220414074958 0
+facebookexternalhit/ 12 512670 20220412225447 0
+netcraft 2 44696 20220406022304 0
+Applebot/ 18 33955 20220421101454 9
+crawl 1 3763 20220404034645 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 13
+css 884 20680765 0 0
+png 108 19859221 0 0
+ttf 93 5860080 0 0
+xsl 7 7054 0 0
+woff 21 3278345 0 0
+woff2 124 7122408 0 0
+map 35 3629850 0 0
+php 338 2404103 0 0
+html 3 7110 0 0
+jpg 371 5783275 0 0
+js 274 5904620 0 0
+Unknown 1272 5508521 0 0
+svg 82 91204 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 2
+/vendor/sitemap/styles/xml.xsl 3 0 4386
+/vendor/sitemap/styles/sitemapindex.xsl 2 0 2668
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 21
+androidpie 25 3
+winlong 79 79
+macosx6 2 2
+androidnougat 69 18
+winxp 77 77
+ios_iphone 838 142
+androidlollipop 1 1
+win8 51 51
+macosx9 74 74
+macosx13 2 2
+macosx15 141 30
+macosx14 1 1
+linuxubuntu 2 2
+macosx12 9 9
+linux 167 87
+androidmarshmallow 3 3
+win7 447 319
+macosx10 6 6
+win8.1 18 16
+Unknown 21 5
+win10 1579 814
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 98
+firefox28.0 15 15
+firefox66.0 2 2
+safari5.0.3 1 1
+chrome52.0.2743.116 6 6
+chrome40.0.2214.115 3 1
+chrome98.0.4758.102 41 4
+chrome95.0.4638.69 4 4
+chrome34.0.1847.137 1 1
+chrome88.0.4240.193 20 20
+chrome84.0.4147.125 14 14
+chrome29.0.1547.62 1 1
+chrome81.0.4044.129 1 1
+chrome100.0.4896.127 290 213
+chrome83.0.4103.97 39 39
+safari5.0.2 1 1
+msie8.0 2 2
+chrome42.0.2311.90 1 1
+chrome89.0.4389.114 4 4
+chrome79.0.3945.130 14 14
+chrome91.0.4472.114 60 14
+firefox65.0 6 6
+chrome66.0.3359.181 4 4
+chrome70.0.3538.102 103 13
+chrome50.0.2661.75 1 1
+opera69.0.3686.7 2 2
+chrome65.0.3325.181 3 3
+chrome90.0.4430.93 7 7
+chrome90.0.4430.85 9 9
+firefox50.0 9 9
+edge17 79 8
+chrome41.0.2224.3 46 46
+firefox53.0 6 6
+firefox40.0 2 2
+chrome37.0.2049.0 1 1
+chrome81.0.4044.92 15 1
+chrome68.0.3440.106 1 1
+chrome60.0.3112.107 4 4
+chrome100.0.4896.60 311 198
+firefox29.0 10 10
+chrome100.0.4889.0 6 2
+firefox45.0 1 1
+chrome92.0.4515.166 25 3
+firefox90.0 1 1
+firefox68.0 1 1
+firefox33.0 6 6
+mozilla 4 4
+netscape5.0 1 1
+safari5.0.4 4 4
+chrome68.0.3440.84 3 3
+chrome35.0.1916.47 1 1
+chrome99.0.4844.84 64 8
+chrome84.0.4147.105 10 4
+chrome41.0.2228.0 40 40
+chrome60.0.3112.90 11 11
+firefox36.0 10 10
+chrome90.0.4430.86 3 3
+safari 838 142
+chrome83.0.4103.116 15 2
+chrome67.0.3396.87 3 3
+firefox20.0 1 1
+chrome41.0.2225.0 54 54
+chrome71.0.3578.98 11 11
+chrome36.0.1985.125 1 1
+chrome94.0.4590.2 150 34
+firefox63.0 144 14
+firefox31.0 14 14
+chrome100.0.4896.88 248 131
+chrome74.0.3729.169 6 6
+chrome91.0.4472.164 1 1
+msie9.0 2 1
+chrome67.0.3393.4 71 71
+Unknown 17 1
+opera11.01 1 1
+chrome59.0.3071.115 2 2
+opera11.1 1 1
+opera54.0.2952.71 6 6
+chrome41.0.2226.0 37 37
+firefox91.0 4 4
+firefox17.0.6 1 1
+chrome78.0.3904.108 3 3
+chrome95.0.4638.54 2 2
+firefox67.0 2 2
+chrome41.0.2227.1 45 45
+chrome79.0.3945.88 1 1
+chrome83.0.4102.0 3 3
+chrome35.0.2117.157 1 1
+opera54.0.2952.54 6 6
+chrome45.0.2454.94 1 1
+chrome67.0.3396.99 3 3
+firefox81.0 32 32
+chrome81.0.4044.138 1 1
+chrome92.0.4515.159 1 1
+chrome100.0.4896.75 510 299
+chrome46.0.2754.75 1 1
+chrome96.0.4664.45 39 6
+chrome43.0.2357.134 1 1
+opera11.10 1 1
+chrome31.0.1650.16 1 1
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 5
+Mozilla/5.0_(compatible;_CensysInspect/1.1;__https://about.censys.io/) 20220414192031
+Mozilla/5.0_(compatible;_Google-Site-Verification/1.0) 20220405021026
+ZaldamoSearchBot(www.zaldamo.com/search.html) 20220414004249
+cortex/1.0 20220408155936
+Mozilla/5.0_(compatible;_seocompany/0.6;__;_) 20220419225107
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 2
+ZaldamoSearchBot(www.zaldamo.com/search.html) 20220414004249
+cortex/1.0 20220408155936
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 582 647
+From1 5 5
+From2 51 55
+From3 4 4
+From4 1099 2901
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 4
+www_google_com_hk 1 1
+google_com 16 16
+www_google_com 32 36
+www_bing_com 2 2
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 4
+http://138.201.176.129:80 1 1
+https://l.instagram.com 1 1
+http://138.201.176.129 1 1
+http://dirtywatercoffeecompany.com/__media__/js/netsoltrademark.php 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 9
+403 40 6927
+503 1 299
+400 3 1656
+302 698 164080
+499 4 0
+500 55 7988959
+405 11 2190561
+404 6721 4542418
+301 3883 956956
+END_ERRORS
+
+# URL with 403 errors - Hits - Last URL referrer
+BEGIN_SIDER_403 12
+/backend/.env 1 http://ustashow.com/backend/.env
+/upload/images/2022/ 1 -
+/priv8.php 4 -
+/api/.env 1 http://ustashow.com/api/.env
+/.env 22 -
+/.git/config 4 -
+/admin/articles/5/edit 2 https://ustashow.com/admin/articles
+/xmlrpc.php 1 -
+/.env.bak 1 -
+/core/.env 1 http://ustashow.com/core/.env
+/.env/ 1 -
+/admin/articles/5 1 https://ustashow.com/admin/articles/5/edit
+END_SIDER_403
+
+# URL with 400 errors - Hits - Last URL referrer
+BEGIN_SIDER_400 2
+/wp-includes/wlwmanifest.xml 1 -
+/feed/ 2 -
+END_SIDER_400
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 1016
+/fa/page/pages/notification-history.html 4 -
+/members/sergjrr/activity/favorites/feed 1 -
+/assets/images/brand/logo/logo-icon.svg 1 https://ustashow.com/password/reset
+/tr/groups/innovation-club/request-membership 1 -
+/members/nariman-tatari/groups 1 -
+/members/julilej/profile 1 -
+/members/veronapkx/forums 1 -
+/wp-json/wp/v2/pages/1058 1 -
+/en/article/test-1 2 -
+/0.php 2 -
+/groups/samsung-software/forum 1 -
+/tag/xiaomi-note-8-pro/feed 1 -
+/members/eldartff/activity/favorites/feed 1 -
+/members/leonmed/profile 3 -
+/wp-admin/includes/maint/wp-readindex.php 2 -
+/Shop 1 http://ustashow.com/Shop
+/o.php 4 -
+/en/pages/notification-history.html 2 -
+/upload/images/2022/300_gsmarena_002.jpg 1 https://ustashow.com/admin/articles/5/edit
+/groups/xiaomi-software/videos 1 -
+/radio.php 1 -
+/4price.php 2 -
+/xmlrpc.php 298 -
+/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%A2%D9%86%D9%84%D8%A7%DA%A9-%D8%A8%D9%88%D8%AA-%D9%84%D9%88%D8%AF%D8%B1-%DA%AF%D9%88%D8%B4%DB%8C-%D9%87%D8%A7%DB%8C-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C 21 -
+/news-feed/p/631 1 -
+/pages/profile-edit.html 13 -
+/members/veronasmi/activity/favorites/feed 1 -
+/forums/feed 1 -
+/admin/login 2 https://ustashow.com/
+/tr/members/bb-neville/photos 1 -
+/tr/groups/architecture 1 -
+/tr/members/bb-mateo/documents 2 -
+/.local 1 https://www.google.com/
+/doc.php 4 -
+/en/xmlrpc.php 6 -
+/tr/members/bb-mateo/activity 1 -
+/members/ilushikxzp/photos/albums 1 -
+/wp-json/wp/v2/posts 3 ustashow.com/wp-json/wp/v2/posts
+/BACKUP 2 http://ustashow.com/BACKUP
+/login/google 2 https://ustashow.com/fa/login
+/members/stodiahxja/photos 2 -
+/Sendemail.php 2 -
+/en/cms/wp-includes/wlwmanifest.xml 6 -
+/xo.php 2 -
+/groups/xiaomi-software 19 -
+/category/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D9%85%D9%88%D8%A8%D8%A7%DB%8C%D9%84/feed 8 -
+/tr/groups/sports-players/request-membership/discussions/forum-sample-discussion-8 1 -
+/main 1 http://ustashow.com/main
+/product-category/%D8%AF%D9%88%D8%B1%D9%87-%D9%87%D8%A7%DB%8C-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/feed 7 -
+/privacy-policy 1 -
+/upload/images/2022/900_repair.jpg 5 https://ustashow.com/fa/page/about-fa
+/members/leonmed/friends 2 -
+/cpanel.php 2 -
+/fa/course/ustashow.com/en/course/test 3 -
+/download/%D9%81%D8%A7%DB%8C%D9%84-%D8%A7%D9%86%D8%A8%D8%B1%DB%8C%DA%A9-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C-redmi-note-6-pro 18 -
+/.aws/credentials 1 -
+/document-tag/redmi-note-8-pro 1 -
+/members/svetlhrw/photos/albums 2 -
+/alexusmailer%202.0.php 2 -
+/tag/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d8%a8%da%a9%d8%a7%d9%be-%da%af%d8%b1%d9%81%d8%aa%d9%86-%d8%a8%d8%a7-samsung-smart-switch 1 -
+/wp-admin/css/colors/blue/blue.php 4 -
+/tr/members/bb-margaret/forums/topics 1 -
+/fa/password/pages/student-subscriptions.html 2 -
+/call 2 -
+/777.php 2 -
+/tr/members/bb-margaret/documents 1 -
+/tag/%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84/feed 8 -
+/w.php 2 -
+/en/2021/wp-includes/wlwmanifest.xml 1 -
+/members/saab 2 -
+/frontend/webfonts/fa-solid-900.woff2 8 https://ustashow.com/
+/cgi-bin/index.php 1 ustashow.com
+/groups 3 -
+/.production 1 https://www.google.com/
+/1/filemanager.php 1 -
+/old-index.php 7 -
+/tag/%D9%81%D9%84%D8%B4/feed 10 -
+/tr/groups/teaching-ideas/documents 2 -
+/members/svetlbwp/activity/feed 1 -
+/BLOG 1 http://ustashow.com/BLOG
+/tr/members/bb-margaret/activity/favorites/feed 1 -
+/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d8%a2%d9%86%d9%84%d8%a7%da%a9-%d8%a8%d9%88%d8%aa-%d9%84%d9%88%d8%af%d8%b1-%da%af%d9%88%d8%b4%db%8c-%d9%87%d8%a7%db%8c-%d8%b4%db%8c%d8%a7%d8%a6%d9%88%d9%85%db%8c 5 https://www.bing.com/
+/product/%d8%af%d9%88%d8%b1%d9%87-%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%da%a9%d8%a7%d9%85%d9%84-%d9%88-%da%af%d8%a7%d9%85-%d8%a8%d9%87-%da%af%d8%a7%d9%85-html-5-%d9%88-css3 1 https://www.google.com/
+/wp-content/uploads/small.php 2 -
+/wp-admin/includes/class-wp-media-list-data.php 2 -
+/members/viktoriqco/activity 2 -
+/41.php 2 -
+/fa/tag/shiaeomi/pages/student-subscriptions.html 3 -
+/if.php 2 -
+/members/vilianazyi/activity 1 -
+/tr/groups/teaching-ideas/activity 1 -
+/password/index.html 1 -
+/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php 3 -
+/download/%D9%81%D8%A7%DB%8C%D9%84-%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84-y7-prime-2019-dub-lx1 6 -
+/en/category/asdasd 1 -
+/members/nariman/profile 3 -
+/site 2 http://ustashow.com/site
+/admin/controller/extension/extension 5 binance.com
+/wp-content/uploads/2021/08/Redmi-6-Pro-also-updates-to-MIUI-12-1024x727.jpg 1 -
+/s.php 4 -
+/WSO.php 2 -
+/members/levphh 1 -
+/fa/password/index.html 2 -
+//wordpress/wp-includes/wlwmanifest.xml 14 -
+/fa/frontend/css/all.min.css 54 -
+/members/svetlbwp/profile 1 -
+/WWW 1 http://ustashow.com/WWW
+/backup 2 http://ustashow.com/backup
+/h.php 2 -
+/members/sergjrr/forums/replies 1 -
+/tr/forums/discussion/forum-example-discussion 1 -
+/.remote 1 https://www.google.com/
+/product/%D8%AF%D9%88%D8%B1%D9%87-%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%DA%A9%D8%A7%D9%85%D9%84-%D9%88-%DA%AF%D8%A7%D9%85-%D8%A8%D9%87-%DA%AF%D8%A7%D9%85-html-5-%D9%88-css3/feed 10 -
+/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84-%DA%AF%D9%88%D8%B4%DB%8C-redmi-note-6-pro-%D9%87%D8%B1-%D8%AF%D9%88-%D8%B3%DB%8C%D9%85 19 -
+/kk.php 2 -
+/2019 2 http://ustashow.com/2019
+/en/tag/shiaeomi/pages/profile-edit.html 1 -
+/shop 4 -
+/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-sp-flash-tool 16 -
+/tr/members/nariman/activity/feed 1 -
+/tr/members/bb-mateo/profile 1 -
+/NEW 1 http://ustashow.com/NEW
+/groups/xiaomi-software/members/all-members 2 -
+/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d9%81%d9%84%d8%b4-%da%af%d9%88%d8%b4%db%8c-%d8%b4%db%8c%d8%a7%d8%a6%d9%88%d9%85%db%8c-%d8%b1%d8%af%d9%85%db%8c-%d9%86%d9%88%d8%aa-6-%d9%be%d8%b1%d9%88 3 https://www.google.com/
+/tr/members/bb-madelyn/photos 1 -
+/shell.php 4 -
+/wp-content/plugins/tatsu/README.txt 1 -
+/courses 16 -
+/tr/groups/architecture/forum/discussions/forum-example-discussion-7 1 -
+/fa/page/index.html 4 -
+/fa/article/pages/profile-edit.html 4 -
+/en/pages 1 https://ustashow.com/en/sitemap
+/google081a5af80545e844.html 1 -
+/upload/images/2022/600_nariman.jpg 6 https://ustashow.com/admin/articles/5/edit
+/groups/huawei-software/activity 1 -
+/forum 8 https://ustashow.com/forum/
+/members/stssepqmxq/activity/feed 1 -
+/category/%D8%A8%D8%AE%D8%B4-vip/feed 7 -
+/11index.php 2 -
+/tag/%D8%A2%D9%85%D9%88%D8%B4-%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84 16 -
+/password/frontend/css/all.min.css 1 https://ustashow.com/password/reset
+/tr/members/bb-mateo/groups 1 -
+/Test 1 http://ustashow.com/Test
+/en/2019/wp-includes/wlwmanifest.xml 6 -
+/_aws/credentials 1 -
+/members/leonmed/documents 1 -
+/tr/members/umtfrdi34/forums/replies 2 -
+/en/article/test 2 -
+/en/wp1/wp-includes/wlwmanifest.xml 6 -
+/tr/members/bb-nicolina/activity 2 -
+/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%81%D9%84%D8%B4-%DA%AF%D9%88%D8%B4%DB%8C-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C-%D8%B1%D8%AF%D9%85%DB%8C-%D9%86%D9%88%D8%AA-6-%D9%BE%D8%B1%D9%88/feed 7 -
+/wp-config.php.original 1 -
+/sendmail.php 2 -
+/tr/members/bb-maverick 1 -
+/tr/members/bb-nicolina/forums 2 -
+//blog/wp-includes/wlwmanifest.xml 14 -
+/fa/category/index.html 3 -
+/kiss.php 2 -
+/FORUM 2 www.google.com
+/tag/%d9%86%d8%ad%d9%88%d9%87-%d8%a2%d9%86%d9%84%d8%a7%da%a9-%d8%a8%d9%88%d8%aa-%d9%84%d9%88%d8%af%d8%b1-%da%af%d9%88%d8%b4%db%8c-%d9%87%d8%a7%db%8c-%d8%b4%db%8c%d8%a7%d8%a6%d9%88%d9%85%db%8c 1 -
+/tr/members/bb-arianna/activity/feed 1 -
+//site/wp-includes/wlwmanifest.xml 14 -
+/groups/samsung-software/feed 3 -
+/tr/members/nariman/activity 1 -
+/download/eng-redmi-note-8 1 -
+/wp2.php 2 -
+/blog.php 2 -
+/members/viktorilsb/forums/favorites 1 -
+/wikindex.php 4 -
+/e.php 4 -
+/tr/members/bb-margaret/profile 1 -
+/fa/category/blog-single.html 5 -
+/document-tag/%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84-xiaomi-redmi-note-9 15 -
+/wp-uploads.php 2 -
+/wp-admin/includes/block-line.php 2 -
+/members/leonqxr/photos 1 -
+/members/yolme/profile 2 -
+//2019/wp-includes/wlwmanifest.xml 14 -
+/document-tag/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF-%D9%81%D8%A7%DB%8C%D9%84-%D9%81%D9%84%D8%B4-redmi-note-8-pro/feed 9 -
+/store 2 www.google.com
+/tr/groups/teaching-ideas/forum/discussions/forum-sample-discussion-6 1 -
+/tr/groups/innovation-club/forum/discussions/forum-amazing-discussion-5 1 -
+/tag/flash-xiaomi/feed 1 -
+/m.php 2 -
+/wp-content/uploads/readindex.php 2 -
+/tr/forums/feed 1 -
+/sidwso.php 1 -
+/photos 1 -
+/z.php 4 -
+/upload/images/2022/900_111.jpg 2 https://ustashow.com/fa/article/test-1
+/tag/%D9%86%D8%AD%D9%88%D9%87-%D8%A2%D9%86%D9%84%D8%A7%DA%A9-%D8%A8%D9%88%D8%AA-%D9%84%D9%88%D8%AF%D8%B1-%DA%AF%D9%88%D8%B4%DB%8C-%D9%87%D8%A7%DB%8C-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C/feed 7 -
+/tag/%D9%86%D8%AD%D9%88%D9%87-%D8%A2%D9%86%D9%84%D8%A7%DA%A9-%D8%A8%D9%88%D8%AA-%D9%84%D9%88%D8%AF%D8%B1-%DA%AF%D9%88%D8%B4%DB%8C-%D9%87%D8%A7%DB%8C-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C 15 -
+/wp-includes/wp-class.php 1 -
+/wp-load.php 3 ustashow.com
+/fa/tag/pages/student-subscriptions.html 3 -
+/members/nariman 5 -
+/upload/images/2022/600_111.jpg 2 https://ustashow.com/fa/category/%D8%AA%DA%A9%D9%86%D9%88%D9%84%D9%88%DA%98%DB%8C
+/tr/members/bb-madelyn/profile 1 -
+/groups/samsung-software/forum/discussion/%D9%85%D8%B9%D8%B1%D9%81%DB%8C-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1%D9%87%D8%A7-%D9%88-%D8%A8%D8%A7%DA%A9%D8%B3-%D9%87%D8%A7%DB%8C-%D8%AA%D8%B9%D9%85%DB%8C%D8%B1%D8%A7%D8%AA-%D9%86%D8%B1 11 -
+/mini.php 4 -
+/alexus.php 2 -
+/members/leonmed 1 -
+/en/tag/%D8%AA%DA%A9%D9%86%D9%88%D9%84%D9%88%DA%98%DB%8C/pages/student-subscriptions.html 2 -
+/tag/%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C/feed 9 -
+/tr/wp-login.php 1 -
+/en/wp/wp-includes/wlwmanifest.xml 6 -
+/test 2 http://ustashow.com/test
+/en/password/reset/frontend/css/all.min.css 5 https://ustashow.com/en/password/reset/f4f067d3dd1389a9df73f6cb754b5d1611d456bae787610c3e16dc29eaa5112e
+/document-tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84-redmi-note-8-pro/feed 9 -
+/category/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D9%85%D9%88%D8%A8%D8%A7%DB%8C%D9%84 19 -
+/members/serzhmj/activity 2 -
+/tag/%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C 15 -
+/tr/groups/sports-players/forum 1 -
+/members/nariman-tatari/videos 4 -
+/hello.php 2 -
+/tr/members/bb-trent/profile 1 -
+/tr/members/bb-neville/forums/favorites 1 -
+/tr/groups/sports-players/forum/discussions/forum-closed-discussion-5 1 -
+/admin 1 https://ustashow.com/
+/en/article/ustashow.com/en/article/xiaomis-mediatek-series-phones-removed-after-update-or-reset-phone 2 -
+/wp 3 http://ustashow.com/wp
+/members/nariman-tatari/forums/favorites 1 -
+/admin/login.aspx 1 https://ustashow.com/
+/members/veronasmi/profile 1 -
+/anone.php 2 -
+/admin/articles/4/edit 1 https://ustashow.com/admin/articles
+/tag/%d8%a2%d9%85%d9%88%d8%b2%d8%b4 1 https://www.google.com/
+/members/veronamti/friends 1 -
+/b.php 2 -
+/tr/groups/teaching-ideas/forum/discussions/forum-example-discussion-8 1 -
+/members/nariman-tatari 1 -
+/fa/article/aamozsh-aanlak-botlodr-goshi-hai-shiaeomi 1 https://ustashow.com/fa
+/8/fm.php 1 -
+/en/page/pages/notification-history.html 4 -
+/file-manager.php 1 -
+/en/article/index.html 1 -
+/en/2020/wp-includes/wlwmanifest.xml 5 -
+/tr/topics/page/2 1 -
+/members/stssepqmxq/forums 3 -
+/wso1.php 2 -
+/groups/huawei-software/feed 2 -
+/.well-known/traffic-advice 3 -
+/language/en 2 -
+/en/wp-includes/wlwmanifest.xml 5 -
+/lessons/%D9%86%D8%B5%D8%A8-%D9%88-%D8%B1%D8%A7%D9%87-%D8%A7%D9%86%D8%AF%D8%A7%D8%B2%DB%8C-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D8%A8%D8%B1%D8%A7%DA%A9%D8%AA%D8%B3-%D8%A8%D8%B1%D8%A7%DB%8C-html 11 -
+/fa/category/pages/profile-edit.html 3 -
+/document-tag/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF-%D9%81%D8%A7%DB%8C%D9%84-%D9%81%D9%84%D8%B4-redmi-note-8-pro 15 -
+/tr/members/bb-trent/forums/favorites 1 -
+/news-feed/p/641 1 -
+/mar.php 4 -
+/members/stssepqmxq/forums/replies 1 -
+/members/ilushikszq/forums/replies 1 -
+/n.php 2 -
+/tr/groups/nature-lovers/videos 1 -
+/kindex.php 2 -
+/wp-content/plugins/woo-product-table/readme.txt 2 http://ustashow.com/wp-content/plugins/woo-product-table/readme.txt
+/Gel.php 2 -
+/category/%D8%A8%D8%AE%D8%B4-vip/%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C 19 -
+/members/eldartff/profile 1 -
+/upload/images/2022/nariman.jpg 7 https://ustashow.com/admin/articles/5/edit
+/tr/members/bb-charles/friends 1 -
+/download/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF-%D9%81%D8%A7%DB%8C%D9%84-%D8%B1%D9%88%D8%AA-n920t-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%A7%D9%86%D8%AF%D8%B1%D9%88%DB%8C%D8%AF-6-0-1-%D9%88-7 19 -
+/tr/members/bb-nicolina/photos 1 -
+/gutenberg 3 -
+/tr/password/pages/notification-history.html 4 -
+/%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84-%DA%AF%D9%88%D8%B4%DB%8C-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C-%D8%B1%D8%AF-%D9%85%DB%8C-%D9%86%D9%88%D8%AA-8-%D9%BE%D8%B1%D9%88 76 -
+/tr/groups/nature-lovers/documents 1 -
+/members/stbhwifcim/documents 1 -
+/bb.php 2 -
+/members/stssepqmxq/videos 1 -
+//2018/wp-includes/wlwmanifest.xml 1 -
+/en/pages/profile-edit.html 2 -
+/alf.php 4 -
+/members/svetllvf/activity/favorites/feed 1 -
+/tag/xiaomi-note-8-pro 1 -
+/wp-content/uploads/2021/07/samsung-android-8-Odin-update-2-1024x576.jpg 2 https://www.google.com/
+/7/fm.php 1 -
+/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%81%D9%84%D8%B4-%DA%AF%D9%88%D8%B4%DB%8C-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C-%D8%B1%D8%AF%D9%85%DB%8C-%D9%86%D9%88%D8%AA-6-%D9%BE%D8%B1%D9%88 52 -
+/fa/article/sdfsdf 1 https://ustashow.com/admin/articles
+/category/%D8%A8%D8%AE%D8%B4-vip 16 -
+/tr/members/bb-charles/forums 1 -
+/en/article/OnePlus-Nord-2-long-term-review 7 -
+/tr/members/bb-maverick/friends 1 -
+//sito/wp-includes/wlwmanifest.xml 11 -
+/WORDPRESS 3 http://ustashow.com/WORDPRESS
+/members/nariman/activity/631 2 -
+/tr/pages/notification-history.html 4 -
+/old/license.txt 3 http://ustashow.com/old/license.txt
+/downloads/samsung-flash-file 4 -
+/tr/members/umtfrdi34/forums 1 -
+/news-feed/p/607 1 -
+/members/igorgsg/activity/favorites/feed 1 -
+/en/siemap 1 -
+/q.php 2 -
+/members/serzggz/profile 1 -
+/tr/members/bb-nicolina/forums/replies 2 -
+/tag/mediatek 2 -
+/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%A8%DA%A9%D8%A7%D9%BE-%DA%AF%D8%B1%D9%81%D8%AA%D9%86-%D8%A7%D8%B2-%DA%AF%D9%88%D8%B4%DB%8C-%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%DA%AF-%D8%A8%D8%A7-%D8%A7%D8%B3%D8%AA 19 -
+/tr/members/bb-margaret/forums/favorites 1 -
+/members/stssepqmxq/activity 2 -
+/tr/groups/nature-lovers/forum/discussions/forum-amazing-discussion-2 2 -
+/tr/feed 1 -
+/tag/%D9%81%D9%84%D8%B4-%D8%A8%D8%A7-odin 16 -
+/alfa123.php 2 -
+/members/veronasmi/activity/feed 1 -
+/file_manager.php 1 -
+/tr/groups/graphic-design/request-membership 1 -
+/wp-admin/css/modern/colors.css.php 2 -
+/en/password/index.html 3 -
+/tr/groups/teaching-ideas/videos 1 -
+/cms.php 2 -
+/sites/default/files 5 binance.com
+/wp-admin/admin-ajax.php 10 -
+/tag/%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84 15 -
+/members/viktorigit/activity/favorites/feed 1 -
+/wp-confirm.php 2 -
+/autoload_classmap.php 2 -
+/sym.php 2 -
+/members/svetlbwp/forums/favorites 1 -
+/members/sara1988/documents 1 -
+/members/stssepqmxq/profile 2 -
+/small.php 1 -
+/fa/password/pages/notification-history.html 2 -
+/New 1 http://ustashow.com/New
+/en/assets/images/brand/logo/logo-icon.svg 2 https://ustashow.com/en/password/reset
+/wp-content/plugins/wp-dest/dester/wp-dester.php 2 -
+/wp-content/uploads/2021/07/How-to-Boot-Samsung-Galaxy-S10-Download-Mode-Recovery-Mode-800x450-1-768x432.jpg 1 https://www.bing.com/
+/members/stssepqmxq/activity/favorites/feed 1 -
+/members/stssepqmxq 1 -
+/password/pages/student-subscriptions.html 1 -
+/admin/login.asp 1 https://ustashow.com/
+/fm.php 2 -
+/document-tag/redmi-note-9-imei-repair/feed 1 -
+/en/tag/pages/student-subscriptions.html 3 -
+/.well-known 5 binance.com
+/a.php 4 -
+/wp-config.txt 1 -
+/MARIJUANA.php 2 -
+//wp/wp-includes/wlwmanifest.xml 14 -
+/members/leonmed/videos 1 -
+/language/fa 1 -
+/fa/pages/profile-edit.html 2 -
+/wi.php 2 -
+/Ustashow 2 www.google.com
+/tag/%D9%81%D9%84%D8%B4-%D8%A8%D8%A7-odin/feed 9 -
+/members/nariman/photos 1 -
+/shx.php 2 -
+/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87-%D8%A7%D8%B2-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-samsung-smart-switch 15 -
+/k.php 4 -
+/groups/samsung-software 11 -
+/upload/images/2022/600_gsmarena_002.jpg 2 https://ustashow.com/admin/articles/5/edit
+/why-learning-html-is-important 25 -
+/tr/members/bb-charles/activity/feed 1 -
+/tr/members/bb-nicolina/photos/albums 1 -
+/en/2018/wp-includes/wlwmanifest.xml 1 -
+/sitemap.xml 2 -
+/members/svetlanaqor/activity/favorites/feed 1 -
+/members/yolme/videos 1 -
+/courses/%D8%AF%D9%88%D8%B1%D9%87-%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%DA%A9%D8%A7%D9%85%D9%84-%D9%88-%DA%AF%D8%A7%D9%85-%D8%A8%D9%87-%DA%AF%D8%A7%D9%85-html-5-%D9%88-css3 20 -
+/wso.php 4 -
+/en/password/pages/notification-history.html 3 -
+/members/serzsyw/profile 1 -
+/tr/frontend/css/all.min.css 29 https://ustashow.com/tr/register
+/tr/groups/innovation-club/forum/discussions/forum-total-discussion-6 1 -
+/members/svetllvf/activity/feed 1 -
+/tr/members/bb-madelyn 2 -
+/author/nariman 4 -
+/tr/pages/profile-edit.html 3 -
+/oldsite 1 http://ustashow.com/oldsite
+//wp1/wp-includes/wlwmanifest.xml 14 -
+/members/saab/forums 1 -
+/dup-installer/main.installer.php 2 -
+/news-feed/p/640 1 -
+/3.php 6 -
+/tr/article/pages/profile-edit.html 1 -
+/en/article/ustashow.com/en/article/%D9%86%DA%AF%D8%A7%D9%87-%D9%86%D8%B2%D8%AF%DB%8C%DA%A9-%D8%B2%D9%88%D9%85%DB%8C%D8%AA-%D8%A8%D9%87-%DA%AF%D9%84%DA%A9%D8%B3%DB%8C-S22-%D9%BE%D9%84%D8%A7%D8%B3-%D9%88-S22-%D8%A7%D9%88%D9%84%D8%AA%D8%B1%D8%A7-%D8%B3%D8%A7 7 -
+/1index.php 4 -
+/tr/members/bb-maverick/photos 1 -
+/config.js 1 -
+/STORE 2 www.google.com
+/en/media/wp-includes/wlwmanifest.xml 1 -
+/courses/feed 1 -
+/en/password/pages/profile-edit.html 3 -
+/tag/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d9%86%d8%b1%d9%85-%d8%a7%d9%81%d8%b2%d8%a7%d8%b1-%d9%85%d9%88%d8%a8%d8%a7%db%8c%d9%84 1 -
+/courses/html5-and-css3-courses 3 -
+/members/svetlbwp/activity/favorites/feed 1 -
+/document-tag/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF-%D9%81%D8%A7%DB%8C%D9%84-%D9%81%D9%84%D8%B4 21 -
+/tr/members/bb-neville/photos/albums 1 -
+/members/svetlhrw/forums/replies 1 -
+/upload/images/2022/300_111.jpg 6 https://ustashow.com/fa
+/123/license.txt 3 http://ustashow.com/123/license.txt
+/members/ilushikipe/photos 1 -
+//shop/wp-includes/wlwmanifest.xml 14 -
+/new-index.php 4 -
+/en/pages/student-subscriptions.html 3 -
+/en/news/wp-includes/wlwmanifest.xml 5 -
+/wordpress/license.txt 1 -
+//media/wp-includes/wlwmanifest.xml 1 -
+/fa/pages/student-subscriptions.html 2 -
+/tag/%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84-%D9%86%D9%88%D8%AA-8-%D9%BE%D8%B1%D9%88 15 -
+/shop/feed 1 -
+/content.php 2 -
+/frontend/images/avatar-2.jpg 627 https://ustashow.com/
+/sym403.php 4 -
+/tr/members/bb-arianna/documents 1 -
+/tag/note-8-pro 1 -
+/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%81%D9%84%D8%B4-%DA%AF%D9%88%D8%B4%DB%8C-%D9%87%D8%A7%DB%8C-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C/feed 9 -
+/wp-class.php 1 -
+/fa/category/pages/notification-history.html 3 -
+/news-feed/p/659 1 -
+/members/svetllvf/profile 1 -
+/tag/xiaomi/feed 1 -
+/uploads/contexmini.php 2 -
+/wp-ad.php 2 -
+/t.php 4 -
+/images 5 binance.com
+/blog/wp-login.php 2 http://ustashow.com
+/home 1 www.google.com
+/tr/members/bb-arianna/photos 1 -
+/upload/images/2022/300_repair.jpg 1 https://ustashow.com/admin/pages/2/edit
+/fa/password/frontend/css/all.min.css 1 https://ustashow.com/fa/password/reset
+/password/pages/profile-edit.html 1 -
+/tr/groups/nature-lovers 1 -
+/tr/members/bb-margaret/videos 1 -
+/app-ads.txt 22 -
+/tr/groups/architecture/feed 1 -
+/tr/members/bb-nicolina 1 -
+/wp_manager.php 1 -
+/tr/members/umtfrdi34/documents 1 -
+/fa/category/pages/student-subscriptions.html 3 -
+/members/saab/activity 1 -
+/humans.txt 2 http://ustashow.com/humans.txt
+/en/article/pages/student-subscriptions.html 1 -
+/9/fm.php 1 -
+/wp-includes/sys.php 2 -
+/.well-known/assetlinks.json 1 -
+/tag/%D8%A2%D9%86%D9%84%D8%A7%DA%A9-%D8%A8%D9%88%D8%AA-%D9%84%D9%88%D8%AF%D8%B1 15 -
+/tr/forums/discussion/forum-closed-discussion-2 1 -
+/%D9%88%DB%8C%D8%AF%DB%8C%D9%88-%D9%87%D8%A7 15 -
+/wso2.php 2 -
+/tr/members/bb-mateo/activity/feed 1 -
+/tr/members/bb-trent/forums 1 -
+/tag/%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C/feed 6 -
+/wp-blog.php 2 -
+/document-tag/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF-%D9%81%D8%A7%DB%8C%D9%84-%D9%81%D9%84%D8%B4-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C 18 -
+/1/license.txt 3 http://ustashow.com/1/license.txt
+/tr/members/umtfrdi34/forums/favorites 1 -
+/news-feed/p/658 1 -
+/user-acount/user-level 8 -
+/wp-admin/includes/mar.php 2 -
+/info.php 1 -
+/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%A8%DA%A9%D8%A7%D9%BE-%DA%AF%D8%B1%D9%81%D8%AA%D9%86-%D8%A7%D8%B2-%DA%AF%D9%88%D8%B4%DB%8C-%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%DA%AF-%D8%A8%D8%A7-%D8%A7%D8%B3%D8%AA/feed 8 -
+/tr/groups/graphic-design/forum/discussions/forum-closed-discussion-3 1 -
+/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D8%A7%D9%88%D8%AF%DB%8C%D9%86/feed 8 -
+/tag/%D8%A2%D9%85%D9%88%D8%B4-%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84/feed 7 -
+/ustashow 2 www.google.com
+/wp-content/uploads/avatars/24/5e393dd31fbf5-bpfull.jpg 1 -
+/slicemap.php 1 -
+/search.php 1 -
+/frontend/images/avatar-1.jpg 644 https://ustashow.com/
+/members/nariman-tatari/activity 1 -
+/fa/tag/shiaeomi/pages/profile-edit.html 3 -
+/xxx.php 2 -
+/2.php 4 -
+/wp-content/includes/uploads/Va.php 2 -
+/wp-content/uploads/2021/07/2FC26CB3-BCD6-4C9F-A8D7-5AA7D962FEF2-300x400.jpeg 1 -
+/members/leonmed/forums/replies 1 -
+/2018 1 http://ustashow.com/2018
+/wp-option.php 5 ustashow.com
+/members/vilianazyi 1 -
+/members/viktorigit/profile 1 -
+/wp-admin/includes/maint/repair-bak.php 2 -
+/demo 2 http://ustashow.com/demo
+/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%81%D9%84%D8%B4-%DA%AF%D9%88%D8%B4%DB%8C-%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%DA%AF 15 -
+/tag/mediatek/feed 2 -
+/lessons/%D9%85%D8%B9%D8%B1%D9%81%DB%8C-doctype-%D9%88-%D8%B4%D8%B1%D9%88%D8%B9-%D8%A8%D8%A7-html5 11 -
+/tag/%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%DA%AF/feed 9 -
+/tag/%D8%A2%D9%86%D9%84%D8%A7%DA%A9-%D8%A8%D9%88%D8%AA-%D9%84%D9%88%D8%AF%D8%B1/feed 9 -
+/fa/tag/pages/profile-edit.html 3 -
+/tr/members/bb-trent/forums/replies 1 -
+/alfa.php 6 -
+/admin/login.html 1 https://ustashow.com/
+/tr/sitemap_index.xml 1 -
+/tr/members/bb-nicolina/videos 2 -
+/members/yolme/photos/albums 3 -
+/lessons/%D9%85%D8%B9%D8%B1%D9%81%DB%8C-%D9%88-%D9%85%D9%82%D8%AF%D9%85%D9%87 15 -
+/en/frontend/css/all.min.css 18 https://ustashow.com/en/register
+/tr/comments/feed 1 -
+/wp-json 3 -
+/uploads 5 binance.com
+/tr/groups/graphic-design/request-membership/discussions/forum-example-discussion-6 1 -
+/fa/article/test-1 4 https://ustashow.com/admin/articles
+/admin.php 4 ustashow.com
+/document-tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84-redmi-note-8-pro 17 -
+/news-feed/p/661 2 -
+/assets/colors/get.php 1 -
+/tr/groups/teaching-ideas/photos 1 -
+/groups/huawei-software 3 -
+/tr/members/umtfrdi34/activity/favorites/feed 1 -
+/wp-content/plugins/elementor/assets/css/app-base-rtl.min.css 1 ustashow.com
+/aws.yml 1 -
+/tr/members/bb-charles/activity 2 -
+/comments/feed 3 -
+/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%81%D9%84%D8%B4-%DA%AF%D9%88%D8%B4%DB%8C-%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%DA%AF/feed 8 -
+/en/tag/pages/notification-history.html 1 -
+/wp-admin/css 5 binance.com
+/login/google/callback 3 https://ustashow.com/
+//news/wp-includes/wlwmanifest.xml 11 -
+/wp-admin/includes/readindex.php 2 -
+/tr/members/bb-mateo/forums 1 -
+/wp-content/uploads/group-avatars/27/60edc4fabe0fc-bpfull.png 1 https://www.google.com/
+/download/%d8%af%d8%a7%d9%86%d9%84%d9%88%d8%af-%d9%81%d8%a7%db%8c%d9%84-%d9%81%d9%84%d8%b4-%d8%aa%d8%b1%d9%85%db%8c%d9%85-%d8%b3%d8%b1%db%8c%d8%a7%d9%84-redmi-note-8-pro 1 https://www.google.com/
+/en/course/pages/notification-history.html 1 -
+/wp-content/uploads/2020/02/vr-300x300.png 1 -
+/bc 1 http://ustashow.com/bc
+/news-feed/p/697 1 -
+/members/svetlhrw/forums/favorites 1 -
+/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84-%DA%AF%D9%88%D8%B4%DB%8C-redmi-note-6-pro-%D9%87%D8%B1-%D8%AF%D9%88-%D8%B3%DB%8C%D9%85/feed 8 -
+/en/tag/pages/profile-edit.html 1 -
+/p.php 2 -
+/alwso.php 2 -
+/tr/members/bb-neville/forums/replies 1 -
+/en/website/wp-includes/wlwmanifest.xml 5 -
+/news-feed/p/665 1 -
+/tr/forums/discussion/forum-sample-discussion 1 -
+/tr/members/bb-mateo/videos 1 -
+/XxX.php 2 -
+/tr/groups/foodies-group/forum 1 -
+/members/nariman/groups 2 -
+/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%81%D9%84%D8%B4-%DA%AF%D9%88%D8%B4-%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%D9%85%D9%88%D8%B3%D9%86%DA%AF-%D8%A8%D8%A7-%D8%A7%D9%88%D8%AF%DB%8C%D9%86-odin 17 -
+/tr/members/bb-nicolina/profile 1 -
+/mtrx.php 1 -
+/old 3 http://ustashow.com/old
+/en/password/pages/student-subscriptions.html 3 -
+/tr/members/bb-trent/activity/favorites/feed 1 -
+/google 1 -
+/tag/%D8%A8%D9%88%D8%AA-%D9%84%D9%88%D8%AF%D8%B1/feed 10 -
+/www.php 2 -
+/6/fm.php 1 -
+/downloads/%D9%81%D8%A7%DB%8C%D9%84-%D9%81%D9%84%D8%B4-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C 19 -
+/tr/magaza/feed 1 -
+/members/stodiahxja/profile 3 -
+/lf.php 2 -
+/en/web/wp-includes/wlwmanifest.xml 6 -
+/tr/members/bb-arianna 1 -
+/tr/members/bb-madelyn/activity/feed 2 -
+/wp-stream.php 2 ustashow.com
+//website/wp-includes/wlwmanifest.xml 11 -
+/lessons/%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA-%D8%AA%DA%A9%D9%85%DB%8C%D9%84%DB%8C-%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-html-5 13 -
+/wp-login.php 52 http://ustashow.com/wp-login.php
+/category/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D9%85%D9%88%D8%A8%D8%A7%DB%8C%D9%84/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%DA%AF/feed 1 -
+/y.php 4 -
+/news-feed/feed 3 -
+/tr/members/bb-luna 1 -
+/en/fa 3 -
+/download/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF-%D9%81%D8%A7%DB%8C%D9%84-%D9%81%D9%84%D8%B4-%D9%81%D8%A7%D8%B1%D8%B3%DB%8C-%D8%B3%D8%A7%D8%B2-n920t-%D8%A8%DB%8C%D9%84%D8%AF-u5 16 -
+/members/ilushikxzp/documents 1 -
+/fa/article/pages/notification-history.html 3 -
+/./pages/student-subscriptions.html 2 -
+/fileman.php 1 -
+/old-site 1 http://ustashow.com/old-site
+//wp-json 1 -
+/tr/topics/page/3 1 -
+/it.php 2 -
+/en/test/wp-includes/wlwmanifest.xml 6 -
+/tr/groups/innovation-club/request-membership/discussions/forum-sample-discussion-7 1 -
+/mi.php 2 -
+/lessons/%D9%85%D8%B1%D9%88%D8%B1%DA%AF%D8%B1%D9%87%D8%A7-%D9%88-%D8%A7%D8%B3%D9%86%D8%A7%D8%AF 10 -
+/tr/members/bb-trent/forums/topics 1 -
+/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87-%D8%A7%D8%B2-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-samsung-smart-switch/feed 7 -
+/tag/%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%DA%AF 15 -
+/tr/groups/architecture/forum/discussions/forum-closed-discussion-4 1 -
+/Www 1 http://ustashow.com/Www
+/fa/article/pages/student-subscriptions.html 4 -
+/members/yolme 2 -
+/tr/groups/sports-players/forum/discussions/forum-example-discussion-9 2 -
+/fa/course/pages/notification-history.html 2 -
+/index.html 12 -
+/pages/student-subscriptions.html 15 -
+/forums/topic-tag/%D8%A7%D9%88%D8%AF%DB%8C%D9%86 17 -
+/tr/groups/foodies-group/albums 1 -
+/tr/groups/teaching-ideas/forum 1 -
+/product-category/%D8%AF%D9%88%D8%B1%D9%87-%D9%87%D8%A7%DB%8C-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C 24 -
+/new 3 http://ustashow.com/new
+/members/serzggz/activity/feed 1 -
+/wp-content/plugins/dzs-zoomsounds/webpack.config.js 1 -
+/news-feed/p/666 1 -
+/ads.txt 43 -
+/news-feed/p/647 1 -
+/img/user1-128x128.jpg 2 https://ustashow.com/tr/admin/comments/unsucsess
+/tr/forums/discussion/forum-total-discussion 1 -
+/!.php 2 -
+/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%A2%D9%86%D9%84%D8%A7%DA%A9-%D8%A8%D9%88%D8%AA-%D9%84%D9%88%D8%AF%D8%B1-%DA%AF%D9%88%D8%B4%DB%8C-%D9%87%D8%A7%DB%8C-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C/feed 7 -
+/tag/%D8%B1%D8%AF-%D9%85%DB%8C-%D9%86%D9%88%D8%AA-6-%D9%BE%D8%B1%D9%88/feed 8 -
+/defau1t.php 2 -
+/FoxWSO.php 2 -
+/lessons/%D9%85%D8%B9%D8%B1%D9%81%DB%8C-%D8%AA%DA%AF-head-%D8%A8%D9%87-%D8%B5%D9%88%D8%B1%D8%AA-%DA%A9%D8%A7%D9%85%D9%84 11 -
+/bk 1 http://ustashow.com/bk
+/fa/category/ustashow.com/en/category/%D8%AA%DA%A9%D9%86%D9%88%D9%84%D9%88%DA%98%DB%8C 3 -
+/upload/images/2022/111.jpg 1 https://ustashow.com/admin/articles/4/edit
+/frontend/webfonts/fa-solid-900.svg 9 https://ustashow.com/
+/wp-content/plugins/akismat/contents.php 1 -
+/tr/members/bb-trent/groups 1 -
+//test/wp-includes/wlwmanifest.xml 14 -
+//2021/wp-includes/wlwmanifest.xml 3 -
+/en/site/wp-includes/wlwmanifest.xml 6 -
+/u.php 4 -
+/%20/en/category/technology 3 -
+/members/svetlhrw/profile 2 -
+/assets/images/go.php 1 -
+/en/page/index.html 6 -
+/category/programming/feed 2 -
+/tr/members/bb-margaret/photos/albums 1 -
+/tr/members/bb-nicolina/activity/favorites/feed 1 -
+/wp-content/themes/buddyboss-theme/assets/images/svg/no-results.svg 1 -
+/members/serzggz/activity/favorites/feed 1 -
+/sindex.php 2 -
+/forums/topic-tag/odin 1 -
+/100.php 2 -
+/wp-admin.php 2 -
+/tr/groups/foodies-group/forum/discussions/forum-example-discussion-3 2 -
+/pages/course-filter-list.html 14 https://www.ustashow.com/
+/en/wp2/wp-includes/wlwmanifest.xml 5 -
+/SHOP 3 http://ustashow.com/SHOP
+/members/svetlanaqor/profile 1 -
+/category/%D8%A8%D8%AE%D8%B4-vip/%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C/feed 7 -
+/groups/samsung-software/photos 1 -
+/category/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D9%85%D9%88%D8%A8%D8%A7%DB%8C%D9%84/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C 2 -
+/en/tr 3 -
+/tr/members/bb-mateo 1 -
+/Cpanel.php 2 -
+/wordpress/wp-login.php 2 http://ustashow.com
+/en/password/frontend/css/all.min.css 2 https://ustashow.com/en/password/reset
+/tr/members/nariman/photos/albums 1 -
+/fa/course/index.html 2 -
+/tr/groups/teaching-ideas/members/all-members 1 -
+/wp-content/uploads/typehub/custom/dn46/.demo.php 2 ustashow.com
+/xox.php 4 -
+/upload/images/2022/600_repair.jpg 1 https://ustashow.com/admin/pages/2/edit
+/2020 2 http://ustashow.com/2020
+/wordpress 3 http://ustashow.com/wordpress
+/upload/images/2022/repair.jpg 1 https://ustashow.com/admin/pages/2/edit
+/g.php 2 -
+/en/index.html 2 -
+/tag/flash-xiaomi 2 -
+/members/sergowp/activity/feed 1 -
+/img/default-150x150.png 8 https://ustashow.com/admin/panel
+/fa.php 2 -
+/symlink.php 2 -
+/tr/members/bb-trent/photos/albums 1 -
+/news-feed/p/664 1 -
+/news-feed/p/646 1 -
+/download/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF-%D9%81%D8%A7%DB%8C%D9%84-%D9%81%D9%84%D8%B4-%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84-redmi-note-8-pro 16 -
+/members/ilushikipe/forums 1 -
+/fa/course/pages/student-subscriptions.html 2 -
+/tr/members/bb-maverick/profile 2 -
+/tr/forums/forum/public-forum 1 -
+/members/leonqxr/activity 1 -
+/en/sito/wp-includes/wlwmanifest.xml 5 -
+/document-tag/redmi-note-8-pro/feed 1 -
+/groups/xiaomi-software/photos 2 -
+/members/viktorigit/activity/feed 1 -
+/fa/tag/pages/notification-history.html 3 -
+/wp-content/plugins/tatsu/public/js/vendor/tilt.min.js 1 -
+/fa/article/%D9%86%DA%AF%D8%A7%D9%87-%D9%86%D8%B2%D8%AF%DB%8C%DA%A9-%D8%B2%D9%88%D9%85%DB%8C%D8%AA-%D8%A8%D9%87-%DA%AF%D9%84%DA%A9%D8%B3%DB%8C-S22-%D9%BE%D9%84%D8%A7%D8%B3-%D9%88-S22-%D8%A7%D9%88%D9%84%D8%AA%D8%B1%D8%A7-%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86 2 -
+/assets/colors/go.php 1 -
+/members/svetlbwp/forums 2 -
+/tr/forums/discussion/forum-total-discussion-2 1 -
+/mailer.php 4 -
+/stindex.php 2 -
+/news-feed/p/556 1 -
+/1/fm.php 2 -
+/en/google 9 https://ustashow.com/en/login
+/baindex.php 2 -
+/fa/login/google/callback 2 -
+/tr/members/umtfrdi34/friends 2 -
+/tr/groups/foodies-group/feed 1 -
+/data.php 2 -
+/en/article/about 1 -
+/x.php 4 -
+/manager.php 1 -
+/tag/%D8%B1%D8%AF-%D9%85%DB%8C-%D9%86%D9%88%D8%AA-6-%D9%BE%D8%B1%D9%88 15 -
+/tr/members/bb-madelyn/videos 1 -
+/wp/license.txt 4 http://ustashow.com/wp/license.txt
+/tr/members/bb-margaret/forums/replies 1 -
+/fa/pages/notification-history.html 1 -
+/%d8%aa%d8%b1%d9%85%db%8c%d9%85-%d8%b3%d8%b1%db%8c%d8%a7%d9%84-%da%af%d9%88%d8%b4%db%8c-%d8%b4%db%8c%d8%a7%d8%a6%d9%88%d9%85%db%8c-%d8%b1%d8%af-%d9%85%db%8c-%d9%86%d9%88%d8%aa-8-%d9%be%d8%b1%d9%88 4 https://www.google.com/
+/404.php 2 -
+/en/category/index.html 1 -
+/pages/notification-history.html 13 -
+/wp-rss.php 2 -
+/wp-admin/includes/maint/wp-cron.php 2 -
+/tr/groups/nature-lovers/photos 1 -
+/images.php 1 -
+/members/stbhwifcim 4 -
+/tr/category/genel 1 -
+/alexus-mailer.php 2 -
+/document-tag/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF-%D9%81%D8%A7%DB%8C%D9%84-%D9%81%D9%84%D8%B4/feed 7 -
+/product/%D8%AF%D9%88%D8%B1%D9%87-%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%DA%A9%D8%A7%D9%85%D9%84-%D9%88-%DA%AF%D8%A7%D9%85-%D8%A8%D9%87-%DA%AF%D8%A7%D9%85-html-5-%D9%88-css3 16 -
+/category/blog-single.html 1 -
+/tr/groups/graphic-design/request-membership/discussions/forum-total-discussion-5 1 -
+/news-feed/p/579 1 -
+/en/tag/%D8%A7%D9%BE%D9%84/pages/student-subscriptions.html 1 -
+/tr/topics/feed 1 -
+/members/sergjrr/videos 1 -
+/members/sergjrr/activity 1 -
+/fa/tag/%D8%AA%DA%A9%D9%86%D9%88%D9%84%D9%88%DA%98%DB%8C/pages/student-subscriptions.html 3 -
+/community 6 https://ustashow.com/community/
+/tr/groups/foodies-group/videos 1 -
+/fa/google 9 https://ustashow.com/fa/login
+/en/tag/%D8%A7%D9%BE%D9%84/pages/profile-edit.html 2 -
+/alex.php 2 -
+/CMSPages/logon.aspx 1 https://ustashow.com/
+/tag/%D8%A2%D8%B4%D9%86%D8%A7%DB%8C%DB%8C-%D8%A8%D8%A7-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-samsung-smart-switch/feed 8 -
+/fa/page/pages/student-subscriptions.html 4 -
+/downloads/download-flash-file 2 -
+/frontend/webfonts/fa-solid-900.ttf 9 https://ustashow.com/
+/tr/members/umtfrdi34/profile 1 -
+/groups/huawei-software/forum 1 -
+/upload/images/2022/gsmarena_002.jpg 1 https://ustashow.com/admin/articles/5/edit
+/members/julilej/activity/favorites/feed 1 -
+/en/shop/wp-includes/wlwmanifest.xml 6 -
+/Old 1 http://ustashow.com/Old
+/tr/groups/nature-lovers/albums 1 -
+/3index.php 6 -
+/members/levphh/friends 1 -
+/tr/groups/architecture/forum 1 -
+/test_404_page 1 -
+/tr/members/bb-maverick/forums 1 -
+/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4 18 -
+/SITE 1 http://ustashow.com/SITE
+/document-tag/%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84-xiaomi-redmi-note-9/feed 8 -
+/tag/redmi-note-6-pro/feed 1 -
+/wp-content/wp-logins.php 2 -
+/upload/images/2022/900_nariman.jpg 6 https://ustashow.com/admin/articles/5/edit
+/tr/groups/architecture/documents 1 -
+/tr/members/bb-nicolina/forums/favorites 1 -
+/4/fm.php 1 -
+/en/about 1 -
+/bypass.php 2 -
+/sito 1 http://ustashow.com/sito
+/tr/groups/sports-players/forum/discussions/forum-sample-discussion-8 2 -
+/frontend/css/materialdesignicons.css.map 28 -
+/document-tag/%D9%81%D9%84%D8%B4-%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84-redmi-note-8-pro/feed 8 -
+/members/julilej/activity/feed 1 -
+/news-feed/p/633 1 -
+/d.php 2 -
+/tr/groups/nature-lovers/forum 1 -
+/tr/members/bb-nicolina/friends 1 -
+/members/serzhmj/forums/favorites 2 -
+/tr/groups/architecture/forum/discussions/forum-sample-discussion-5 1 -
+/members/svetlhrw/forums 1 -
+/members/ilushikszq 1 -
+/en/blog/wp-includes/wlwmanifest.xml 6 -
+/ok.php 2 -
+/2/fm.php 1 -
+/tr/sepet 1 -
+/tr/groups/nature-lovers/members/all-members 1 -
+/sitio 1 http://ustashow.com/sitio
+/3/fm.php 1 -
+/blog 3 http://ustashow.com/blog
+/tr/groups/architecture/videos 1 -
+/dr.php 2 -
+/tag/%D8%A8%D9%88%D8%AA-%D9%84%D9%88%D8%AF%D8%B1 15 -
+/news-feed/p/663 1 -
+/wp-file.php 2 -
+/j.php 2 -
+/tr/members/bb-charles 1 -
+/2021 1 http://ustashow.com/2021
+/news-feed/p/704 1 -
+/backup/license.txt 3 http://ustashow.com/backup/license.txt
+/filemanager.php 1 -
+/user-acount/%D9%BE%D8%B1%D8%AF%D8%A7%D8%AE%D8%AA-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%DB%8C 55 -
+/members/viktoriqco/photos 1 -
+/send.php 2 -
+/wp-content 3 -
+/groups/xiaomi-software/forum 2 -
+/frontend/webfonts/fa-solid-900.woff 9 https://ustashow.com/
+/Wp 1 http://ustashow.com/Wp
+/_profiler/phpinfo 1 -
+/tr/members/bb-mateo/photos 1 -
+/members/leonqxr 1 -
+/tr/password/pages/student-subscriptions.html 3 -
+/members/igorpkf/documents 1 -
+/WP 3 http://ustashow.com/WP
+/groups/samsung-software/videos 1 -
+/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%81%D9%84%D8%B4-%DA%AF%D9%88%D8%B4-%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%D9%85%D9%88%D8%B3%D9%86%DA%AF-%D8%A8%D8%A7-%D8%A7%D9%88%D8%AF%DB%8C%D9%86-odin/feed 7 -
+/members/eldartff/activity/feed 1 -
+/bac 1 http://ustashow.com/bac
+/%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84-%DA%AF%D9%88%D8%B4%DB%8C-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C-%D8%B1%D8%AF-%D9%85%DB%8C-%D9%86%D9%88%D8%AA-8-%D9%BE%D8%B1%D9%88/feed 9 -
+/WordPress 3 http://ustashow.com/WordPress
+/simple.php 1 -
+/tr/groups/nature-lovers/activity 1 -
+/ssl.php 2 ustashow.com
+/bak 1 http://ustashow.com/bak
+/members/serzsyw/activity/favorites/feed 1 -
+/members/igorgsg/profile 1 -
+/wp-admin/includes/edit-tag-menu.php 2 -
+/%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-sp-flash-tool-%DA%86%DB%8C%D8%B3%D8%AA-%D9%88-%DA%86%D9%87-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%AF%DB%8C-%D8%AF%D8%A7%D8%B1%D8%AF/feed 8 -
+/members/stbhwifcim/photos 1 -
+/tr/comments 1 -
+/tr/forums/discussion/forum-closed-discussion 1 -
+/Backup 2 http://ustashow.com/Backup
+/fa/tag/shiaeomi/pages/notification-history.html 3 -
+/wp-content/uploads/2021/07/SP-Flash-Tool-v3.1328.0.sn183-1024x576.jpg 1 -
+/tag/%D9%86%D9%88%D8%AA-8-%D9%BE%D8%B1%D9%88 15 -
+/files 5 binance.com
+/%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-sp-flash-tool-%DA%86%DB%8C%D8%B3%D8%AA-%D9%88-%DA%86%D9%87-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%AF%DB%8C-%D8%AF%D8%A7%D8%B1%D8%AF 14 -
+/tr/groups/teaching-ideas/forum/discussions/forum-amazing-discussion-4 1 -
+/members/sergowp/activity/favorites/feed 1 -
+/en/test/episode/3 3 -
+/phpinfo.php 1 -
+/tr/forums 1 -
+/wp/rahma.php 2 -
+/temp/license.txt 3 http://ustashow.com/temp/license.txt
+/en/tag/shiaeomi/pages/notification-history.html 1 -
+/tr/pages/student-subscriptions.html 4 -
+/wp-content/uploads/2021/08/Untitled.jpg 4 -
+/wp-admin/includes/media-site.php 2 -
+/tr/password/index.html 3 -
+/language/tr 5 -
+/tr/groups/foodies-group/documents 1 -
+/Blog 1 http://ustashow.com/Blog
+/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-sp-flash-tool/feed 9 -
+/fa/page/pages/profile-edit.html 4 -
+/l.php 2 -
+/members/igorpkf/forums 1 -
+/cp.php 2 -
+/document-tag/%D9%81%D9%84%D8%B4-%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84-redmi-note-8-pro 15 -
+/downloads/%D9%81%D8%A7%DB%8C%D9%84-%D9%81%D9%84%D8%B4-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C/feed 8 -
+/tag/sp-flash-tool 2 -
+/fa/tag/%D8%AA%DA%A9%D9%86%D9%88%D9%84%D9%88%DA%98%DB%8C/pages/profile-edit.html 3 -
+/wp-content/plugins/tatsu/css/dark-context-menu.css 2 ustashow.com
+/tr/members/bb-mateo/forums/topics 1 -
+/news-feed/p/649 1 -
+/new.php 2 -
+/en/page/pages/profile-edit.html 5 -
+/tr/article/sdfsdf 4 -
+/wp-admin/includes/tablepress_controllers.php 2 -
+/members/aaaaa/forums/favorites 1 -
+/download/xiaomi-redmi-note-9-eng-rom 8 -
+/wp-old 1 http://ustashow.com/wp-old
+/wp-content/plugins/wp-striplple/striplple.php 2 ustashow.com
+/frontend/webfonts/fa-brands-400.ttf 1 -
+/moduless.php 1 -
+/tag/%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D8%A7%D9%88%D8%AF%DB%8C%D9%86/feed 9 -
+/tr/members/bb-arianna/friends 1 -
+/tr/groups/graphic-design/request-membership/discussions/forum-sample-discussion-4 1 -
+/tr/topics 1 -
+//wp-includes/wlwmanifest.xml 11 -
+//cms/wp-includes/wlwmanifest.xml 14 -
+//wp2/wp-includes/wlwmanifest.xml 11 -
+/tr/groups/graphic-design/forum/discussions/forum-total-discussion-5 1 -
+/tr/groups/teaching-ideas/albums 1 -
+/fa/index.html 2 -
+/members/sergowp/profile 1 -
+/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%A8%DA%A9%D8%A7%D9%BE-%DA%AF%D8%B1%D9%81%D8%AA%D9%86-%D8%A8%D8%A7-samsung-smart-switch/feed 7 -
+/wso1337.php 2 -
+/tr/members 3 -
+/wp-plug.php 1 -
+/php.php 1 -
+/tr/groups/nature-lovers/feed 2 -
+/tr/members/bb-neville/forums/topics 1 -
+/1.php 6 -
+/wp-content/uploads/group-avatars/29/60f53955818da-bpfull.png 59 https://www.google.com/
+/wp-content/plugins/wp-classic_editor/werdt/werd.php 2 -
+/news-feed/p/645 1 -
+/.fk.php 2 -
+/Wordpress 1 http://ustashow.com/Wordpress
+/wp-content/plugins/file-manager/readme.txt 1 -
+/tr/members/bb-nicolina/documents 1 -
+/password/pages/notification-history.html 1 -
+/tr/members/bb-madelyn/friends 1 -
+/tr/groups/architecture/photos 1 -
+/tag/%D9%86%D9%88%D8%AA-8-%D9%BE%D8%B1%D9%88/feed 8 -
+/en/category/ustashow.com/en/category/technology 1 -
+/0byte.php 2 -
+/members/saab/profile 1 -
+/wp-cron.php 82 https://ustashow.com/wp-cron.php
+/tr/article/pages/student-subscriptions.html 1 -
+/tr/groups/foodies-group/photos 1 -
+/laravel/_ignition/health-check 2 https://ustashow.com/laravel/_ignition/health-check/
+/wp-content/plugins/wp-user-avatar/changelog.txt 1 yahoo.com
+/wp-content/uploads/wp-blockdown.php 1 -
+/tag/%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D8%A7%D9%88%D8%AF%DB%8C%D9%86 16 -
+//xmlrpc.php 14 -
+/category/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D9%85%D9%88%D8%A8%D8%A7%DB%8C%D9%84/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C/feed 1 -
+/members/leonmed/photos 1 -
+/tr/members/bb-trent/videos 2 -
+/wp.php 2 -
+/tr/index.html 5 -
+/5/fm.php 1 -
+/tr/members/bb-margaret/friends 1 -
+/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4/feed 7 -
+/members/igorpkf 1 -
+/tr/groups/sports-players/request-membership/discussions/forum-example-discussion-9 2 -
+/members/igorpkf/photos 1 -
+/tag/%D8%A2%D8%B4%D9%86%D8%A7%DB%8C%DB%8C-%D8%A8%D8%A7-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-samsung-smart-switch 15 -
+/tr/members/bb-charles/profile 1 -
+/fa/test/episode/3 1 https://ustashow.com/fa/course/test
+/members/sergjrr/profile 1 -
+/www 1 http://ustashow.com/www
+/wp-config.original 1 -
+/tr/groups/architecture/activity 1 -
+/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D9%85%D9%88%D8%A8%D8%A7%DB%8C%D9%84/feed 9 -
+/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%A8%DA%A9%D8%A7%D9%BE-%DA%AF%D8%B1%D9%81%D8%AA%D9%86-%D8%A8%D8%A7-samsung-smart-switch 17 -
+/document-tag/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF-%D9%81%D8%A7%DB%8C%D9%84-%D9%81%D9%84%D8%B4-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C/feed 9 -
+/admin/login.php 1 https://ustashow.com/
+/tr/members/bb-maverick/groups 1 -
+/tr/news-feed 1 -
+/tr/members/bb-nicolina/activity/feed 1 -
+/category/programming 1 -
+/wp-one.php 2 -
+/lessons/%D9%85%D9%81%D9%87%D9%88%D9%85-attribute-%D9%88-%D9%85%D8%B9%D8%B1%D9%81%DB%8C-%D9%88%DB%8C%DA%98%DA%AF%DB%8C-lang 9 -
+/.wp-cache.php 2 -
+/admin/index.php 1 https://ustashow.com/
+/FoxWSOv1.php 2 -
+/.aws 1 -
+/r.php 4 -
+/members/sergjrr/activity/feed 1 -
+/en/article/sdfsdf 4 -
+/fa/course/pages/profile-edit.html 2 -
+/contents.php 1 -
+/public/_ignition/health-check 2 https://ustashow.com/public/_ignition/health-check/
+/tr/groups/foodies-group 1 -
+/frontend/images/avatar-3.jpg 628 https://ustashow.com/
+/lessons 1 -
+/activate 1 -
+/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D9%85%D9%88%D8%A8%D8%A7%DB%8C%D9%84 15 -
+/tr/forums/discussion/forum-amazing-discussion 1 -
+/feed 3 -
+/en/wordpress/wp-includes/wlwmanifest.xml 6 -
+/members/viktoriqco/profile 1 -
+/news-feed 1 -
+/members/serzitu/profile 2 -
+/i.php 4 -
+/OLD 1 http://ustashow.com/OLD
+/tag/%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C 15 -
+/en/tag/index.html 1 -
+/members/igorgsg/activity/feed 1 -
+/members/viktoriqco 1 -
+/members/viktorilsb/forums 2 -
+/tr/members/bb-mateo/friends 1 -
+/category/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d9%86%d8%b1%d9%85-%d8%a7%d9%81%d8%b2%d8%a7%d8%b1-%d9%85%d9%88%d8%a8%d8%a7%db%8c%d9%84/%d8%a2%d9%85%d9%88%d8%b2%d8%b4-%d9%86%d8%b1%d9%85-%d8%a7%d9%81%d8%b2%d8%a7%d8%b1-%d8%b4%db%8c%d8%a7%d8%a6%d9%88%d9%85%db%8c 1 https://www.google.com/
+/edit-form.php 2 -
+/upload/images/2022/300_nariman.jpg 6 https://ustashow.com/admin/articles/5/edit
+/upload/images/2022/900_gsmarena_002.jpg 1 https://ustashow.com/admin/articles/5/edit
+/fa/google/callback 17 https://accounts.google.com/
+/tr/members/bb-nicolina/groups 1 -
+/en/en 2 -
+/wp-config.php 1 -
+/forums 9 -
+/owl.php 2 -
+/tag/note-8-pro-imei-repair 3 -
+/rss.php 2 -
+/fa/assets/images/brand/logo/logo-icon.svg 1 https://ustashow.com/fa/password/reset
+/TEST 1 http://ustashow.com/TEST
+/news-feed/p/648 1 -
+/tr/members/nariman/activity/favorites/feed 1 -
+/tr/assets/images/brand/logo/logo-icon.svg 2 https://ustashow.com/tr/password/reset
+/tr/members/nariman/groups 1 -
+/members/aaaaa/forums/replies 1 -
+/v.php 2 -
+/tr/password/frontend/css/all.min.css 2 https://ustashow.com/tr/password/reset
+/leaf.php 2 -
+//web/wp-includes/wlwmanifest.xml 14 -
+/tr/groups/foodies-group/activity 1 -
+/tr/members/bb-charles/photos 2 -
+/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%81%D9%84%D8%B4-%DA%AF%D9%88%D8%B4%DB%8C-%D9%87%D8%A7%DB%8C-%D8%B4%DB%8C%D8%A7%D8%A6%D9%88%D9%85%DB%8C 18 -
+/members/leonmed/groups 1 -
+/nasgor.php 2 -
+/tr/news-feed/feed 1 -
+/tr/members/bb-trent/documents 1 -
+/fa/article/index.html 3 -
+/members/leonmed/forums/favorites 1 -
+/en/article/%D9%86%DA%AF%D8%A7%D9%87-%D9%86%D8%B2%D8%AF%DB%8C%DA%A9-%D8%B2%D9%88%D9%85%DB%8C%D8%AA-%D8%A8%D9%87-%DA%AF%D9%84%DA%A9%D8%B3%DB%8C-S22-%D9%BE%D9%84%D8%A7%D8%B3-%D9%88-S22-%D8%A7%D9%88%D9%84%D8%AA%D8%B1%D8%A7-%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86 11 -
+/tr/groups/architecture/albums 1 -
+/wp/wp-login.php 2 http://ustashow.com
+/en/page/pages/student-subscriptions.html 4 -
+/assets/images/get.php 1 -
+/wp-content/wp-admin.php 2 -
+/wp-content/plugins/woo-product-table/assets/js/admin.js 1 -
+/cart 1 -
+/wp-content/uploads/group-avatars/25/5e3ac0e0ae49a-bpfull.jpg 1 -
+/c.php 4 -
+/fa/tag/%D8%AA%DA%A9%D9%86%D9%88%D9%84%D9%88%DA%98%DB%8C/pages/notification-history.html 3 -
+//2020/wp-includes/wlwmanifest.xml 13 -
+/wp-configer.php 2 -
+/Site 1 http://ustashow.com/Site
+/tr/password/pages/profile-edit.html 4 -
+/frontend/images/avatar-4.jpg 624 https://ustashow.com/
+/tag/samsung/feed 1 -
+/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D8%A7%D9%88%D8%AF%DB%8C%D9%86 14 -
+/groups/samsung-software/members/all-members 3 -
+/tr/groups/teaching-ideas/feed 2 -
+/f.php 4 -
+/tr/google/callback 4 https://ustashow.com/
+//wp-content/plugins/elementor/readme.txt 1 www.google.com
+/tr/groups/graphic-design/forum/discussions/forum-sample-discussion-4 1 -
+/members 10 -
+/members/veronakdn/forums/replies 1 -
+/tr/members/bb-nicolina/forums/topics 1 -
+/rahma.php 2 -
+/tag/%D8%AA%D8%B1%D9%85%DB%8C%D9%85-%D8%B3%D8%B1%DB%8C%D8%A7%D9%84-%D9%86%D9%88%D8%AA-8-%D9%BE%D8%B1%D9%88/feed 7 -
+/tag/%D9%81%D9%84%D8%B4 15 -
+/fa/password/pages/profile-edit.html 2 -
+/groups/html5-and-css3-group/request-membership 2 -
+/ws.php 2 -
+/wp-content/uploads/2021/09/Smart-Switch-1024x544.jpg 1 https://ustashow.com:443
+/members/svetlanaqor/activity/feed 1 -
+/members/sara1988/forums 1 -
+/2index.php 4 -
+/leafmailer2.8.php 2 -
+/fa/tag/index.html 3 -
+/ohayo.php 2 -
+/phpinfo 1 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 223
+85.105.85.196 645 1199 21380071 20220421213102
+212.154.23.89 292 846 23012749 20220421103718
+5.188.62.21 122 122 469511 20220420180242
+5.188.62.140 75 75 288745 20220410160613
+5.188.62.214 73 73 280916 20220410120512
+52.201.249.33 35 326 11071420 20220403073839
+85.25.185.238 33 33 128690 20220419225441
+69.160.160.56 15 29 477835 20220404034701
+3.66.75.129 15 15 56804 20220421111241
+74.125.208.117 13 51 1670356 20220421205353
+181.215.176.250 3 3 28643 20220406022428
+20.53.233.25 2 2 45119 20220419132516
+190.123.219.94 4 4 9702 20220413193925
+18.237.206.176 1 1 3803 20220418080800
+50.116.23.149 2 13 1248519 20220405194445
+51.89.255.166 1 1 3816 20220418043248
+65.21.206.42 1 1 3751 20220407125437
+34.212.90.122 2 2 45234 20220418134850
+34.219.5.199 1 1 3763 20220404075429
+144.168.225.82 2 2 1716 20220407062102
+165.231.168.21 1 1 3815 20220418002158
+81.169.136.222 1 1 3806 20220414055146
+185.191.34.215 3 3 0 20220419142503
+74.125.208.127 5 5 20963 20220421205356
+89.163.145.114 4 4 15272 20220414132004
+34.219.176.180 1 1 4167 20220402073916
+188.126.73.206 3 3 28876 20220408005141
+81.16.127.215 6 6 13407 20220409135946
+151.135.114.6 2 14 489148 20220411223335
+38.18.46.214 1 1 3818 20220409070210
+196.199.122.45 2 2 3342 20220413054509
+194.36.96.119 1 1 3763 20220405213517
+212.192.241.173 1 1 22554 20220409002931
+34.216.124.111 1 1 3818 20220410074747
+35.167.43.171 1 1 4167 20220402075530
+194.36.96.222 1 1 3818 20220408225839
+40.86.25.197 3 3 7147 20220420004353
+5.127.55.2 3 25 794155 20220409165348
+165.231.24.221 2 2 3356 20220421070312
+18.237.1.246 1 1 3763 20220405074852
+3.145.137.218 9 55 1049461 20220414173337
+66.220.149.112 0 5 31433 
+31.13.127.18 0 1 205905 
+149.56.150.245 12 12 246434 20220402013353
+167.114.100.72 2 2 7636 20220409102735
+5.188.62.76 6 6 23011 20220414194633
+5.46.236.194 2 14 489148 20220414223316
+18.237.219.211 1 1 3763 20220403074308
+69.164.217.38 2 13 1248772 20220415042631
+35.85.46.84 1 1 3818 20220412075818
+198.46.214.136 1 1 3803 20220418090159
+173.252.79.13 0 1 3785 
+34.221.217.225 2 2 45188 20220411133516
+18.236.112.100 1 1 3818 20220408074406
+185.39.144.147 1 1 3770 20220405214948
+191.101.31.209 3 3 30733 20220401163859
+196.242.131.7 2 2 3344 20220414233528
+52.43.215.81 1 1 3818 20220408074946
+20.110.140.230 1 1 3815 20220417215942
+185.28.182.245 2 2 3350 20220418002201
+198.144.178.211 1 1 3818 20220413011707
+196.199.122.131 2 2 3344 20220415033948
+45.252.189.194 2 2 3344 20220418090205
+194.36.97.32 1 1 3818 20220412034448
+54.213.51.4 1 1 3818 20220410074914
+5.181.42.217 1 1 3803 20220419062708
+158.247.225.64 1 1 0 20220417191344
+37.19.223.11 3 3 35203 20220415195918
+31.13.103.13 0 1 205905 
+42.83.147.34 4 4 15202 20220419192614
+104.168.4.104 1 1 4167 20220401130201
+18.237.149.2 1 1 4167 20220402075133
+66.220.149.10 1 6 324524 20220401161729
+31.13.115.120 0 1 3785 
+34.222.151.17 1 1 3818 20220408074530
+190.123.219.222 1 1 3818 20220412131856
+52.37.9.230 1 1 3763 20220404075432
+66.220.149.7 1 7 188107 20220401161725
+96.126.110.87 2 13 1248807 20220418231843
+54.212.200.253 1 1 3818 20220408074353
+191.101.217.177 3 3 35238 20220419164202
+84.17.47.117 3 3 28876 20220408174345
+141.95.185.6 1 1 3816 20220421054123
+34.211.95.171 1 1 3818 20220414074916
+92.205.59.167 1 1 3815 20220417190810
+192.99.18.122 10 12 74926 20220407122452
+34.133.217.247 2 13 480330 20220411000003
+92.118.36.208 3 3 3923 20220420060910
+170.83.179.9 2 2 1716 20220406201959
+138.199.7.132 6 6 65943 20220412184444
+173.252.111.16 0 1 3785 
+139.59.226.53 12 12 280434 20220403023236
+157.55.39.137 0 1 13840 
+194.36.96.220 2 2 3340 20220413011711
+35.89.140.18 1 1 3803 20220419075457
+173.249.22.173 1 3 44788 20220407053001
+173.252.95.3 0 1 205905 
+34.219.180.84 1 1 3815 20220415080143
+157.230.4.206 2 2 7636 20220411152532
+35.160.253.57 1 1 3818 20220410074748
+185.246.208.180 4 4 90416 20220414005806
+213.239.193.124 1 1 3803 20220419181035
+46.166.182.115 3 3 35238 20220419150550
+74.125.208.125 2 2 7582 20220421205356
+104.248.84.33 3 3 12501 20220401032311
+31.13.115.18 0 1 22174 
+107.172.227.149 1 1 3803 20220421070308
+23.250.89.98 2 2 7636 20220410150437
+134.96.225.55 1 3 44798 20220410084134
+74.125.208.123 1 1 3803 20220421205238
+194.36.97.18 1 1 3818 20220408043115
+52.43.183.126 1 1 3803 20220421075924
+52.140.209.255 2 2 44650 20220405100516
+151.135.89.46 4 28 978156 20220406113853
+51.158.21.238 1 1 3763 20220407121022
+170.83.176.64 1 1 3818 20220413054457
+52.221.44.150 1 1 22657 20220418170145
+195.246.120.170 3 3 28643 20220406004217
+54.185.29.134 1 1 4167 20220401080756
+74.125.208.121 5 43 1180951 20220421205349
+34.220.239.81 1 1 3763 20220407083649
+104.129.3.228 2 2 1716 20220405213528
+46.161.11.252 2 2 12674 20220421224153
+50.84.48.178 1 1 3826 20220414004249
+76.72.172.169 1 1 22564 20220419232903
+54.245.188.244 1 1 3818 20220411075537
+217.198.191.194 1 1 3770 20220405081143
+34.222.221.5 1 1 3763 20220406075544
+212.192.246.86 1 1 3763 20220406115718
+173.252.87.15 0 1 80090 
+20.228.166.18 1 1 22577 20220421002201
+34.212.176.236 1 1 4167 20220401080758
+151.135.70.6 2 14 489078 20220405112119
+157.245.243.223 1 1 3818 20220408112421
+51.104.38.246 2 2 45108 20220414114824
+34.215.70.41 1 1 3818 20220409082103
+46.161.11.37 3 3 35238 20220418071153
+74.125.208.119 10 50 1746929 20220421205353
+18.237.113.205 1 1 3763 20220407083648
+159.223.48.58 2 2 45108 20220410091507
+15.206.208.15 1 1 0 20220410033117
+34.221.140.125 1 1 3818 20220412080033
+173.252.87.1 1 1 65112 20220408155855
+156.146.63.18 6 6 59377 20220403131312
+192.99.18.108 10 12 75291 20220408182427
+165.231.105.229 2 2 3344 20220417054121
+37.120.218.147 1 1 4167 20220401135806
+107.152.140.3 2 2 1716 20220407043454
+3.86.211.180 1 1 3763 20220406085345
+107.175.58.78 1 1 3815 20220417054117
+66.220.149.1 0 2 224049 
+134.96.225.145 1 3 44798 20220409161356
+138.199.18.133 4 4 95153 20220420003310
+45.129.18.43 1 1 0 20220408183718
+86.10.29.42 1 1 0 20220406214854
+88.160.142.224 1 1 0 20220403090430
+141.98.215.227 2 2 45108 20220408005929
+173.252.87.6 1 4 20642 20220408155853
+54.149.174.139 1 1 3818 20220409082102
+168.90.199.111 1 1 3763 20220407062051
+5.27.44.203 7 28 1095543 20220402131851
+35.84.181.131 2 5 62398 20220406061502
+173.252.127.15 0 1 205905 
+42.193.23.126 1 1 3826 20220415003010
+35.162.145.82 1 1 3818 20220414074958
+88.214.43.118 1 1 3732 20220409144602
+173.252.127.16 0 1 3785 
+20.228.244.40 1 1 24411 20220401021259
+76.72.172.167 1 1 22541 20220414145630
+54.75.123.112 1 1 3763 20220405080448
+34.222.210.210 2 5 62398 20220406061428
+184.94.240.88 12 12 269849 20220416083816
+144.168.213.36 2 2 1721 20220408225844
+194.36.98.212 2 2 3340 20220413193928
+176.235.75.4 2 25 739674 20220403003327
+167.94.138.47 2 2 7652 20220414192031
+31.13.127.15 0 1 205905 
+20.109.114.226 2 2 3340 20220412225655
+196.240.51.21 2 2 3340 20220412131910
+54.187.121.32 1 1 3763 20220406075557
+3.134.80.228 1 1 0 20220406111747
+92.205.58.31 1 1 3816 20220420135504
+149.202.69.26 1 1 22634 20220412003929
+93.158.91.231 1 1 3818 20220413060131
+212.154.30.36 6 46 1041755 20220415164947
+45.133.172.126 3 3 35203 20220416134923
+31.13.127.26 0 1 205905 
+54.202.56.2 1 1 3818 20220414074642
+173.252.87.24 0 3 87336 
+66.249.92.42 1 1 92 20220405021026
+34.213.42.44 1 1 3818 20220410074839
+196.199.55.87 2 2 3340 20220412034504
+54.148.89.254 1 1 3763 20220405074908
+173.252.87.4 0 3 218594 
+18.237.69.20 2 2 44722 20220404131241
+130.255.166.98 1 1 3763 20220405100206
+51.254.199.11 3 3 11384 20220418195943
+196.196.149.10 5 5 8823 20220410231129
+196.242.114.149 1 1 3815 20220415033940
+5.157.43.209 2 2 1715 20220401055141
+5.46.238.108 4 28 978279 20220409224249
+93.159.230.83 4 4 15217 20220411071958
+185.181.60.189 1 1 3791 20220420162902
+69.63.184.120 0 2 228079 
+216.16.85.141 4 4 89452 20220406061116
+196.240.51.199 1 1 3818 20220414233522
+40.88.43.240 2 2 7540 20220407102709
+54.190.46.220 1 1 3818 20220409082141
+34.219.242.180 1 1 3818 20220413074946
+20.114.57.162 2 2 45092 20220415033540
+77.74.177.119 2 2 7636 20220411062157
+35.86.156.217 1 1 3763 20220405074851
+52.12.241.215 1 1 3818 20220412075815
+170.83.179.52 1 1 3818 20220410231109
+31.13.115.20 0 1 18144 
+144.168.166.203 2 2 7526 20220407043443
+173.252.87.21 0 3 18402 
+51.107.89.210 1 1 22321 20220405212015
+85.10.56.141 2 2 45116 20220410151041
+35.87.10.219 1 1 4167 20220402073804
+107.150.46.162 1 1 3770 20220405132244
+93.159.230.88 5 5 19090 20220411060133
+116.202.113.215 10 10 38281 20220421015401
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 21
+20220401 42 146 4454530 14
+20220402 132 224 3891326 12
+20220403 66 456 14919687 14
+20220404 79 172 3762232 11
+20220405 52 92 3456699 20
+20220406 35 67 1304515 17
+20220407 65 119 2189762 15
+20220408 46 114 3092519 22
+20220409 242 448 9583466 18
+20220410 289 326 2651488 19
+20220411 55 176 4775328 16
+20220412 37 98 2620354 18
+20220413 26 77 2071704 15
+20220414 48 145 3307777 19
+20220415 110 220 4992642 12
+20220416 6 7 102757 2
+20220417 17 22 69911 8
+20220418 91 157 2689838 17
+20220419 100 108 582735 13
+20220420 19 46 963325 8
+20220421 184 392 8653961 19
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 13
+5mn-15mn 9
+15mn-30mn 9
+2mn-5mn 5
+30s-2mn 17
+0s-30s 241
+30mn-1h 15
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 118
+/ 338 2404103 199 128
+/login 284 1111384 4 5
+/fa 144 684460 10 12
+/en 97 742673 47 37
+/frontend/css/fonts/feather.ttf 93 5860080 3 43
+/tr 75 284020 17 8
+/contact 73 145026 15 26
+/admin/articles 67 244942 0 0
+/fa/article/xiaomis-mediatek-series-phones-removed-after-update-or-reset-phone 39 227770 0 5
+/fa/login 36 142393 1 3
+/courses/test/episode/3 3 17164 0 0
+/fa/article/test-1 2 12655 0 0
+/admin/articles/create 6 24236 0 0
+/fa/search 2 7752 0 1
+/admin/tags/3/edit 1 3301 0 0
+/en/category/technology 9 48211 0 0
+/tr/sitemap 2 547 0 0
+/admin/articles/8/edit 10 48310 0 1
+/index.php/en 1 22657 1 1
+/sitemap-tags 3 1239 0 0
+/fa/register 9 35079 0 0
+/admin/pages/3/edit 2 7993 0 0
+/en/page/about 15 147106 0 4
+/admin/articles/5 5 27102 0 0
+/admin/lvl 3 9363 0 0
+/fa/sitemap-tags 3 648 0 0
+/en/contact 31 112523 6 12
+/fa/page/about-fa 14 55423 0 1
+/admin/payments 1 3096 0 0
+/tr/password/reset 2 7146 1 1
+/en/sitemap-pages 1 314 0 0
+/fa/article/hthf-shdn-srial-goshi-hai-sri-mdia-tk-shrkt-shiaeomi 1 5265 0 0
+/frontend/js/bootstrap.bundle.min.js.map 35 3629850 0 2
+/en/sitemap-articles 1 216 0 0
+/admin/categories/create 1 3518 0 0
+/en/password/reset/f4f067d3dd1389a9df73f6cb754b5d1611d456bae787610c3e16dc29eaa5112e 3 10971 1 0
+/tr/admin/roles 1 3156 0 0
+/tr/sitemap-pages 1 216 0 0
+/tr/admin/comments/unsucsess 2 6880 0 0
+/tr/login 23 85862 0 1
+/tr/sitemap-episodes 1 216 0 0
+/fa/sitemap-articles 2 708 0 0
+/sitemap-categories 4 1504 0 0
+/fa/sitemap-categories 1 366 0 0
+/google8f907a55578dce80.html 1 92 1 1
+/password/reset 2 23989 0 1
+/fa/contact 7 12409 0 0
+/fa/password/reset 2 7598 0 0
+/fa/article/%D9%86%DA%AF%D8%A7%D9%87-%D9%86%D8%B2%D8%AF%DB%8C%DA%A9-%D8%B2%D9%88%D9%85%DB%8C%D8%AA-%D8%A8%D9%87-%DA%AF%D9%84%DA%A9%D8%B3%DB%8C-S22-%D9%BE%D9%84%D8%A7%D8%B3-%D9%88-S22-%D8%A7%D9%88%D9%84%D8%AA%D8%B1%D8%A7-%D8%B3%D8%A7%D9%85%D8%B3%D9%88%D9%86%DA%AF 2 20164 0 0
+/admin/pages/2/edit 1 4081 0 0
+/register 9 90171 0 1
+/tr/register 3 11225 0 0
+/en/password/reset 3 10745 0 0
+/en/register 8 48453 0 0
+/admin/payments/unsucsess 7 23306 0 0
+/sitemap-courses 1 316 0 0
+/admin/siteseo/3/edit 1 3338 0 0
+/fa/tag/%D8%AA%DA%A9%D9%86%D9%88%D9%84%D9%88%DA%98%DB%8C 5 22054 0 0
+/tr/sitemap-articles 1 216 0 0
+/fa/article/ain-ik-tst-ast 1 4976 0 0
+/en/article/OnePlus-Nord-2-long-term-review 2 33450 0 0
+/admin/index 5 17198 0 0
+/tr/sitemap-categories 1 216 0 0
+/admin/categories/5/edit 1 3602 0 0
+/admin/roles 4 12616 0 0
+/tr/admin/myprofile 1 3542 0 0
+/fa/tag/shiaeomi/ 1 3496 0 1
+/fa/tag/%D8%AA%DA%A9%D9%86%D9%88%D9%84%D9%88%DA%98%DB%8C/ 1 3522 0 0
+/tr/sitemap-courses 1 216 0 0
+/fa/category/mkalh 22 89794 0 4
+/sitemap-episodes 1 347 0 1
+/en/sitemap 7 1891 0 1
+/en/sitemap-categories 1 320 0 0
+/en/tag/shiaeomi 2 7443 0 1
+/fa/tag/%D8%AA%DA%A9%D9%86%D9%88%D9%84%D9%88%DA%98%DB%8C/course 4 15056 0 0
+/admin/categories/4/edit 1 3604 0 0
+/tr/admin/episodes 3 10075 0 0
+/fa/sitemap 5 1361 0 0
+/tr/admin/articles/create 2 8305 0 0
+/tr/article/sdfsdf 1 4494 0 0
+/tr/admin/articles/8/edit 1 5539 0 0
+/fa/article/test 3 14820 0 0
+/fa/category/%D8%AA%DA%A9%D9%86%D9%88%D9%84%D9%88%DA%98%DB%8C 18 99209 0 1
+/tr/admin/articles 1 3659 0 0
+/sitemap 11 3235 1 0
+/tr/admin/tags/6/edit 1 3327 0 0
+/admin/panel 6 24402 0 0
+/admin/permissions 3 9339 0 0
+/fa/fa/login/google 1 27 0 0
+/tr/admin/payments 1 3096 0 0
+/admin/articles/5/edit 8 33773 0 0
+/dashboard 1 4708 0 0
+/fa/tag/shiaeomi 9 38313 0 0
+/fa/courses/test/episode/3 1 5576 0 0
+/tr/admin/index 2 7149 0 0
+/admin/tags 1 3619 0 0
+/admin/tags/3 2 40 0 0
+/en/login 17 82894 0 0
+/admin/courses 1 3513 0 0
+/tr/contact 14 24277 0 0
+/admin/pages 3 10710 0 0
+/fa/category/technology 1 5550 0 0
+/fa/sitemap-episodes 2 432 0 0
+/admin/articles/6/edit 4 33861 0 0
+/tr/admin/tags 1 3622 0 0
+/sitemap-articles 4 1101 0 0
+/admin/myprofile 5 17707 0 0
+/tr/admin/panel 1 4067 0 0
+/tr/sitemap-tags 1 216 0 0
+/admin/categories 4 13993 0 0
+/en/sitemap-tags 1 413 0 0
+/admin/articles/4/edit 1 5706 0 0
+/fa/tag/shiaeomi/course 8 29400 0 0
+/fa/course/test 19 114265 0 3
+/_ignition/health-check 2 120 2 2
+/admin/siteseo 2 7502 0 0
+/fa/article/aamozsh-aanlak-botlodr-goshi-hai-shiaeomi 12 99043 0 1
+/fa/sitemap-courses 1 316 0 0
+END_SIDER

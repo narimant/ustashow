@@ -29,9 +29,10 @@ class ContactMail extends Mailable
     public function build()
     {
 
+      
         return $this->view('emails.contact')
-            ->subject('new contact')
-            ->from('nt@yahoo.com')
+            ->subject('new contact from ustashow contact form')
+            ->from($this->data['email'])
             ->with('data',$this->data);
     }
 }

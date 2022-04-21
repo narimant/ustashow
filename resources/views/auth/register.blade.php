@@ -92,7 +92,7 @@
                             <div class="mt-4 text-center ">
 
                                 <!--google-->
-                                <a href="{{url('login/google')}}" class="btn btn-block btn-social btn-social-outline btn-google " >
+                                <a href="{{route('google.login')}}" class="btn btn-block btn-social btn-social-outline btn-google " >
                                     <i class="fab fa-google "></i>
                                 </a>
                             </div>

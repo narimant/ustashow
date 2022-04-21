@@ -21,7 +21,15 @@ class Episode extends Model
     }
     public function path()
     {
-        return "/courses/{$this->course->slug}/episode/{$this->id}";
+        $local=app()->getLocale();
+
+        if(array_key_exists($local,config('app.locales')))
+        {
+            return "/$local/courses/{$this->course->slug}/episode/{$this->id}";
+        }else
+        {
+            return "/courses/{$this->course->slug}/episode/{$this->id}";
+        }
     }
 
     public function comments()

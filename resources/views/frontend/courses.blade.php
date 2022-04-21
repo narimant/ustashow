@@ -158,7 +158,7 @@
                         </div>
                         <!-- Card body -->
                         <div class="card-body">
-                            <!-- Price single pages -->
+                            <!-- Price single page -->
                             <div class="mb-3">
                                 <span class="text-dark fw-bold h2">{{ $course->price }}</span>
 

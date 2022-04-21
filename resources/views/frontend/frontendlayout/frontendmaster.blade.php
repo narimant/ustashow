@@ -13,7 +13,33 @@ $dir=(app()->getLocale()=='fa') ? "rtl" :"ltr";
 
     <script src="{{ asset('js/sweetalert.min.js') }}"></script>
 
+    @if(config('app.locales') != null && Route::is(['index']))
+    @foreach(config('app.locales') as $local=>$value)
+            <link rel="alternate" hreflang="{{$local}}" href="https://ustashow.com/{{$local}}" />
+    @endforeach
+    @else
+        @php
+        $local=app()->getLocale();
+        @endphp
+            @if(str_contains(url()->current(), '/article/'))
 
+                <link rel="alternate" hreflang="{{$local}}" href="https://ustashow.com/{{$local}}/article/{{$article->slug}}" />
+
+                @elseif(str_contains(url()->current(), '/page/'))
+                <link rel="alternate" hreflang="{{$local}}" href="https://ustashow.com/{{$local}}/page/{{$pages->slug}}" />
+
+                @elseif(str_contains(url()->current(), '/category/'))
+                <link rel="alternate" hreflang="{{$local}}" href="https://ustashow.com/{{$local}}/category/{{$categoryslug}}" />
+
+                @elseif(str_contains(url()->current(), '/tag/'))
+                    <link rel="alternate" hreflang="{{$local}}" href="https://ustashow.com/{{$local}}/tag/{{$tag->slug}}" />
+
+                @elseif(str_contains(url()->current(), '/course/'))
+                    <link rel="alternate" hreflang="{{$local}}" href="https://ustashow.com/{{$local}}/course/{{$course->slug}}" />
+
+        @endif
+
+    @endif
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{  asset('frontend/css/all.min.css') }}" >

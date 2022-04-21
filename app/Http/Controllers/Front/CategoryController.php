@@ -39,14 +39,14 @@ class CategoryController extends Controller
         OpenGraph::addProperty('type', 'articles');
         OpenGraph::setSiteName(\env('APP_NAME'));
         OpenGraph::addProperty('locale', $local);
-
+            $categoryslug=$category->slug;
         SEOTools::setCanonical($_SERVER['HTTP_HOST'].$category->path());
         if($articles->count()>0)
         {
-            return view('frontend.categorypagearticle',compact('articles'));
+            return view('frontend.categorypagearticle',compact('articles','categoryslug'));
         }else
         {
-            return view('frontend.categorypagecourse',compact('courses'));
+            return view('frontend.categorypagecourse',compact('courses','categoryslug'));
         }
 
     }

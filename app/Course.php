@@ -85,7 +85,7 @@ class Course extends Model
 
     public function tags()
     {
-        return $this->morphToMany(tag::class, 'taggable');
+        return $this->morphToMany(Tag::class, 'taggable');
     }
 
 

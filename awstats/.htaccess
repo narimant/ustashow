@@ -1,0 +1,5 @@
+Options -Indexes
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.ustashow.com$ [NC]
+RewriteRule ^(.*)$ http://ustashow.com/awstats/$1 [R=301,L]

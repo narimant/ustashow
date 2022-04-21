@@ -34,7 +34,7 @@
 
                 <div class="col-xl-10 col-lg-10 col-md-12 col-12 mb-6">
                     @if($pages->images !=null)
-                    <img src="{{$pages->images['images']['900']}}" alt="" class="img-fluid rounded-3">
+                    <img src="{{$pages->images['images']['900']}}" alt="" class="img-fluid post-head-image rounded-3">
                         @endif
 
                 </div>

@@ -7,6 +7,7 @@ use App\Category;
 use App\Course;
 use App\Episode;
 use App\Http\Controllers\Controller;
+use App\Page;
 use App\Tag;
 use Carbon\Carbon;
 
@@ -15,28 +16,34 @@ class SitemapController extends Controller
 {
     public function index()
     {
+        $language=app()->getLocale();
+
         $sitemap = app()->make('sitemap');
-        $sitemap->setCache('laravel.sitemap', 60);
+        $sitemap->setCache('laravel.sitemap'.$language, 60);
 
         if(! $sitemap->isCached() ) {
             $date = Carbon::createFromFormat('Y-m-d H:i:s',now());
-            $sitemap->add(url()->to('/sitemap-articles'),$date,'0.9','daily');
-            $sitemap->add(url()->to('/sitemap-courses'),$date,'0.9','daily');
-            $sitemap->add(url()->to('/sitemap-tags'),$date,'0.9','daily');
-            $sitemap->add(url()->to('/sitemap-categories'),$date,'0.9','daily');
-            $sitemap->add(url()->to('/sitemap-episodes'),$date,'0.9','daily');
+
+            $sitemap->addSitemap(url()->to($language.'/sitemap-articles'),$date,'0.9','daily');
+            $sitemap->addSitemap(url()->to($language.'/sitemap-courses'),$date,'0.9','daily');
+            $sitemap->addSitemap(url()->to($language.'/sitemap-tags'),$date,'0.9','daily');
+            $sitemap->addSitemap(url()->to($language.'/sitemap-categories'),$date,'0.9','daily');
+            $sitemap->addSitemap(url()->to($language.'/sitemap-episodes'),$date,'0.9','daily');
+            $sitemap->addSitemap(url()->to($language.'/sitemap-pages'),$date,'0.9','daily');
         }
 
-        return $sitemap->render();
+        return $sitemap->render('sitemapindex');
     }
 
     public function articles()
     {
+        $language=app()->getLocale();
         $sitemap = app()->make('sitemap');
-        $sitemap->setCache('laravel.sitemap.articles', 60);
+        $sitemap->setCache('laravel.sitemap.articles'.$language, 60);
 
         if(! $sitemap->isCached() ) {
-            $articles = Article::latest()->status()->get();
+            $articles = Article::whereLang($language)->latest()->status()->get();
+
             foreach ($articles as $article) {
                 $path='/'.$article->lang.'/article/'.$article->slug;
 
@@ -44,18 +51,19 @@ class SitemapController extends Controller
             }
         }
 
-        return $sitemap->render();
+        return $sitemap->render('xml');
     }
 
 
 
     public function courses()
     {
+        $language=app()->getLocale();
         $sitemap = app()->make('sitemap');
-        $sitemap->setCache('laravel.sitemap.courses', 60);
+        $sitemap->setCache('laravel.sitemap.courses'.$language, 60);
 
         if(! $sitemap->isCached() ) {
-            $courses = Course::latest()->status()->get();
+            $courses = Course::whereLang($language)->latest()->status()->get();
             foreach ($courses as $course) {
                 $path='/'.$course->lang.'/course/'.$course->slug;
 
@@ -63,16 +71,17 @@ class SitemapController extends Controller
             }
         }
 
-        return $sitemap->render();
+        return $sitemap->render('xml');
     }
 
     public function tags()
     {
+        $language=app()->getLocale();
         $sitemap = app()->make('sitemap');
-        $sitemap->setCache('laravel.sitemap.tags', 60);
+        $sitemap->setCache('laravel.sitemap.tags'.$language, 60);
 
         if(! $sitemap->isCached() ) {
-            $tags = Tag::latest()->get();
+            $tags = Tag::whereLang($language)->latest()->get();
             foreach ($tags as $tag) {
                 $path='/'.$tag->lang.'/tag/'.$tag->slug;
 
@@ -80,16 +89,17 @@ class SitemapController extends Controller
             }
         }
 
-        return $sitemap->render();
+        return $sitemap->render('xml');
     }
 
     public function categories()
     {
+        $language=app()->getLocale();
         $sitemap = app()->make('sitemap');
-        $sitemap->setCache('laravel.sitemap.categories', 60);
+        $sitemap->setCache('laravel.sitemap.categories'.$language, 60);
 
         if(! $sitemap->isCached() ) {
-            $categories = Category::latest()->get();
+            $categories = Category::whereLang($language)->latest()->get();
             foreach ($categories as $category) {
                 $path='/'.$category->lang.'/category/'.$category->slug;
 
@@ -97,18 +107,19 @@ class SitemapController extends Controller
             }
         }
 
-        return $sitemap->render();
+        return $sitemap->render('xml');
     }
 
 
 
     public function episodes()
     {
+        $language=app()->getLocale();
         $sitemap = app()->make('sitemap');
-        $sitemap->setCache('laravel.sitemap.episodes', 60);
+        $sitemap->setCache('laravel.sitemap.episodes'.$language, 60);
 
         if(! $sitemap->isCached() ) {
-            $episodes = Episode::latest()->get();
+            $episodes = Episode::whereLang($language)->latest()->get();
             foreach ($episodes as $episode) {
                 $path=$episode->path();
 
@@ -116,7 +127,24 @@ class SitemapController extends Controller
             }
         }
 
-        return $sitemap->render();
+        return $sitemap->render('xml');
     }
 
+    public function pages()
+    {
+        $language=app()->getLocale();
+        $sitemap = app()->make('sitemap');
+        $sitemap->setCache('laravel.sitemap.page'.$language, 60);
+
+        if(! $sitemap->isCached() ) {
+            $episodes = Page::whereLang($language)->latest()->get();
+            foreach ($episodes as $episode) {
+                $path=$episode->path();
+
+                $sitemap->add(url()->to($path),$episode->created_at ,'0.9','Weekly');
+            }
+        }
+
+        return $sitemap->render('xml');
+    }
 }

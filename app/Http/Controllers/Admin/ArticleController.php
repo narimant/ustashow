@@ -58,11 +58,8 @@ class ArticleController extends AdminController
         /*
          * upload image
          */
-        if($request->hasFile('images') != null)
-        {
-            $files=$request->file('images');
-            $imagesUrl=$this->uploadimage($files);
-        }
+        $files=$request->file('images');
+        $imagesUrl=$this->uploadimage($files);
 
 
 

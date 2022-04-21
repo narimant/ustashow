@@ -2,7 +2,9 @@
 
 @section('content')
 
-    <div class="py-4 py-lg-8 pb-14 ">
+    
+
+<div class="py-4 py-lg-8 pb-14 ">
         <div class="container articlepage">
             <div class="row justify-content-center">
                 <div class="col-xl-10 col-lg-10 col-md-12 col-12 mb-2">
@@ -33,7 +35,7 @@
                 <!-- Image -->
 
                 <div class="col-xl-10 col-lg-10 col-md-12 col-12 mb-6">
-                    <img src="{{$article->images['images']['900']}}" alt="" class="img-fluid rounded-3">
+                    <img src="{{$article->images['images']['900']}}" alt="" class="img-fluid post-head-image rounded-3">
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -128,7 +130,5 @@
     </div>
 
 </div>
-
-
 
 @endsection

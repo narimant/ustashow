@@ -4,7 +4,7 @@
 
     @include('Admin.section.sidebar')
 
-<!-- Content Wrapper. Contains pages content -->
+<!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -26,5 +26,5 @@
         @yield('content')
 
 </div>
-@include('admin.section.footer')
+@include('Admin.section.footer')
 

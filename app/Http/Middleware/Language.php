@@ -22,7 +22,15 @@ class Language
          * for use this section you can pass for get request()->ip()
          */
         $position = Location::get(request()->ip());
-        $countryCode=$position->countryCode;
+
+        if($position!=null)
+        {
+            $countryCode=$position->countryCode;
+        }else
+        {
+            $countryCode=config('app.fallback_locale');
+        }
+
 
         if(! array_key_exists($local,config('app.locales')))
         {
@@ -60,8 +68,11 @@ class Language
                 $segments[0]=config('app.fallback_locale');
             }
 
+            if( $segments[0]!=config('app.fallback_locale'))
+            {
+                return redirect(implode('/',$segments));
+            }
 
-            return redirect(implode('/',$segments));
         }
         else
         {

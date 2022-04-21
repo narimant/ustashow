@@ -17,7 +17,7 @@ class CourseController extends Controller
 {
     public function single(Course $course)
     {
-        $local=app()->getLocale();
+  		$local=app()->getLocale();
         $related = Course::where('lang',$local)->whereHas('tags', function ($q) use ($course) {
             return $q->whereIn('name', $course->tags->pluck('name'));
         })
@@ -45,6 +45,8 @@ class CourseController extends Controller
 
 
         return view('frontend.courses', compact('course','comment','related'));
+            
+       
     }
 
 

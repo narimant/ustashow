@@ -10,7 +10,7 @@
             <div class="col-lg-12 col-md-12 col-12">
                 <div>
                     <h1 class="text-white mb-1 display-4">#{{$tag->name}}</h1>
-                    <p class="mb-0 text-white lead">{{$articles->count()+$courses->count()}} Result For  #{{$tag->name}}</p>
+                    <p class="mb-0 text-white lead">{{$articles->count()+$courses->count()}} {{ __('messages.Result For') }}  #{{$tag->name}}</p>
                 </div>
             </div>
         </div>
@@ -26,10 +26,10 @@
 
                 <ul class="nav nav-lb-tab mb-6" id="tab" role="tablist">
                     <li class="nav-item ms-0" role="presentation">
-                        <a class="nav-link {{$type=='article' ? 'active ' : ''}} "   href="{{route('tag.show',['tagSlug'=>$tag->slug])}}"  aria-selected="true">Articles</a>
+                        <a class="nav-link {{$type=='article' ? 'active ' : ''}} "   href="{{route('tag.show',['tagSlug'=>$tag->slug])}}"  aria-selected="true">{{ __('messages.Article') }}</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link {{$type=='course' ? 'active ' : ''}}"   href="{{route('tag.show',['tagSlug'=>$tag->slug,'type'=>"course"])}}"  aria-selected="false">Courses</a>
+                        <a class="nav-link {{$type=='course' ? 'active ' : ''}}"   href="{{route('tag.show',['tagSlug'=>$tag->slug,'type'=>"course"])}}"  aria-selected="false">{{ __('messages.Course') }}</a>
                     </li>
                 </ul>
 
@@ -149,7 +149,14 @@
                                 @endforeach
                                     {{$courses->links()}}
                             @else
-                                mojod nist
+                                <div class="alert alert-warning d-flex align-items-center" role="alert">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                    </svg>
+                                    <div>
+                                       {{__('messages.There is currently no display course for the tag of your choice')}}
+                                    </div>
+                                </div>
                             @endif
 
                         </div>

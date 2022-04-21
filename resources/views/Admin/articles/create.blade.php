@@ -46,7 +46,7 @@
 
 
 
-            @include('Admin.section.errors')
+          
             <form action="{{route('articles.store')}}" method="post" enctype="multipart/form-data" class="form-horizontal">
                 @csrf
 

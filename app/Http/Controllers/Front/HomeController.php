@@ -90,7 +90,7 @@ class HomeController extends Controller
 
     }
 
-
+   
 
     public function pages(Page $pages)
     {
@@ -152,6 +152,6 @@ class HomeController extends Controller
         ];
         $amdin_email=SiteSetting::where('key','admin_email')->first();
         Mail::to('info@ustashow.com')->send(new ContactMail($data));
-        return 'thanks for send mail';
+        return redirect()->back()->withErrors('msg','your contact sucsess fulley send');
     }
 }
