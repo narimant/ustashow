@@ -136,6 +136,9 @@ return array(
         "available" => "موجود",
         "size" => "اندازه",
         "body" => "متن",
-        "comment" => "کامنت"
+        "category" => "دسته بندی",
+        "images" => "عکس",
+
+
     ),
 );

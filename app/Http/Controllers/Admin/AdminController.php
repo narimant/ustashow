@@ -45,7 +45,7 @@ class AdminController extends Controller
             if (is_numeric($tag)) {
                 $tagArr[] = $tag;
             } else {
-                $newTag = Tag::create(['name' => $tag]);
+                $newTag = Tag::create(['name' => $tag,'status'=>1,'lang'=>app()->getLocale()]);
                 $tagArr[] = $newTag->id;
             }
         }

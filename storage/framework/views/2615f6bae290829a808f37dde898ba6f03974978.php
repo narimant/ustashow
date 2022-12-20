@@ -11,7 +11,10 @@
     <script>
         CKEDITOR.replace('body',{
             filebrowserUploadUrl:'/admin/panel/upload-image',
-            filebrowserImageUploadUrl:'/admin/panel/upload-image'
+            filebrowserImageUploadUrl:'/admin/panel/upload-image',
+        <?php if(app()->getLocale()=='fa'): ?>
+        contentsLangDirection : 'rtl',
+            <?php endif; ?>
         })
 
 
@@ -40,6 +43,16 @@
                         Create Articles
                     </h3>
                 </div>
+
+                <?php if($errors->any()): ?>
+                    <div class="alert alert-danger">
+                        <ul>
+                            <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <li><?php echo e($error); ?></li>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
                 <div class="card-body">
 
 
@@ -62,9 +75,9 @@
                         <div class="form-group">
                             <label  for="language">language</label>
                             <select name="lang" id="language" class="form-control">
-                                <option value="en" selected>english</option>
-                                <option value="fa">persian</option>
-                                <option value="tr">turkish</option>
+                                <option value="en" <?php echo e(app()->getLocale()=='en' ? 'selected' : ''); ?>>english</option>
+                                <option value="fa" <?php echo e(app()->getLocale()=='fa' ? 'selected' : ''); ?>>persian</option>
+                                <option value="tr" <?php echo e(app()->getLocale()=='tr' ? 'selected' : ''); ?>>turkish</option>
 
                             </select>
                         </div>

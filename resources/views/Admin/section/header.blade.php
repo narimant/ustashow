@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"   @if(app()->getLocale()=='fa') dir="rtl" @endif>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,14 @@
     <!-- IonIcons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('css/adminlte.min.css') }}">
+
+
+    @if(app()->getLocale()=='fa')
+        <link rel="stylesheet" href="{{ asset('css/adminlte.min.rtl.css') }}">
+
+        @else
+        <link rel="stylesheet" href="{{ asset('css/adminlte.min.css') }}">
+    @endif
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
 

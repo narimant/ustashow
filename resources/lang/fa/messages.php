@@ -12,7 +12,6 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
     'Virews' => 'بازدیدها',
     'commentnotlogin'=>'برای ارسال کامنت لطفا به حساب کاربری خود وارد شوید و یا ثبت نام کنید',
     'add comment successfully'=>'پیام شما با موفقیت ارسال شد و بعد از تایید مدیریت نمایش داده خواهد شد',

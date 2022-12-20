@@ -13,7 +13,10 @@
     <script>
         CKEDITOR.replace('body',{
             filebrowserUploadUrl:'/admin/panel/upload-image',
-            filebrowserImageUploadUrl:'/admin/panel/upload-image'
+            filebrowserImageUploadUrl:'/admin/panel/upload-image',
+        @if(app()->getLocale()=='fa')
+        contentsLangDirection : 'rtl',
+            @endif
         })
 
 
@@ -42,6 +45,16 @@
                         Create Articles
                     </h3>
                 </div>
+
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="card-body">
 
 
@@ -64,9 +77,9 @@
                         <div class="form-group">
                             <label  for="language">language</label>
                             <select name="lang" id="language" class="form-control">
-                                <option value="en" selected>english</option>
-                                <option value="fa">persian</option>
-                                <option value="tr">turkish</option>
+                                <option value="en" {{app()->getLocale()=='en' ? 'selected' : ''}}>english</option>
+                                <option value="fa" {{app()->getLocale()=='fa' ? 'selected' : ''}}>persian</option>
+                                <option value="tr" {{app()->getLocale()=='tr' ? 'selected' : ''}}>turkish</option>
 
                             </select>
                         </div>

@@ -4,7 +4,7 @@
     <a href="index3.html" class="brand-link">
         <img src="{{asset('upload/logo/logo.jpg')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
              style="opacity: .8">
-        <span class="brand-text font-weight-light">Ustashow V.1</span>
+        <span class="brand-text font-weight-light">{{__('adminPanel.Ustashow')}} V.1</span>
     </a>
 
     <!-- Sidebar -->
@@ -40,7 +40,7 @@
                     <a class="nav-link {{ Request::is('admin/panel')? 'active': '' }}" href="{{route('admin.index')}}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Dashboard
+                            {{__('adminPanel.Dashboard')}}
                         </p>
                     </a>
 
@@ -52,7 +52,7 @@
                     <a href="#" class="nav-link {{ Route::is(['articles.index','articles.create' ,'articles.edit'])? 'active': '' }}">
                         <i class="fas fa-newspaper"></i>
                         <p>
-                            Article
+                            {{__('adminPanel.Articles')}}
                             <i class="fas fa-angle-left right"></i>
 
                         </p>
@@ -62,7 +62,7 @@
                             <a href="{{route('articles.index')}}"
                                class="nav-link {{ Route::is('articles.index')? 'active': '' }}">
 
-                                <p>All Articles</p>
+                                <p>{{__('adminPanel.All Articles')}}</p>
                             </a>
                         </li>
 
@@ -70,7 +70,7 @@
                             <a href="{{route('articles.create')}}"
                                class="nav-link {{ Route::is('articles.create')? 'active': '' }}">
 
-                                <p>Create Articles</p>
+                                <p>{{__('adminPanel.Create Articles')}}</p>
                             </a>
                         </li>
 
@@ -82,7 +82,7 @@
                     <a href="#" class="nav-link {{ Route::is(['categories.index','categories.create'])? 'active': '' }}">
                         <i class="fas fa-newspaper"></i>
                         <p>
-                            Category
+                            {{__('adminPanel.Category')}}
                             <i class="fas fa-angle-left right"></i>
 
                         </p>
@@ -92,7 +92,7 @@
                             <a href="{{route('categories.index')}}"
                                class="nav-link {{ Route::is('categories.index')? 'active': '' }}">
 
-                                <p>All Category</p>
+                                <p>{{__('adminPanel.All Category')}}</p>
                             </a>
                         </li>
 
@@ -100,7 +100,7 @@
                             <a href="{{route('categories.create')}}"
                                class="nav-link {{ Route::is('categories.create')? 'active': '' }}">
 
-                                <p>Create Category</p>
+                                <p>{{__('adminPanel.Create Category')}}</p>
                             </a>
                         </li>
 
@@ -113,7 +113,7 @@
                     <a href="#" class="nav-link {{ Route::is(['tags.index','tags.create'])? 'active': '' }}">
                         <i class="fas fa-newspaper"></i>
                         <p>
-                            Tag
+                            {{__('adminPanel.Tags')}}
                             <i class="fas fa-angle-left right"></i>
 
                         </p>
@@ -123,7 +123,7 @@
                             <a href="{{route('tags.index')}}"
                                class="nav-link {{ Route::is('tags.index')? 'active': '' }}">
 
-                                <p>All Tags</p>
+                                <p>{{__('adminPanel.All Tags')}}</p>
                             </a>
                         </li>
 
@@ -131,7 +131,7 @@
                             <a href="{{route('tags.create')}}"
                                class="nav-link {{ Route::is('tags.create')? 'active': '' }}">
 
-                                <p>Create Tag</p>
+                                <p>{{__('adminPanel.Create Tag')}}</p>
                             </a>
                         </li>
 
@@ -144,7 +144,7 @@
                     <a href="#" class="nav-link {{ Route::is(['pages.index','pages.create'])? 'active': '' }}">
                         <i class="fas fa-newspaper"></i>
                         <p>
-                            Pages
+                            {{__('adminPanel.Pages')}}
                             <i class="fas fa-angle-left right"></i>
 
                         </p>
@@ -154,7 +154,7 @@
                             <a href="{{route('pages.index')}}"
                                class="nav-link {{ Route::is('pages.index')? 'active': '' }}">
 
-                                <p>All Page</p>
+                                <p>{{__('adminPanel.All Pages')}}</p>
                             </a>
                         </li>
 
@@ -162,7 +162,7 @@
                             <a href="{{route('pages.create')}}"
                                class="nav-link {{ Route::is('pages.create')? 'active': '' }}">
 
-                                <p>Create Page</p>
+                                <p>{{__('adminPanel.Create Page')}}</p>
                             </a>
                         </li>
 
@@ -174,7 +174,7 @@
                     <a href="#" class="nav-link {{ Route::is(['courses.index','courses.create'])? 'active': '' }}">
                         <i class="fa-thin fa-books"></i>
                         <p>
-                            Courses
+                            {{__('adminPanel.Courses')}}
                             <i class="fas fa-angle-left right"></i>
 
                         </p>
@@ -184,7 +184,7 @@
                             <a href="{{route('courses.index')}}"
                                class="nav-link {{ Route::is('courses.index')? 'active': '' }}">
 
-                                <p>All courses</p>
+                                <p>{{__('adminPanel.All courses')}}</p>
                             </a>
                         </li>
 
@@ -192,7 +192,7 @@
                             <a href="{{route('courses.create')}}"
                                class="nav-link {{ Route::is('courses.create')? 'active': '' }}">
 
-                                <p>Create courses</p>
+                                <p>{{__('adminPanel.Create course')}}</p>
                             </a>
                         </li>
 
@@ -205,7 +205,7 @@
                     <a href="#" class="nav-link {{ Route::is(['episodes.index','episodes.create'])? 'active': '' }}">
                         <i class="fa-thin fa-books"></i>
                         <p>
-                            Episodes
+                            {{__('adminPanel.Episodes')}}
                             <i class="fas fa-angle-left right"></i>
 
                         </p>
@@ -215,7 +215,7 @@
                             <a href="{{route('episodes.index')}}"
                                class="nav-link {{ Route::is('episodes.index')? 'active': '' }}">
 
-                                <p>All Episodes</p>
+                                <p>{{__('adminPanel.All Episodes')}}</p>
                             </a>
                         </li>
 
@@ -223,7 +223,7 @@
                             <a href="{{route('episodes.create')}}"
                                class="nav-link {{ Route::is('episodes.create')? 'active': '' }}">
 
-                                <p>Create Episodes</p>
+                                <p>{{__('adminPanel.Create Episodes')}}</p>
                             </a>
                         </li>
 
@@ -236,7 +236,7 @@
                     <a href="#" class="nav-link {{ Route::is(['comments.index','comments.unsucsess'])? 'active': '' }}">
                         <i class="fa-thin fa-books"></i>
                         <p>
-                            Comments
+                            {{__('adminPanel.Comments')}}
 
                             <i class="fas fa-angle-left right"></i>
 
@@ -247,7 +247,7 @@
                             <a href="{{route('comments.index')}}"
                                class="nav-link {{ Route::is('comments.index')? 'active': '' }}">
 
-                                <p>All Comments</p>
+                                <p>{{__('adminPanel.All Comments')}}</p>
                             </a>
                         </li>
 
@@ -255,7 +255,7 @@
                             <a href="{{route('comments.unsucsess')}}"
                                class="nav-link {{ Route::is('comments.unsucsess')? 'active': '' }}">
 
-                                <p>Comments unsucsess
+                                <p>{{__('adminPanel.Comments unsuccess')}}
                                     @if($newcomment->count()>0)
                                         <span class="badge badge-danger right">{{ $newcomment->count() }}</span>
                                     @endif
@@ -271,7 +271,7 @@
                     <a href="#" class="nav-link {{ Route::is(['payments.index','payments.unsucsess'])? 'active': '' }}">
                         <i class="fa-thin fa-books"></i>
                         <p>
-                            Payments
+                            {{__('adminPanel.Payments')}}
                             <i class="fas fa-angle-left right"></i>
 
                         </p>
@@ -281,14 +281,14 @@
                             <a href="{{route('payments.index')}}"
                                class="nav-link {{ Route::is('payments.index')? 'active': '' }}">
 
-                                <p>All Payments</p>
+                                <p>{{__('adminPanel.All Payments')}}</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('payments.unsucsess')}}"
                                class="nav-link {{ Route::is('payments.unsucsess')? 'active': '' }}">
 
-                                <p>Unsucsess Payments</p>
+                                <p>{{__('adminPanel.Unsucsess Payments')}}</p>
                             </a>
                         </li>
 
@@ -305,7 +305,7 @@
                        class="nav-link {{ Route::is(['users.index','users.create','lvl.index','roles.index','permissions.index','permissions.create','users.profile'])? 'active': '' }}">
                         <i class="fa-thin fa-books"></i>
                         <p>
-                            Users
+                            {{__('adminPanel.Users')}}
                             <i class="fas fa-angle-left right"></i>
 
                         </p>
@@ -315,14 +315,14 @@
                             <a href="{{ route('users.profile') }}"
                                class="nav-link {{ Route::is('users.profile')? 'active': '' }}">
 
-                                <p>My Profile</p>
+                                <p>{{__('adminPanel.My Profile')}}</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('users.index') }}"
                                class="nav-link {{ Route::is('users.index')? 'active': '' }}">
 
-                                <p>All Users</p>
+                                <p>{{__('adminPanel.All Users')}}</p>
                             </a>
                         </li>
 
@@ -331,21 +331,21 @@
                             <a href="{{ route('lvl.index') }}"
                                class="nav-link {{ Route::is('lvl.index')? 'active': '' }}">
 
-                                <p>Manage Users</p>
+                                <p>{{__('adminPanel.Manage Users')}}</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('roles.index') }}"
                                class="nav-link {{ Route::is('roles.index')? 'active': '' }}">
 
-                                <p> All Role</p>
+                                <p>{{__('adminPanel.All Role')}} </p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('permissions.index') }}"
                                class="nav-link {{ Route::is(['permissions.index','permissions.create'])? 'active': '' }}">
 
-                                <p> All Permissions</p>
+                                <p> {{__('adminPanel.All Permissions')}}</p>
                             </a>
                         </li>
 
@@ -359,7 +359,7 @@
                     <a href="#" class="nav-link {{ Route::is(['siteSettings.index','footer.index'])? 'active': '' }}">
                         <i class="fa-thin fa-books"></i>
                         <p>
-                            Site Settings
+                            {{__('adminPanel.Site Settings')}}
                             <i class="fas fa-angle-left right"></i>
 
                         </p>
@@ -369,7 +369,7 @@
                             <a href="{{route('siteseo.index')}}"
                                class="nav-link {{ Route::is('siteseo.index')? 'active': '' }}">
 
-                                <p>Site Main Seo</p>
+                                <p>{{__('adminPanel.Site Main Seo')}}</p>
                             </a>
                         </li>
 
@@ -377,7 +377,7 @@
                             <a href="{{route('footer.index')}}"
                                class="nav-link {{ Route::is('footer.index')? 'active': '' }}">
 
-                                <p>Site Footer Settings</p>
+                                <p>{{__('adminPanel.Site Footer Settings')}}</p>
                             </a>
                         </li>
 

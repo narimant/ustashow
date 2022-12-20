@@ -66,9 +66,12 @@ class ArticleController extends AdminController
         /*
          * start work on tags
          */
+        if ($request->tags !=null)
+        {
+            $allTagfind=$this->checktags($request->tags);
+            unset($request['tags']);
+        }
 
-         $allTagfind=$this->checktags($request->tags);
-        unset($request['tags']);
         /*
          * end work on tags
          */
@@ -91,7 +94,11 @@ class ArticleController extends AdminController
          */
         $newarticle=auth()->user()->article()->create(array_merge($request->all() , [ 'images' => $imagesUrl ]));
         $newarticle->categories()->sync($category);
-        $newarticle->tags()->sync($allTagfind);
+        if ( !empty($allTagfind))
+        {
+            $newarticle->tags()->sync($allTagfind);
+        }
+
 
 
         return redirect(route('articles.index'));
