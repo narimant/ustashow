@@ -42,7 +42,7 @@
 
                 <div class="card-header">
                     <h3 class="card-title">
-                        Create Articles
+                        {{__('adminPanel.Create Articles')}}
                     </h3>
                 </div>
 
@@ -64,18 +64,18 @@
                 @csrf
 
                 <div class="form-group">
-                    <label  for="title">Titile</label>
-                    <input type="text" name="title" value="{{old('title')}}" class="form-control" id="title" placeholder="insert title " >
+                    <label  for="title">  {{__('adminPanel.Title')}} </label>
+                    <input type="text" name="title" value="{{old('title')}}" class="form-control" id="title" placeholder=" {{__('adminPanel.Insert title')}}  " >
                 </div>
 
                 <div class="form-group">
-                    <label  for="description">description</label>
-                    <input type="text" name="description" value="{{old('description')}}" class="form-control" id="description" placeholder="insert  description" >
+                    <label  for="description">  {{__('adminPanel.description')}} </label>
+                    <input type="text" name="description" value="{{old('description')}}" class="form-control" id="description" placeholder="{{__('adminPanel.Insert description')}}  " >
                 </div>
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">
-                            <label  for="language">language</label>
+                            <label  for="language">  {{__('adminPanel.Language')}} </label>
                             <select name="lang" id="language" class="form-control">
                                 <option value="en" {{app()->getLocale()=='en' ? 'selected' : ''}}>english</option>
                                 <option value="fa" {{app()->getLocale()=='fa' ? 'selected' : ''}}>persian</option>
@@ -86,10 +86,10 @@
                     </div>
                     <div class="col-6">
                         <div class="form-group">
-                            <label  for="status">Display Status</label>
+                            <label  for="status">  {{__('adminPanel.Display Status')}} </label>
                             <select name="status" id="status" class="form-control">
-                                <option value="0" selected>Draft</option>
-                                <option value="1">publish</option>
+                                <option value="0" selected>{{__('adminPanel.Draft')}}</option>
+                                <option value="1">{{__('adminPanel.publish')}}</option>
 
 
                             </select>
@@ -99,18 +99,18 @@
 
 
                 <div class="form-group">
-                    <label  for="body">body</label>
-                    <textarea rows="5" name="body"  class="form-control" id="body" placeholder="insert  body" >{{old('body')}}</textarea>
+                    <label  for="body">  {{__('adminPanel.body')}} </label>
+                    <textarea rows="5" name="body"  class="form-control" id="body" placeholder="{{__('adminPanel.Insert Body')}}  " >{{old('body')}}</textarea>
                 </div>
 
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-6 ">
-                            <label  for="description">Image</label>
+                            <label  for="description">{{__('adminPanel.Image')}}</label>
                             <input type="file" name="images" value="{{old('images')}}"  class="form-control" id="images" placeholder="insert  Image" >
                         </div>
                         <div class="col-sm-6 ">
-                            <label  for="description">Category</label>
+                            <label  for="description">  {{__('adminPanel.Category')}} </label>
                             <div>
                                 <ul class="list-group ">
                                 @foreach(\App\Category::where('parent_id',null)->with('sub_category')->get() as $value)
@@ -127,7 +127,7 @@
                         </div>
 
                         <div class="col-sm-6 mt-3">
-                            <label  for="tags">Tags</label>
+                            <label  for="tags">  {{__('adminPanel.Tags')}} </label>
                             <select class="form-control" id="tags" name="tags[]" multiple="multiple">
                                 @foreach($alltags as $tag)
                                 <option value="{{$tag->id}}">{{$tag->name}}</option>
@@ -144,22 +144,22 @@
                 <hr>
                 <div class="row mb-3">
                     <div class="col-sm-12 form-group">
-                        <label class="form-label" for="seoTitle">Seo Title</label>
+                        <label class="form-label" for="seoTitle">  {{__('adminPanel.Seo Title')}} </label>
                         <input type="text" class="form-control" name="seoTitle" value="{{old('seoTitle')}}">
                     </div>
                     <div class="col-sm-12 form-group">
-                        <label class="form-label" for="seoDescription">Seo Description</label>
+                        <label class="form-label" for="seoDescription">  {{__('adminPanel.Seo Description')}} </label>
                         <input type="text" class="form-control" name="seoDescription" value="{{old('seoDescription')}}">
                     </div>
                     <div class="col-sm-12 form-group">
-                        <label class="form-label" for="seoKeyword">Seo Keyword</label>
+                        <label class="form-label" for="seoKeyword">  {{__('adminPanel.Seo Keyword')}} </label>
                         <input type="text" class="form-control" name="seoKeyword" value="{{old('seoKeyword')}}">
                     </div>
                 </div>
 
 
                 <div class="form-group">
-                    <button class="btn btn-primary">Save</button>
+                    <button class="btn btn-primary">  {{__('adminPanel.Save')}} </button>
                 </div>
             </form>
 

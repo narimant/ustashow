@@ -1,14 +1,6 @@
 @extends('Admin.master')
 
-@section('script')
-    <script src="/ckeditor/ckeditor.js"></script>
-    <script>
-        CKEDITOR.replace('body',{
-            filebrowserUploadUrl:'/admin/panel/upload-image',
-            filebrowserImageUploadUrl:'/admin/panel/upload-image'
-        })
-    </script>
-@endsection
+
 
 @section('content')
 
@@ -36,6 +28,41 @@
             </div>
 
 
+            <div class="form-group">
+                <label  for="language">language</label>
+                <select name="lang" id="language" class="form-control">
+                    <option value="en" {{ $tag->lang=='en' ? 'selected' :'' }}>english</option>
+                    <option value="fa" {{ $tag->lang=='fa' ? 'selected' :'' }}>persian</option>
+                    <option value="tr" {{ $tag->lang=='tr' ? 'selected' :'' }}>turkish</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label  for="Status">Status</label>
+                <select name="status" id="Status" class="form-control">
+                    <option value="1" {{ $tag->status==1 ? 'selected' :'' }}>Active</option>
+                    <option value="0" {{ $tag->status==0 ? 'selected' :'' }}>Deactivate</option>
+
+
+                </select>
+            </div>
+
+            {{--      SEO          --}}
+            <hr>
+            <div class="row mb-3">
+                <div class="col-sm-12 form-group">
+                    <label class="form-label" for="seoTitle">Seo Title</label>
+                    <input type="text" class="form-control" name="seoTitle" value="{{$tag->seoTitle }}">
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label class="form-label" for="seoDescription">Seo Description</label>
+                    <input type="text" class="form-control" name="seoDescription" value="{{$tag->seoDescription }}">
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label class="form-label" for="seoKeyword">Seo Keyword</label>
+                    <input type="text" class="form-control" name="seoKeyword" value="{{$tag->seoKeyword}}">
+                </div>
+            </div>
 
 
             <div class="form-group">

@@ -12,7 +12,12 @@
  
     <script src="{{asset('js/select2.min.js')}}"></script>
     <script>
-        CKEDITOR.replace('body', {filebrowserImageBrowseUrl: '{{route("fm.ckeditor")}}'});
+        CKEDITOR.replace('body', {
+            filebrowserImageBrowseUrl: '{{route("fm.ckeditor")}}',
+                @if(app()->getLocale()=='fa')
+            contentsLangDirection : 'rtl',
+        @endif
+        });
         /*CKEDITOR.replace('body',{
            filebrowserUploadUrl:'{{route("panel.upload")}}',
            filebrowserImageUploadUrl:'{{route("panel.upload")}}'
@@ -37,7 +42,7 @@
 
                 <div class="card-header">
                     <h3 class="card-title">
-                        Edit Articles
+                        {{__('adminPanel.Edit Article')}}
                     </h3>
                 </div>
                 <div class="card-body">
@@ -48,7 +53,7 @@
            @method('put')
 
             <div class="form-group">
-                <label  for="title">Titile</label>
+                <label  for="title">{{__('adminPanel.Title')}}</label>
                 <input type="text" name="title" value="{{ $article->title }}" class="form-control" id="title" placeholder="insert title " >
             </div>
             <div class="form-group">
@@ -57,13 +62,13 @@
             </div>
 
             <div class="form-group">
-                <label  for="description">description</label>
+                <label  for="description">{{__('adminPanel.description')}}</label>
                 <input type="text" name="description" value="{{ $article->description }}" class="form-control" id="description" placeholder="insert  description" >
             </div>
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
-                        <label  for="language">language</label>
+                        <label  for="language">{{__('adminPanel.Language')}}</label>
                         <select name="lang" id="language" class="form-control">
                             <option value="en" {{$article->lang=='en' ? 'selected' : ''}}>english</option>
                             <option value="fa" {{$article->lang=='fa' ? 'selected' : ''}}>persian</option>
@@ -74,10 +79,10 @@
                 </div>
                 <div class="col-6">
                     <div class="form-group">
-                        <label  for="status">Display Status</label>
+                        <label  for="status"> {{__('adminPanel.Display Status')}}</label>
                         <select name="status" id="status" class="form-control">
-                            <option value="0" {{$article->status=='0' ? 'selected' : ''}}>Draft</option>
-                            <option value="1" {{$article->status=='1' ? 'selected' : ''}}>publish</option>
+                            <option value="0" {{$article->status=='0' ? 'selected' : ''}}>{{__('adminPanel.Draft')}}</option>
+                            <option value="1" {{$article->status=='1' ? 'selected' : ''}}>{{__('adminPanel.publish')}}</option>
 
 
                         </select>
@@ -85,14 +90,14 @@
                 </div>
             </div>
             <div class="form-group">
-                <label  for="body">body</label>
-                <textarea rows="5" name="body"  class="form-control" id="body" placeholder="insert  body" >{{ $article->body }}</textarea>
+                <label  for="body">{{__('adminPanel.body')}}</label>
+                <textarea rows="5" name="body"  class="form-control" id="body" placeholder="{{__('adminPanel.Insert Body')}}" >{{ $article->body }}</textarea>
             </div>
 
             <div class="form-group">
                 <div class="row">
                     <div class="col-sm-6 ">
-                        <label  for="description">Image</label>
+                        <label  for="description">{{__('adminPanel.Image')}}</label>
                         <input type="file" name="images"   class="form-control" id="images" placeholder="insert  Image" >
                         <div class="col-sm-12">
                             @foreach( $article->images['images'] as $key => $image)
@@ -107,7 +112,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 ">
-                        <label  for="description">Category</label>
+                        <label  for="description">{{__('adminPanel.Category')}} </label>
 
                         <div>
                             <ul class="list-group ">
@@ -130,7 +135,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-
+                        <label  for="tags">  {{__('adminPanel.Tags')}} </label>
                         <select class="form-control" id="tags" name="tags[]" multiple="multiple">
                             @foreach($alltags as $tag)
                                 <option value="{{$tag->id}}" {{ in_array($tag->id,$articletagsids)?'selected':''}}>{{$tag->name}}</option>
@@ -147,22 +152,22 @@
             <hr>
             <div class="row mb-3">
                 <div class="col-sm-12 form-group">
-                    <label class="form-label" for="seoTitle">Seo Title</label>
+                    <label class="form-label" for="seoTitle">{{__('adminPanel.Seo Title')}}</label>
                     <input type="text" class="form-control" name="seoTitle" value="{{$article->seoTitle}}">
                 </div>
                 <div class="col-sm-12 form-group">
-                    <label class="form-label" for="seoDescription">Seo Description</label>
+                    <label class="form-label" for="seoDescription">{{__('adminPanel.Seo Description')}}</label>
                     <input type="text" class="form-control" name="seoDescription" value="{{$article->seoDescription}}">
                 </div>
                 <div class="col-sm-12 form-group">
-                    <label class="form-label" for="seoKeyword">Seo Keyword</label>
+                    <label class="form-label" for="seoKeyword">{{__('adminPanel.Seo Keyword')}}</label>
                     <input type="text" class="form-control" name="seoKeyword" value="{{$article->seoKeyword}}">
                 </div>
             </div>
 
 
             <div class="form-group">
-                <button class="btn btn-primary">Update</button>
+                <button class="btn btn-primary">{{__('adminPanel.Update')}}</button>
             </div>
         </form>
 

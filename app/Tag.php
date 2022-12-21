@@ -13,7 +13,7 @@ class Tag extends Model
 
     use Sluggable;
     protected $fillable=[
-        'name','status','lang'
+        'name','status','lang','seoTitle','seoDescription','seoKeyword'
     ];
 
     public function sluggable()

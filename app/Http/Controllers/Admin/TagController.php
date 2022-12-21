@@ -38,9 +38,17 @@ class TagController extends Controller
     public function store(Request $request)
     {
         $request->validate(['name'=>'required']);
-        Tag::create([
-            'name'=>$request->name
-        ]);
+        $tag=new Tag();
+        $tag->name=$request->name;
+        $tag->lang=$request->lang;
+        $tag->status=$request->status;
+        $tag->seoTitle=$request->seoTitle;
+        $tag->seoDescription=$request->seoDescription;
+        $tag->seoKeyword=$request->seoKeyword;
+        $tag->save();
+//        Tag::create([
+//            'name'=>
+//        ]);
         return  redirect(route('tags.index'));
     }
 

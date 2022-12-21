@@ -9,7 +9,12 @@
  
     <script src="<?php echo e(asset('js/select2.min.js')); ?>"></script>
     <script>
-        CKEDITOR.replace('body', {filebrowserImageBrowseUrl: '<?php echo e(route("fm.ckeditor")); ?>'});
+        CKEDITOR.replace('body', {
+            filebrowserImageBrowseUrl: '<?php echo e(route("fm.ckeditor")); ?>',
+                <?php if(app()->getLocale()=='fa'): ?>
+            contentsLangDirection : 'rtl',
+        <?php endif; ?>
+        });
         /*CKEDITOR.replace('body',{
            filebrowserUploadUrl:'<?php echo e(route("panel.upload")); ?>',
            filebrowserImageUploadUrl:'<?php echo e(route("panel.upload")); ?>'
@@ -34,7 +39,8 @@
 
                 <div class="card-header">
                     <h3 class="card-title">
-                        Edit Articles
+                        <?php echo e(__('adminPanel.Edit Article')); ?>
+
                     </h3>
                 </div>
                 <div class="card-body">
@@ -45,7 +51,7 @@
            <?php echo method_field('put'); ?>
 
             <div class="form-group">
-                <label  for="title">Titile</label>
+                <label  for="title"><?php echo e(__('adminPanel.Title')); ?></label>
                 <input type="text" name="title" value="<?php echo e($article->title); ?>" class="form-control" id="title" placeholder="insert title " >
             </div>
             <div class="form-group">
@@ -54,13 +60,13 @@
             </div>
 
             <div class="form-group">
-                <label  for="description">description</label>
+                <label  for="description"><?php echo e(__('adminPanel.description')); ?></label>
                 <input type="text" name="description" value="<?php echo e($article->description); ?>" class="form-control" id="description" placeholder="insert  description" >
             </div>
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
-                        <label  for="language">language</label>
+                        <label  for="language"><?php echo e(__('adminPanel.Language')); ?></label>
                         <select name="lang" id="language" class="form-control">
                             <option value="en" <?php echo e($article->lang=='en' ? 'selected' : ''); ?>>english</option>
                             <option value="fa" <?php echo e($article->lang=='fa' ? 'selected' : ''); ?>>persian</option>
@@ -71,10 +77,10 @@
                 </div>
                 <div class="col-6">
                     <div class="form-group">
-                        <label  for="status">Display Status</label>
+                        <label  for="status"> <?php echo e(__('adminPanel.Display Status')); ?></label>
                         <select name="status" id="status" class="form-control">
-                            <option value="0" <?php echo e($article->status=='0' ? 'selected' : ''); ?>>Draft</option>
-                            <option value="1" <?php echo e($article->status=='1' ? 'selected' : ''); ?>>publish</option>
+                            <option value="0" <?php echo e($article->status=='0' ? 'selected' : ''); ?>><?php echo e(__('adminPanel.Draft')); ?></option>
+                            <option value="1" <?php echo e($article->status=='1' ? 'selected' : ''); ?>><?php echo e(__('adminPanel.publish')); ?></option>
 
 
                         </select>
@@ -82,14 +88,14 @@
                 </div>
             </div>
             <div class="form-group">
-                <label  for="body">body</label>
-                <textarea rows="5" name="body"  class="form-control" id="body" placeholder="insert  body" ><?php echo e($article->body); ?></textarea>
+                <label  for="body"><?php echo e(__('adminPanel.body')); ?></label>
+                <textarea rows="5" name="body"  class="form-control" id="body" placeholder="<?php echo e(__('adminPanel.Insert Body')); ?>" ><?php echo e($article->body); ?></textarea>
             </div>
 
             <div class="form-group">
                 <div class="row">
                     <div class="col-sm-6 ">
-                        <label  for="description">Image</label>
+                        <label  for="description"><?php echo e(__('adminPanel.Image')); ?></label>
                         <input type="file" name="images"   class="form-control" id="images" placeholder="insert  Image" >
                         <div class="col-sm-12">
                             <?php $__currentLoopData = $article->images['images']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $image): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -105,7 +111,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 ">
-                        <label  for="description">Category</label>
+                        <label  for="description"><?php echo e(__('adminPanel.Category')); ?> </label>
 
                         <div>
                             <ul class="list-group ">
@@ -128,7 +134,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-
+                        <label  for="tags">  <?php echo e(__('adminPanel.Tags')); ?> </label>
                         <select class="form-control" id="tags" name="tags[]" multiple="multiple">
                             <?php $__currentLoopData = $alltags; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tag): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <option value="<?php echo e($tag->id); ?>" <?php echo e(in_array($tag->id,$articletagsids)?'selected':''); ?>><?php echo e($tag->name); ?></option>
@@ -145,22 +151,22 @@
             <hr>
             <div class="row mb-3">
                 <div class="col-sm-12 form-group">
-                    <label class="form-label" for="seoTitle">Seo Title</label>
+                    <label class="form-label" for="seoTitle"><?php echo e(__('adminPanel.Seo Title')); ?></label>
                     <input type="text" class="form-control" name="seoTitle" value="<?php echo e($article->seoTitle); ?>">
                 </div>
                 <div class="col-sm-12 form-group">
-                    <label class="form-label" for="seoDescription">Seo Description</label>
+                    <label class="form-label" for="seoDescription"><?php echo e(__('adminPanel.Seo Description')); ?></label>
                     <input type="text" class="form-control" name="seoDescription" value="<?php echo e($article->seoDescription); ?>">
                 </div>
                 <div class="col-sm-12 form-group">
-                    <label class="form-label" for="seoKeyword">Seo Keyword</label>
+                    <label class="form-label" for="seoKeyword"><?php echo e(__('adminPanel.Seo Keyword')); ?></label>
                     <input type="text" class="form-control" name="seoKeyword" value="<?php echo e($article->seoKeyword); ?>">
                 </div>
             </div>
 
 
             <div class="form-group">
-                <button class="btn btn-primary">Update</button>
+                <button class="btn btn-primary"><?php echo e(__('adminPanel.Update')); ?></button>
             </div>
         </form>
 

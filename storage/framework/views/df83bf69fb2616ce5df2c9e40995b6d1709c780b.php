@@ -16,11 +16,12 @@
 
     <?php if(app()->getLocale()=='fa'): ?>
         <link rel="stylesheet" href="<?php echo e(asset('css/adminlte.min.rtl.css')); ?>">
-
+        <link rel="stylesheet" href="<?php echo e(asset('css/custom.rtl.css')); ?>">
         <?php else: ?>
         <link rel="stylesheet" href="<?php echo e(asset('css/adminlte.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(asset('css/custom.css')); ?>">
     <?php endif; ?>
-    <link rel="stylesheet" href="<?php echo e(asset('css/custom.css')); ?>">
+
     <link rel="stylesheet" href="<?php echo e(asset('vendor/file-manager/css/file-manager.css')); ?>">
 
 

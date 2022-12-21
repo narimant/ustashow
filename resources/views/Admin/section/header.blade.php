@@ -16,11 +16,12 @@
 
     @if(app()->getLocale()=='fa')
         <link rel="stylesheet" href="{{ asset('css/adminlte.min.rtl.css') }}">
-
+        <link rel="stylesheet" href="{{ asset('css/custom.rtl.css') }}">
         @else
         <link rel="stylesheet" href="{{ asset('css/adminlte.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     @endif
-    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+
     <link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
 
 
