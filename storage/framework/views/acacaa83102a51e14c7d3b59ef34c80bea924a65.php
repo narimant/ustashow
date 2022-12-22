@@ -6,8 +6,8 @@
 
             <div class="card">
                 <div class="card-header d-flex align-content-center">
-                    <h3 class="card-title ">All Tags</h3>
-                    <a href="<?php echo e(route('tags.create')); ?>" class="btn btn-warning ml-auto p-2">Create Tag</a>
+                    <h3 class="card-title "><?php echo e(__('adminPanel.All Tags')); ?></h3>
+                    <a href="<?php echo e(route('tags.create')); ?>" class="btn btn-warning ml-auto p-2"><?php echo e(__('adminPanel.Create Tag')); ?></a>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -15,9 +15,9 @@
                         <thead>
                         <tr>
                             <th class="col-2">#</th>
-                            <th><?php echo e(_('name')); ?></th>
+                            <th><?php echo e(__('adminPanel.Tags Name')); ?></th>
 
-                            <th class="col-2"><?php echo e(_('Settings')); ?></th>
+                            <th class="col-2"><?php echo e(__('adminPanel.Settings')); ?></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -28,7 +28,7 @@
 
                             <tr>
                                 <td><?php echo e($i++); ?></td>
-                                <td><A href="<?php echo e($tag->path()); ?>"> <?php echo e($tag->name); ?></A></td>
+                                <td><a href="<?php echo e($tag->path()); ?>"> <?php echo e($tag->name); ?></a></td>
 
 
                                 <td>
@@ -37,8 +37,8 @@
                                         <?php echo method_field('DELETE'); ?>
                                         <?php echo csrf_field(); ?>
                                         <div class="btn btn-group">
-                                            <a   href="<?php echo e(route('tags.edit', [ 'tag'=>$tag->id])); ?>" class="btn btn-primary"><?php echo e(_('Edit')); ?></a>
-                                            <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?')" ><?php echo e(_('Delete')); ?></button>
+                                            <a   href="<?php echo e(route('tags.edit', [ 'tag'=>$tag->id])); ?>" class="btn btn-primary"><?php echo e(__('adminPanel.Edit')); ?></a>
+                                            <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?')" ><?php echo e(__('adminPanel.Delete')); ?></button>
                                         </div>
                                     </form>
                                 </td>

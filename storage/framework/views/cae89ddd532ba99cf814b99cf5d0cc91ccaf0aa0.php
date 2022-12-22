@@ -6,8 +6,8 @@
 
             <div class="card">
                 <div class="card-header d-flex align-content-center">
-                    <h3 class="card-title ">All Articles</h3>
-                    <a href="<?php echo e(route('categories.create')); ?>" class="btn btn-warning ml-auto p-2">Create category</a>
+                    <h3 class="card-title "><?php echo e(__('adminPanel.All Category')); ?></h3>
+                    <a href="<?php echo e(route('categories.create')); ?>" class="btn btn-warning ml-auto p-2"><?php echo e(__('adminPanel.Create Category')); ?></a>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -15,9 +15,9 @@
                         <thead>
                         <tr>
                             <th class="col-2">#</th>
-                            <th><?php echo e(_('name')); ?></th>
+                            <th><?php echo e(__('adminPanel.Category Name')); ?></th>
 
-                            <th class="col-2"><?php echo e(_('Settings')); ?></th>
+                            <th class="col-2"><?php echo e(__('adminPanel.Settings')); ?></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -37,8 +37,8 @@
                                         <?php echo method_field('DELETE'); ?>
                                         <?php echo csrf_field(); ?>
                                         <div class="btn btn-group">
-                                            <a   href="<?php echo e(route('categories.edit', [ 'category'=>$category->id])); ?>" class="btn btn-primary"><?php echo e(_('Edit')); ?></a>
-                                            <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?')" ><?php echo e(_('Delete')); ?></button>
+                                            <a   href="<?php echo e(route('categories.edit', [ 'category'=>$category->id])); ?>" class="btn btn-primary"><?php echo e(__('adminPanel.Edit')); ?></a>
+                                            <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?')" ><?php echo e(__('adminPanel.Delete')); ?></button>
                                         </div>
                                     </form>
                                 </td>

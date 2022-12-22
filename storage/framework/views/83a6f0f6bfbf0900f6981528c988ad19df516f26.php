@@ -8,7 +8,8 @@
 
                 <div class="card-header">
                     <h3 class="card-title">
-                        Create Category
+                        <?php echo e(__('adminPanel.Create Category')); ?>
+
                     </h3>
                 </div>
                 <div class="card-body">
@@ -18,17 +19,16 @@
                         <?php echo csrf_field(); ?>
 
                         <div class="form-group">
-                            <label  for="name">Category Name</label>
+                            <label  for="name"><?php echo e(__('adminPanel.Category Name')); ?></label>
                             <input type="text" name="name" value="<?php echo e(old('name')); ?>" class="form-control" id="name" placeholder="insert name " >
                         </div>
 
                             <div class="form-group">
-                                <label  for="language">language</label>
+                                <label  for="language"><?php echo e(__('adminPanel.Language')); ?></label>
                                 <select name="lang" id="language" class="form-control">
-                                    <option value="en" selected>english</option>
-                                    <option value="fa">persian</option>
-                                    <option value="tr">turkish</option>
-
+                                    <option value="en" <?php echo e(app()->getLocale()=='en' ? 'selected' : ''); ?>>english</option>
+                                    <option value="fa" <?php echo e(app()->getLocale()=='fa' ? 'selected' : ''); ?>>persian</option>
+                                    <option value="tr" <?php echo e(app()->getLocale()=='tr' ? 'selected' : ''); ?>>turkish</option>
                                 </select>
                             </div>
 
@@ -36,7 +36,7 @@
 
 
                         <div class="form-group">
-                            <label for="parent_id" class="form-label"> Category Parent</label>
+                            <label for="parent_id" class="form-label"><?php echo e(__('adminPanel.Category Parent')); ?></label>
 
                                 <select name="parent_id" id="parent_id" class="form-control">
                                     <option value="">انتخاب</option>
@@ -57,15 +57,15 @@
                         <hr>
                         <div class="row mb-3">
                             <div class="col-sm-12 form-group">
-                                <label class="form-label" for="seoTitle">Seo Title</label>
+                                <label class="form-label" for="seoTitle"><?php echo e(__('adminPanel.Seo Title')); ?></label>
                                 <input type="text" class="form-control" name="seoTitle" value="<?php echo e(old('seoTitle')); ?>">
                             </div>
                             <div class="col-sm-12 form-group">
-                                <label class="form-label" for="seoDescription">Seo Description</label>
+                                <label class="form-label" for="seoDescription"><?php echo e(__('adminPanel.Seo Description')); ?></label>
                                 <input type="text" class="form-control" name="seoDescription" value="<?php echo e(old('seoDescription')); ?>">
                             </div>
                             <div class="col-sm-12 form-group">
-                                <label class="form-label" for="seoKeyword">Seo Keyword</label>
+                                <label class="form-label" for="seoKeyword"><?php echo e(__('adminPanel.Seo Keyword')); ?></label>
                                 <input type="text" class="form-control" name="seoKeyword" value="<?php echo e(old('seoKeyword')); ?>">
                             </div>
                         </div>

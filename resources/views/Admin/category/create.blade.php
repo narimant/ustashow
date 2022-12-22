@@ -13,7 +13,7 @@
 
                 <div class="card-header">
                     <h3 class="card-title">
-                        Create Category
+                        {{__('adminPanel.Create Category')}}
                     </h3>
                 </div>
                 <div class="card-body">
@@ -23,17 +23,16 @@
                         @csrf
 
                         <div class="form-group">
-                            <label  for="name">Category Name</label>
+                            <label  for="name">{{__('adminPanel.Category Name')}}</label>
                             <input type="text" name="name" value="{{old('name')}}" class="form-control" id="name" placeholder="insert name " >
                         </div>
 
                             <div class="form-group">
-                                <label  for="language">language</label>
+                                <label  for="language">{{__('adminPanel.Language')}}</label>
                                 <select name="lang" id="language" class="form-control">
-                                    <option value="en" selected>english</option>
-                                    <option value="fa">persian</option>
-                                    <option value="tr">turkish</option>
-
+                                    <option value="en" {{app()->getLocale()=='en' ? 'selected' : ''}}>english</option>
+                                    <option value="fa" {{app()->getLocale()=='fa' ? 'selected' : ''}}>persian</option>
+                                    <option value="tr" {{app()->getLocale()=='tr' ? 'selected' : ''}}>turkish</option>
                                 </select>
                             </div>
 
@@ -41,7 +40,7 @@
 
 
                         <div class="form-group">
-                            <label for="parent_id" class="form-label"> Category Parent</label>
+                            <label for="parent_id" class="form-label">{{__('adminPanel.Category Parent')}}</label>
 
                                 <select name="parent_id" id="parent_id" class="form-control">
                                     <option value="">انتخاب</option>
@@ -62,15 +61,15 @@
                         <hr>
                         <div class="row mb-3">
                             <div class="col-sm-12 form-group">
-                                <label class="form-label" for="seoTitle">Seo Title</label>
+                                <label class="form-label" for="seoTitle">{{__('adminPanel.Seo Title')}}</label>
                                 <input type="text" class="form-control" name="seoTitle" value="{{old('seoTitle')}}">
                             </div>
                             <div class="col-sm-12 form-group">
-                                <label class="form-label" for="seoDescription">Seo Description</label>
+                                <label class="form-label" for="seoDescription">{{__('adminPanel.Seo Description')}}</label>
                                 <input type="text" class="form-control" name="seoDescription" value="{{old('seoDescription')}}">
                             </div>
                             <div class="col-sm-12 form-group">
-                                <label class="form-label" for="seoKeyword">Seo Keyword</label>
+                                <label class="form-label" for="seoKeyword">{{__('adminPanel.Seo Keyword')}}</label>
                                 <input type="text" class="form-control" name="seoKeyword" value="{{old('seoKeyword')}}">
                             </div>
                         </div>

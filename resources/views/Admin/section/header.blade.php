@@ -12,8 +12,7 @@
     <!-- IonIcons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-
-
+    <link rel="stylesheet" href="{{  asset('frontend/css/flag-icon.min.css') }}" >
     @if(app()->getLocale()=='fa')
         <link rel="stylesheet" href="{{ asset('css/adminlte.min.rtl.css') }}">
         <link rel="stylesheet" href="{{ asset('css/custom.rtl.css') }}">
@@ -48,11 +47,9 @@
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="index3.html" class="nav-link">Home</a>
+                <a href="{{route('admin.index')}}" class="nav-link">{{__('adminPanel.Home')}}</a>
             </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link">Contact</a>
-            </li>
+
         </ul>
 
         <!-- Right navbar links -->
@@ -149,6 +146,39 @@
                     <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
                 </div>
             </li>
+            {{--language menu--}}
+
+            <ul class="navbar-nav navbar-right-wrap ms-auto d-none d-lg-block">
+
+
+
+
+                <li class="nav-item dropdown d-inline-block">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        @php
+                            $segment=request()->segments();
+                            if(isset($segment[0]) && $segment[0]=='fa' || app()->getLocale()=='fa')
+                                {
+                                   echo '<span class="flag-icon flag-icon-ir"> </span> farsi';
+                                }elseif (isset($segment[0]) && $segment[0]=='tr' || app()->getLocale()=='tr')
+                                {
+                                    echo '<span class="flag-icon flag-icon-tr"> </span> Turky';
+                                }else
+                                {
+                                    echo '<span class="flag-icon flag-icon-us"> </span> Engliah';
+                                }
+                        @endphp
+                    </a>
+                    <div class="dropdown-menu  dropdown-menu-end" >
+                        <a class="dropdown-item" href="{{url('tr')}}"><span class="flag-icon flag-icon-tr"> </span>  turkish</a>
+                        <a class="dropdown-item" href="{{url('fa')}}"><span class="flag-icon flag-icon-ir"> </span>  farsi</a>
+                        <a class="dropdown-item" href="{{url('en')}}"><span class="flag-icon flag-icon-us"> </span>  english</a>
+                    </div>
+                </li>
+
+
+
+            </ul>
             <li class="nav-item">
                 <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                     <i class="fas fa-expand-arrows-alt"></i>

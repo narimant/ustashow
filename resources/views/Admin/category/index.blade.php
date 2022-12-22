@@ -9,8 +9,8 @@
 
             <div class="card">
                 <div class="card-header d-flex align-content-center">
-                    <h3 class="card-title ">All Articles</h3>
-                    <a href="{{ route('categories.create') }}" class="btn btn-warning ml-auto p-2">Create category</a>
+                    <h3 class="card-title ">{{__('adminPanel.All Category')}}</h3>
+                    <a href="{{ route('categories.create') }}" class="btn btn-warning ml-auto p-2">{{__('adminPanel.Create Category')}}</a>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body">
@@ -18,9 +18,9 @@
                         <thead>
                         <tr>
                             <th class="col-2">#</th>
-                            <th>{{ _('name') }}</th>
+                            <th>{{__('adminPanel.Category Name')}}</th>
 
-                            <th class="col-2">{{_('Settings')}}</th>
+                            <th class="col-2">{{__('adminPanel.Settings')}}</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -40,8 +40,8 @@
                                         @method('DELETE')
                                         @csrf
                                         <div class="btn btn-group">
-                                            <a   href="{{ route('categories.edit', [ 'category'=>$category->id]) }}" class="btn btn-primary">{{ _('Edit') }}</a>
-                                            <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?')" >{{ _('Delete') }}</button>
+                                            <a   href="{{ route('categories.edit', [ 'category'=>$category->id]) }}" class="btn btn-primary">{{__('adminPanel.Edit')}}</a>
+                                            <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?')" >{{__('adminPanel.Delete')}}</button>
                                         </div>
                                     </form>
                                 </td>

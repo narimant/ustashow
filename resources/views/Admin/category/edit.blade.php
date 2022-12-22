@@ -20,7 +20,7 @@
 
                 <div class="card-header">
                     <h3 class="card-title">
-                        Edit Category
+                       {{__('adminPanel.Edit Category')}}
                     </h3>
                 </div>
                 <div class="card-body">
@@ -31,11 +31,11 @@
             @method('put')
 
             <div class="form-group">
-                <label  for="name">Category Name</label>
+                <label  for="name">{{__('adminPanel.Category Name')}}</label>
                 <input type="text" name="name" value="{{ $category->name }}" class="form-control" id="name" placeholder="insert category name " >
             </div>
             <div class="form-group">
-                <label  for="language">language</label>
+                <label  for="language">{{__('adminPanel.Language')}}</label>
                 <select name="lang" id="language" class="form-control">
                     <option value="en" {{$category->lang=='en' ? 'selected' : ''}}>english</option>
                     <option value="fa" {{$category->lang=='fa' ? 'selected' : ''}}>persian</option>
@@ -44,7 +44,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="parent_id" class="form-label"> Category Parent</label>
+                <label for="parent_id" class="form-label"> {{__('adminPanel.Category Parent')}}</label>
 
                 <select name="parent_id" id="parent_id" class="form-control">
                     <option value="">انتخاب</option>
@@ -64,21 +64,21 @@
             <hr>
             <div class="row mb-3">
                 <div class="col-sm-12 form-group">
-                    <label class="form-label" for="seoTitle">Seo Title</label>
+                    <label class="form-label" for="seoTitle">{{__('adminPanel.Seo Title')}}</label>
                     <input type="text" class="form-control" name="seoTitle" value="{{$category->seoTitle}}">
                 </div>
                 <div class="col-sm-12 form-group">
-                    <label class="form-label" for="seoDescription">Seo Description</label>
+                    <label class="form-label" for="seoDescription">{{__('adminPanel.Seo Description')}}</label>
                     <input type="text" class="form-control" name="seoDescription" value="{{$category->seoDescription}}">
                 </div>
                 <div class="col-sm-12 form-group">
-                    <label class="form-label" for="seoKeyword">Seo Keyword</label>
+                    <label class="form-label" for="seoKeyword">{{__('adminPanel.Seo Keyword')}}</label>
                     <input type="text" class="form-control" name="seoKeyword" value="{{$category->seoKeyword}}">
                 </div>
             </div>
 
             <div class="form-group">
-                <button class="btn btn-primary">Update</button>
+                <button class="btn btn-primary">{{__('adminPanel.Update')}}</button>
             </div>
         </form>
 
