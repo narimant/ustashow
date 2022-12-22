@@ -184,7 +184,7 @@
                             <a href="{{route('courses.index')}}"
                                class="nav-link {{ Route::is('courses.index')? 'active': '' }}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>{{__('adminPanel.All courses')}}</p>
+                                <p>{{__('adminPanel.Courses')}}</p>
                             </a>
                         </li>
 
@@ -255,7 +255,7 @@
                             <a href="{{route('comments.unsucsess')}}"
                                class="nav-link {{ Route::is('comments.unsucsess')? 'active': '' }}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>{{__('adminPanel.Comments unsuccess')}}
+                                <p>{{__('adminPanel.New Comments')}}
                                     @if($newcomment->count()>0)
                                         <span class="badge badge-danger right">{{ $newcomment->count() }}</span>
                                     @endif

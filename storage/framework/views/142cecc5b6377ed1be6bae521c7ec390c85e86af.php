@@ -6,19 +6,19 @@
 
             <div class="card">
                 <div class="card-header d-flex align-content-center">
-                    <h3 class="card-title ">All Articles</h3>
-                    <a href="<?php echo e(route('pages.create')); ?>" class="btn btn-warning ml-auto p-2">Create Page</a>
+                    <h3 class="card-title "><?php echo e(__('adminPanel.All Pages')); ?></h3>
+                    <a href="<?php echo e(route('pages.create')); ?>" class="btn btn-warning ml-auto p-2"><?php echo e(__('adminPanel.Create Page')); ?></a>
                 </div>
                 <!-- /.card-header -->
                 <ul class="nav nav-tabs mt-3" id="custom-content-above-tab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link <?php echo e(request()->get('show')=='' ? "active" : ''); ?>"  href="<?php echo e(route('pages.index')); ?>"  > Footer Active</a>
+                        <a class="nav-link <?php echo e(request()->get('show')=='' ? "active" : ''); ?>"  href="<?php echo e(route('pages.index')); ?>"  > <?php echo e(__('adminPanel.Active Pages')); ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo e(request()->get('show')=='draft' ? "active" : ''); ?>"  href="<?php echo e(route('pages.index',['show'=>'draft'])); ?>"  > Foter Draft <?php if($draftcount>0): ?><span class="badge badge-primary right"><?php echo e($draftcount); ?><?php endif; ?></a>
+                        <a class="nav-link <?php echo e(request()->get('show')=='draft' ? "active" : ''); ?>"  href="<?php echo e(route('pages.index',['show'=>'draft'])); ?>"  > <?php echo e(__('adminPanel.Draft Pages')); ?> <?php if($draftcount>0): ?><span class="badge badge-primary right"><?php echo e($draftcount); ?><?php endif; ?></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo e(request()->get('show')=='trash' ? "active" : ''); ?>"  href="<?php echo e(route('pages.index',['show'=>'trash'])); ?>"  >Footer in Trash <?php if($trashcount>0): ?><span class="badge badge-danger right"><?php echo e($trashcount); ?><?php endif; ?></span></a>
+                        <a class="nav-link <?php echo e(request()->get('show')=='trash' ? "active" : ''); ?>"  href="<?php echo e(route('pages.index',['show'=>'trash'])); ?>"  ><?php echo e(__('adminPanel.Trash Pages')); ?> <?php if($trashcount>0): ?><span class="badge badge-danger right"><?php echo e($trashcount); ?><?php endif; ?></span></a>
                     </li>
 
                 </ul>
@@ -29,10 +29,10 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th><?php echo e(_('title')); ?></th>
-                            <th><?php echo e(_('Comment')); ?></th>
-                            <th><?php echo e(_('Virews')); ?></th>
-                            <th><?php echo e(_('Settings')); ?></th>
+                            <th><?php echo e(__('adminPanel.Title')); ?></th>
+                            <th><?php echo e(__('adminPanel.Comments')); ?></th>
+                            <th><?php echo e(__('adminPanel.Views')); ?></th>
+                            <th><?php echo e(__('adminPanel.Settings')); ?></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -62,15 +62,15 @@
                                         <?php echo method_field('DELETE'); ?>
                                         <?php echo csrf_field(); ?>
                                         <div class="btn btn-group">
-                                            <a   href="<?php echo e(route('pages.edit', [ 'page'=>$pageIteam->id])); ?>" class="btn btn-primary"><?php echo e(_('Edit')); ?></a>
+                                            <a   href="<?php echo e(route('pages.edit', [ 'page'=>$pageIteam->id])); ?>" class="btn btn-primary"><?php echo e(__('adminPanel.Edit')); ?></a>
                                            <?php if(request()->get('show')=='trash'): ?>
-                                                <a   href="<?php echo e(route('pageItem.restore', [ 'id'=>$pageIteam->id])); ?>" class="btn btn-success"><?php echo e(_('Restore')); ?></a>
+                                                <a   href="<?php echo e(route('pageItem.restore', [ 'id'=>$pageIteam->id])); ?>" class="btn btn-success"><?php echo e(__('adminPanel.Restore')); ?></a>
                                             <?php endif; ?>
                                             <?php if(request()->get('show')=='draft'): ?>
 
-                                                <a   href="<?php echo e(route('pageItem.publish', [ 'id'=>$pageIteam->id])); ?>" class="btn btn-success"><?php echo e(_('Publish')); ?></a>
+                                                <a   href="<?php echo e(route('pageItem.publish', [ 'id'=>$pageIteam->id])); ?>" class="btn btn-success"><?php echo e(__('adminPanel.Publish')); ?></a>
                                             <?php endif; ?>
-                                            <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?')" ><?php echo e(_('Delete')); ?></button>
+                                            <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?')" ><?php echo e(__('adminPanel.Delete')); ?></button>
                                         </div>
                                     </form>
                                 </td>

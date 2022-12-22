@@ -13,7 +13,10 @@
     <script>
         CKEDITOR.replace('body',{
             filebrowserUploadUrl:'/admin/panel/upload-image',
-            filebrowserImageUploadUrl:'/admin/panel/upload-image'
+            filebrowserImageUploadUrl:'/admin/panel/upload-image',
+            @if(app()->getLocale()=='fa')
+            contentsLangDirection : 'rtl',
+            @endif
         })
 
 
@@ -39,7 +42,7 @@
 
                 <div class="card-header">
                     <h3 class="card-title">
-                        Create Footer Page
+                        {{__('adminPanel.Create Page')}}
                     </h3>
                 </div>
                 <div class="card-body">
@@ -51,32 +54,32 @@
                 @csrf
                 @method('post')
                 <div class="form-group">
-                    <label  for="title">Titile</label>
+                    <label  for="title">{{__('adminPanel.Title')}}</label>
                     <input type="text" name="title" value="{{old('title')}}" class="form-control" id="title" placeholder="insert title " >
                 </div>
 
                 <div class="form-group">
-                    <label  for="description">description</label>
+                    <label  for="description">{{__('adminPanel.description')}}</label>
                     <input type="text" name="description" value="{{old('description')}}" class="form-control" id="description" placeholder="insert  description" >
                 </div>
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">
-                            <label  for="language">language</label>
+                            <label  for="language">{{__('adminPanel.Language')}} </label>
                             <select name="lang" id="language" class="form-control">
-                                <option value="en" selected>english</option>
-                                <option value="fa">persian</option>
-                                <option value="tr">turkish</option>
+                                <option value="en" {{app()->getLocale()=='en' ? 'selected' : ''}}>english</option>
+                                <option value="fa" {{app()->getLocale()=='fa' ? 'selected' : ''}}>persian</option>
+                                <option value="tr" {{app()->getLocale()=='tr' ? 'selected' : ''}}>turkish</option>
 
                             </select>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-group">
-                            <label  for="status">Display Status</label>
+                            <label  for="status">{{__('adminPanel.Display Status')}}</label>
                             <select name="status" id="status" class="form-control">
-                                <option value="0" selected>Draft</option>
-                                <option value="1">publish</option>
+                                <option value="0" selected>{{__('adminPanel.Draft')}}</option>
+                                <option value="1">{{__('adminPanel.publish')}}</option>
 
 
                             </select>
@@ -86,14 +89,14 @@
 
 
                 <div class="form-group">
-                    <label  for="body">body</label>
+                    <label  for="body"> {{__('adminPanel.body')}}</label>
                     <textarea rows="5" name="body"  class="form-control" id="body" placeholder="insert  body" >{{old('body')}}</textarea>
                 </div>
 
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-6 ">
-                            <label  for="description">Image</label>
+                            <label  for="description">{{__('adminPanel.Image')}}</label>
                             <input type="file" name="images" value="{{old('images')}}"  class="form-control" id="images" placeholder="insert  Image" >
                         </div>
 
@@ -109,15 +112,15 @@
                 <hr>
                 <div class="row mb-3">
                     <div class="col-sm-12 form-group">
-                        <label class="form-label" for="seoTitle">Seo Title</label>
+                        <label class="form-label" for="seoTitle">{{__('adminPanel.Seo Title')}}</label>
                         <input type="text" class="form-control" name="seoTitle" value="{{old('seoTitle')}}">
                     </div>
                     <div class="col-sm-12 form-group">
-                        <label class="form-label" for="seoDescription">Seo Description</label>
+                        <label class="form-label" for="seoDescription">{{__('adminPanel.Seo Description')}}</label>
                         <input type="text" class="form-control" name="seoDescription" value="{{old('seoDescription')}}">
                     </div>
                     <div class="col-sm-12 form-group">
-                        <label class="form-label" for="seoKeyword">Seo Keyword</label>
+                        <label class="form-label" for="seoKeyword">{{__('adminPanel.Seo Keyword')}}</label>
                         <input type="text" class="form-control" name="seoKeyword" value="{{old('seoKeyword')}}">
                     </div>
                 </div>

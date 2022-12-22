@@ -138,7 +138,7 @@ return array(
         "body" => "متن",
         "category" => "دسته بندی",
         "images" => "عکس",
-
+        "price" => "قیمت",
 
     ),
 );

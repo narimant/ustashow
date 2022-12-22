@@ -190,7 +190,7 @@
                             <a href="<?php echo e(route('courses.index')); ?>"
                                class="nav-link <?php echo e(Route::is('courses.index')? 'active': ''); ?>">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p><?php echo e(__('adminPanel.All courses')); ?></p>
+                                <p><?php echo e(__('adminPanel.Courses')); ?></p>
                             </a>
                         </li>
 
@@ -263,7 +263,7 @@
                             <a href="<?php echo e(route('comments.unsucsess')); ?>"
                                class="nav-link <?php echo e(Route::is('comments.unsucsess')? 'active': ''); ?>">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p><?php echo e(__('adminPanel.Comments unsuccess')); ?>
+                                <p><?php echo e(__('adminPanel.New Comments')); ?>
 
                                     <?php if($newcomment->count()>0): ?>
                                         <span class="badge badge-danger right"><?php echo e($newcomment->count()); ?></span>

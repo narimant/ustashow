@@ -11,7 +11,10 @@
     <script>
         CKEDITOR.replace('body',{
             filebrowserUploadUrl:'/admin/panel/upload-image',
-            filebrowserImageUploadUrl:'/admin/panel/upload-image'
+            filebrowserImageUploadUrl:'/admin/panel/upload-image',
+            @if(app()->getLocale()=='fa')
+            contentsLangDirection : 'rtl',
+            @endif
         })
 
         $('#tags').select2({
@@ -33,7 +36,7 @@
 
                 <div class="card-header">
                     <h3 class="card-title">
-                        Edit Course
+                        {{__('adminPanel.Edit Course')}}
                     </h3>
                 </div>
                 <div class="card-body">
@@ -44,18 +47,18 @@
            @method('put')
 
             <div class="form-group">
-                <label  for="title">Titile</label>
+                <label  for="title">{{__('adminPanel.Title')}}</label>
                 <input type="text" name="title" value="{{ $course->title }}" class="form-control" id="title" placeholder="insert title " >
             </div>
 
             <div class="form-group">
-                <label  for="description">description</label>
+                <label  for="description">{{__('adminPanel.description')}}</label>
                 <input type="text" name="description" value="{{ $course->description }}" class="form-control" id="description" placeholder="insert  description" >
             </div>
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
-                        <label  for="language">language</label>
+                        <label  for="language">{{__('adminPanel.Language')}}</label>
                         <select name="lang" id="language" class="form-control">
                             <option value="en" {{$course->lang=='en' ? 'selected' : ''}}>english</option>
                             <option value="fa" {{$course->lang=='fa' ? 'selected' : ''}}>persian</option>
@@ -66,7 +69,7 @@
                 </div>
                 <div class="col-6">
                     <div class="form-group">
-                        <label  for="status">Display Status</label>
+                        <label  for="status">{{__('adminPanel.Display Status')}}</label>
                         <select name="status" id="status" class="form-control">
                             <option value="0" {{$course->status=='0' ? 'selected' : ''}}>Draft</option>
                             <option value="1" {{$course->status=='1' ? 'selected' : ''}}>publish</option>
@@ -77,14 +80,14 @@
                 </div>
             </div>
             <div class="form-group">
-                <label  for="body">body</label>
+                <label  for="body">{{__('adminPanel.body')}}</label>
                 <textarea rows="5" name="body"  class="form-control" id="body" placeholder="insert  body" >{{ $course->body }}</textarea>
             </div>
 
             <div class="form-group">
                 <div class="row">
                     <div class="col-sm-6 ">
-                        <label  for="description">Image</label>
+                        <label  for="description">{{__('adminPanel.Image')}}</label>
                         <input type="file" name="images"   class="form-control" id="images" placeholder="insert  Image" >
                         <div class="col-sm-12">
                             @foreach( $course->images['images'] as $key => $image)
@@ -102,7 +105,7 @@
 
 
                     <div class="col-sm-6 ">
-                        <label  for="description">Category</label>
+                        <label  for="description">{{__('adminPanel.Category')}}</label>
                         <div>
                             <ul class="list-group ">
                                 @foreach(\App\Category::where('parent_id',null)->with('sub_category')->get() as $value)
@@ -138,16 +141,16 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-sm-6">
-                        <label  for="price">Price</label>
+                        <label  for="price">{{__('adminPanel.Price')}}</label>
                         <input type="text" name="price" value="{{ $course->price }}" class="form-control" id="price" placeholder="inser price">
                     </div>
                     <div class="col-sm-6">
-                        <label  for="type">Course type</label>
+                        <label  for="type">{{__('adminPanel.Course Type')}}</label>
                         <select name="type" id="type" class="form-control">
 
-                            <option value="vip" {{ $course->type=='vip' ? 'selected' : '' }} >Vip</option>
-                            <option value="free" {{ $course->type=='free' ? 'selected' : '' }}>Free</option>
-                            <option value="cash" {{ $course->type=='cash' ? 'selected' : '' }}>Cash</option>
+                            <option value="vip" {{ $course->type=='vip' ? 'selected' : '' }} >{{__('adminPanel.Vip')}}</option>
+                            <option value="free" {{ $course->type=='free' ? 'selected' : '' }}>{{__('adminPanel.Free')}}</option>
+                            <option value="cash" {{ $course->type=='cash' ? 'selected' : '' }}>{{__('adminPanel.Cash')}}</option>
                         </select>
                     </div>
                 </div>
@@ -159,15 +162,15 @@
             <hr>
             <div class="row mb-3">
                 <div class="col-sm-12 form-group">
-                    <label class="form-label" for="seoTitle">Seo Title</label>
+                    <label class="form-label" for="seoTitle">{{__('adminPanel.Seo Title')}}</label>
                     <input type="text" class="form-control" name="seoTitle" value="{{$course->seoTitle}}">
                 </div>
                 <div class="col-sm-12 form-group">
-                    <label class="form-label" for="seoDescription">Seo Description</label>
+                    <label class="form-label" for="seoDescription">{{__('adminPanel.Seo Description')}}</label>
                     <input type="text" class="form-control" name="seoDescription" value="{{$course->seoDescription}}">
                 </div>
                 <div class="col-sm-12 form-group">
-                    <label class="form-label" for="seoKeyword">Seo Keyword</label>
+                    <label class="form-label" for="seoKeyword">{{__('adminPanel.Seo Keyword')}}</label>
                     <input type="text" class="form-control" name="seoKeyword" value="{{$course->seoKeyword}}">
                 </div>
             </div>
