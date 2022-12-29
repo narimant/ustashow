@@ -85,7 +85,8 @@
 
                 <?php $__currentLoopData = $articles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <!-- Card -->
-                    <div class="card col-3 m-2 card-hover p-0">
+                <div class="col-3">
+                    <div class="card  card-hover p-0">
                     <a href="<?php echo e($article->path()); ?>" class="card-img-top">
                         <img src="<?php echo e($article->images['tumbnail']); ?>" alt="" class="rounded-top-md card-img-top">
                     </a>
@@ -116,6 +117,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 

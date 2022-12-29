@@ -3,7 +3,16 @@
 
 $dir=(app()->getLocale()=='fa') ? "rtl" :"ltr";
 ?>
-<html lang="<?php echo e(app()->getLocale()); ?>" dir="<?php echo e($dir); ?>">
+<html
+        dir="<?php echo e($dir); ?>"
+           <?php if(app()->getLocale()=='fa'): ?>
+           lang="fa-ir"
+        <?php elseif(app()->getLocale()=='tr'): ?>
+        lang="tr-TR"
+        <?php else: ?>
+        lang="'en-US'"
+        <?php endif; ?>
+>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -27,10 +36,10 @@ $dir=(app()->getLocale()=='fa') ? "rtl" :"ltr";
                 <!--<link rel="alternate" hreflang="<?php echo e($local); ?>" href="https://ustashow.com/<?php echo e($local); ?>/article/<?php echo e($article->slug); ?>" /> -->
 
                 <?php elseif(str_contains(url()->current(), '/page/')): ?>
-                <link rel="alternate" hreflang="<?php echo e($local); ?>" href="https://ustashow.com/<?php echo e($local); ?>/page/<?php echo e($pages->slug); ?>" />
+        <!-- <link rel="alternate" hreflang="<?php echo e($local); ?>" href="https://ustashow.com/<?php echo e($local); ?>/page/<?php echo e($pages->slug); ?>" /> -->
 
                 <?php elseif(str_contains(url()->current(), '/category/')): ?>
-                <link rel="alternate" hreflang="<?php echo e($local); ?>" href="https://ustashow.com/<?php echo e($local); ?>/category/<?php echo e($categoryslug); ?>" />
+        <!-- <link rel="alternate" hreflang="<?php echo e($local); ?>" href="https://ustashow.com/<?php echo e($local); ?>/category/<?php echo e($categoryslug); ?>" /> -->
 
                 <?php elseif(str_contains(url()->current(), '/tag/')): ?>
                     <link rel="alternate" hreflang="<?php echo e($local); ?>" href="https://ustashow.com/<?php echo e($local); ?>/tag/<?php echo e($tag->slug); ?>" />

@@ -50,7 +50,7 @@
                             @method('DELETE')
                             @csrf
                             <div class="btn btn-group">
-                                {{--                                    <a href="{{ route('episodes.edit', [ 'episode'=>$users->id]) }}" class="btn btn-primary">{{ _('Edit') }}</a>--}}
+                                <a href="{{ route('user.edit', [ 'user'=>$user->id]) }}" class="btn btn-primary">{{ _('Edit') }}</a>
                                 <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?')">{{ _('Delete') }}</button>
                             </div>
                         </form>

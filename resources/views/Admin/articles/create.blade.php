@@ -15,7 +15,7 @@
             filebrowserUploadUrl:'/admin/panel/upload-image',
             filebrowserImageUploadUrl:'/admin/panel/upload-image',
         @if(app()->getLocale()=='fa')
-        contentsLangDirection : 'rtl',
+            contentsLangDirection : 'rtl',
             @endif
         })
 

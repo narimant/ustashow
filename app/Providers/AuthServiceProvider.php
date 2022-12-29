@@ -15,7 +15,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        // 'App\Model' => 'App\Policies\ModelPolicy',
+         'App\Model' => 'App\Policies\ModelPolicy',
     ];
 
     /**
@@ -27,20 +27,17 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        if (Schema::hasTable('Permission'))
-        {
-            foreach ($this->getPermission() as $permission)
-            {
-                Gate::define($permission->name ,function ($user) use ($permission) {
-                    return  $user->hasRole($permission->roles);
-                });
-            }
+        foreach ($this->getPermissions() as $permission) {
+            Gate::define($permission->name , function ($user) use($permission){
+                return $user->hasRole($permission->roles);
+            });
         }
 
     }
 
-    protected function getPermission()
+    protected function getPermissions()
     {
+
         return Permission::with('roles')->get();
     }
 }

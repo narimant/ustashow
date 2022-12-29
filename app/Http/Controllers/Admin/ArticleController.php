@@ -11,6 +11,14 @@ use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class ArticleController extends AdminController
 {
+
+        public function __construct()
+        {
+
+
+
+        }
+
     /**
      * Display a listing of the resource.
      *
@@ -18,6 +26,8 @@ class ArticleController extends AdminController
      */
     public function index()
     {
+
+
         $show=\request()->get('show');
         if(isset($show) && $show=='trash')
         {

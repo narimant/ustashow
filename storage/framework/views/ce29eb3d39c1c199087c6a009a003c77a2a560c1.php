@@ -47,7 +47,7 @@
                             <?php echo method_field('DELETE'); ?>
                             <?php echo csrf_field(); ?>
                             <div class="btn btn-group">
-                                
+                                <a href="<?php echo e(route('user.edit', [ 'user'=>$user->id])); ?>" class="btn btn-primary"><?php echo e(_('Edit')); ?></a>
                                 <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure?')"><?php echo e(_('Delete')); ?></button>
                             </div>
                         </form>

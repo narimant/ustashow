@@ -3,7 +3,16 @@
 
 $dir=(app()->getLocale()=='fa') ? "rtl" :"ltr";
 @endphp
-<html lang="{{ app()->getLocale() }}" dir="{{ $dir }}">
+<html
+        dir="{{ $dir }}"
+           @if (app()->getLocale()=='fa')
+           lang="fa-ir"
+        @elseif(app()->getLocale()=='tr')
+        lang="tr-TR"
+        @else
+        lang="'en-US'"
+        @endif
+>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -26,10 +35,10 @@ $dir=(app()->getLocale()=='fa') ? "rtl" :"ltr";
                 <!--<link rel="alternate" hreflang="{{$local}}" href="https://ustashow.com/{{$local}}/article/{{$article->slug}}" /> -->
 
                 @elseif(str_contains(url()->current(), '/page/'))
-                <link rel="alternate" hreflang="{{$local}}" href="https://ustashow.com/{{$local}}/page/{{$pages->slug}}" />
+        <!-- <link rel="alternate" hreflang="{{$local}}" href="https://ustashow.com/{{$local}}/page/{{$pages->slug}}" /> -->
 
                 @elseif(str_contains(url()->current(), '/category/'))
-                <link rel="alternate" hreflang="{{$local}}" href="https://ustashow.com/{{$local}}/category/{{$categoryslug}}" />
+        <!-- <link rel="alternate" hreflang="{{$local}}" href="https://ustashow.com/{{$local}}/category/{{$categoryslug}}" /> -->
 
                 @elseif(str_contains(url()->current(), '/tag/'))
                     <link rel="alternate" hreflang="{{$local}}" href="https://ustashow.com/{{$local}}/tag/{{$tag->slug}}" />

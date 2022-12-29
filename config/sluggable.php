@@ -60,7 +60,7 @@ return [
      */
 
 
-    'method' => array('Str','slug'),/*function($string, $separator = '-') {
+    'method' => /*array('Str','slug'),*/function($string, $separator = '-') {
         $_transliteration = ["/ö|œ/" => "e",
             "/ü/" => "e",
             "/Ä/" => "e",
@@ -119,7 +119,7 @@ return [
         $map = $_transliteration + $merge;
         unset($_transliteration);
         return preg_replace(array_keys($map), array_values($map), $string);
-    },*/
+    },
 
 
     /**

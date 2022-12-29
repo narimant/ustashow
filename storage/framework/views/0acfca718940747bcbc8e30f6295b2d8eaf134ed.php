@@ -49,7 +49,9 @@
 
 
                 <!-- Articles -->
+                   <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('show_articles')): ?>
                 <li class="nav-item <?php echo e(Route::is(['articles.index','articles.create','articles.edit']) ? 'menu-open': ''); ?>">
+
                     <a href="#" class="nav-link <?php echo e(Route::is(['articles.index','articles.create' ,'articles.edit'])? 'active': ''); ?>">
                         <i class=" fas fa-file"></i>
                         <p>
@@ -59,7 +61,9 @@
 
                         </p>
                     </a>
+
                     <ul class="nav nav-treeview">
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('all_articles')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('articles.index')); ?>"
                                class="nav-link <?php echo e(Route::is('articles.index')? 'active': ''); ?>">
@@ -67,7 +71,8 @@
                                 <p><?php echo e(__('adminPanel.All Articles')); ?></p>
                             </a>
                         </li>
-
+                        <?php endif; ?>
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('create_article')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('articles.create')); ?>"
                                class="nav-link <?php echo e(Route::is('articles.create')? 'active': ''); ?>">
@@ -75,11 +80,13 @@
                                 <p><?php echo e(__('adminPanel.Create Articles')); ?></p>
                             </a>
                         </li>
-
+                        <?php endif; ?>
                     </ul>
                 </li>
+                    <?php endif; ?>
 
                 <!-- category -->
+                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('show_category')): ?>
                 <li class="nav-item <?php echo e(Route::is(['categories.index','categories.create']) ? 'menu-open': ''); ?>">
                     <a href="#" class="nav-link <?php echo e(Route::is(['categories.index','categories.create'])? 'active': ''); ?>">
                         <i class="fa fa-folder"></i>
@@ -91,6 +98,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('all_category')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('categories.index')); ?>"
                                class="nav-link <?php echo e(Route::is('categories.index')? 'active': ''); ?>">
@@ -98,7 +106,9 @@
                                 <p><?php echo e(__('adminPanel.All Category')); ?></p>
                             </a>
                         </li>
+                        <?php endif; ?>
 
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('create_category')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('categories.create')); ?>"
                                class="nav-link <?php echo e(Route::is('categories.create')? 'active': ''); ?>">
@@ -106,12 +116,13 @@
                                 <p><?php echo e(__('adminPanel.Create Category')); ?></p>
                             </a>
                         </li>
-
+                        <?php endif; ?>
                     </ul>
                 </li>
-
+                <?php endif; ?>
 
                 <!-- tag -->
+                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('show_tags')): ?>
                 <li class="nav-item <?php echo e(Route::is(['tags.index','tags.create']) ? 'menu-open': ''); ?>">
                     <a href="#" class="nav-link <?php echo e(Route::is(['tags.index','tags.create'])? 'active': ''); ?>">
                         <i class="fas fa-thin fa-tags"></i>
@@ -123,6 +134,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('all_tags')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('tags.index')); ?>"
                                class="nav-link <?php echo e(Route::is('tags.index')? 'active': ''); ?>">
@@ -130,7 +142,8 @@
                                 <p><?php echo e(__('adminPanel.All Tags')); ?></p>
                             </a>
                         </li>
-
+                        <?php endif; ?>
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('create_tag')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('tags.create')); ?>"
                                class="nav-link <?php echo e(Route::is('tags.create')? 'active': ''); ?>">
@@ -138,12 +151,13 @@
                                 <p><?php echo e(__('adminPanel.Create Tag')); ?></p>
                             </a>
                         </li>
-
+                        <?php endif; ?>
                     </ul>
                 </li>
-
+                <?php endif; ?>
 
                 <!-- Pages -->
+                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('show_pages')): ?>
                 <li class="nav-item <?php echo e(Route::is(['pages.index','pages.create']) ? 'menu-open': ''); ?>">
                     <a href="#" class="nav-link <?php echo e(Route::is(['pages.index','pages.create'])? 'active': ''); ?>">
                         <i class="nav-icon fas fa-book"></i>
@@ -155,6 +169,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('all_pages')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('pages.index')); ?>"
                                class="nav-link <?php echo e(Route::is('pages.index')? 'active': ''); ?>">
@@ -162,7 +177,8 @@
                                 <p><?php echo e(__('adminPanel.All Pages')); ?></p>
                             </a>
                         </li>
-
+                        <?php endif; ?>
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('create_page')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('pages.create')); ?>"
                                class="nav-link <?php echo e(Route::is('pages.create')? 'active': ''); ?>">
@@ -170,11 +186,12 @@
                                 <p><?php echo e(__('adminPanel.Create Page')); ?></p>
                             </a>
                         </li>
-
+                        <?php endif; ?>
                     </ul>
                 </li>
-
+                <?php endif; ?>
                 <!-- Courses -->
+                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('show_courses')): ?>
                 <li class="nav-item <?php echo e(Route::is(['courses.index','courses.create']) ? 'menu-open': ''); ?>">
                     <a href="#" class="nav-link <?php echo e(Route::is(['courses.index','courses.create'])? 'active': ''); ?>">
                         <i class="fas fa-graduation-cap"></i>
@@ -186,6 +203,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('all_courses')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('courses.index')); ?>"
                                class="nav-link <?php echo e(Route::is('courses.index')? 'active': ''); ?>">
@@ -193,7 +211,8 @@
                                 <p><?php echo e(__('adminPanel.Courses')); ?></p>
                             </a>
                         </li>
-
+                        <?php endif; ?>
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('create_course')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('courses.create')); ?>"
                                class="nav-link <?php echo e(Route::is('courses.create')? 'active': ''); ?>">
@@ -201,12 +220,14 @@
                                 <p><?php echo e(__('adminPanel.Create course')); ?></p>
                             </a>
                         </li>
+                            <?php endif; ?>
 
                     </ul>
                 </li>
-
+                <?php endif; ?>
 
                 <!-- Episodes -->
+                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('show_episode')): ?>
                 <li class="nav-item <?php echo e(Route::is(['episodes.index','episodes.create']) ? 'menu-open': ''); ?>">
                     <a href="#" class="nav-link <?php echo e(Route::is(['episodes.index','episodes.create'])? 'active': ''); ?>">
                         <i class="fas fa-video"></i>
@@ -218,6 +239,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('all_episodes')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('episodes.index')); ?>"
                                class="nav-link <?php echo e(Route::is('episodes.index')? 'active': ''); ?>">
@@ -225,7 +247,8 @@
                                 <p><?php echo e(__('adminPanel.All Episodes')); ?></p>
                             </a>
                         </li>
-
+                        <?php endif; ?>
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('create_episode')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('episodes.create')); ?>"
                                class="nav-link <?php echo e(Route::is('episodes.create')? 'active': ''); ?>">
@@ -233,12 +256,14 @@
                                 <p><?php echo e(__('adminPanel.Create Episodes')); ?></p>
                             </a>
                         </li>
+                            <?php endif; ?>
 
                     </ul>
                 </li>
-
+                <?php endif; ?>
 
                 <!-- Comments -->
+                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('show_comments')): ?>
                 <li class="nav-item <?php echo e(Route::is(['comments.index','comments.unsucsess']) ? 'menu-open': ''); ?>">
                     <a href="#" class="nav-link <?php echo e(Route::is(['comments.index','comments.unsucsess'])? 'active': ''); ?>">
                         <i class="fas fa-comments"></i>
@@ -251,6 +276,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('all_comments')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('comments.index')); ?>"
                                class="nav-link <?php echo e(Route::is('comments.index')? 'active': ''); ?>">
@@ -258,7 +284,9 @@
                                 <p><?php echo e(__('adminPanel.All Comments')); ?></p>
                             </a>
                         </li>
+                        <?php endif; ?>
 
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('Unverified_comments')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('comments.unsucsess')); ?>"
                                class="nav-link <?php echo e(Route::is('comments.unsucsess')? 'active': ''); ?>">
@@ -271,11 +299,12 @@
                                 </p>
                             </a>
                         </li>
-
+                        <?php endif; ?>
                     </ul>
                 </li>
-
+                <?php endif; ?>
                 <!-- Payment -->
+                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('show_payments')): ?>
                 <li class="nav-item <?php echo e(Route::is(['payments.index','payments.unsucsess']) ? 'menu-open': ''); ?>">
                     <a href="#" class="nav-link <?php echo e(Route::is(['payments.index','payments.unsucsess'])? 'active': ''); ?>">
                         <i class="fas fa-money-check-alt"></i>
@@ -305,11 +334,12 @@
 
                     </ul>
                 </li>
+                <?php endif; ?>
 
 
                 <!-- Users -->
 
-
+                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('show_users')): ?>
                 <li class="nav-item <?php echo e(Route::is(['users.index','users.create','lvl.index','roles.index','permissions.index','permissions.create','users.profile']) ? 'menu-open': ''); ?>">
                     <a href="#"
                        class="nav-link <?php echo e(Route::is(['users.index','users.create','lvl.index','roles.index','permissions.index','permissions.create','users.profile'])? 'active': ''); ?>">
@@ -322,6 +352,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('my_profile')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('users.profile')); ?>"
                                class="nav-link <?php echo e(Route::is('users.profile')? 'active': ''); ?>">
@@ -329,6 +360,8 @@
                                 <p><?php echo e(__('adminPanel.My Profile')); ?></p>
                             </a>
                         </li>
+                        <?php endif; ?>
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('all_users')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('users.index')); ?>"
                                class="nav-link <?php echo e(Route::is('users.index')? 'active': ''); ?>">
@@ -336,8 +369,10 @@
                                 <p><?php echo e(__('adminPanel.All Users')); ?></p>
                             </a>
                         </li>
+                            <?php endif; ?>
 
 
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('manage_users')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('lvl.index')); ?>"
                                class="nav-link <?php echo e(Route::is('lvl.index')? 'active': ''); ?>">
@@ -345,6 +380,8 @@
                                 <p><?php echo e(__('adminPanel.Manage Users')); ?></p>
                             </a>
                         </li>
+                            <?php endif; ?>
+                            <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('all_roles')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('roles.index')); ?>"
                                class="nav-link <?php echo e(Route::is('roles.index')? 'active': ''); ?>">
@@ -352,6 +389,8 @@
                                 <p><?php echo e(__('adminPanel.All Role')); ?> </p>
                             </a>
                         </li>
+                            <?php endif; ?>
+                            <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('all_permisions')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('permissions.index')); ?>"
                                class="nav-link <?php echo e(Route::is(['permissions.index','permissions.create'])? 'active': ''); ?>">
@@ -359,13 +398,15 @@
                                 <p> <?php echo e(__('adminPanel.All Permissions')); ?></p>
                             </a>
                         </li>
+                                <?php endif; ?>
 
 
                     </ul>
                 </li>
-
+                <?php endif; ?>
 
                 <!-- Site Settings -->
+                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('show_site_settings')): ?>
                 <li class="nav-item <?php echo e(Route::is(['siteSettings.index','footer.index']) ? 'menu-open': ''); ?>">
                     <a href="#" class="nav-link <?php echo e(Route::is(['siteSettings.index','footer.index'])? 'active': ''); ?>">
                         <i class="fas fa-cogs"></i>
@@ -377,6 +418,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('site_seo')): ?>
                         <li class="nav-item">
                             <a href="<?php echo e(route('siteseo.index')); ?>"
                                class="nav-link <?php echo e(Route::is('siteseo.index')? 'active': ''); ?>">
@@ -384,19 +426,22 @@
                                 <p><?php echo e(__('adminPanel.Site Main Seo')); ?></p>
                             </a>
                         </li>
+                        <?php endif; ?>
 
-                        <li class="nav-item">
+                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('site_footer')): ?>
+                            <li class="nav-item">
                             <a href="<?php echo e(route('footer.index')); ?>"
                                class="nav-link <?php echo e(Route::is('footer.index')? 'active': ''); ?>">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p><?php echo e(__('adminPanel.Site Footer Settings')); ?></p>
                             </a>
                         </li>
-
+                        <?php endif; ?>
 
 
                     </ul>
                 </li>
+                    <?php endif; ?>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

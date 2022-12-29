@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class SiteseoController extends Controller
 {
+    public function __construct()
+    {
+       $this->middleware('can:site_seo')->only('index');
+        $this->middleware('can:edit_site_seo')->only('edit');
+    }
     /**
      * Display a listing of the resource.
      *

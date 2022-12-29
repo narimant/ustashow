@@ -59,20 +59,21 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsToMany(Role::class);
     }
 
-    public function hasRole($roles)
-    {
-        if(is_string($roles)){
-            return $this->roles->contains('name',$roles);
-        }
 
-//        foreach ($roles as $r)
-//        {
-//           if($this->hasRole($r->name))
-//           {
-//               return true;
-//           }
+    public function hasRole($role)
+    {
+        if(is_string($role)) {
+            return $this->roles->contains('name' , $role);
+        }
+//
+//        foreach ($role as $r) {
+//            if($this->hasRole($r->name)) {
+//                return true;
+//            }
 //        }
-        return !! $roles->intersect($this->roles)->count() ;
+//        return false;
+
+        return !! $role->intersect($this->roles)->count();
     }
 
     public function isVip()

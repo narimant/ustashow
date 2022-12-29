@@ -87,7 +87,8 @@
 
                 @foreach($articles as $article)
                 <!-- Card -->
-                    <div class="card col-3 m-2 card-hover p-0">
+                <div class="col-3">
+                    <div class="card  card-hover p-0">
                     <a href="{{$article->path()}}" class="card-img-top">
                         <img src="{{ $article->images['tumbnail'] }}" alt="" class="rounded-top-md card-img-top">
                     </a>
@@ -118,6 +119,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
                 @endforeach
 

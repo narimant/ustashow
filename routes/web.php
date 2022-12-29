@@ -78,7 +78,7 @@ Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback
 Route::namespace('Admin')->prefix('/admin')->middleware(['auth:web','chekAdmin','verified'])->group(function (){
     Route::get('/panel','AdminController@index')->name('admin.index');
     Route::post('/panel/upload-image','PanelController@CkUploadImage')->name('panel.upload');
-    Route::resource('articles','ArticleController');
+    Route::resource('articles','ArticleController')->middleware('can:create_article');
     Route::get('article/{id}','ArticleController@restore')->name('article.restore');
     Route::get('article/publish/{id}','ArticleController@publish')->name('article.publish');
     Route::delete('article/{id}','ArticleController@forceDelete')->name('article.forceDelete');
@@ -126,6 +126,8 @@ Route::namespace('Admin')->prefix('/admin')->middleware(['auth:web','chekAdmin',
         Route::post('/uploadimage','UserController@userImage')->name('users.uploadImage');
         Route::resource('lvl','lvlManageController')->parameters(['lvl'=>'user']);
         Route::delete('/{user}/destroy','UserController@destroy')->name('users.destroy');
+        Route::get('/{user}/edit','UserController@edit')->name('user.edit');
+        Route::put('/user/{user}','UserController@update')->name('user.update');
     });
 });
 

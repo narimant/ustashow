@@ -48,7 +48,9 @@
 
 
                 <!-- Articles -->
+                   @can('show_articles')
                 <li class="nav-item {{ Route::is(['articles.index','articles.create','articles.edit']) ? 'menu-open': '' }}">
+
                     <a href="#" class="nav-link {{ Route::is(['articles.index','articles.create' ,'articles.edit'])? 'active': '' }}">
                         <i class=" fas fa-file"></i>
                         <p>
@@ -57,7 +59,9 @@
 
                         </p>
                     </a>
+
                     <ul class="nav nav-treeview">
+                        @can('all_articles')
                         <li class="nav-item">
                             <a href="{{route('articles.index')}}"
                                class="nav-link {{ Route::is('articles.index')? 'active': '' }}">
@@ -65,7 +69,8 @@
                                 <p>{{__('adminPanel.All Articles')}}</p>
                             </a>
                         </li>
-
+                        @endcan
+                        @can('create_article')
                         <li class="nav-item">
                             <a href="{{route('articles.create')}}"
                                class="nav-link {{ Route::is('articles.create')? 'active': '' }}">
@@ -73,11 +78,13 @@
                                 <p>{{__('adminPanel.Create Articles')}}</p>
                             </a>
                         </li>
-
+                        @endcan
                     </ul>
                 </li>
+                    @endcan
 
                 <!-- category -->
+                @can('show_category')
                 <li class="nav-item {{ Route::is(['categories.index','categories.create']) ? 'menu-open': '' }}">
                     <a href="#" class="nav-link {{ Route::is(['categories.index','categories.create'])? 'active': '' }}">
                         <i class="fa fa-folder"></i>
@@ -88,6 +95,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        @can('all_category')
                         <li class="nav-item">
                             <a href="{{route('categories.index')}}"
                                class="nav-link {{ Route::is('categories.index')? 'active': '' }}">
@@ -95,7 +103,9 @@
                                 <p>{{__('adminPanel.All Category')}}</p>
                             </a>
                         </li>
+                        @endcan
 
+                        @can('create_category')
                         <li class="nav-item">
                             <a href="{{route('categories.create')}}"
                                class="nav-link {{ Route::is('categories.create')? 'active': '' }}">
@@ -103,12 +113,13 @@
                                 <p>{{__('adminPanel.Create Category')}}</p>
                             </a>
                         </li>
-
+                        @endcan
                     </ul>
                 </li>
-
+                @endcan
 
                 <!-- tag -->
+                @can('show_tags')
                 <li class="nav-item {{ Route::is(['tags.index','tags.create']) ? 'menu-open': '' }}">
                     <a href="#" class="nav-link {{ Route::is(['tags.index','tags.create'])? 'active': '' }}">
                         <i class="fas fa-thin fa-tags"></i>
@@ -119,6 +130,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        @can('all_tags')
                         <li class="nav-item">
                             <a href="{{route('tags.index')}}"
                                class="nav-link {{ Route::is('tags.index')? 'active': '' }}">
@@ -126,7 +138,8 @@
                                 <p>{{__('adminPanel.All Tags')}}</p>
                             </a>
                         </li>
-
+                        @endcan
+                        @can('create_tag')
                         <li class="nav-item">
                             <a href="{{route('tags.create')}}"
                                class="nav-link {{ Route::is('tags.create')? 'active': '' }}">
@@ -134,12 +147,13 @@
                                 <p>{{__('adminPanel.Create Tag')}}</p>
                             </a>
                         </li>
-
+                        @endcan
                     </ul>
                 </li>
-
+                @endcan
 
                 <!-- Pages -->
+                @can('show_pages')
                 <li class="nav-item {{ Route::is(['pages.index','pages.create']) ? 'menu-open': '' }}">
                     <a href="#" class="nav-link {{ Route::is(['pages.index','pages.create'])? 'active': '' }}">
                         <i class="nav-icon fas fa-book"></i>
@@ -150,6 +164,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        @can('all_pages')
                         <li class="nav-item">
                             <a href="{{route('pages.index')}}"
                                class="nav-link {{ Route::is('pages.index')? 'active': '' }}">
@@ -157,7 +172,8 @@
                                 <p>{{__('adminPanel.All Pages')}}</p>
                             </a>
                         </li>
-
+                        @endcan
+                        @can('create_page')
                         <li class="nav-item">
                             <a href="{{route('pages.create')}}"
                                class="nav-link {{ Route::is('pages.create')? 'active': '' }}">
@@ -165,11 +181,12 @@
                                 <p>{{__('adminPanel.Create Page')}}</p>
                             </a>
                         </li>
-
+                        @endcan
                     </ul>
                 </li>
-
+                @endcan
                 <!-- Courses -->
+                @can('show_courses')
                 <li class="nav-item {{ Route::is(['courses.index','courses.create']) ? 'menu-open': '' }}">
                     <a href="#" class="nav-link {{ Route::is(['courses.index','courses.create'])? 'active': '' }}">
                         <i class="fas fa-graduation-cap"></i>
@@ -180,6 +197,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        @can('all_courses')
                         <li class="nav-item">
                             <a href="{{route('courses.index')}}"
                                class="nav-link {{ Route::is('courses.index')? 'active': '' }}">
@@ -187,7 +205,8 @@
                                 <p>{{__('adminPanel.Courses')}}</p>
                             </a>
                         </li>
-
+                        @endcan
+                        @can('create_course')
                         <li class="nav-item">
                             <a href="{{route('courses.create')}}"
                                class="nav-link {{ Route::is('courses.create')? 'active': '' }}">
@@ -195,12 +214,14 @@
                                 <p>{{__('adminPanel.Create course')}}</p>
                             </a>
                         </li>
+                            @endcan
 
                     </ul>
                 </li>
-
+                @endcan
 
                 <!-- Episodes -->
+                @can('show_episode')
                 <li class="nav-item {{ Route::is(['episodes.index','episodes.create']) ? 'menu-open': '' }}">
                     <a href="#" class="nav-link {{ Route::is(['episodes.index','episodes.create'])? 'active': '' }}">
                         <i class="fas fa-video"></i>
@@ -211,6 +232,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        @can('all_episodes')
                         <li class="nav-item">
                             <a href="{{route('episodes.index')}}"
                                class="nav-link {{ Route::is('episodes.index')? 'active': '' }}">
@@ -218,7 +240,8 @@
                                 <p>{{__('adminPanel.All Episodes')}}</p>
                             </a>
                         </li>
-
+                        @endcan
+                        @can('create_episode')
                         <li class="nav-item">
                             <a href="{{route('episodes.create')}}"
                                class="nav-link {{ Route::is('episodes.create')? 'active': '' }}">
@@ -226,12 +249,14 @@
                                 <p>{{__('adminPanel.Create Episodes')}}</p>
                             </a>
                         </li>
+                            @endcan
 
                     </ul>
                 </li>
-
+                @endcan
 
                 <!-- Comments -->
+                @can('show_comments')
                 <li class="nav-item {{ Route::is(['comments.index','comments.unsucsess']) ? 'menu-open': '' }}">
                     <a href="#" class="nav-link {{ Route::is(['comments.index','comments.unsucsess'])? 'active': '' }}">
                         <i class="fas fa-comments"></i>
@@ -243,6 +268,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        @can('all_comments')
                         <li class="nav-item">
                             <a href="{{route('comments.index')}}"
                                class="nav-link {{ Route::is('comments.index')? 'active': '' }}">
@@ -250,7 +276,9 @@
                                 <p>{{__('adminPanel.All Comments')}}</p>
                             </a>
                         </li>
+                        @endcan
 
+                        @can('Unverified_comments')
                         <li class="nav-item">
                             <a href="{{route('comments.unsucsess')}}"
                                class="nav-link {{ Route::is('comments.unsucsess')? 'active': '' }}">
@@ -262,11 +290,12 @@
                                 </p>
                             </a>
                         </li>
-
+                        @endcan
                     </ul>
                 </li>
-
+                @endcan
                 <!-- Payment -->
+                @can('show_payments')
                 <li class="nav-item {{ Route::is(['payments.index','payments.unsucsess']) ? 'menu-open': '' }}">
                     <a href="#" class="nav-link {{ Route::is(['payments.index','payments.unsucsess'])? 'active': '' }}">
                         <i class="fas fa-money-check-alt"></i>
@@ -295,11 +324,12 @@
 
                     </ul>
                 </li>
+                @endcan
 
 
                 <!-- Users -->
 
-
+                @can('show_users')
                 <li class="nav-item {{ Route::is(['users.index','users.create','lvl.index','roles.index','permissions.index','permissions.create','users.profile']) ? 'menu-open': '' }}">
                     <a href="#"
                        class="nav-link {{ Route::is(['users.index','users.create','lvl.index','roles.index','permissions.index','permissions.create','users.profile'])? 'active': '' }}">
@@ -311,6 +341,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        @can('my_profile')
                         <li class="nav-item">
                             <a href="{{ route('users.profile') }}"
                                class="nav-link {{ Route::is('users.profile')? 'active': '' }}">
@@ -318,6 +349,8 @@
                                 <p>{{__('adminPanel.My Profile')}}</p>
                             </a>
                         </li>
+                        @endcan
+                        @can('all_users')
                         <li class="nav-item">
                             <a href="{{ route('users.index') }}"
                                class="nav-link {{ Route::is('users.index')? 'active': '' }}">
@@ -325,8 +358,10 @@
                                 <p>{{__('adminPanel.All Users')}}</p>
                             </a>
                         </li>
+                            @endcan
 
 
+                        @can('manage_users')
                         <li class="nav-item">
                             <a href="{{ route('lvl.index') }}"
                                class="nav-link {{ Route::is('lvl.index')? 'active': '' }}">
@@ -334,6 +369,8 @@
                                 <p>{{__('adminPanel.Manage Users')}}</p>
                             </a>
                         </li>
+                            @endcan
+                            @can('all_roles')
                         <li class="nav-item">
                             <a href="{{ route('roles.index') }}"
                                class="nav-link {{ Route::is('roles.index')? 'active': '' }}">
@@ -341,6 +378,8 @@
                                 <p>{{__('adminPanel.All Role')}} </p>
                             </a>
                         </li>
+                            @endcan
+                            @can('all_permisions')
                         <li class="nav-item">
                             <a href="{{ route('permissions.index') }}"
                                class="nav-link {{ Route::is(['permissions.index','permissions.create'])? 'active': '' }}">
@@ -348,13 +387,15 @@
                                 <p> {{__('adminPanel.All Permissions')}}</p>
                             </a>
                         </li>
+                                @endcan
 
 
                     </ul>
                 </li>
-
+                @endcan
 
                 <!-- Site Settings -->
+                @can('show_site_settings')
                 <li class="nav-item {{ Route::is(['siteSettings.index','footer.index']) ? 'menu-open': '' }}">
                     <a href="#" class="nav-link {{ Route::is(['siteSettings.index','footer.index'])? 'active': '' }}">
                         <i class="fas fa-cogs"></i>
@@ -365,6 +406,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        @can('site_seo')
                         <li class="nav-item">
                             <a href="{{route('siteseo.index')}}"
                                class="nav-link {{ Route::is('siteseo.index')? 'active': '' }}">
@@ -372,19 +414,22 @@
                                 <p>{{__('adminPanel.Site Main Seo')}}</p>
                             </a>
                         </li>
+                        @endcan
 
-                        <li class="nav-item">
+                        @can('site_footer')
+                            <li class="nav-item">
                             <a href="{{route('footer.index')}}"
                                class="nav-link {{ Route::is('footer.index')? 'active': '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>{{__('adminPanel.Site Footer Settings')}}</p>
                             </a>
                         </li>
-
+                        @endcan
 
 
                     </ul>
                 </li>
+                    @endcan
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

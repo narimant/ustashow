@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Intervention\Image\Facades\Image;
 
 class UserController extends Controller
@@ -61,7 +62,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return view('Admin.users.edit',compact('user'));
     }
 
     /**
@@ -73,7 +74,20 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+
+       $user->name=$request->name;
+       if($request->level=='admin')
+       {
+           $user->roles()->sync(2);
+       }
+       $user->level=$request->level;
+       if($request->password != null)
+       {
+           $user->password =Hash::make($request->password );
+       }
+       $user->save();
+
+
     }
 
     /**
