@@ -93,7 +93,22 @@ $dir=(app()->getLocale()=='fa') ? "rtl" :"ltr";
 
 <?php echo $__env->make('sweet::alert', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <script src="<?php echo e(asset('frontend/js/bootstrap.bundle.min.js')); ?>"></script>
+<script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+<script src="//cdn.sc.gl/videojs-hotkeys/0.2/videojs.hotkeys.min.js"></script>
 
+<script type="text/javascript">
+    var player = videojs('my-video', {
+        playbackRates: [0.5, 1, 1.25,1.5, 2],
+        fluid:true,
+        plugins: {
+            hotkeys: {
+                volumeStep: 0.1,
+                seekStep: 5,
+                enableModifiersForNumbers: false
+            },
+        },
+    });
+</script>
 
 
 

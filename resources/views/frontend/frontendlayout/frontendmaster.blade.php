@@ -92,7 +92,39 @@ $dir=(app()->getLocale()=='fa') ? "rtl" :"ltr";
 
 @include('sweet::alert')
 <script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}"></script>
+<script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+<script src="//cdn.sc.gl/videojs-hotkeys/0.2/videojs.hotkeys.min.js"></script>
+<script src="https://unpkg.com/@silvermine/videojs-quality-selector/dist/js/silvermine-videojs-quality-selector.min.js"></script>
+<script type="text/javascript">
+   /* var player = videojs('my-video', {
+        playbackRates: [0.5, 1, 1.25,1.5, 2],
+        fluid:true,
+        plugins: {
+            hotkeys: {
+                volumeStep: 0.1,
+                seekStep: 5,
+                enableModifiersForNumbers: false
+            },
+        },
+    });
+*/
+    videojs("video_1", {
+        playbackRates: [0.5, 1, 1.25,1.5, 2],
+        fluid:true,
+        plugins: {
+            hotkeys: {
+                volumeStep: 0.1,
+                seekStep: 5,
+                enableModifiersForNumbers: false
+            },
+        }}, function() {
 
+        var player = this;
+        player.controlBar.addChild('QualitySelector');
+    });
+
+
+</script>
 
 
 

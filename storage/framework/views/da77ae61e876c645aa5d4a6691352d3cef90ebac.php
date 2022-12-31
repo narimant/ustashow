@@ -1,3 +1,6 @@
+<?php $__env->startSection('style'); ?>
+    <link href="<?php echo e(asset('frontend/css/video-js.css')); ?>" rel="stylesheet" />
+    <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
 
 
@@ -6,9 +9,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-12 mb-5">
-                    <div class="rounded-3 position-relative w-100 d-block overflow-hidden p-0" style="height: 600px;">
-                        <iframe class="position-absolute top-0 end-0 start-0 end-0 bottom-0 h-100 w-100"
-                                src="https://www.youtube.com/embed/PkZNo7MFNFg"></iframe>
+                    <div class="rounded-3 position-relative w-100 d-block overflow-hidden p-0">
+                        <video id="my-video"
+                               class="video-js vjs-big-play-centered vjs-control"
+                               controls
+                               preload="auto"
+
+                               poster="https://ustashow.com/images/dfgdfgdfg.jpg"
+                               data-setup="{}" >
+                            <source src="https://ustashow.com/images/music_video.mp4" type="video/mp4">
+
+                            <p class="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading to a
+                                web browser that
+                                <a href="https://videojs.com/html5-video-support/" target="_blank"
+                                >supports HTML5 video</a
+                                >
+                            </p>
+
+                        </video>
+
+
+
                     </div>
                 </div>
             </div>
@@ -179,5 +201,10 @@
     </div>
 
 <?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('script'); ?>
+
+
+    <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('frontend.frontendlayout.frontendmaster', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\ASUSGAMİNG\Desktop\ustashow backup\ustashow.com\resources\views/frontend/episode.blade.php ENDPATH**/ ?>

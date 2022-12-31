@@ -51,7 +51,7 @@
             </div>
 
             <div class="form-group">
-                <label  for="description"><?php echo e(__('adminPanel.Description')); ?></label>
+                <label  for="description"><?php echo e(__('adminPanel.description')); ?></label>
                 <input type="text" name="description" value="<?php echo e($course->description); ?>" class="form-control" id="description" placeholder="insert  description" >
             </div>
             <div class="row">

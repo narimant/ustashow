@@ -1,6 +1,9 @@
 @extends('frontend.frontendlayout.frontendmaster')
 
-
+@section('style')
+    <link href="{{asset('frontend/css/video-js.css')}}" rel="stylesheet" />
+    <link href="https://unpkg.com/@silvermine/videojs-quality-selector/dist/css/quality-selector.css" rel="stylesheet">
+    @endsection
 @section('content')
 
 
@@ -9,9 +12,36 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-12 mb-5">
-                    <div class="rounded-3 position-relative w-100 d-block overflow-hidden p-0" style="height: 600px;">
-                        <iframe class="position-absolute top-0 end-0 start-0 end-0 bottom-0 h-100 w-100"
-                                src="https://www.youtube.com/embed/PkZNo7MFNFg"></iframe>
+                    <div class="rounded-3 position-relative w-100 d-block overflow-hidden p-0">
+                       <!-- <video id="my-video"
+                               class="video-js vjs-big-play-centered"
+                               controls
+                               preload="auto"
+
+                               poster="https://ustashow.com/images/dfgdfgdfg.jpg"
+                               data-setup="{}" >
+                            <source src="https://ustashow.com/images/music_video.mp4" type="video/mp4">
+
+                            <p class="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading to a
+                                web browser that
+                                <a href="https://videojs.com/html5-video-support/" target="_blank"
+                                >supports HTML5 video</a
+                                >
+                            </p>
+
+                        </video>-->
+
+
+                        <video id="video_1" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" data-setup='{}'>
+                            <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ab/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm.720p.webm" type="video/webm" label="720P">
+                            <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ab/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm.480p.webm" type="video/webm" label="480P" selected="true">
+                            <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ab/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm.360p.webm" type="video/webm" label="360P">
+                            <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ab/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm/Caminandes_3_-_Llamigos_-_Blender_Animated_Short.webm.240p.webm" type="video/webm" label="240P">
+                        </video>
+
+
+
                     </div>
                 </div>
             </div>
@@ -178,3 +208,8 @@
     </div>
 
 @endsection
+
+@section('script')
+
+
+    @endsection

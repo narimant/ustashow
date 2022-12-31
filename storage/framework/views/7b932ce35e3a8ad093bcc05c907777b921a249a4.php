@@ -20,7 +20,7 @@
             <?php echo method_field('put'); ?>
 
             <div class="form-group">
-                <label  for="name"><?php echo e(__('adminPanel.Tag Name')); ?></label>
+                <label  for="name"><?php echo e(__('adminPanel.Tags Name')); ?></label>
                 <input type="text" name="name" value="<?php echo e($tag->name); ?>" class="form-control" id="name" placeholder="insert Tag name " >
             </div>
 
