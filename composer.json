@@ -12,25 +12,25 @@
         "ext-gettext": "*",
         "alexusmai/laravel-file-manager": "^2.5",
         "artesaos/seotools": "^0.20.2",
-        "cviebrock/eloquent-sluggable": "7.0.*",
+        "cviebrock/eloquent-sluggable": "^8.0",
         "fideloper/proxy": "^4.4",
         "guzzlehttp/guzzle": "^7.4",
         "intervention/image": "^2.7",
-        "laravel/framework": "^7.0",
+        "laravel/framework": "^8.0",
         "laravel/socialite": "^5.2",
         "laravel/tinker": "^2.5",
-        "laravelium/feed": "7.*",
-        "laravelium/sitemap": "7.*",
+        "laravelium/feed": "8.*",
+        "laravelium/sitemap": "8.*",
         "stevebauman/location": "^6.3",
         "uxweb/sweet-alert": "^2.0"
     },
     "require-dev": {
-        "facade/ignition": "^2.0",
+        "facade/ignition": "^2.3.6",
         "fakerphp/faker": "^1.9.1",
-        "laravel/ui": "^2.0",
+        "laravel/ui": "^3.0",
         "mockery/mockery": "^1.0",
-        "nunomaduro/collision": "^4.1",
-        "phpunit/phpunit": "^8.5.8|^9.3.3"
+        "nunomaduro/collision": "^5.0",
+        "phpunit/phpunit": "^9.0"
     },
     "config": {
         "optimize-autoloader": true,
