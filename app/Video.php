@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -53,10 +54,10 @@ class Video extends Model
 
         if(array_key_exists($local,config('app.locales')))
         {
-            return "/$local/article/$this->slug";
+            return "/$local/video/$this->slug";
         }else
         {
-            return "/article/$this->slug";
+            return "/video/$this->slug";
         }
 
 

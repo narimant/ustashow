@@ -60,7 +60,7 @@
 
 
           
-            <form action="{{route('articles.store')}}" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <form action="{{route('videos.store')}}" method="post" enctype="multipart/form-data" class="form-horizontal">
                 @csrf
 
                 <div class="form-group">
@@ -106,9 +106,19 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-6 ">
-                            <label  for="description">{{__('adminPanel.Image')}}</label>
-                            <input type="file" name="images" value="{{old('images')}}"  class="form-control" id="images" placeholder="insert  Image" >
+                            <div class="col-12">
+                                <label  for="description">{{__('adminPanel.Image')}}</label>
+                                <input type="file" name="images" value="{{old('images')}}"  class="form-control" id="images" placeholder="insert  Image" >
+
+                            </div>
+
+                            <div class="col-12 mt-2">
+                                <label  for="VideoUrl">{{__('adminPanel.Video Url')}}</label>
+                                <input type="url" name="VideoUrl" class="form-control" id="VideoUrl" value="{{old('VideoUrl')}}">
+                            </div>
+
                         </div>
+
                         <div class="col-sm-6 ">
                             <label  for="description">  {{__('adminPanel.Category')}} </label>
                             <div>

@@ -1,7 +1,7 @@
 @extends('frontend.frontendlayout.frontendmaster')
 
 @section('style')
-    <link href="{{asset('videos')}}" rel="stylesheet" />
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
     <link href="https://unpkg.com/@silvermine/videojs-quality-selector/dist/css/quality-selector.css" rel="stylesheet">
     @endsection
 @section('content')
@@ -209,7 +209,4 @@
 
 @endsection
 
-@section('script')
 
-
-    @endsection

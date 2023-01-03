@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Video;
+use App\Category;
+use App\video;
 use App\Tag;
-use App\Http\Requests\VideoRequest;
+use App\Http\Requests\videoRequest;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
-class VideoController extends AdminController
+class videoController extends AdminController
 {
     /**
      * Display a listing of the resource.
@@ -19,17 +21,17 @@ class VideoController extends AdminController
         $show=\request()->get('show');
         if(isset($show) && $show=='trash')
         {
-            $Videos= Video::onlyTrashed()->latest()->paginate(20);
+            $videos= video::onlyTrashed()->latest()->paginate(20);
         }elseif(isset($show) && $show=='draft')
         {
-            $Videos=Video::Status(false)->latest()->paginate(20);
+            $videos=video::Status(false)->latest()->paginate(20);
         }else
         {
-            $Videos=Video::Status()->latest()->paginate(20);
+            $videos=video::Status()->latest()->paginate(20);
         }
-        $trashcount=Video::onlyTrashed()->count();
-        $draftcount=Video::Status(false)->count();
-        return view('Admin.videos.all',['videos'=>$Videos,'trashcount'=>$trashcount,'draftcount'=>$draftcount]);
+        $trashcount=video::onlyTrashed()->count();
+        $draftcount=video::Status(false)->count();
+        return view('Admin.videos.all',['videos'=>$videos,'trashcount'=>$trashcount,'draftcount'=>$draftcount]);
     }
 
     /**
@@ -40,7 +42,7 @@ class VideoController extends AdminController
     public function create()
     {
         $alltags=Tag::all();
-        return view('Admin.Videos.create',compact('alltags'));
+        return view('Admin.videos.create',compact('alltags'));
     }
 
     /**
@@ -49,7 +51,7 @@ class VideoController extends AdminController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(VideoRequest $request)
+    public function store(videoRequest $request)
     {
 
 
@@ -90,55 +92,55 @@ class VideoController extends AdminController
         /*
          * save data
          */
-        $newVideo=auth()->user()->Video()->create(array_merge($request->all() , [ 'images' => $imagesUrl ]));
-        $newVideo->categories()->sync($category);
+        $newvideo=auth()->user()->video()->create(array_merge($request->all() , [ 'images' => $imagesUrl ]));
+        $newvideo->categories()->sync($category);
         if ( !empty($allTagfind))
         {
-            $newVideo->tags()->sync($allTagfind);
+            $newvideo->tags()->sync($allTagfind);
         }
 
 
 
-        return redirect(route('Videos.index'));
+        return redirect(route('videos.index'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Video  $Video
+     * @param  \App\video  $video
      * @return \Illuminate\Http\Response
      */
-    public function show(Video $Video)
+    public function show(video $video)
     {
-        dd($Video);
+        dd($video);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Video  $Video
+     * @param  \App\video  $video
      * @return \Illuminate\Http\Response
      */
-    public function edit(Video $Video)
+    public function edit(video $video)
     {
         $alltags=Tag::all();
-        $tags=$Video->tags;
+        $tags=$video->tags;
         foreach($tags as $tag)
         {
-            $Videotagsids[]=$tag->id;
+            $videotagsids[]=$tag->id;
         }
 
-        return view('Admin.Videos.edit',compact('Video','alltags','Videotagsids'));
+        return view('Admin.videos.edit',compact('video','alltags','videotagsids'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Video  $Video
+     * @param  \App\video  $video
      * @return \Illuminate\Http\Response
      */
-    public function update(VideoRequest $request, Video $Video)
+    public function update(videoRequest $request, video $video)
     {
 
         $files=$request->file('images');
@@ -152,14 +154,14 @@ class VideoController extends AdminController
         }
         else
         {
-            $inputs['images']=$Video->images;
+            $inputs['images']=$video->images;
             $inputs['images']['tumbnail']=$inputs['imagesThumb'];
         }
 
         unset($inputs['imagesThumb']);
 
         /****
-         * unset category ids of request for add or update Video
+         * unset category ids of request for add or update video
          * and set request category in category argument for sync with category tables
          */
         $category=Category::find($request->category);
@@ -177,27 +179,27 @@ class VideoController extends AdminController
          */
 
 
-        if($inputs['slug'] != '' &&$Video->slug!= $inputs['slug'] )
+        if($inputs['slug'] != '' &&$video->slug!= $inputs['slug'] )
         {
-            $inputs['slug']=SlugService::createSlug(Video::class, 'slug', $inputs['slug']);
+            $inputs['slug']=SlugService::createSlug(video::class, 'slug', $inputs['slug']);
 
         }
-        $Video->update($inputs);
-        $Video->categories()->sync($category);
-        $Video->tags()->sync($allTagfind);
-        return redirect(route('Videos.index'));
+        $video->update($inputs);
+        $video->categories()->sync($category);
+        $video->tags()->sync($allTagfind);
+        return redirect(route('videos.index'));
 
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Video  $Video
+     * @param  \App\video  $video
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Video $Video)
+    public function destroy(video $video)
     {
-        $Video->delete();
+        $video->delete();
         return redirect()->back();
     }
 
@@ -212,9 +214,9 @@ class VideoController extends AdminController
          * Find content only among those deleted.
          */
 
-        $Video = Video::onlyTrashed()->findOrFail($id);
+        $video = video::onlyTrashed()->findOrFail($id);
 
-        $Video->restore();
+        $video->restore();
 
         return redirect()->back();
 
@@ -222,16 +224,16 @@ class VideoController extends AdminController
 
     public function forceDelete( $id)
     {
-        $Video=Video::onlyTrashed()->findOrFail($id);
-        $Video->forceDelete();
+        $video=video::onlyTrashed()->findOrFail($id);
+        $video->forceDelete();
         return redirect()->back();
     }
 
     public function publish($id)
     {
-        $Video=Video::findOrfail($id);
-        $Video->status=1;
-        $Video->update();
+        $video=video::findOrfail($id);
+        $video->status=1;
+        $video->update();
         return redirect()->back();
     }
 }

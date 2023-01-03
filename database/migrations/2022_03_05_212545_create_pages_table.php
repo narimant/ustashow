@@ -27,6 +27,7 @@ class CreatePagesTable extends Migration
             $table->integer('ViewCount')->default(0);
             $table->integer('CommentCount')->default(0);
             $table->string('lang',10)->default('en');
+            $table->string('attachTo',100)->nullable();
             $table->boolean('status')->default(0);
             $table->string('seoTitle')->nullable();
             $table->string('seoDescription')->nullable();

@@ -71,6 +71,64 @@
     </div>
 
 
+    <?php if($videos->isNotEmpty()): ?>
+
+        <div class="pt-lg-12 pb-lg-3 pt-8 pb-6">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col">
+                        <h2 class="mb-0"><?php echo app('translator')->get('messages.Last Videos'); ?></h2>
+                    </div>
+                </div>
+                <div class="row">
+
+                <?php $__currentLoopData = $videos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $video): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <!-- Card -->
+                        <div class="col-3">
+                            <div class="card  card-hover p-0">
+                                <a href="<?php echo e($video->path()); ?>" class="card-img-top">
+
+                                    <img src="<?php echo e($video->images['tumbnail']); ?>" alt="" class="rounded-top-md card-img-top">
+                                </a>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <h4 class="mb-2 text-truncate-line-2 ">
+                                        <a href="<?php echo e($video->path()); ?>" class="text-inherit"><?php echo e($video->title); ?></a></h4>
+                                    <!-- List -->
+                                    <ul class="mb-3 list-inline">
+                                        <li class="list-inline-item"><i class="far fa-clock me-1"></i><?php echo e($video->CreateTimeDiff); ?></li>
+
+                                    </ul>
+
+                                </div>
+                                <!-- Card Footer -->
+                                <div class="card-footer">
+                                    <div class="row align-items-center g-0">
+                                        <div class="col-auto">
+
+                                            <img src="<?php echo e($video->user->userimage()); ?>" class="rounded-circle avatar-xs" alt="">
+                                        </div>
+                                        <div class="col ms-2">
+                                            <span><?php echo e($video->user->name); ?></span>
+
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="#" class="text-muted bookmark">
+                                                <i class="fe fe-bookmark  "></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+                </div>
+            </div>
+        </div>
+
+    <?php endif; ?>
+
 
 <?php if($articles->isNotEmpty()): ?>
 

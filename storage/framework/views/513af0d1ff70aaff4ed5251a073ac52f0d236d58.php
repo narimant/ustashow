@@ -97,7 +97,7 @@ $dir=(app()->getLocale()=='fa') ? "rtl" :"ltr";
 <script src="//cdn.sc.gl/videojs-hotkeys/0.2/videojs.hotkeys.min.js"></script>
 <script src="https://unpkg.com/@silvermine/videojs-quality-selector/dist/js/silvermine-videojs-quality-selector.min.js"></script>
 <script type="text/javascript">
-   /* var player = videojs('my-video', {
+   /* var player = videojs('my-videos', {
         playbackRates: [0.5, 1, 1.25,1.5, 2],
         fluid:true,
         plugins: {

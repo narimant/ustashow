@@ -10,9 +10,12 @@
 
                 <nav class="nav nav-footer justify-content-center justify-content-md-end">
                     <a class="nav-link active ps-0" href="{{route('contact.index')}}">{{__('messages.contact')}}</a>
+
                     @foreach($footerPages->get() as $footer)
                     <a class="nav-link active ps-0" href="{{$footer->path()}}">{{ $footer->title }}</a>
                     @endforeach
+
+
                 </nav>
             </div>
         </div>

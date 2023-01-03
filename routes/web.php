@@ -25,6 +25,7 @@ Route::namespace('Front')->group(function (){
 
     Route::get('/','HomeController@index')->name('index');
     Route::get('/article/{articleSlug}','ArticleController@single');
+    Route::get('/video/{video:slug}','VideoController@single');
     Route::get('/course/{courseSlug}','CourseController@single');
     Route::get('/category/{categorySlug}','CategoryController@show');
     Route::get('/tag/{tagSlug}/{type?}','TagController@show')->name('tag.show');
@@ -78,26 +79,45 @@ Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback
 Route::namespace('Admin')->prefix('/admin')->middleware(['auth:web','chekAdmin','verified'])->group(function (){
     Route::get('/panel','AdminController@index')->name('admin.index');
     Route::post('/panel/upload-image','PanelController@CkUploadImage')->name('panel.upload');
-    Route::resource('articles','ArticleController')->middleware('can:create_article');
+
+    //Article Section
+    Route::resource('articles','ArticleController');
     Route::get('article/{id}','ArticleController@restore')->name('article.restore');
     Route::get('article/publish/{id}','ArticleController@publish')->name('article.publish');
     Route::delete('article/{id}','ArticleController@forceDelete')->name('article.forceDelete');
-    Route::get('course/{id}','CourseController@restore')->name('course.restore');
-    Route::get('course/publish/{id}','CourseController@publish')->name('course.publish');
-    Route::delete('course/{id}','CourseController@forceDelete')->name('course.forceDelete');
-    Route::get('episode/{id}','EpisodeController@restore')->name('episode.restore');
-    Route::get('episode/publish/{id}','EpisodeController@publish')->name('episode.publish');
-    Route::delete('episode/{id}','EpisodeController@forceDelete')->name('episode.forceDelete');
-    Route::resource('courses','CourseController');
-    Route::resource('episodes','EpisodeController');
-    Route::resource('roles','RoleController');
-    Route::resource('permissions','PermissionController');
-    Route::resource('categories','CategoryController') ;
-    Route::resource('tags','TagController') ;
 
 
     //videos section
     Route::resource('videos','VideoController');
+    Route::get('videos/{id}','VideoController@restore')->name('videos.restore');
+    Route::get('videos/publish/{id}','VideoController@publish')->name('videos.publish');
+    Route::delete('videos/{id}','VideoController@forceDelete')->name('videos.forceDelete');
+
+    //Course Section
+    Route::resource('courses','CourseController');
+    Route::delete('course/{id}','CourseController@forceDelete')->name('course.forceDelete');
+    Route::get('course/publish/{id}','CourseController@publish')->name('course.publish');
+    Route::get('course/{id}','CourseController@restore')->name('course.restore');
+
+    //Episode Section
+    Route::resource('episodes','EpisodeController');
+    Route::delete('episode/{id}','EpisodeController@forceDelete')->name('episode.forceDelete');
+    Route::get('episode/{id}','EpisodeController@restore')->name('episode.restore');
+    Route::get('episode/publish/{id}','EpisodeController@publish')->name('episode.publish');
+
+    //Role Section
+    Route::resource('roles','RoleController');
+
+    //Perimisions Section
+    Route::resource('permissions','PermissionController');
+
+    //Category Section
+    Route::resource('categories','CategoryController') ;
+
+    //Tags Section
+    Route::resource('tags','TagController') ;
+
+
 
 
     //pages section

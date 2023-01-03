@@ -73,6 +73,64 @@
     </div>
 
 
+    @if($videos->isNotEmpty())
+
+        <div class="pt-lg-12 pb-lg-3 pt-8 pb-6">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col">
+                        <h2 class="mb-0">@lang('messages.Last Videos')</h2>
+                    </div>
+                </div>
+                <div class="row">
+
+                @foreach($videos as $video)
+                    <!-- Card -->
+                        <div class="col-3">
+                            <div class="card  card-hover p-0">
+                                <a href="{{$video->path()}}" class="card-img-top">
+
+                                    <img src="{{ $video->images['tumbnail'] }}" alt="" class="rounded-top-md card-img-top">
+                                </a>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <h4 class="mb-2 text-truncate-line-2 ">
+                                        <a href="{{$video->path()}}" class="text-inherit">{{$video->title}}</a></h4>
+                                    <!-- List -->
+                                    <ul class="mb-3 list-inline">
+                                        <li class="list-inline-item"><i class="far fa-clock me-1"></i>{{ $video->CreateTimeDiff  }}</li>
+
+                                    </ul>
+
+                                </div>
+                                <!-- Card Footer -->
+                                <div class="card-footer">
+                                    <div class="row align-items-center g-0">
+                                        <div class="col-auto">
+
+                                            <img src="{{$video->user->userimage()}}" class="rounded-circle avatar-xs" alt="">
+                                        </div>
+                                        <div class="col ms-2">
+                                            <span>{{ $video->user->name }}</span>
+
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="#" class="text-muted bookmark">
+                                                <i class="fe fe-bookmark  "></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+
+                </div>
+            </div>
+        </div>
+
+    @endif
+
 
 @if($articles->isNotEmpty())
 

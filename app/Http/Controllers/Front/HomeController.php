@@ -12,6 +12,7 @@ use App\Mail\ContactMail;
 use App\Page;
 use App\Siteseo;
 use App\SiteSetting;
+use App\Video;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Carbon\Carbon;
@@ -65,7 +66,16 @@ class HomeController extends Controller
         }
 
 
-        return view('frontend.index',compact('articles','courses'));
+        //videos
+        if(cache()->has('videos.'.$local)){
+            $videos=cache('videos');
+        }else{
+            $videos=Video::status()->whereLang($local)->latest()->take(4)->get();
+            cache(['videos'=>$videos,Carbon::now()->addMinute(100)]);
+        }
+
+
+        return view('frontend.index',compact('videos','articles','courses'));
     }
 
 

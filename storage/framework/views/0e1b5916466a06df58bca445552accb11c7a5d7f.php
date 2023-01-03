@@ -10,9 +10,12 @@
 
                 <nav class="nav nav-footer justify-content-center justify-content-md-end">
                     <a class="nav-link active ps-0" href="<?php echo e(route('contact.index')); ?>"><?php echo e(__('messages.contact')); ?></a>
+
                     <?php $__currentLoopData = $footerPages->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $footer): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <a class="nav-link active ps-0" href="<?php echo e($footer->path()); ?>"><?php echo e($footer->title); ?></a>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+
                 </nav>
             </div>
         </div>

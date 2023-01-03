@@ -1,5 +1,5 @@
 <?php $__env->startSection('style'); ?>
-    <link href="<?php echo e(asset('frontend/css/videos-js.css')); ?>" rel="stylesheet" />
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
     <link href="https://unpkg.com/@silvermine/videojs-quality-selector/dist/css/quality-selector.css" rel="stylesheet">
     <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
@@ -11,24 +11,24 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-12 mb-5">
                     <div class="rounded-3 position-relative w-100 d-block overflow-hidden p-0">
-                       <!-- <video id="my-video"
-                               class="video-js vjs-big-play-centered"
+                       <!-- <videos id="my-videos"
+                               class="videos-js vjs-big-play-centered"
                                controls
                                preload="auto"
 
                                poster="https://ustashow.com/images/dfgdfgdfg.jpg"
                                data-setup="{}" >
-                            <source src="https://ustashow.com/images/music_video.mp4" type="video/mp4">
+                            <source src="https://ustashow.com/images/music_video.mp4" type="videos/mp4">
 
                             <p class="vjs-no-js">
-                                To view this video please enable JavaScript, and consider upgrading to a
+                                To view this videos please enable JavaScript, and consider upgrading to a
                                 web browser that
                                 <a href="https://videojs.com/html5-video-support/" target="_blank"
-                                >supports HTML5 video</a
+                                >supports HTML5 videos</a
                                 >
                             </p>
 
-                        </video>-->
+                        </videos>-->
 
 
                         <video id="video_1" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" data-setup='{}'>
@@ -211,9 +211,6 @@
 
 <?php $__env->stopSection(); ?>
 
-<?php $__env->startSection('script'); ?>
 
-
-    <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('frontend.frontendlayout.frontendmaster', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\ustashow\ustashow\resources\views/frontend/episode.blade.php ENDPATH**/ ?>

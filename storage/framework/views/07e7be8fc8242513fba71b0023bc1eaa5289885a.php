@@ -61,7 +61,7 @@
 
 
           
-            <form action="<?php echo e(route('articles.store')); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <form action="<?php echo e(route('videos.store')); ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <?php echo csrf_field(); ?>
 
                 <div class="form-group">
@@ -107,9 +107,19 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-6 ">
-                            <label  for="description"><?php echo e(__('adminPanel.Image')); ?></label>
-                            <input type="file" name="images" value="<?php echo e(old('images')); ?>"  class="form-control" id="images" placeholder="insert  Image" >
+                            <div class="col-12">
+                                <label  for="description"><?php echo e(__('adminPanel.Image')); ?></label>
+                                <input type="file" name="images" value="<?php echo e(old('images')); ?>"  class="form-control" id="images" placeholder="insert  Image" >
+
+                            </div>
+
+                            <div class="col-12 mt-2">
+                                <label  for="VideoUrl"><?php echo e(__('adminPanel.Video Url')); ?></label>
+                                <input type="url" name="VideoUrl" class="form-control" id="VideoUrl" value="<?php echo e(old('VideoUrl')); ?>">
+                            </div>
+
                         </div>
+
                         <div class="col-sm-6 ">
                             <label  for="description">  <?php echo e(__('adminPanel.Category')); ?> </label>
                             <div>
