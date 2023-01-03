@@ -54,60 +54,60 @@ if (! empty($item['images'])) {
 
 if (! empty($item['videos'])) {
     foreach ($item['videos'] as $video) {
-        echo "\t\t".'<video:video>'."\n";
+        echo "\t\t".'<videos:videos>'."\n";
         if (isset($video['thumbnail_loc'])) {
-            echo "\t\t\t".'<video:thumbnail_loc>'.$video['thumbnail_loc'].'</video:thumbnail_loc>'."\n";
+            echo "\t\t\t".'<videos:thumbnail_loc>'.$video['thumbnail_loc'].'</videos:thumbnail_loc>'."\n";
         }
         if (isset($video['title'])) {
-            echo "\t\t\t".'<video:title><![CDATA['.$video['title'].']]></video:title>'."\n";
+            echo "\t\t\t".'<videos:title><![CDATA['.$video['title'].']]></videos:title>'."\n";
         }
         if (isset($video['description'])) {
-            echo "\t\t\t".'<video:description><![CDATA['.$video['description'].']]></video:description>'."\n";
+            echo "\t\t\t".'<videos:description><![CDATA['.$video['description'].']]></videos:description>'."\n";
         }
         if (isset($video['content_loc'])) {
-            echo "\t\t\t".'<video:content_loc>'.$video['content_loc'].'</video:content_loc>'."\n";
+            echo "\t\t\t".'<videos:content_loc>'.$video['content_loc'].'</videos:content_loc>'."\n";
         }
         if (isset($video['duration'])) {
-            echo "\t\t\t".'<video:duration>'.$video['duration'].'</video:duration>'."\n";
+            echo "\t\t\t".'<videos:duration>'.$video['duration'].'</videos:duration>'."\n";
         }
         if (isset($video['expiration_date'])) {
-            echo "\t\t\t".'<video:expiration_date>'.$video['expiration_date'].'</video:expiration_date>'."\n";
+            echo "\t\t\t".'<videos:expiration_date>'.$video['expiration_date'].'</videos:expiration_date>'."\n";
         }
         if (isset($video['rating'])) {
-            echo "\t\t\t".'<video:rating>'.$video['rating'].'</video:rating>'."\n";
+            echo "\t\t\t".'<videos:rating>'.$video['rating'].'</videos:rating>'."\n";
         }
         if (isset($video['view_count'])) {
-            echo "\t\t\t".'<video:view_count>'.$video['view_count'].'</video:view_count>'."\n";
+            echo "\t\t\t".'<videos:view_count>'.$video['view_count'].'</videos:view_count>'."\n";
         }
         if (isset($video['publication_date'])) {
-            echo "\t\t\t".'<video:publication_date>'.$video['publication_date'].'</video:publication_date>'."\n";
+            echo "\t\t\t".'<videos:publication_date>'.$video['publication_date'].'</videos:publication_date>'."\n";
         }
         if (isset($video['family_friendly'])) {
-            echo "\t\t\t".'<video:family_friendly>'.$video['family_friendly'].'</video:family_friendly>'."\n";
+            echo "\t\t\t".'<videos:family_friendly>'.$video['family_friendly'].'</videos:family_friendly>'."\n";
         }
         if (isset($video['requires_subscription'])) {
-            echo "\t\t\t".'<video:requires_subscription>'.$video['requires_subscription'].'</video:requires_subscription>'."\n";
+            echo "\t\t\t".'<videos:requires_subscription>'.$video['requires_subscription'].'</videos:requires_subscription>'."\n";
         }
         if (isset($video['live'])) {
-            echo "\t\t\t".'<video:live>'.$video['live'].'</video:live>'."\n";
+            echo "\t\t\t".'<videos:live>'.$video['live'].'</videos:live>'."\n";
         }
         if (isset($video['player_loc'])) {
-            echo "\t\t\t".'<video:player_loc allow_embed="'.$video['player_loc']['allow_embed'].'" autoplay="'.
-        $video['player_loc']['autoplay'].'">'.$video['player_loc']['player_loc'].'</video:player_loc>'."\n";
+            echo "\t\t\t".'<videos:player_loc allow_embed="'.$video['player_loc']['allow_embed'].'" autoplay="'.
+        $video['player_loc']['autoplay'].'">'.$video['player_loc']['player_loc'].'</videos:player_loc>'."\n";
         }
         if (isset($video['restriction'])) {
-            echo "\t\t\t".'<video:restriction relationship="'.$video['restriction']['relationship'].'">'.$video['restriction']['restriction'].'</video:restriction>'."\n";
+            echo "\t\t\t".'<videos:restriction relationship="'.$video['restriction']['relationship'].'">'.$video['restriction']['restriction'].'</videos:restriction>'."\n";
         }
         if (isset($video['gallery_loc'])) {
-            echo "\t\t\t".'<video:gallery_loc title="'.$video['gallery_loc']['title'].'">'.$video['gallery_loc']['gallery_loc'].'</video:gallery_loc>'."\n";
+            echo "\t\t\t".'<videos:gallery_loc title="'.$video['gallery_loc']['title'].'">'.$video['gallery_loc']['gallery_loc'].'</videos:gallery_loc>'."\n";
         }
         if (isset($video['price'])) {
-            echo "\t\t\t".'<video:price currency="'.$video['price']['currency'].'">'.$video['price']['price'].'</video:price>'."\n";
+            echo "\t\t\t".'<videos:price currency="'.$video['price']['currency'].'">'.$video['price']['price'].'</videos:price>'."\n";
         }
         if (isset($video['uploader'])) {
-            echo "\t\t\t".'<video:uploader info="'.$video['uploader']['info'].'">'.$video['uploader']['uploader'].'</video:uploader>'."\n";
+            echo "\t\t\t".'<videos:uploader info="'.$video['uploader']['info'].'">'.$video['uploader']['uploader'].'</videos:uploader>'."\n";
         }
-        echo "\t\t".'</video:video>'."\n";
+        echo "\t\t".'</videos:videos>'."\n";
     }
 }
 

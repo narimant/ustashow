@@ -67,7 +67,7 @@ return [
     'Buy this course'=>'خرید این دوره',
     'for buy this course please first login'=>'برای خرید این دوره لطفا ابتدا وارد شوید',
     'What’s included'=>'محتویات داخل دوره',
-    'hours video'=>'ساعت ویدیو',
+    'hours videos'=>'ساعت ویدیو',
     'Watch Offline'=>'تماشای آفلاین',
     'Follow'=>'دنبال کردن',
     'Episode Description'=>'توصیحات این بخش',

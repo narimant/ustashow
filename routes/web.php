@@ -96,6 +96,10 @@ Route::namespace('Admin')->prefix('/admin')->middleware(['auth:web','chekAdmin',
     Route::resource('tags','TagController') ;
 
 
+    //videos section
+    Route::resource('videos','VideoController');
+
+
     //pages section
     Route::resource('pages','PageController');
     Route::get('pageItem/{id}','PageController@restore')->name('pageItem.restore');

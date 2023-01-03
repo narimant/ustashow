@@ -208,7 +208,7 @@
                                 <h4 class="mb-0"><?php echo e(__('messages.What’s included')); ?></h4>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="d-flex align-items-center list-group-item bg-transparent"><i class="fe fe-play-circle align-middle me-2 text-primary"></i><?php echo e($course->time); ?> <?php echo e(__('messages.hours video')); ?></li>
+                                <li class="d-flex align-items-center list-group-item bg-transparent"><i class="fe fe-play-circle align-middle me-2 text-primary"></i><?php echo e($course->time); ?> <?php echo e(__('messages.hours videos')); ?></li>
 
 
                                 <li class="d-flex align-items-center list-group-item bg-transparent"><i class="fe fe-video align-middle me-2 text-secondary"></i><?php echo e(__('messages.Watch Offline')); ?></li>

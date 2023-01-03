@@ -207,7 +207,7 @@
                                 <h4 class="mb-0">{{__('messages.What’s included')}}</h4>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="d-flex align-items-center list-group-item bg-transparent"><i class="fe fe-play-circle align-middle me-2 text-primary"></i>{{ $course->time }} {{__('messages.hours video')}}</li>
+                                <li class="d-flex align-items-center list-group-item bg-transparent"><i class="fe fe-play-circle align-middle me-2 text-primary"></i>{{ $course->time }} {{__('videos')}}</li>
 
 
                                 <li class="d-flex align-items-center list-group-item bg-transparent"><i class="fe fe-video align-middle me-2 text-secondary"></i>{{__('messages.Watch Offline')}}</li>

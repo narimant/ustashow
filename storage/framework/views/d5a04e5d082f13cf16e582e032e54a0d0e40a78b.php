@@ -48,42 +48,82 @@
                 </li>
 
 
-                <!-- Articles -->
-                   <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('show_articles')): ?>
-                <li class="nav-item <?php echo e(Route::is(['articles.index','articles.create','articles.edit']) ? 'menu-open': ''); ?>">
 
-                    <a href="#" class="nav-link <?php echo e(Route::is(['articles.index','articles.create' ,'articles.edit'])? 'active': ''); ?>">
-                        <i class=" fas fa-file"></i>
-                        <p>
-                            <?php echo e(__('adminPanel.Articles')); ?>
 
-                            <i class="fas fa-angle-left right"></i>
+            <!-- Articles -->
+                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('show_articles')): ?>
+                    <li class="nav-item <?php echo e(Route::is(['articles.index','articles.create','articles.edit']) ? 'menu-open': ''); ?>">
 
-                        </p>
-                    </a>
+                        <a href="#" class="nav-link <?php echo e(Route::is(['articles.index','articles.create' ,'articles.edit'])? 'active': ''); ?>">
+                            <i class=" fas fa-file"></i>
+                            <p>
+                                <?php echo e(__('adminPanel.Articles')); ?>
 
-                    <ul class="nav nav-treeview">
-                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('all_articles')): ?>
-                        <li class="nav-item">
-                            <a href="<?php echo e(route('articles.index')); ?>"
-                               class="nav-link <?php echo e(Route::is('articles.index')? 'active': ''); ?>">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p><?php echo e(__('adminPanel.All Articles')); ?></p>
-                            </a>
-                        </li>
-                        <?php endif; ?>
-                        <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('create_article')): ?>
-                        <li class="nav-item">
-                            <a href="<?php echo e(route('articles.create')); ?>"
-                               class="nav-link <?php echo e(Route::is('articles.create')? 'active': ''); ?>">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p><?php echo e(__('adminPanel.Create Articles')); ?></p>
-                            </a>
-                        </li>
-                        <?php endif; ?>
-                    </ul>
-                </li>
-                    <?php endif; ?>
+                                <i class="fas fa-angle-left right"></i>
+
+                            </p>
+                        </a>
+
+                        <ul class="nav nav-treeview">
+                            <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('all_articles')): ?>
+                                <li class="nav-item">
+                                    <a href="<?php echo e(route('articles.index')); ?>"
+                                       class="nav-link <?php echo e(Route::is('articles.index')? 'active': ''); ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p><?php echo e(__('adminPanel.All Articles')); ?></p>
+                                    </a>
+                                </li>
+                            <?php endif; ?>
+                            <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('create_article')): ?>
+                                <li class="nav-item">
+                                    <a href="<?php echo e(route('articles.create')); ?>"
+                                       class="nav-link <?php echo e(Route::is('articles.create')? 'active': ''); ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p><?php echo e(__('adminPanel.Create Articles')); ?></p>
+                                    </a>
+                                </li>
+                            <?php endif; ?>
+                        </ul>
+                    </li>
+                <?php endif; ?>
+
+
+            <!-- Videos -->
+                <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('show_videos')): ?>
+                    <li class="nav-item <?php echo e(Route::is(['videos.index','videos.create','videos.edit']) ? 'menu-open': ''); ?>">
+
+                        <a href="#" class="nav-link <?php echo e(Route::is(['videos.index','videos.create' ,'videos.edit'])? 'active': ''); ?>">
+                            <i class=" fas fa-file"></i>
+                            <p>
+                                <?php echo e(__('adminPanel.Videos')); ?>
+
+                                <i class="fas fa-angle-left right"></i>
+
+                            </p>
+                        </a>
+
+                        <ul class="nav nav-treeview">
+                            <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('all_videos')): ?>
+                                <li class="nav-item">
+                                    <a href="<?php echo e(route('videos.index')); ?>"
+                                       class="nav-link <?php echo e(Route::is('videos.index')? 'active': ''); ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p><?php echo e(__('adminPanel.All Videos')); ?></p>
+                                    </a>
+                                </li>
+                            <?php endif; ?>
+                            <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('create_video')): ?>
+                                <li class="nav-item">
+                                    <a href="<?php echo e(route('videos.create')); ?>"
+                                       class="nav-link <?php echo e(Route::is('videos.create')? 'active': ''); ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p><?php echo e(__('adminPanel.Create Video')); ?></p>
+                                    </a>
+                                </li>
+                            <?php endif; ?>
+                        </ul>
+                    </li>
+                <?php endif; ?>
 
                 <!-- category -->
                 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('show_category')): ?>

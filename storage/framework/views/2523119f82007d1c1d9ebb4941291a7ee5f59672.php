@@ -1,5 +1,5 @@
 <?php $__env->startSection('style'); ?>
-    <link href="<?php echo e(asset('frontend/css/video-js.css')); ?>" rel="stylesheet" />
+    <link href="<?php echo e(asset('frontend/css/videos-js.css')); ?>" rel="stylesheet" />
     <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
 

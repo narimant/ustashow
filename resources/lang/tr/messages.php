@@ -67,7 +67,7 @@ return [
     'Buy this course'=>'Bu kursu satın al',
     'for buy this course please first login'=>'Bu kursu satın almak için lütfen önce giriş yapınız',
     'What’s included'=>'Neler dahil',
-    'hours video'=>'saat videosu',
+    'hours videos'=>'saat videosu',
     'Watch Offline'=>'Çevrimdışı İzle',
     'Lifetime access'=>'ömür boyu erişim',
     'Follow'=>'Takip etmek',

@@ -53,7 +53,7 @@ return [
     'Buy this course'=>'Buy this course',
     'for buy this course please first login'=>'for buy this course please first login',
     'What’s included'=>'What’s included',
-    'hours video'=>'hours video',
+    'hours videos'=>'hours videos',
     'Watch Offline'=>'Watch Offline',
     'Lifetime access'=>'Lifetime access',
     'Follow'=>'Follow',

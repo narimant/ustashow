@@ -248,7 +248,7 @@
 		"user-x",
 		"users",
 		"video",
-		"video-off",
+		"videos-off",
 		"voicemail",
 		"volume",
 		"volume-1",

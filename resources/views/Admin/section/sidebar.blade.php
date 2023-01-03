@@ -47,41 +47,80 @@
                 </li>
 
 
-                <!-- Articles -->
-                   @can('show_articles')
-                <li class="nav-item {{ Route::is(['articles.index','articles.create','articles.edit']) ? 'menu-open': '' }}">
 
-                    <a href="#" class="nav-link {{ Route::is(['articles.index','articles.create' ,'articles.edit'])? 'active': '' }}">
-                        <i class=" fas fa-file"></i>
-                        <p>
-                            {{__('adminPanel.Articles')}}
-                            <i class="fas fa-angle-left right"></i>
 
-                        </p>
-                    </a>
+            <!-- Articles -->
+                @can('show_articles')
+                    <li class="nav-item {{ Route::is(['articles.index','articles.create','articles.edit']) ? 'menu-open': '' }}">
 
-                    <ul class="nav nav-treeview">
-                        @can('all_articles')
-                        <li class="nav-item">
-                            <a href="{{route('articles.index')}}"
-                               class="nav-link {{ Route::is('articles.index')? 'active': '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>{{__('adminPanel.All Articles')}}</p>
-                            </a>
-                        </li>
-                        @endcan
-                        @can('create_article')
-                        <li class="nav-item">
-                            <a href="{{route('articles.create')}}"
-                               class="nav-link {{ Route::is('articles.create')? 'active': '' }}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>{{__('adminPanel.Create Articles')}}</p>
-                            </a>
-                        </li>
-                        @endcan
-                    </ul>
-                </li>
-                    @endcan
+                        <a href="#" class="nav-link {{ Route::is(['articles.index','articles.create' ,'articles.edit'])? 'active': '' }}">
+                            <i class=" fas fa-file"></i>
+                            <p>
+                                {{__('adminPanel.Articles')}}
+                                <i class="fas fa-angle-left right"></i>
+
+                            </p>
+                        </a>
+
+                        <ul class="nav nav-treeview">
+                            @can('all_articles')
+                                <li class="nav-item">
+                                    <a href="{{route('articles.index')}}"
+                                       class="nav-link {{ Route::is('articles.index')? 'active': '' }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>{{__('adminPanel.All Articles')}}</p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('create_article')
+                                <li class="nav-item">
+                                    <a href="{{route('articles.create')}}"
+                                       class="nav-link {{ Route::is('articles.create')? 'active': '' }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>{{__('adminPanel.Create Articles')}}</p>
+                                    </a>
+                                </li>
+                            @endcan
+                        </ul>
+                    </li>
+                @endcan
+
+
+            <!-- Videos -->
+                @can('show_videos')
+                    <li class="nav-item {{ Route::is(['videos.index','videos.create','videos.edit']) ? 'menu-open': '' }}">
+
+                        <a href="#" class="nav-link {{ Route::is(['videos.index','videos.create' ,'videos.edit'])? 'active': '' }}">
+                            <i class=" fas fa-file"></i>
+                            <p>
+                                {{__('adminPanel.Videos')}}
+                                <i class="fas fa-angle-left right"></i>
+
+                            </p>
+                        </a>
+
+                        <ul class="nav nav-treeview">
+                            @can('all_videos')
+                                <li class="nav-item">
+                                    <a href="{{route('videos.index')}}"
+                                       class="nav-link {{ Route::is('videos.index')? 'active': '' }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>{{__('adminPanel.All Videos')}}</p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('create_video')
+                                <li class="nav-item">
+                                    <a href="{{route('videos.create')}}"
+                                       class="nav-link {{ Route::is('videos.create')? 'active': '' }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>{{__('adminPanel.Create Video')}}</p>
+                                    </a>
+                                </li>
+                            @endcan
+                        </ul>
+                    </li>
+                @endcan
 
                 <!-- category -->
                 @can('show_category')
