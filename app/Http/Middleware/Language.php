@@ -74,7 +74,10 @@ class Language
            if( $segments[0]!=config('app.fallback_locale'))
             {
                 return redirect(implode('/',$segments));
-          }
+          }else
+           {
+               return redirect(config('app.fallback_locale'));
+           }
 
         }
       else

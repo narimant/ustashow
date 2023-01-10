@@ -79,15 +79,20 @@ class UserController extends Controller
        if($request->level=='admin')
        {
            $user->roles()->sync(2);
+           $user->level="admin";
+       }else
+       {
+           $user->roles()->detach(2);
+           $user->level="user";
        }
-       $user->level=$request->level;
+
        if($request->password != null)
        {
            $user->password =Hash::make($request->password );
        }
        $user->save();
 
-
+        return redirect()->route('users.index');
     }
 
     /**

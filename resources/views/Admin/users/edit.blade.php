@@ -21,14 +21,27 @@
                     <form method="post" action="{{route('user.update',['user'=>$user->id])}}">
                         @csrf
                         @method('put')
-                        <input type="text"  value="{{$user->name}}" name="name">
-                        <select name="level">
-                            <option value="users">{{__('adminPanel.User')}}</option>
-                            <option value="admin">{{__('adminPanel.Admin')}}</option>
-                        </select>
-                        <input type="text" disabled value="{{$user->email}}" >
-                        <input type="password" name="password">
-                <input type="submit" value="update">
+                        <div class="form-group">
+                            <label for="name">{{__('adminPanel.Name')}}</label>
+                            <input type="text" id="name"  class="form-control" value="{{$user->name}}" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="level">{{__('adminPanel.Level')}}</label>
+                            <select name="level" class="form-control" id="level">
+                                <option value="users">{{__('adminPanel.User')}}</option>
+                                <option value="admin">{{__('adminPanel.Admin')}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">{{__('adminPanel.Email')}}</label>
+                            <input type="text" id="email" disabled value="{{$user->email}}" class="form-control disabled">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">{{__('adminPanel.Password')}}</label>
+                            <input type="password" id="password" name="password" class="form-control">
+                        </div>
+
+                <input type="submit" value="update" class="btn btn-primary ">
                     </form>
                 </div>
 

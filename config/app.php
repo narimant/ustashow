@@ -165,7 +165,7 @@ return [
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Stevebauman\Location\LocationServiceProvider::class,
-
+        ProtoneMedia\LaravelFFMpeg\Support\ServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -243,7 +243,7 @@ return [
         // or
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
         'Feed' => Roumen\Feed\Feed::class,
-
+        'FFMpeg' => ProtoneMedia\LaravelFFMpeg\Support\FFMpeg::class
     ],
 
 ];

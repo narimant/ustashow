@@ -21,6 +21,7 @@
         "laravel/tinker": "^2.5",
         "laravelium/feed": "8.*",
         "laravelium/sitemap": "8.*",
+        "pbmedia/laravel-ffmpeg": "^7.8",
         "stevebauman/location": "^6.3",
         "uxweb/sweet-alert": "^2.0"
     },
