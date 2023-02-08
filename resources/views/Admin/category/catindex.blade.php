@@ -4,7 +4,10 @@
     <td>{{$j}}</td>
     <td><A href="{{$item->path()}}">@for($a=0;$a<$i;$a++) <i class="fas fa-long-arrow-alt-right"></i> @endfor {{$item->name}}</A></td>
 
-
+        <td>
+            {{$item->lang}}
+        </td>
+        <td>{{$item->category_mode}}</td>
     <td>
         <form action="{{ route('categories.destroy' , ['category'=>$item->id]) }}" method="post">
 

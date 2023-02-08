@@ -19,7 +19,8 @@
                         <tr>
                             <th class="col-2">#</th>
                             <th>{{__('adminPanel.Category Name')}}</th>
-
+                            <th>{{__('adminPanel.Category Language')}}</th>
+                            <th>{{__('adminPanel.Category Mode')}}</th>
                             <th class="col-2">{{__('adminPanel.Settings')}}</th>
                         </tr>
                         </thead>
@@ -33,7 +34,10 @@
                                 <td>{{$j++}}</td>
                                 <td><A href="{{$category->path()}}"> {{$category->name}}</A></td>
 
-
+                                <td>
+                                    {{$category->lang}}
+                                </td>
+                                <td>{{$category->category_mode}}</td>
                                 <td>
                                     <form action="{{ route('categories.destroy' , ['category'=>$category->id]) }}" method="post">
 
@@ -45,6 +49,7 @@
                                         </div>
                                     </form>
                                 </td>
+
                             </tr>
                             @endif
 

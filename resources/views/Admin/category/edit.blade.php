@@ -35,6 +35,14 @@
                 <input type="text" name="name" value="{{ $category->name }}" class="form-control" id="name" placeholder="insert category name " >
             </div>
             <div class="form-group">
+                <label  for="language">{{__('adminPanel.Category Mode')}}</label>
+                <select name="category_mode" id="language" class="form-control">
+                    <option value="blog" {{$category->category_mode=='blog' ? 'selected' : ''}}>{{__('adminPanel.Category For Blog')}}</option>
+                    <option value="video" {{$category->category_mode=='video' ? 'selected' : ''}}>{{__('adminPanel.Category For Video')}}</option>
+                    <option value="course" {{$category->category_mode=='course' ? 'selected' : ''}}>{{__('adminPanel.Category For Course')}}</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label  for="language">{{__('adminPanel.Language')}}</label>
                 <select name="lang" id="language" class="form-control">
                     <option value="en" {{$category->lang=='en' ? 'selected' : ''}}>english</option>

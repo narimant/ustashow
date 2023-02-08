@@ -152,8 +152,8 @@
                     <!-- Card -->
                     <div class="card mb-3 mb-4">
                         <div class="p-1">
-                            <div class="d-flex justify-content-center position-relative rounded py-10 border-white border rounded-3 bg-cover" style="background-image: url({{ $course->images['images']['300'] }});">
-
+                            <div class="" >
+<img  src="{{ $course->images['images']['600'] }}" width="100%">
                             </div>
                         </div>
                         <!-- Card body -->
@@ -168,7 +168,7 @@
                                 @if(auth()->check() && !auth()->user()->checkLearn($course))
 
 
-                                            <form method="post" action="/course/Payment">
+                                            <form method="post" action="{{route('course.payment')}}">
                                                 @csrf
                                                 <div class="d-grid">
                                                 <input type="hidden" name="course_id" value="{{ $course->id }}">

@@ -1,8 +1,9 @@
 <?php $__env->startSection('content'); ?>
 
+    <div class="container crumb p-4">
+    <?php echo e(Breadcrumbs::render('category', $category)); ?>
 
-
-
+    </div>
 
 <div class="pb-8">
     <div class="container">

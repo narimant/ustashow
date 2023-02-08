@@ -135,10 +135,15 @@ class ArticleController extends AdminController
     {
         $alltags=Tag::all();
         $tags=$article->tags;
-        foreach($tags as $tag)
+        $articletagsids=[];
+        if (!empty($tags))
         {
-            $articletagsids[]=$tag->id;
+            foreach($tags as $tag)
+            {
+                $articletagsids[]=$tag->id;
+            }
         }
+
 
         return view('Admin.articles.edit',compact('article','alltags','articletagsids'));
     }

@@ -123,7 +123,7 @@
                             <label  for="description">  {{__('adminPanel.Category')}} </label>
                             <div>
                                 <ul class="list-group ">
-                                @foreach(\App\Category::where('parent_id',null)->with('sub_category')->get() as $value)
+                                @foreach(\App\Category::where(['parent_id'=>null,'category_mode'=>'video'])->with('sub_category')->get() as $value)
                                         <li class="list-group-item"><input type="checkbox" name="category[]"value="{{ $value->id }}">{{ $value->name }}</input></li>
 
                                     @if($value->sub_category->count())

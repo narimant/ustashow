@@ -1,8 +1,12 @@
 <?php $__env->startSection('content'); ?>
 
-    
+    <div class="container crumb p-4">
+        <?php echo e(Breadcrumbs::render('article', $article)); ?>
 
-<div class="py-4 py-lg-8 pb-14 ">
+    </div>
+
+
+    <div class="py-4 py-lg-8 pb-14 ">
         <div class="container articlepage">
             <div class="row justify-content-center">
                 <div class="col-xl-10 col-lg-10 col-md-12 col-12 mb-2">

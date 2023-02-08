@@ -26,7 +26,14 @@
                             <label  for="name">{{__('adminPanel.Category Name')}}</label>
                             <input type="text" name="name" value="{{old('name')}}" class="form-control" id="name" placeholder="insert name " >
                         </div>
-
+                        <div class="form-group">
+                            <label  for="language">{{__('adminPanel.Category Mode')}}</label>
+                            <select name="category_mode" id="language" class="form-control">
+                                <option value="blog" >{{__('adminPanel.Category For Blog')}}</option>
+                                <option value="video" >{{__('adminPanel.Category For Video')}}</option>
+                                <option value="course" >{{__('adminPanel.Category For Course')}}</option>
+                            </select>
+                        </div>
                             <div class="form-group">
                                 <label  for="language">{{__('adminPanel.Language')}}</label>
                                 <select name="lang" id="language" class="form-control">

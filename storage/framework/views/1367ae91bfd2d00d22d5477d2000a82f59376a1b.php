@@ -80,7 +80,7 @@
                         <label  for="status"> <?php echo e(__('adminPanel.Display Status')); ?></label>
                         <select name="status" id="status" class="form-control">
                             <option value="0" <?php echo e($article->status=='0' ? 'selected' : ''); ?>><?php echo e(__('adminPanel.Draft')); ?></option>
-                            <option value="1" <?php echo e($article->status=='1' ? 'selected' : ''); ?>><?php echo e(__('adminPanel.publish')); ?></option>
+                            <option value="1" <?php echo e($article->status=='1' ? 'selected' : ''); ?>><?php echo e(__('adminPanel.Publish')); ?></option>
 
 
                         </select>
@@ -115,7 +115,7 @@
 
                         <div>
                             <ul class="list-group ">
-                                <?php $__currentLoopData = \App\Category::where('parent_id',null)->with('sub_category')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = \App\Category::where(['parent_id'=>null,'category_mode'=>'blog'])->with('sub_category')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <li class="list-group-item"><input type="checkbox" name="category[]"
                                                                        <?php $__currentLoopData = $article->categories()->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                                            <?php if($category->id==$value->id): ?>

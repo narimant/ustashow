@@ -57,7 +57,7 @@ $dir=(app()->getLocale()=='fa') ? "rtl" :"ltr";
     <link rel="stylesheet" href="<?php echo e(asset('frontend/css/feather.css')); ?>" >
     <link rel="stylesheet" href="<?php echo e(asset('frontend/css/materialdesignicons.min.css')); ?>" >
     <link rel="stylesheet" href="<?php echo e(asset('frontend/css/customstyle.css')); ?>" >
-    <link rel="stylesheet" href="<?php echo e(asset('frontend/css/bootstrap-select.min.css')); ?>" >
+
     <link rel="stylesheet" href="<?php echo e(asset('frontend/css/flag-icon.min.css')); ?>" >
 
     <?php if(app()->getLocale()=='fa'): ?>

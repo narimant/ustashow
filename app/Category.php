@@ -13,6 +13,7 @@ class Category extends Model
     use Sluggable;
     protected $fillable=[
         'name',
+        'category_mode',
         'parent_id',
         'lang',
         'seoTitle',

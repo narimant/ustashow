@@ -84,7 +84,7 @@
 
                 <?php $__currentLoopData = $videos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $video): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <!-- Card -->
-                        <div class="col-3">
+                        <div class="col-xl-3 col-lg-3 col-sm-12 col-md-6 mb-md-3 mb-sm-3">
                             <div class="card  card-hover p-0">
                                 <a href="<?php echo e($video->path()); ?>" class="card-img-top">
 
@@ -143,39 +143,39 @@
 
                 <?php $__currentLoopData = $articles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <!-- Card -->
-                <div class="col-3">
+                <div class="col-xl-3 col-lg-3 col-sm-12 col-md-6 mb-md-3 mb-sm-3">
                     <div class="card  card-hover p-0">
-                    <a href="<?php echo e($article->path()); ?>" class="card-img-top">
-                        <img src="<?php echo e($article->images['tumbnail']); ?>" alt="" class="rounded-top-md card-img-top">
-                    </a>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                        <h4 class="mb-2 text-truncate-line-2 ">
-                            <a href="<?php echo e($article->path()); ?>" class="text-inherit"><?php echo e($article->title); ?></a></h4>
-                        <!-- List -->
-                        <ul class="mb-3 list-inline">
-                            <li class="list-inline-item"><i class="far fa-clock me-1"></i><?php echo e($article->CreateTimeDiff); ?></li>
+                        <a href="<?php echo e($article->path()); ?>" class="card-img-top">
+                            <img src="<?php echo e($article->images['tumbnail']); ?>" alt="" class="rounded-top-md card-img-top">
+                        </a>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <h4 class="mb-2 text-truncate-line-2 ">
+                                <a href="<?php echo e($article->path()); ?>" class="text-inherit"><?php echo e($article->title); ?></a></h4>
+                            <!-- List -->
+                            <ul class="mb-3 list-inline">
+                                <li class="list-inline-item"><i class="far fa-clock me-1"></i><?php echo e($article->CreateTimeDiff); ?></li>
 
-                        </ul>
+                            </ul>
 
-                    </div>
-                    <!-- Card Footer -->
-                    <div class="card-footer">
-                        <div class="row align-items-center g-0">
-                            <div class="col-auto">
-                                <img src="<?php echo e($article->user->userimage()); ?>" class="rounded-circle avatar-xs" alt="">
-                            </div>
-                            <div class="col ms-2">
-                                <span><?php echo e($article->user->name); ?></span>
-                            </div>
-                            <div class="col-auto">
-                                <a href="#" class="text-muted bookmark">
-                                    <i class="fe fe-bookmark  "></i>
-                                </a>
+                        </div>
+                        <!-- Card Footer -->
+                        <div class="card-footer">
+                            <div class="row align-items-center g-0">
+                                <div class="col-auto">
+                                    <img src="<?php echo e($article->user->userimage()); ?>" class="rounded-circle avatar-xs" alt="">
+                                </div>
+                                <div class="col ms-2">
+                                    <span><?php echo e($article->user->name); ?></span>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="#" class="text-muted bookmark">
+                                        <i class="fe fe-bookmark  "></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
@@ -200,7 +200,8 @@
 
             <?php $__currentLoopData = $courses; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $course): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <!-- Card -->
-                    <div class="card col-3 m-2 card-hover p-0">
+                <div class="col-xl-3 col-lg-3 col-sm-12 col-md-6 mb-md-3 mb-sm-3">
+                    <div class="card  card-hover p-0">
                         <a href="<?php echo e($course->path()); ?>" class="card-img-top">
                             <img src="<?php echo e($course->images['tumbnail']); ?>" alt="" class="rounded-top-md card-img-top">
                         </a>
@@ -232,6 +233,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
             </div>

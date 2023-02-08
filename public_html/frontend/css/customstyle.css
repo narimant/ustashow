@@ -8,3 +8,10 @@
 .post-head-image{
 width:100%;
 }
+.crumb .breadcrumb .breadcrumb-item+.breadcrumb-item:before{
+    font-size: 0.85rem;
+}
+.breadcrumb-item+.breadcrumb-item:before{
+    line-height: 18px;
+    font-weight: bold;
+}

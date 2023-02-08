@@ -16,7 +16,8 @@
                         <tr>
                             <th class="col-2">#</th>
                             <th><?php echo e(__('adminPanel.Category Name')); ?></th>
-
+                            <th><?php echo e(__('adminPanel.Category Language')); ?></th>
+                            <th><?php echo e(__('adminPanel.Category Mode')); ?></th>
                             <th class="col-2"><?php echo e(__('adminPanel.Settings')); ?></th>
                         </tr>
                         </thead>
@@ -30,7 +31,11 @@
                                 <td><?php echo e($j++); ?></td>
                                 <td><A href="<?php echo e($category->path()); ?>"> <?php echo e($category->name); ?></A></td>
 
+                                <td>
+                                    <?php echo e($category->lang); ?>
 
+                                </td>
+                                <td><?php echo e($category->category_mode); ?></td>
                                 <td>
                                     <form action="<?php echo e(route('categories.destroy' , ['category'=>$category->id])); ?>" method="post">
 
@@ -42,6 +47,7 @@
                                         </div>
                                     </form>
                                 </td>
+
                             </tr>
                             <?php endif; ?>
 

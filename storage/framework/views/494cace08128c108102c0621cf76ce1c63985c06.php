@@ -114,7 +114,7 @@
                             <label  for="description">  <?php echo e(__('adminPanel.Category')); ?> </label>
                             <div>
                                 <ul class="list-group ">
-                                <?php $__currentLoopData = \App\Category::where('parent_id',null)->with('sub_category')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = \App\Category::where(['parent_id'=>null,'category_mode'=>'blog'])->with('sub_category')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <li class="list-group-item"><input type="checkbox" name="category[]"value="<?php echo e($value->id); ?>"><?php echo e($value->name); ?></input></li>
 
                                     <?php if($value->sub_category->count()): ?>

@@ -13,6 +13,7 @@
         "alexusmai/laravel-file-manager": "^2.5",
         "artesaos/seotools": "^0.20.2",
         "cviebrock/eloquent-sluggable": "^8.0",
+        "diglactic/laravel-breadcrumbs": "^8.0",
         "fideloper/proxy": "^4.4",
         "guzzlehttp/guzzle": "^7.4",
         "intervention/image": "^2.7",

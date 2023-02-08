@@ -4,9 +4,9 @@
 
 @section('content')
 
-
-
-
+    <div class="container crumb p-4">
+    {{ Breadcrumbs::render('category', $category) }}
+    </div>
 
 <div class="pb-8">
     <div class="container">

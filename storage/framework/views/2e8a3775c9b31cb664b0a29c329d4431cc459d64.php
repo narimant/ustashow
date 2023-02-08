@@ -22,7 +22,14 @@
                             <label  for="name"><?php echo e(__('adminPanel.Category Name')); ?></label>
                             <input type="text" name="name" value="<?php echo e(old('name')); ?>" class="form-control" id="name" placeholder="insert name " >
                         </div>
-
+                        <div class="form-group">
+                            <label  for="language"><?php echo e(__('adminPanel.Category Mode')); ?></label>
+                            <select name="category_mode" id="language" class="form-control">
+                                <option value="blog" ><?php echo e(__('adminPanel.Category For Blog')); ?></option>
+                                <option value="video" ><?php echo e(__('adminPanel.Category For Video')); ?></option>
+                                <option value="course" ><?php echo e(__('adminPanel.Category For Course')); ?></option>
+                            </select>
+                        </div>
                             <div class="form-group">
                                 <label  for="language"><?php echo e(__('adminPanel.Language')); ?></label>
                                 <select name="lang" id="language" class="form-control">

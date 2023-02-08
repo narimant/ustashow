@@ -89,7 +89,7 @@
                             <label  for="status">  {{__('adminPanel.Display Status')}} </label>
                             <select name="status" id="status" class="form-control">
                                 <option value="0" selected>{{__('adminPanel.Draft')}}</option>
-                                <option value="1">{{__('adminPanel.publish')}}</option>
+                                <option value="1">{{__('adminPanel.Publish')}}</option>
 
 
                             </select>
@@ -113,7 +113,7 @@
                             <label  for="description">  {{__('adminPanel.Category')}} </label>
                             <div>
                                 <ul class="list-group ">
-                                @foreach(\App\Category::where('parent_id',null)->with('sub_category')->get() as $value)
+                                @foreach(\App\Category::where(['parent_id'=>null,'category_mode'=>'blog'])->with('sub_category')->get() as $value)
                                         <li class="list-group-item"><input type="checkbox" name="category[]"value="{{ $value->id }}">{{ $value->name }}</input></li>
 
                                     @if($value->sub_category->count())

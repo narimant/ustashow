@@ -22,6 +22,7 @@ class CreateCategoriesTable extends Migration
             $table->string('seoDescription')->nullable();
             $table->string('seoKeyword')->nullable();
             $table->bigInteger('parent_id')->nullable();
+            $table->string('category_mode',50)->default('blog');
             $table->timestamps();
             $table->softDeletes();
         });

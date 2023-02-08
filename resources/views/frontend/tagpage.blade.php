@@ -2,8 +2,9 @@
 @extends('frontend.frontendlayout.frontendmaster')
 
 @section('content')
-
-
+    <div class="container crumb p-4">
+    {{ Breadcrumbs::render('tag', $tag) }}
+    </div>
 <div class="py-4 py-lg-6 bg-primary">
     <div class="container">
         <div class="row">

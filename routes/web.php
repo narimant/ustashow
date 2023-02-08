@@ -53,7 +53,7 @@ Route::namespace('Front')->group(function (){
 });
 
 Route::namespace('Front')->middleware(['auth:web','verified'])->group(function (){
-    Route::post('/course/Payment','PaymentController@peyment');
+    Route::post('/course/Payment','PaymentController@peyment')->name('course.payment');
     Route::get('course/Payment/check','PaymentController@check');
 
 

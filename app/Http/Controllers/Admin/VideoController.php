@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Category;
-use App\video;
+use App\Video;
 use App\Tag;
 use App\Http\Requests\videoRequest;
 use Cviebrock\EloquentSluggable\Services\SlugService;

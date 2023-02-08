@@ -30,9 +30,9 @@ class AdminController extends Controller
       $image=$file->move(public_path($uploadurl),$filename);
 		
         //resize image of orginal image
-        $size=[300,600,900];
+        $size=[300=>300,600=>400,900=>600];
         $url['images']=$this->resizeimage($image->getRealPath(),$size,$uploadurl,$filename);
-        $url['tumbnail']=$url['images'][$size[0]];
+        $url['tumbnail']=$url['images'][$size[300]];
 
         return $url;
 
@@ -61,12 +61,12 @@ class AdminController extends Controller
     {
         $image['orginal']=$imagepath.'/'.$filename;
 
-        foreach ($size as $value)
+        foreach ($size as $width=>$height)
         {
-            $image[$value]=$imagepath.'/'.$value.'_'.$filename;
-            Image::make($url)->resize($value, null, function ($constraint) {
+            $image[$width]=$imagepath.'/'.$width.'_'.$filename;
+            Image::make($url)->fit($width, $height, function ($constraint) {
                 $constraint->aspectRatio();
-            })->save(public_path( $image[$value]));
+            })->save(public_path( $image[$width]));
 
         }
         return $image;

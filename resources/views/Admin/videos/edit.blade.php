@@ -119,7 +119,7 @@
 
                         <div>
                             <ul class="list-group ">
-                                @foreach(\App\Category::where('parent_id',null)->with('sub_category')->get() as $value)
+                                @foreach(\App\Category::where(['parent_id'=>null,'category_mode'=>'video'])->with('sub_category')->get() as $value)
                                     <li class="list-group-item"><input type="checkbox" name="category[]"
                                                                        @foreach($video->categories()->get() as $category)
                                                                            @if($category->id==$value->id)
