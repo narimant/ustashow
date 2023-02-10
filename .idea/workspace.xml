@@ -2,56 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94415ffb-76b3-4a43-9f2c-06a4f797ffe2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/routes/breadcrumbs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ustashow.com.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ustashow.com.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/VideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/VideoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/packages.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/packages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_01_22_130240_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_01_22_130240_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/frontend/css/customstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/frontend/css/customstyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/frontend/css/themertl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/frontend/css/themertl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/fa/adminPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/fa/adminPanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/fa/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/fa/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/articles/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/articles/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/articles/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/articles/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/category/catindex.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/category/catindex.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/category/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/category/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/category/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/category/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/category/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/course/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/course/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/course/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/course/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/videos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/videos/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/videos/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/videos/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/article.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/article.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/categorypagearticle.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/categorypagearticle.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/courses.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/courses.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/frontendlayout/frontendmaster.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/frontendlayout/frontendmaster.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/frontendlayout/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/frontendlayout/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/tagpage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/tagpage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/1367ae91bfd2d00d22d5477d2000a82f59376a1b.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/1367ae91bfd2d00d22d5477d2000a82f59376a1b.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/2e8a3775c9b31cb664b0a29c329d4431cc459d64.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/2e8a3775c9b31cb664b0a29c329d4431cc459d64.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/3d03adbb3b7c4cbc23ad85719688073468fe6ff7.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/3d03adbb3b7c4cbc23ad85719688073468fe6ff7.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/494cace08128c108102c0621cf76ce1c63985c06.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/494cace08128c108102c0621cf76ce1c63985c06.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/50d90da8cb31ccd80360fb9f9961fdba8459016f.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/50d90da8cb31ccd80360fb9f9961fdba8459016f.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/513af0d1ff70aaff4ed5251a073ac52f0d236d58.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/513af0d1ff70aaff4ed5251a073ac52f0d236d58.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/5a4bfd8498ce1bd5097ef8e6717261bf983d4096.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/5a4bfd8498ce1bd5097ef8e6717261bf983d4096.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/89565f745b9a0e37ca7ee8238ce8cd79d039f3ff.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/89565f745b9a0e37ca7ee8238ce8cd79d039f3ff.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/ed2c63435760a067a8179f66b6083e1973a642e6.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/ed2c63435760a067a8179f66b6083e1973a642e6.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/f1e307d9bd1dc0fcbac94ba3d647f90ea217cebc.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/f1e307d9bd1dc0fcbac94ba3d647f90ea217cebc.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor.zip" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -177,14 +131,15 @@
           <entry key="project.open.time.0" value="5" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.5" value="3" />
-          <entry key="project.open.time.6" value="3" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.open.time.6" value="4" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="44" />
           <entry key="dummy" value="1" />
+          <entry key="gitignore" value="11" />
           <entry key="json" value="20" />
           <entry key="php" value="2672" />
         </counts>
@@ -195,12 +150,13 @@
           <entry key="CSS" value="44" />
           <entry key="JSON" value="20" />
           <entry key="PHP" value="1167" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="6" />
+          <entry key="gitignore" value="1" />
           <entry key="json" value="3" />
           <entry key="php" value="118" />
         </counts>
@@ -211,6 +167,7 @@
           <entry key="CSS" value="6" />
           <entry key="JSON" value="3" />
           <entry key="PHP" value="63" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -218,27 +175,18 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/Admin/articles/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="91" column="74" selection-start-line="91" selection-start-column="74" selection-end-line="91" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Admin/articles/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="1848">
               <caret line="84" column="114" selection-start-line="84" selection-start-column="114" selection-end-line="84" selection-end-column="114" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ArticleController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-890">
+            <state relative-caret-position="22">
               <caret line="137" column="9" selection-start-line="137" selection-start-column="9" selection-end-line="137" selection-end-column="9" />
               <folding>
                 <element signature="e#46#62#0#PHP" expanded="true" />
@@ -247,10 +195,19 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
+            <state relative-caret-position="616">
               <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
             </state>
           </provider>
@@ -268,7 +225,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Admin/course/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="2178">
               <caret line="99" column="109" selection-start-line="99" selection-start-column="109" selection-end-line="99" selection-end-column="109" />
             </state>
           </provider>
@@ -277,7 +234,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Admin/course/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
+            <state relative-caret-position="2420">
               <caret line="110" column="105" selection-start-line="110" selection-start-column="105" selection-end-line="110" selection-end-column="105" />
             </state>
           </provider>
@@ -286,7 +243,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Admin/videos/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
+            <state relative-caret-position="2750">
               <caret line="125" column="104" selection-start-line="125" selection-start-column="104" selection-end-line="125" selection-end-column="104" />
             </state>
           </provider>
@@ -295,7 +252,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/Admin/videos/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
+            <state relative-caret-position="2662">
               <caret line="121" column="104" selection-start-line="121" selection-start-column="104" selection-end-line="121" selection-end-column="104" />
             </state>
           </provider>
@@ -357,7 +314,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Requests/VideoRequest.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/section/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/frontendlayout/footer.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2022_03_05_212545_create_pages_table.php" />
@@ -408,6 +364,7 @@
         <option value="$PROJECT_DIR$/resources/views/Admin/articles/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Admin/articles/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -572,7 +529,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -583,99 +539,54 @@
             <path>
               <item name="ustashow" type="b2602c69:ProjectViewProjectNode" />
               <item name="ustashow" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ustashow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ustashow" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ustashow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ustashow" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ustashow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ustashow" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ustashow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ustashow" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ustashow" type="b2602c69:ProjectViewProjectNode" />
               <item name="ustashow" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="public_html" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ustashow" type="b2602c69:ProjectViewProjectNode" />
               <item name="ustashow" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
+              <item name="public_html" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ustashow" type="b2602c69:ProjectViewProjectNode" />
               <item name="ustashow" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="public_html" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ustashow" type="b2602c69:ProjectViewProjectNode" />
               <item name="ustashow" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ustashow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ustashow" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-              <item name="articles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ustashow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ustashow" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-              <item name="category" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ustashow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ustashow" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-              <item name="course" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ustashow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ustashow" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-              <item name="videos" type="462c0819:PsiDirectoryNode" />
+              <item name="public_html" type="462c0819:PsiDirectoryNode" />
+              <item name="upload" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="2023" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ustashow" type="b2602c69:ProjectViewProjectNode" />
               <item name="ustashow" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ustashow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ustashow" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ustashow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ustashow" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -753,16 +664,17 @@
       <workItem from="1673729323029" duration="864000" />
       <workItem from="1674072006621" duration="3042000" />
       <workItem from="1675854885936" duration="7636000" />
+      <workItem from="1676058213486" duration="481000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119675000" />
+    <option name="totallyTimeSpent" value="120156000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="830" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30268458" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3067114" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -775,7 +687,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49932885" weight="0.3055954" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49932885" visible="true" weight="0.3055954" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067115" side_tool="true" weight="0.23672883" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -811,16 +723,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1562">
-          <caret line="75" column="7" selection-start-line="75" selection-start-column="7" selection-end-line="80" />
-          <folding>
-            <element signature="e#23#41#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/frontendlayout/menu.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1232">
@@ -891,9 +793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-          <folding>
-            <element signature="e#162#200#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1070,48 +969,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/course/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="99" column="109" selection-start-line="99" selection-start-column="109" selection-end-line="99" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/course/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="110" column="105" selection-start-line="110" selection-start-column="105" selection-end-line="110" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/videos/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="125" column="104" selection-start-line="125" selection-start-column="104" selection-end-line="125" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/videos/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="121" column="104" selection-start-line="121" selection-start-column="104" selection-end-line="121" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/Admin/articles/all.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/articles/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="2002">
           <caret line="91" column="74" selection-start-line="91" selection-start-column="74" selection-end-line="91" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Admin/articles/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="1848">
           <caret line="84" column="114" selection-start-line="84" selection-start-column="114" selection-end-line="84" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -1122,20 +997,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/course/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+        <state relative-caret-position="2178">
+          <caret line="99" column="109" selection-start-line="99" selection-start-column="109" selection-end-line="99" selection-end-column="109" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/course/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2420">
+          <caret line="110" column="105" selection-start-line="110" selection-start-column="105" selection-end-line="110" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/videos/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2750">
+          <caret line="125" column="104" selection-start-line="125" selection-start-column="104" selection-end-line="125" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/videos/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2662">
+          <caret line="121" column="104" selection-start-line="121" selection-start-column="104" selection-end-line="121" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Admin/articles/all.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ArticleController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-890">
+        <state relative-caret-position="22">
           <caret line="137" column="9" selection-start-line="137" selection-start-column="9" selection-end-line="137" selection-end-column="9" />
           <folding>
             <element signature="e#46#62#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
