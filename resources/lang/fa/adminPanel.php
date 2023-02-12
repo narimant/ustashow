@@ -102,7 +102,7 @@ return[
     'Category For Course'=>'دسته بندی برای دوره آموزشی',
     'Category Mode'=>'حالت دسته بندی',
     'Category Language'=>'زبان دسته بندی',
-    ''=>'',
+    'Category Color'=>'رنگ دسته بندی',
     ''=>'',
     ''=>'',
     ''=>'',

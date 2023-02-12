@@ -42,6 +42,7 @@ class CategoryController extends Controller
         $request->validate(['name'=>'required']);
         Category::create([
             'name'=>$request->name,
+            'color'=>$request->color,
             'category_mode'=>$request->category_mode,
             'lang'=>$request->lang,
             'seoTitle'=>$request->seoTitle,

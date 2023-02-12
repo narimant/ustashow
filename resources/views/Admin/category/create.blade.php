@@ -27,6 +27,12 @@
                             <input type="text" name="name" value="{{old('name')}}" class="form-control" id="name" placeholder="insert name " >
                         </div>
                         <div class="form-group">
+                            <label  for="color">{{__('adminPanel.Category Color')}}</label>
+                            <input type="color" id="color" name="color" value="#ff0000">
+
+                        </div>
+
+                        <div class="form-group">
                             <label  for="language">{{__('adminPanel.Category Mode')}}</label>
                             <select name="category_mode" id="language" class="form-control">
                                 <option value="blog" >{{__('adminPanel.Category For Blog')}}</option>

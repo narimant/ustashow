@@ -125,6 +125,7 @@ class videoController extends AdminController
     {
         $alltags=Tag::all();
         $tags=$video->tags;
+        $videotagsids=[];
         foreach($tags as $tag)
         {
             $videotagsids[]=$tag->id;
@@ -171,9 +172,15 @@ class videoController extends AdminController
         /****
          * start work on tags
          */
+        if(!empty($request->tags))
+        {
+            $allTagfind=$this->checktags($request->tags);
+            unset($inputs['tags']);
+        }else
+        {
+            $allTagfind=[];
+        }
 
-        $allTagfind=$this->checktags($request->tags);
-        unset($inputs['tags']);
         /*
          * end work on tags
          */

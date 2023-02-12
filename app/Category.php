@@ -13,6 +13,7 @@ class Category extends Model
     use Sluggable;
     protected $fillable=[
         'name',
+        'color',
         'category_mode',
         'parent_id',
         'lang',
@@ -65,6 +66,10 @@ class Category extends Model
     {
         return $this->hasMany(self::class,'parent_id','id');
     }
+
+    public function childrenRecursive() {
+        return $this->sub_category()->with('childrenRecursive');
+    }
     public function seoData($value='seoTitle')
     {
         if($value=='seoTitle')
@@ -97,5 +102,9 @@ class Category extends Model
             }
         }
     }
+
+
+
+
 
 }

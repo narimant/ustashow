@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 
+use App\Article;
 use App\Category;
 use App\Http\Controllers\Controller;
 use Artesaos\SEOTools\Facades\OpenGraph;
@@ -13,7 +14,7 @@ use Artesaos\SEOTools\Facades\SEOTools;
 class CategoryController extends Controller
 {
 
-
+        static $categoryids=[];
     /**
      * Display the specified resource.
      *
@@ -23,8 +24,13 @@ class CategoryController extends Controller
     public function show(Category $category)
     {
         $local=app()->getLocale();
-        $articles=$category->articles()->latest()->paginate(15);
-        $courses=$category->courses()->latest()->paginate(15);
+
+
+        $categorychilds= $this->categoryTree($category->id);
+
+
+        $articles=$category->articles()->OrwhereIn('categoryables.category_id',$categorychilds)->latest()->paginate(15);
+
 
         /*
         * seo strat
@@ -44,7 +50,14 @@ class CategoryController extends Controller
         SEOTools::setCanonical($_SERVER['HTTP_HOST'].$category->path());
 
 
-            return view('frontend.categorypagearticle',compact('articles','categoryslug','category'));
+
+
+
+
+
+
+
+           return view('frontend.categorypagearticle',compact('articles','categoryslug','category'));
 
 
            // return view('frontend.categorypagecourse',compact('courses','categoryslug'));
@@ -52,5 +65,30 @@ class CategoryController extends Controller
 
     }
 
+//this method for fech child category id of parent id and return array result
+    private function categoryTree($parent_id , $sub_mark = ''){
+        global $categoryids;
+
+        //$query = $db->query("SELECT * FROM categories WHERE parent_id = $parent_id ORDER BY name ASC");
+          $query=Category::where('parent_id',$parent_id)->get();
+
+        //return $query;
+        if (!$query->isEmpty() )
+        {
+            foreach ($query as $value){
+
+                if($value->parent_id!=null){
+                    $categoryids[]=$value->id;
+                    $this->categoryTree($value->id);
+                }
+            }
+
+        }else
+        {
+            $categoryids=[$parent_id];
+        }
+
+        return $categoryids;
+    }
 
 }

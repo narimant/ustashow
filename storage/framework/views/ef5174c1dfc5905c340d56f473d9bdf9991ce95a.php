@@ -33,6 +33,13 @@
                 <label  for="name"><?php echo e(__('adminPanel.Category Name')); ?></label>
                 <input type="text" name="name" value="<?php echo e($category->name); ?>" class="form-control" id="name" placeholder="insert category name " >
             </div>
+
+            <div class="form-group">
+                <label  for="color"><?php echo e(__('adminPanel.Category Color')); ?></label>
+                <input type="color" id="color" name="color" value="<?php echo e($category->color); ?>">
+
+            </div>
+
             <div class="form-group">
                 <label  for="language"><?php echo e(__('adminPanel.Category Mode')); ?></label>
                 <select name="category_mode" id="language" class="form-control">

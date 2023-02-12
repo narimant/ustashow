@@ -118,7 +118,7 @@
 
                         <div>
                             <ul class="list-group ">
-                                <?php $__currentLoopData = \App\Category::where('parent_id',null)->with('sub_category')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <?php $__currentLoopData = \App\Category::where(['parent_id'=>null,'category_mode'=>'video'])->with('sub_category')->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <li class="list-group-item"><input type="checkbox" name="category[]"
                                                                        <?php $__currentLoopData = $video->categories()->get(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                                            <?php if($category->id==$value->id): ?>

@@ -45,7 +45,10 @@ class ArticleController extends Controller
 
         SEOTools::setCanonical($_SERVER['HTTP_HOST'].$article->path());
 
-
+        if($article->status==0)
+        {
+            abort(404);
+        }
         return view('frontend.article',compact('article','comment','related'));
     }
 

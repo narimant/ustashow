@@ -5,6 +5,10 @@
 
     </div>
 
+
+
+
+
 <div class="pb-8">
     <div class="container">
         <div class="row">
@@ -18,6 +22,7 @@
                 </div>
             </div>
             <?php $__currentLoopData = $articles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <?php if($article->status==1 ): ?>
                 <?php if($loop->first): ?>
                     <div class="col-xl-12 col-lg-12 col-md-12 col-12">
                         <!-- Card -->
@@ -31,8 +36,7 @@
                                     <div class="card-body">
                                         <?php $__currentLoopData = $article->categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <a href="<?php echo e($category->path()); ?>" class="fs-5 mb-3 fw-semi-bold d-block">
-                                            <?php echo e($category->name); ?>
-
+                                           <span style="color: <?php echo e($category->color); ?>;"><?php echo e($category->name); ?></span>
                                         </a>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         <h1 class="mb-2 mb-lg-4"> <a href="<?php echo e($article->path()); ?>" class="text-inherit">
@@ -66,9 +70,8 @@
                             <!-- Card body -->
                             <div class="card-body">
                                 <?php $__currentLoopData = $article->categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                    <a href="<?php echo e($category->path()); ?>" class="fs-5 fw-semi-bold d-block mb-3 text-danger">
-                                        <?php echo e($category->name); ?>
-
+                                    <a href="<?php echo e($category->path()); ?>" class="fs-5 fw-semi-bold d-block mb-3">
+                                        <span style="color: <?php echo e($category->color); ?>;"> <?php echo e($category->name); ?></span>
                                     </a>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
@@ -93,7 +96,9 @@
                         </div>
                     </div>
                 <?php endif; ?>
+            <?php endif; ?>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
 
 
             <!-- Buttom -->

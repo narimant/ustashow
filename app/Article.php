@@ -32,7 +32,7 @@ class Article extends Model
         return [
             'slug' => [
                 'source' => 'title',
-                'onUpdate'           => false,
+                'onUpdate' => false,
             ],
 
         ];

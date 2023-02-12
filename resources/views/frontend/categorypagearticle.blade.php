@@ -8,6 +8,10 @@
     {{ Breadcrumbs::render('category', $category) }}
     </div>
 
+
+
+
+
 <div class="pb-8">
     <div class="container">
         <div class="row">
@@ -21,6 +25,7 @@
                 </div>
             </div>
             @foreach($articles as $article)
+                @if($article->status==1 )
                 @if($loop->first)
                     <div class="col-xl-12 col-lg-12 col-md-12 col-12">
                         <!-- Card -->
@@ -34,7 +39,7 @@
                                     <div class="card-body">
                                         @foreach($article->categories as $category)
                                         <a href="{{$category->path()}}" class="fs-5 mb-3 fw-semi-bold d-block">
-                                            {{$category->name}}
+                                           <span style="color: {{$category->color}};">{{$category->name}}</span>
                                         </a>
                                         @endforeach
                                         <h1 class="mb-2 mb-lg-4"> <a href="{{$article->path()}}" class="text-inherit">
@@ -67,8 +72,8 @@
                             <!-- Card body -->
                             <div class="card-body">
                                 @foreach($article->categories as $category)
-                                    <a href="{{$category->path()}}" class="fs-5 fw-semi-bold d-block mb-3 text-danger">
-                                        {{$category->name}}
+                                    <a href="{{$category->path()}}" class="fs-5 fw-semi-bold d-block mb-3">
+                                        <span style="color: {{$category->color}};"> {{$category->name}}</span>
                                     </a>
                                 @endforeach
 
@@ -92,7 +97,9 @@
                         </div>
                     </div>
                 @endif
+            @endif
             @endforeach
+
 
 
             <!-- Buttom -->
